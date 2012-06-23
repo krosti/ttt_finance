@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>asd</title>
+</head>
+<body>
+	<div class="test"></div>
+
+	<!-- include ExtJS -->
+	<script type="text/javascript" src="http://extjs.cachefly.net/extjs/4.0.1/ext-all.js"></script>
+
+	<!-- test setup -->
+	<script type="text/Javascript">
+	/*jslint browser: true, vars: true, plusplus: false, white: true, sloppy: true */
+	/*jshint bitwise:true, curly:true, eqeqeq:true, forin:true, immed:true, latedef:true, newcap:true, noarg:true, noempty:true, regexp:true, undef:true, trailing:true, strict:false */
+	/*global Ext:false, Bancha:false, window:false, alert:false */
+
+	if(typeof window.Ext !== 'object') {
+		alert('This script requires a internet connection to load Ext Core.');
+	}
+
+	var BanchaSetup = {
+		
+		
+		// helper functions
+		log: Ext.get('log'),
+
+		loadApp: function(location,callback) {
+			Ext.create('Ext.Button', {
+		    text: 'Click this me',
+		    renderTo: Ext.getBody(),
+		    handler: function() {
+		        alert('You clicked the button!')
+		    }
+			});
+		},
+			
+		
+	
+	}; //eo BanchaSetup
+
+	Ext.onReady(BanchaSetup.loadApp);
+
+	</script>
+</body>
+</html>

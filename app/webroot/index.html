@@ -1,0 +1,51 @@
+<html> 
+
+<head>
+<title>BorealDev Clients - APP</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta http-equiv="Content-Script-Type" content="text/javascript" /> 
+<meta name="description" content="" /> 
+<meta name="keywords" content="" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold' rel='stylesheet' type='text/css' /> 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<!-- sample specific css -->
+<link rel="stylesheet" href="css/resources/css/ext-all.css" type="text/css">
+<link rel="stylesheet" href="css/borealdev-clients-samples.css" type="text/css">
+<!-- eo sample specific css -->
+
+</head> 
+<body id="top" style="text-align:center;"> 
+
+	<header>
+		<span>BorealDev</span>
+		<span style="font-weight:500;">CLIENTS</span>
+	</header>
+
+	<section>
+		<span>please log-in with your account:</span>
+	</section>
+
+	<div class="login"></div>
+
+</body>
+
+	<!-- include ExtJS -->
+	<!--IFDEBUG -->
+	<script type="text/javascript" src="js/ext-all-dev.js"></script>
+	<!-- ENDIF -->
+	<!-- IFPRODUCTION
+	<script type="text/javascript" src="js/ext-all.js"></script>
+	ENDIF -->
+
+	<!-- include Bancha and the remote API -->
+	<script type="text/javascript" src="Bancha/js/Bancha.js"></script>
+	<script type="text/javascript" src="bancha-api.js"></script>
+
+	<!-- include code -->
+	<script type="text/javascript" src="js/error-handling.js"></script>
+	<!--script type="text/javascript" src="js/beta-error-handling.js"></script-->
+	<script type="text/javascript" src="js/borealdev-clients-app.js"></script> 
+	<script type="text/javascript" src="js/crud-samples.js"></script> 
+
+</html>

@@ -1,0 +1,106 @@
+/* layout */
+body {
+    margin-top:40px;
+    margin-left:20px;
+    margin-bottom:5px;
+}
+
+#gridpanel, #paginated-gridpanel, #formpanel, #chart {
+    margin:60px auto 3px auto;
+}
+
+
+/* font styling */
+body h1, body .descriptions {
+    font-family: 'Droid Serif', tahoma, arial, verdana, sans-serif;
+}
+body h1 {
+    margin-top: 45px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #633;
+}
+
+
+/* center extjs sample panels */
+.x-panel {
+    margin:0 auto 0 auto;
+    text-align:center;
+}
+
+/* div centering */
+.middleOnly {
+    width: 650;
+    margin: auto;
+    padding:10px;
+    text-align:left;
+}
+
+/* description right under a extjs panel*/
+.panel-description {
+    width: 650;
+    margin: auto;
+    padding-top:10px;
+    padding-bottom:30px;
+    text-align:left;
+}
+
+/* nicer log panel look */
+.log-text {
+	padding-top:10px;
+	padding-left:10px;
+    text-align:left;
+    font-size:13px;
+    color: black;
+}
+
+
+/* icon styling */
+.uploaded-image {
+    margin-left:80px;
+}
+.icon-add {
+	background-image:url(../img/icons/add.png) ! important;
+}
+.icon-save {
+	background-image:url(../img/icons/disk.png) ! important;
+}
+.icon-reset {
+	background-image:url(../img/icons/arrow_undo.png) ! important;
+}
+.icon-upload {
+	background-image:url(../img/icons/image_add.png) ! important;
+}
+.icon-edit-user {
+	background-image:url(../img/icons/user_edit.png) ! important;
+}
+
+
+
+
+/* github link at the bottom of the page */
+.github-link {
+    margin: 30px 0;
+}
+.github-link a {
+    color:#633;
+    font-size:24px;
+}
+
+
+/* footer */
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px auto;
+}
+.footer, .push {
+    height: 30px;
+    clear: both;
+    font-size: 13px;
+    color: black;
+    text-align: right;
+	margin-right:15px;
+}
