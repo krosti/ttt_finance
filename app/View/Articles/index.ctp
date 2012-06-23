@@ -1,3 +1,4 @@
+<?php #echo debug($articles) ?>
 <div class="articles index">
 	<h2><?php echo __('Articles');?></h2>
 	<table cellpadding="0" cellspacing="0">

@@ -12,7 +12,7 @@ class ArticlesController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Article->recursive = -1; // modified, cause we don't need associated data
+		$this->Article->recursive = 1; // modified
 		$articles = $this->paginate();																// added
 		$this->set('articles', $articles);															// modified
 		return array_merge($this->request['paging']['Article'],array('records'=>$articles)); 		// added
