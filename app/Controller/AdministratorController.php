@@ -41,7 +41,7 @@ class AdministratorController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Articles');
 
 	public $layout = "backend";
 
@@ -52,6 +52,11 @@ class AdministratorController extends AppController {
  */
 	public function display() {
 		
+	}
+
+	public function posts() {
+		$orders = $this->Article->find('all');
+    	$this->set('articles', $orders);
 	}
 
 }

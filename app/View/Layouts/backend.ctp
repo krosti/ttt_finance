@@ -29,7 +29,9 @@
 	<header>
 		<span>TriTangoTraders</span>
 		<span style="font-weight:500; letter-spacing:-2px;">ADMINISTRADOR</span>
-		<span><img src="img/ttt.png"></span>
+		<span>
+			<?php echo $this->Html->image('ttt.png'); ?>
+		</span>
 		<section>
 			<span>please log-in with your account:</span>
 		</section>
@@ -47,7 +49,7 @@
 
 	<!-- include ExtJS -->
 	<!--IFDEBUG -->
-	<script type="text/javascript" src="js/ext-all-dev.js"></script>
+	<!--script type="text/javascript" src="js/ext-all-dev.js"></script>
 	<!-- ENDIF -->
 	<!-- IFPRODUCTION
 	<script type="text/javascript" src="js/ext-all.js"></script>
@@ -58,9 +60,9 @@
 	<script type="text/javascript" src="bancha-api.js"></script>
 
 	<!-- include code -->
-	<script type="text/javascript" src="js/error-handling.js"></script>
+	<!--script type="text/javascript" src="js/error-handling.js"></script>
 	<!--script type="text/javascript" src="js/beta-error-handling.js"></script-->
-	<script type="text/javascript" src="js/ttt-clients-app.js"></script> 
+	<!--script type="text/javascript" src="js/ttt-clients-app.js"></script> 
 	<script type="text/javascript" src="extjs-login/app.js"></script> 
 	<script type="text/javascript" src="js/banchaOnReady.js"></script> <!-- contiene las funciones para el manejo de Bancha -->
 </html>
