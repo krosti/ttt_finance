@@ -34,14 +34,14 @@ class AdministratorController extends AppController {
  *
  * @var array
  */
-	public $helpers = array('Html');
+	public $helpers = array('Html','Js');
 
 /**
  * This controller does not use a model
  *
  * @var array
  */
-	public $uses = array('Articles');
+	public $uses = array('Article');
 
 	public $layout = "backend";
 

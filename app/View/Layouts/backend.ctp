@@ -21,6 +21,8 @@
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+
+		echo $this->Html->script(array('jquery'));
 	?>
 </head>
 
@@ -44,7 +46,7 @@
 		</div>
 		
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php #echo $this->element('sql_dump'); ?>
 </body>
 
 	<!-- include ExtJS -->
@@ -65,4 +67,12 @@
 	<!--script type="text/javascript" src="js/ttt-clients-app.js"></script> 
 	<script type="text/javascript" src="extjs-login/app.js"></script> 
 	<script type="text/javascript" src="js/banchaOnReady.js"></script> <!-- contiene las funciones para el manejo de Bancha -->
+
+	<!-- YUI -->
+	<script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js" type="text/javascript"></script>
+
+	<!-- Google Chart -->
+  <!--script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">gchart.init();</script-->
+
 </html>
