@@ -4,7 +4,8 @@ ui = {
 		* 		objt = el objeto de elementos que debe dibujar
 		* 		graphicName = el nombre del grafico
 		*/
-		gchart.drawSimpleChart();
+		//gchart.drawSimpleChart(); // with google chart
+		//rgraph.drawLineChart();
 	},
 	carousel: function(wrapper){
 		/* require: "assets/js/bootstrap-carousel.js"
@@ -12,7 +13,7 @@ ui = {
 		$(wrapper).carousel();
 	},
 	takeScreenshot: function(){
-		/*	require: "html2canvas" and "jsfeedback"
+		/*	require:
 		*
 		*/
 		
