@@ -6,6 +6,15 @@
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13px;
 	}
+	button{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 13px;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+	}
+	p{
+		float: left;
+	}
 </style>
 
 <div id="results"></div>
@@ -13,15 +22,16 @@
 <div id="graphic-wrapper">
 	<div id="chart_div"></div>
 
-	<p>
+	<p style="float:left;">
 		<label>Drawing tool: <select id="dtool">
 	        <option value="line">Line</option>
+	        <option value="linePointToPoint">Line Point To Point</option>
 	        <option value="rect">Rectangle</option>
 	        <option value="pencil">Pencil</option>
 	    </select></label>
 	    <div class="commands">
-	        <button id="btnUndo" href="#">Undo</button>
-	        <button id="btnRedo" href="#">Redo</button>
+	        <!--button id="btnUndo" href="#">Undo</button>
+	        <button id="btnRedo" href="#">Redo</button-->
 	        <button id="btnClear" href="#">Clear Canvas</button>
 	    </div>
 	</p>
