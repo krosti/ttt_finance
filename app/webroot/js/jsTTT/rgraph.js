@@ -35,6 +35,10 @@ rgraph = {
         line.Draw();
 	},
 
+	drawScatterChart: function(){
+
+	},
+
 	undoOptions: function(){
 		
         var btnUndo = document.getElementById('btnUndo');

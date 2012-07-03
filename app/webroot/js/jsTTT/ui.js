@@ -16,6 +16,18 @@ ui = {
 		/*	require:
 		*
 		*/
+		$('#take-screenshot').on('click',function(){
+			var 	canvas = document.getElementById('myLine')
+				,	pngFile = canvas.toDataURL('image/png')
+				,	thumbsBox = document.getElementById('thumbsBox')
+				,	img = document.createElement('img');
+
+			img.src = pngFile;
+			img.width = 200;
+			img.height = 120;
+			thumbsBox.appendChild(img);
+			
+		});
 		
 	}
 }

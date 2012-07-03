@@ -2,6 +2,8 @@
 	#graphic-wrapper { position: relative; margin: auto; }
 	#imageView { position: absolute; left: 0px; }
 	#imageTemp { position: absolute; left: 0px; }
+	#thumbsBox { float:left; width:200px; }
+	#thumbsBox img { float:left; }
 	div{
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13px;
@@ -50,6 +52,7 @@
           href="http://www.konqueror.org">Konqueror</a>.</p>
     </canvas>
 </div>
+<div id="thumbsBox"></div>
 
 <button id="take-screenshot">Take Screenshot</button>
 
@@ -65,7 +68,10 @@
 		'RGraph/libraries/RGraph.common.effects',
 		'RGraph/libraries/RGraph.common.key',
 		'RGraph/libraries/RGraph.line',
+		'RGraph/libraries/RGraph.scatter',
 		'jCanvaScript.1.5.15',
+		'canvas2image',
+		'base64',
 		//ourAPPS
 		'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
