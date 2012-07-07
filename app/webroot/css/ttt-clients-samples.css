@@ -14,11 +14,41 @@ header{
 	color:#666;
 	text-align: center;
 }
+header span{
+	display:inline;
+}
 
 section{
 	color:#ccc;
 	font-size: 13px;
 	padding: 10px;
+}
+div{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+}
+button{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+p{
+	float: left;
+}
+
+h1{
+	color: #242424;
+	font-size: 70px;
+	text-align: center;
+	text-transform: lowercase;
+}
+article{
+	margin:20px auto;
+	text-align: center;
+}
+.clear{
+	clear:both;
 }
 
 #login{
@@ -27,4 +57,81 @@ section{
 
 #userchart{
 	margin: 50px auto;
+}
+
+.button-circle-color{
+	border-radius: 10px;
+	background-color: white;
+	width: 13px;
+	height: 13px;
+	float:left;
+	display: inline-block;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.label{
+	float:left;
+	display: inline-block;
+	color: #383838;
+}
+
+.horizontalLine{
+	height: 1px;
+	background-color: black;
+	width: 100%;
+}
+.selectBtn{
+	background: url(../img/icons/glyphicons-halflings.png) 14px 111px;
+	width:15px;
+	height:15px;
+	margin-left:-30px;
+	margin-top:20px;
+	position: absolute;
+}
+
+
+/*COLOR 4 ELEMENTS*/
+.lightGrey{ background-color: #dddddd; }
+.darkGrey{ background-color: #383838; }
+
+/*COLORS 4 BUTTONS*/
+.blue{
+	background-color: #1C4B8F;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
+		#399DEF 25%,
+		#1C4B8F );
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#fff3db),
+		color-stop(0.25, #399DEF),
+		to(#1C4B8F));
+
+}
+.orange{
+	background-color: #FC990C;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
+		#ffc821 25%,
+		#ff3c00 );
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#fff3db),
+		color-stop(0.25, #ffc821),
+		to(#ff3c00));
+}
+.green{
+	background-color: #8A9B0F;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
+		#C7F464 25%,
+		#8A9B0F );
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#fff3db),
+		color-stop(0.25, #C7F464),
+		to(#8A9B0F));
 }

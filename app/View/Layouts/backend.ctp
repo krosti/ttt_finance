@@ -16,13 +16,13 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('resources/css/ext-all','ttt-clients-samples'));
+		echo $this->Html->css(array('resources/css/ext-all','ttt-clients-samples','lightbox'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 
-		echo $this->Html->script(array('jquery'));
+		echo $this->Html->script(array('jquery','lightbox'));
 	?>
 </head>
 

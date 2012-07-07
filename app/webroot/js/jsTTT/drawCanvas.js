@@ -5,7 +5,7 @@
 
 drawCanvas = {
 	
-	init: function(){
+	_init: function(){
 		this.loadTool();
 	},
 
@@ -278,4 +278,4 @@ drawCanvas = {
 		
 	}
 }
-drawCanvas.init();
+drawCanvas._init();

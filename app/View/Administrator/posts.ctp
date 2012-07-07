@@ -2,8 +2,8 @@
 	#graphic-wrapper { position: relative; margin: auto; }
 	#imageView { position: absolute; left: 0px; }
 	#imageTemp { position: absolute; left: 0px; }
-	#thumbsBox { float:left; width:200px; }
-	#thumbsBox img { float:left; }
+	#thumbsBox { float:left; display:none; }
+	#thumbsBox img, .thumbWrapper { float:left; }
 	div{
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13px;
@@ -19,42 +19,55 @@
 	}
 </style>
 
+		<div style="display:none;">
+			<!--elementos invisibles para rehusar-->
+			<a class="selectBtn"></a>
+		</div>
+
 <div id="results"></div>
 
+<!--START-graphic box-->
 <div id="graphic-wrapper">
 	<div id="chart_div"></div>
 
 	<p style="float:left;">
 		<label>Drawing tool: <select id="dtool">
-	        <option value="line">Line</option>
-	        <option value="linePointToPoint">Line Point To Point</option>
-	        <option value="rect">Rectangle</option>
-	        <option value="pencil">Pencil</option>
+	        <option value="line">Linea</option>
+	        <option value="linePointToPoint">Linea Punto a Punto</option>
+	        <option value="rect">Rectangulo</option>
+	        <option value="pencil">Lapiz</option>
 	    </select></label>
 	    <div class="commands">
 	        <!--button id="btnUndo" href="#">Undo</button>
 	        <button id="btnRedo" href="#">Redo</button-->
-	        <button id="btnClear" href="#">Clear Canvas</button>
+	        <button id="btnClear" href="#">Limpiar</button>
+	        <button id="take-screenshot">Tomar Foto</button>
+	        <div id="cambiar-color1"><div class="button-circle-color blue"></div></div>
+	        <div id="cambiar-color2"><div class="button-circle-color orange"></div></div>
+	        <div id="cambiar-color3"><div class="button-circle-color green"></div></div>
 	    </div>
 	</p>
 
+	<div class="canvasWrapper">
+		<canvas id="screenView" width="980" height="500" style="display:none;"></canvas>
 
-	<canvas id="myLine" width="700" height="500"></canvas>
+		<canvas id="myLine" width="980" height="500"></canvas>
 
-	<canvas id="imageView" width="700" height="500">
-        <p>Unfortunately, your browser is currently unsupported by our web 
-        application.  We are sorry for the inconvenience. Please use one of the 
-        supported browsers listed below, or draw the image you want using an 
-        offline tool.</p>
-        <p>Supported browsers: <a href="http://www.opera.com">Opera</a>, <a 
-          href="http://www.mozilla.com">Firefox</a>, <a 
-          href="http://www.apple.com/safari">Safari</a>, and <a 
-          href="http://www.konqueror.org">Konqueror</a>.</p>
-    </canvas>
+		<canvas id="imageView" width="980" height="500">
+	        <p>Unfortunately, your browser is currently unsupported by our web 
+	        application.  We are sorry for the inconvenience. Please use one of the 
+	        supported browsers listed below, or draw the image you want using an 
+	        offline tool.</p>
+	        <p>Supported browsers: <a href="http://www.opera.com">Opera</a>, <a 
+	          href="http://www.mozilla.com">Firefox</a>, <a 
+	          href="http://www.apple.com/safari">Safari</a>, and <a 
+	          href="http://www.konqueror.org">Konqueror</a>.</p>
+	    </canvas>
+	</div>
 </div>
 <div id="thumbsBox"></div>
 
-<button id="take-screenshot">Take Screenshot</button>
+
 
 
 
@@ -70,8 +83,7 @@
 		'RGraph/libraries/RGraph.line',
 		'RGraph/libraries/RGraph.scatter',
 		'jCanvaScript.1.5.15',
-		'canvas2image',
-		'base64',
+		'lightbox',
 		//ourAPPS
 		'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',

@@ -2,6 +2,8 @@
 
 	$(function(){
 
+		//env variables
+		var thumbsBox = $('#thumbsBox');
 
 		// make code pretty
 		window.prettyPrint && prettyPrint();
@@ -12,11 +14,11 @@
 		// draw simple graph
 		ui.graphs("objtc","First Graphic");
 
-		 // get data with YUI
+		// get data with YUI
 		//crawler.simpleQuerybySymbol("YHOO");
 
-		//  bind button for screenshot tool
-		ui.takeScreenshot();
+		// bind button for screenshot tool
+		ui.takeScreenshot(thumbsBox);
 
 	})
 

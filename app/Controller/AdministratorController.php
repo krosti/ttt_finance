@@ -59,4 +59,8 @@ class AdministratorController extends AppController {
     	$this->set('articles', $orders);
 	}
 
+	public function elements() {
+
+	}
+
 }
