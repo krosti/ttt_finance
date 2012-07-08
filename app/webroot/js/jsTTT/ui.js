@@ -58,21 +58,33 @@ ui = {
 		* [X] ponerle un caption cuando se selecciona, un tilde o algo
 		*/
 		var images = $('img',thumbsBox)
-			,	selectBtn = '<a class="selectBtn"></a>';
+			,	principalWrapper = '<div class="thumbWrapper"></div>' // wrapper
+			,	selectBtn = document.createElement('a') //boton para seleccionar imagen para un post
+			, expandBtn = document.createElement('a'); //boton para expandir la imagen en el lightbox
 		
+		selectBtn.setAttribute('class','selectBtn');
+		expandBtn.setAttribute('class','expandBtn');
+		expandBtn.setAttribute('rel','lightbox');
+
 		images.each(function(){
 			var e = $(this);
 
 			//agrego un Wrapper
 			if (!e.parents().hasClass('thumbWrapper')){
-    		e.wrap('<div class="thumbWrapper"></div>');
+    		e.wrap(principalWrapper);
  			}
 
- 			//agrego el icon1 - selectBtn
+ 			//agrego el boton selectBtn - this.selectBtn()
  			var parent = e.closest('.thumbWrapper');
  			if(parent.find('.selectBtn').length == 0){
  				parent.append(selectBtn);
  			}
+
+ 			//agrego el expandBtn
+ 			if (parent.find('.expandBtn').length == 0) {
+ 				expandBtn.setAttribute('href', e.attr('src'));
+ 				parent.append(expandBtn);
+ 			};
 
 			//borde en el Click
 			e.on('click',function(){
@@ -80,12 +92,19 @@ ui = {
 				e.css('border','2px solid #8A9B0F');
 			});
 
-			//append de boton selecionar
-			
-
 		});
 		
+		ui.selectBtn();
+	},
 
+	selectBtn: function(){
+		/*
+		* desc: boton seleccionar esta imagen para un post
+		*/
+		$('.selectBtn').on('click',function(){
+			var id = $(this).closest('.thumbWrapper').find('img').attr('id');
+			console.log('fue seleccionado este grafico '+id);
+		});
 	},
 
 	prettifyPre: function(){

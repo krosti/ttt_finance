@@ -84,8 +84,16 @@ article{
 	background: url(../img/icons/glyphicons-halflings.png) 14px 111px;
 	width:15px;
 	height:15px;
-	margin-left:-30px;
-	margin-top:20px;
+	margin-left: -45px;
+	margin-top: 96px;
+	position: absolute;
+}
+.expandBtn{
+	background: url(../img/icons/glyphicons-halflings.png) 110px 65px;
+	width:15px;
+	height:15px;
+	margin-left: -25px;
+	margin-top: 95px;
 	position: absolute;
 }
 
