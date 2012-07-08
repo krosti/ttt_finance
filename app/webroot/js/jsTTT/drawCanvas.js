@@ -276,6 +276,18 @@ drawCanvas = {
 		
 		init();
 		
+	},
+
+	clearCanvas: function(context){
+		var canvas = document.getElementById(context);
+
+		canvas = canvas.getContext('2d');
+		canvas.save();
+		canvas.setTransform(1, 0, 0, 1, 0, 0);
+		canvas.clearRect(0, 0, canvas.width, canvas.height);
+
+		// Restore the transform
+		canvas.restore();
 	}
 }
 drawCanvas._init();

@@ -12,7 +12,7 @@
 		//ui.carousel("#myCarousel");
 
 		// draw simple graph
-		ui.graphs("objtc","First Graphic");
+		ui.graphs("objtc","line");
 
 		// get data with YUI
 		//crawler.simpleQuerybySymbol("YHOO");

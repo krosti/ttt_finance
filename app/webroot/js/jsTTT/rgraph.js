@@ -2,7 +2,6 @@ rgraph = {
   
   init: function(){
     this.loader();
-    this.drawLineChart('#FAA82B');
     this.undoOptions();
   },
 
@@ -28,7 +27,7 @@ rgraph = {
     line.Set('chart.linewidth', 2);
     line.Set('chart.filled', true);
     line.Set('chart.hmargin', 5);
-    line.Set('chart.labels', ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']);
+    line.Set('chart.labels', ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dic']);
     line.Set('chart.gutter.left', 40);
     
     // Now call the .Draw() method to draw the chart.

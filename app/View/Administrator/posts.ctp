@@ -42,9 +42,9 @@
 	        <button id="btnRedo" href="#">Redo</button-->
 	        <button id="btnClear" href="#">Limpiar</button>
 	        <button id="take-screenshot">Tomar Foto</button>
-	        <div id="cambiar-color1"><div class="button-circle-color blue"></div></div>
-	        <div id="cambiar-color2"><div class="button-circle-color orange"></div></div>
-	        <div id="cambiar-color3"><div class="button-circle-color green"></div></div>
+	        <div id="cambiar-color1" style="width:15px;height:15px;float:left;"><div class="button-circle-color blue"></div></div>
+	        <div id="cambiar-color2" style="width:15px;height:15px;float:left;"><div class="button-circle-color orange"></div></div>
+	        <div id="cambiar-color3" style="width:15px;height:15px;float:left;"><div class="button-circle-color green"></div></div>
 	    </div>
 	</p>
 

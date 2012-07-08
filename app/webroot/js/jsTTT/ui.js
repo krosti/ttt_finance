@@ -10,12 +10,20 @@ ui = {
 		*/
 		//gchart.drawSimpleChart(); // with google chart
 		//rgraph.drawLineChart();
+		var status = false;
+		switch(graphicName){
+			case 'line': rgraph.drawLineChart('#FAA82B'); ui.botonesCambioDeColor(graphicName); status = true; break;
+			case 'candlestick': rgraph.drawScatterChart();  ui.botonesCambioDeColor(graphicName); status = true; break;
+		}
+		return status
 	},
+
 	carousel: function(wrapper){
 		/* require: "assets/js/bootstrap-carousel.js"
 		*/
 		$(wrapper).carousel();
 	},
+
 	takeScreenshot: function(thumbsBox){
 		/*	require: nada
 		*
@@ -105,6 +113,30 @@ ui = {
 			var id = $(this).closest('.thumbWrapper').find('img').attr('id');
 			console.log('fue seleccionado este grafico '+id);
 		});
+	},
+
+	botonesCambioDeColor: function(graphicName){
+		/*
+		* desc: bindeo de los botones de cambio de color
+		* vars: graphicName es el tipo de grafico a dibujar
+		*/
+
+		var color = 'red' //defaultColor
+			,	clearBtn = $('#btnClear');
+
+		$('#cambiar-color1, #cambiar-color2, #cambiar-color3').on('click',function(){
+			var e = $(this).find('div');
+			if (e.hasClass('blue')) { color = '#1C4B8F'};
+			if (e.hasClass('orange')) { color = '#FC990C'};
+			if (e.hasClass('green')) { color = '#8A9B0F'};
+
+			switch(graphicName){
+				case 'line': drawCanvas.clearCanvas('myLine'); clearBtn.trigger('click'); rgraph.drawLineChart(color); break;
+				case 'candlestick': drawCanvas.clearCanvas('myLine'); clearBtn.trigger('click'); rgraph.drawScatterChart(); break;
+			};
+		});
+
+		
 	},
 
 	prettifyPre: function(){
