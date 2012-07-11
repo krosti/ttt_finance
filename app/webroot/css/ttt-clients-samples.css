@@ -47,8 +47,35 @@ article{
 	margin:20px auto;
 	text-align: center;
 }
+a:link, a:visited{
+	color:white;
+}
+a:hover{
+	color:#ddd;
+}
+
 .clear{
 	clear:both;
+}
+.bold{
+	font-weight: bold;
+}
+.no-margin{
+	margin:0px;
+	padding:0px;
+}
+.positive{
+	color:green;
+	padding-left: 20px;
+	background: url(../img/icons/arrowPos.gif) no-repeat 0px;
+}
+.negative{
+	color:red;
+	padding-left: 20px;
+	background: url(../img/icons/arrowNeg.gif) no-repeat 0px;
+}
+.neutral{
+	color:#7AA9CB;
 }
 
 #login{
@@ -59,6 +86,48 @@ article{
 	margin: 50px auto;
 }
 
+#cotizacionBox{
+	width:1000px;
+	height: 35px;
+	background-color: #383838;
+	color: white;
+	border: 1px solid #363636;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	position:fixed;
+	bottom: 0px;
+	box-shadow: 0px 0px 7px #666;
+}
+#datosLive div{
+	font-family: arial,helvetica,sans;
+	padding:10px;
+	float:left;
+	border-right: 1px solid #303030;
+}
+#datosLive span{
+	margin-left:5px;
+	margin-right:5px;
+	font-size: 13px;
+}
+
+.labelsCotizacion{
+	position: absolute;
+	margin-top:-22px;
+	display: none;
+}
+.miniBtn{
+	float:left;
+	border:1px solid #646764;
+	background-color: #403F3F;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 1px;
+}
 .button-circle-color{
 	border-radius: 10px;
 	background-color: white;
@@ -80,6 +149,8 @@ article{
 	background-color: black;
 	width: 100%;
 }
+
+/*USO DE GLYPH*/
 .selectBtn{
 	background: url(../img/icons/glyphicons-halflings.png) 14px 111px;
 	width:15px;
@@ -95,6 +166,12 @@ article{
 	margin-left: -25px;
 	margin-top: 95px;
 	position: absolute;
+}
+#showLoabels{
+	background: url(../img/icons/glyphicons-halflings.png) -24px 111px;
+	width: 18px;
+	height: 17px;
+	float: right;
 }
 
 

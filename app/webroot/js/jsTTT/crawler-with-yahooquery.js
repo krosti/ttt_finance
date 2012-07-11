@@ -1,3 +1,9 @@
+/*
+* @author Fernando Cea
+* require: YUI Api 3.5.1+
+* lib: <script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js" type="text/javascript"></script>
+*/
+
 crawler = {
 
   query: function(ticker){
@@ -79,7 +85,7 @@ crawler = {
           success: function(r) {
             if (r.query && r.query.results) {
                 count++;
-                console.log("Actualizacion nro: "+count);
+                console.log("#1- Actualizacion nro: "+count);
                 //res.setHTML('<h2>Recent Flickr Photos <em>(query #' + count + ')</em></h2>');
                 res.setHTML(r.query.results.stock.SixMonths.replace(/p/g,"span"));
                 //Y.each(r.query.results.stock, function(v) {
@@ -94,6 +100,35 @@ crawler = {
     Y.later(5000, q, q.send, null, true);
 
     });
+  },
+
+  queryYQL: function(simbolos){
+    /*
+    * query Quant Yahoo Finance Site
+    */
+    console.log('OK - queryYQL');
+
+    YUI().use('node', 'yql', function(Y) {
+      var res = Y.one('#datosLive')
+        , count = 0;
+      var q = Y.YQL('select * from yahoo.finance.quotes where symbol in ('+ simbolos +')', {
+        //Tell JSONP to not cache this request so we get new images on each request
+        allowCache: false,
+        on: {
+          success: function(r) {
+            if (r.query && r.query.results) {
+                count++;
+                console.log("#2- Actualizacion nro: "+count);
+                symbols.updateBox(r.query.results.quote);
+                //res.setHTML(r.query.results.quote);
+            }
+          }
+        }
+      });
+      Y.later(7000, q, q.send, null, true);
+    });
+    
   }
+
 
 }

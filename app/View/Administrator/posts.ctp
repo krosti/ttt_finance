@@ -19,12 +19,7 @@
 	}
 </style>
 
-		<div style="display:none;">
-			<!--elementos invisibles para rehusar-->
-			<a class="selectBtn"></a>
-		</div>
 
-<div id="results"></div>
 
 <!--START-graphic box-->
 <div id="graphic-wrapper">
@@ -45,6 +40,7 @@
 	        <div id="cambiar-color1" style="width:15px;height:15px;float:left;"><div class="button-circle-color blue"></div></div>
 	        <div id="cambiar-color2" style="width:15px;height:15px;float:left;"><div class="button-circle-color orange"></div></div>
 	        <div id="cambiar-color3" style="width:15px;height:15px;float:left;"><div class="button-circle-color green"></div></div>
+	        <button id="showLoabels"></button>
 	    </div>
 	</p>
 

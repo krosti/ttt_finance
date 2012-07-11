@@ -3,6 +3,36 @@ ui = {
 
 	},
 
+	loadScript: function(url, callback){
+		/*
+		* desc: method para levantar asyncronicamente librerias y saber su estado
+		*/
+    var head = document.getElementsByTagName("head")[0];
+    var script = document.createElement("script");
+    script.src = url;
+
+    // Attach handlers for all browsers
+    var done = false;
+    script.onload = script.onreadystatechange = function()
+    {
+      if( !done && ( !this.readyState 
+                      || this.readyState == "loaded" 
+                      || this.readyState == "complete") )
+      {
+        done = true;
+
+        // Continue your code
+        callback();
+
+        // Handle memory leak in IE
+        script.onload = script.onreadystatechange = null;
+        head.removeChild( script );
+      }
+    };
+
+    head.appendChild(script);
+	},
+
 	graphs: function(objt,graphicName){
 		/* method que dibuja los graficos
 		* 		objt = el objeto de elementos que debe dibujar
@@ -150,5 +180,23 @@ ui = {
         codeBlock.addClass('prettyprint linenums');
     });
     prettyPrint();
-	}
+	},
+
+	marquesinaAnimada: function(contenedor){
+		/*
+		* require: jquery.jstockticker-1.1.js
+		* desc: anima la marquesina
+		*/
+		$('#datosLive').jStockTicker({interval: 45});
+	},
+
+	linkLinks: function(){
+    /*
+    * desc: linkea los links a sus clicks para actualizar la barra de cotizaciones online
+    */
+    $('#linkARG').on('click', function(){ window.location.hash = 'argentina'; symbols._init(); });
+    $('#linkUSA').on('click', function(){ window.location.hash = 'usa'; symbols._init(); });
+    $('#linkIND').on('click', function(){ window.location.hash = 'indices'; symbols._init(); });
+    $('#showLoabels').on('click', function(){ $('.labelsCotizacion').slideToggle(); });
+  }
 }

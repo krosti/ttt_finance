@@ -16,7 +16,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('resources/css/ext-all','ttt-clients-samples','lightbox'));
+		echo $this->Html->css(array('resources/css/ext-all','ttt-clients-samples','lightbox','stockTicker'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -46,6 +46,14 @@
 		</div>
 		
 	</div>
+	<div id="cotizacionBox">
+		<div class="labelsCotizacion">
+			<a href="#argentina" class="miniBtn" id="linkARG">Argentina</a>
+			<a href="#usa" class="miniBtn" id="linkUSA">USA</a>
+			<a href="#indices" class="miniBtn" id="linkIND">Indices</a>
+		</div>
+		<div id="datosLive"></div>
+	</div>
 	<?php #echo $this->element('sql_dump'); ?>
 </body>
 
@@ -69,7 +77,13 @@
 	<script type="text/javascript" src="js/banchaOnReady.js"></script> <!-- contiene las funciones para el manejo de Bancha -->
 
 	<!-- YUI -->
-	<script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js" type="text/javascript"></script>
+	
+<?php 
+	echo $this->Html->script(array(
+		//Common libs
+		'jquery.jstockticker-1.1' //jStock Marquesine - require jQuery 1.4+
+	));
+?>
 
 	<!-- Google Chart -->
   <!--script type="text/javascript" src="https://www.google.com/jsapi"></script>
