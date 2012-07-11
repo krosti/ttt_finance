@@ -104,7 +104,7 @@ symbols = {
       percentage = 
       changeRealTime = data[i].Change_PercentChange;
       changeRealTime = ( changeRealTime.search(/\+[0-9]/g) >= 0 ) ? '<span class="positive">'+changeRealTime+'</span>' : 
-                            ( changeRealTime.search(/.00\%/g) >= 0 ) ? '<span class="neutral">'+changeRealTime+'</span>' : '<span class="negative">'+changeRealTime+'</span>';
+                            ( changeRealTime.search(/0.00\%/g) >= 0 ) ? '<span class="neutral">'+changeRealTime+'</span>' : '<span class="negative">'+changeRealTime+'</span>';
 
       n.innerHTML = 
             '<span class="bold no-margin">'+symbol+'</span>' 

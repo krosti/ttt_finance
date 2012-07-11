@@ -19,7 +19,21 @@
 	}
 </style>
 
-
+<form>
+	<div class="formLabel">Titulo</div>
+	<div class="formOptions">
+		<span class="style1"></span>
+		<span class="style2"></span>
+	</div>
+	<input id="formTitulo"/>
+	<div class="formLabel">Cuerpo</div>
+	<div class="formOptions">
+		<span class="style1"></span>
+		<span class="style2"></span>
+		<span class="style3"></span>
+	</div>
+		<textarea id="formCuerpo"></textarea>
+</form>
 
 <!--START-graphic box-->
 <div id="graphic-wrapper">
