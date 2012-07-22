@@ -131,5 +131,5 @@
 		'jsTTT/drawCanvas'
 	));
 
-	count($articles);
+	//count($articles);
 ?>
