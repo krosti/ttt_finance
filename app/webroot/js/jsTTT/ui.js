@@ -43,7 +43,7 @@ ui = {
 		var status = false;
 		switch(graphicName){
 			case 'line': rgraph.drawLineChart('#FAA82B'); ui.botonesCambioDeColor(graphicName); status = true; break;
-			case 'candlestick': rgraph.drawScatterChart();  ui.botonesCambioDeColor(graphicName); status = true; break;
+			case 'candlestick': rgraph.drawScatterChart('#40B7D9');  ui.botonesCambioDeColor(graphicName); status = true; break;
 		}
 		return status
 	},
@@ -58,6 +58,7 @@ ui = {
 		/*	require: nada
 		*
 		*/
+		
 		$('#take-screenshot').on('click',function(){
 			var 	canvas1 = document.getElementById('myLine')
 				,	canvas2 = document.getElementById('imageView')
@@ -154,15 +155,16 @@ ui = {
 		var color = 'red' //defaultColor
 			,	clearBtn = $('#btnClear');
 
-		$('#cambiar-color1, #cambiar-color2, #cambiar-color3').on('click',function(){
+		$('#cambiar-color0, #cambiar-color1, #cambiar-color2, #cambiar-color3').on('click',function(){
 			var e = $(this).find('div');
 			if (e.hasClass('blue')) { color = '#1C4B8F'};
+			if (e.hasClass('lightBlue')) { color = '#40B7D9'};
 			if (e.hasClass('orange')) { color = '#FC990C'};
 			if (e.hasClass('green')) { color = '#8A9B0F'};
 
 			switch(graphicName){
 				case 'line': drawCanvas.clearCanvas('myLine'); clearBtn.trigger('click'); rgraph.drawLineChart(color); break;
-				case 'candlestick': drawCanvas.clearCanvas('myLine'); clearBtn.trigger('click'); rgraph.drawScatterChart(); break;
+				case 'candlestick': drawCanvas.clearCanvas('myLine'); clearBtn.trigger('click'); rgraph.drawScatterChart(color); break;
 			};
 		});
 
@@ -198,5 +200,30 @@ ui = {
     $('#linkUSA').on('click', function(){ window.location.hash = 'usa'; symbols._init(); });
     $('#linkIND').on('click', function(){ window.location.hash = 'indices'; symbols._init(); });
     $('#showLoabels').on('click', function(){ $('.labelsCotizacion').slideToggle(); });
+  },
+
+  graphicWrapperExpandCollapse: function(){
+  	/*
+  	* desc: bindea los links y cosas para expandir y mostrar la secciones de graficos
+  	*/
+
+  	$('#graphicFalseBox').on('click', function(){
+  		//muestra/oculta el grafico
+  		var box = $(this);
+
+  		box.find('.iconExpanded').toggleClass('iconCollapsed');
+
+  		$('#graphic-wrapper').slideToggle(1000);
+  	});
+
+  	$('#imageFalseBox').on('click', function(){
+  		//muestre/oculta el image uploader
+  		var box = $(this);
+
+  		box.find('.iconExpanded').toggleClass('iconCollapsed');
+
+  		$('#uploadPhotoBox').slideToggle(1000);
+  	});
   }
+
 }

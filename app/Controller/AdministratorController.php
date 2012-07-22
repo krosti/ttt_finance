@@ -55,8 +55,8 @@ class AdministratorController extends AppController {
 	}
 
 	public function posts() {
-		$orders = $this->Article->find('all');
-    	$this->set('articles', $orders);
+		/*$orders = $this->Article->find('all');
+    	$this->set('articles', $orders);*/
 	}
 
 	public function elements() {

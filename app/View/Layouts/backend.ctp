@@ -44,8 +44,8 @@
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		
 	</div>
+
 	<div id="cotizacionBox">
 		<div class="labelsCotizacion">
 			<a href="#argentina" class="miniBtn" id="linkARG">Argentina</a>

@@ -13,6 +13,8 @@
 		ui.marquesinaAnimada('#datosLive');
 		//links de los distintos mercados
 		ui.linkLinks();
+		//bandeja expande contrae del graphic tool
+		ui.graphicWrapperExpandCollapse();
 
 		// Usage: 
 		// This code loads jQuery and executes some code when jQuery is loaded
@@ -24,7 +26,7 @@
 		//ui.carousel("#myCarousel");
 
 		// draw simple graph
-		ui.graphs("objtc","line");
+		ui.graphs("objtc","candlestick");
 
 		// get data with YUI
 		//crawler.simpleQuerybySymbol("YHOO");

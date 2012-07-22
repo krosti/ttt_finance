@@ -27,7 +27,7 @@ div{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 }
-button{
+button, input{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	border: 1px solid #ccc;
@@ -177,6 +177,32 @@ a:hover{
 
 
 /*FORM DESIGN*/
+.graphicFalseBox{
+	border: 1px solid #40B7D9;
+	width: 100%;
+	height: 27px;
+	background: #333;
+	font-weight: 500;
+	font-size: 17px;
+	border-radius: 50px;
+	color: #509073;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.graphicFalseBox span{ padding-top: 1px; padding-left:10px; float: left; }
+.graphicFalseBox .iconExpanded{ 
+	background: url(../img/icons/glyphicons-halflings-white.png) 161px 42px;
+	width: 18px;
+	height: 17px;
+	float: right;
+	border: none;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+.graphicFalseBox .iconCollapsed{ 
+	background: url(../img/icons/glyphicons-halflings-white.png) 181px 42px;
+	margin-right: 5px;
+}
 /*FORM DESIGN*/
 .formLabel{
 	color:#303030;
@@ -197,6 +223,12 @@ a:hover{
 .formOptions .style1{ background: url(../img/icons/glyphicons-halflings.png) -24px 87px;  }
 .formOptions .style2{ background: url(../img/icons/glyphicons-halflings.png) -24px 87px;  }
 .formOptions .style3{ background: url(../img/icons/glyphicons-halflings.png) -24px 87px;  }
+.formOptions .style1:hover{ background: url(../img/icons/glyphicons-halflings-white.png) -24px 87px;  }
+.formOptions .style2:hover{ background: url(../img/icons/glyphicons-halflings-white.png) -24px 87px;  }
+.formOptions .style3:hover{ background: url(../img/icons/glyphicons-halflings-white.png) -24px 87px;  }
+.formOptions .style1 span{}
+.formOptions .style2 span{ font-weight: 300;}
+.formOptions .style3 span{ font-weight: 300; text-transform: uppercase; }
 #formTitulo{ 
 	width:980px;
 	height:40px;
@@ -222,8 +254,47 @@ a:hover{
 	margin-bottom: 20px;
 	padding:10px;
 }
+#uploadPhotoBox{
+	margin-top: 10px;
+	display: none;
+}
 /*FORM DESIGN*/
+.buttonsBox{
+	margin-top:20px;
+}
 /*FORM DESIGN*/
+
+
+/*????????????*/
+/*EXTRA*/
+.Ntooltip {
+	position: relative; /* es la posición normal */
+	text-decoration: none !important; /* forzar sin subrayado */
+	color:#0080C0 !important; /* forzar color del texto */
+	font-weight:bold !important; /* forzar negritas */
+}
+
+.Ntooltip:hover {
+	z-index:999; /* va a estar por encima de todo */
+}
+
+.Ntooltip span {
+	display: none; /* el elemento va a estar oculto */
+}
+
+.Ntooltip:hover span {
+	display: block; /* se fuerza a mostrar el bloque */
+	position: absolute; /* se fuerza a que se ubique en un lugar de la pantalla */
+	top:2em; right:2em; /* donde va a estar */
+	width:55px; /* el ancho por defecto que va a tener */
+	padding:5px; /* la separación entre el contenido y los bordes */
+	background-color: #363636; /* el color de fondo por defecto */
+	color: #509073; /* el color de los textos por defecto */
+	border-radius: 2px;
+	text-align: center;
+}
+/*????????????*/
+/*EXTRA*/
 
 
 /*COLOR 4 ELEMENTS*/
@@ -236,38 +307,50 @@ a:hover{
 	background: -moz-linear-gradient(
 		top,
 		#fff3db 0%,
+		#1C4B8F 25%,
+		#399DEF );
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#fff3db),
+		color-stop(0.25, #1C4B8F),
+		to(#399DEF));
+}
+.lightBlue{
+	background-color: #40B7D9;
+	background: -moz-linear-gradient(
+		top,
+		#fff3db 0%,
 		#399DEF 25%,
-		#1C4B8F );
+		#40B7D9 );
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
 		from(#fff3db),
 		color-stop(0.25, #399DEF),
-		to(#1C4B8F));
-
+		to(#40B7D9));
 }
 .orange{
 	background-color: #FC990C;
 	background: -moz-linear-gradient(
 		top,
 		#fff3db 0%,
-		#ffc821 25%,
-		#ff3c00 );
+		#ff3c00 25%,
+		#ffc821 );
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
 		from(#fff3db),
-		color-stop(0.25, #ffc821),
-		to(#ff3c00));
+		color-stop(0.25, #ff3c00),
+		to(#ffc821));
 }
 .green{
 	background-color: #8A9B0F;
 	background: -moz-linear-gradient(
 		top,
 		#fff3db 0%,
-		#C7F464 25%,
-		#8A9B0F );
+		#8A9B0F 25%,
+		#C7F464 );
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
 		from(#fff3db),
-		color-stop(0.25, #C7F464),
-		to(#8A9B0F));
+		color-stop(0.25, #8A9B0F),
+		to(#C7F464));
 }
