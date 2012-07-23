@@ -268,9 +268,9 @@ ui = {
 
     $('#updateGraphic').on('click',function(){
       var 
-          startDate = $('#startDate').val()
-        , endDate = $('#endDate').val();
-        
+          startDate = $('#startDate').val().toString()
+        , endDate = $('#endDate').val().toString();
+
       crawler.getDataCandlestick(boxAcciones.val(),startDate,endDate,'#40B7D9');
     });
   }
