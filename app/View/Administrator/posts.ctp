@@ -53,26 +53,39 @@
 <!--START-graphic box-->
 <div id="graphic-wrapper">
 	<div id="chart_div"></div>
+	<select id="selectboxIndices">
+		<option default>Elegir Uno</option>
+		<option value="argentina">argentina</option>
+		<option value="usa">usa</option>
+		<option value="indices">indices</option>
+	</select>
+	<select id="selectboxAcciones"></select>
+	<input id="startDate" placeholder="yyyy-mm-dd [desde]"/>
+	<input id="endDate" placeholder="yyyy-mm-dd [hasta]"/>
+	<button id="updateGraphic">Actualizar</button>
 
-	<p style="float:left;">
-		<label>Drawing tool: <select id="dtool">
-	        <option value="line">Linea</option>
-	        <option value="linePointToPoint">Linea Punto a Punto</option>
-	        <option value="rect">Rectangulo</option>
-	        <option value="pencil">Lapiz</option>
-	    </select></label>
-	    <div class="commands">
-	        <!--button id="btnUndo" href="#">Undo</button>
-	        <button id="btnRedo" href="#">Redo</button-->
-	        <button id="btnClear" href="#">Limpiar</button>
-	        <button id="take-screenshot">Tomar Foto</button>
-	        <div id="cambiar-color0" style="width:15px;height:15px;float:left;"><div class="button-circle-color lightBlue"></div></div>
-	        <div id="cambiar-color1" style="width:15px;height:15px;float:left;"><div class="button-circle-color blue"></div></div>
-	        <div id="cambiar-color2" style="width:15px;height:15px;float:left;"><div class="button-circle-color orange"></div></div>
-	        <div id="cambiar-color3" style="width:15px;height:15px;float:left;"><div class="button-circle-color green"></div></div>
-	        <button id="showLoabels"></button>
-	    </div>
-	</p>
+	<button id="drawToolBoxButton">Drawing/Dibujo</button>
+	<div id="drawToolsBox">
+		<p style="float:left;">
+			<label>Drawing tool: <select id="dtool">
+		        <option value="line">Linea</option>
+		        <option value="linePointToPoint">Linea Punto a Punto</option>
+		        <option value="rect">Rectangulo</option>
+		        <option value="pencil">Lapiz</option>
+		    </select></label>
+		    <div class="commands">
+		        <!--button id="btnUndo" href="#">Undo</button>
+		        <button id="btnRedo" href="#">Redo</button-->
+		        <button id="btnClear" href="#">Limpiar</button>
+		        <button id="take-screenshot">Tomar Foto</button>
+		        <div id="cambiar-color0" style="width:15px;height:15px;float:left;"><div class="button-circle-color lightBlue"></div></div>
+		        <div id="cambiar-color1" style="width:15px;height:15px;float:left;"><div class="button-circle-color blue"></div></div>
+		        <div id="cambiar-color2" style="width:15px;height:15px;float:left;"><div class="button-circle-color orange"></div></div>
+		        <div id="cambiar-color3" style="width:15px;height:15px;float:left;"><div class="button-circle-color green"></div></div>
+		        <button id="showLoabels"></button>
+		    </div>
+		</p>
+	</div>
 
 	<div class="canvasWrapper">
 		<canvas id="screenView" width="980" height="500" style="display:none;"></canvas>

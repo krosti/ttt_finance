@@ -13,6 +13,9 @@ symbols = {
         symbols.updateBox(r); //this
       }
     });
+    // TODO: hacer lo de arriba
+    crawler.getDataCandlestick('^MERV','2012-01-01','2012-07-20','#40B7D9');
+
   },
   
   getSymbols:function(){
@@ -32,7 +35,6 @@ symbols = {
       callback(); //HORRIBLE
     }
   },
-
   listaDeAcciones: function(tipo){
     /*
     * desc: retorna string con todas las acciones
@@ -86,7 +88,6 @@ symbols = {
     
     return baseString;
   },
-
   updateBox:function(data){
     /*
     * desc: actualiza una caja con los ultimos datos de un accion por Symbol.
@@ -117,6 +118,53 @@ symbols = {
       box.append(n);
       //console.log(data[i]);
     };
+  },
+  doArray: function(type, data, color){
+    /*
+    *   arma un array con la estructura para los graficos
+    */
+    var dataArray = []
+      , max = 0
+      , min = 10000
+      , low = 0
+      , high = 0;
+      
+    switch(type){
+      case 'candlestick':
+        for (var i = 0; i < data.length; i++) {
+          //[date, [low, open, close, adjclose, hight], color]
+          low = data[i].Low;
+          high = data[i].High;
+          
+          min = (min > low) ? low : min;
+          max = (max < high) ? high : max;
+
+          dataArray.push([
+              i+1, 
+              [
+                parseFloat(low), 
+                parseFloat(data[i].Open), 
+                parseFloat(data[i].Close), 
+                parseFloat(data[i].Adj_Close), 
+                parseFloat(high),
+                color,
+                color
+              ], 
+              'black'
+              ]);
+        };
+        break;
+    }
+    //console.log('$$$$$$$$$$');
+    //console.log(dataArray);
+    //console.log('$$$$$$$$$$');
+    max = parseInt(max);
+    min = parseInt(min);
+    //fixx
+    min = (max < min) ? 0 : min;
+    
+    ui.graphs(dataArray,"candlestick",max,min);
+
   }
 
   

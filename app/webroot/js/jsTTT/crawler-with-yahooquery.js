@@ -106,7 +106,7 @@ crawler = {
     /*
     * query Quant Yahoo Finance Site
     */
-    console.log('OK - queryYQL');
+    console.log('#1- OK - queryYQL');
 
     YUI().use('node', 'yql', function(Y) {
       var res = Y.one('#datosLive')
@@ -129,6 +129,36 @@ crawler = {
       //Y.later(7000, q, q.send, null, true);
     });
     
+  },
+
+  getDataCandlestick: function(symbol,startDate,endDate,color){
+    /*
+    *  query de Historical Data
+    */
+    YUI().use('node', 'yql', function(Y) {
+      var count = 0
+        , queryString = '';
+
+      var q = Y.YQL('select * from yahoo.finance.historicaldata where symbol = "'+symbol+'" and startDate = "'+startDate+'" and endDate = "'+endDate+'"  | reverse()', {
+        //Tell JSONP to not cache this request so we get new images on each request
+        allowCache: false,
+        on: {
+          success: function(r) {
+            if (r.query && r.query.results) {
+                count++;
+                console.log("#3- HistoricalData "+symbol+' -#'+count+' -desde'+startDate+' -hasta'+endDate);
+                __DATA = r.query.results.quote;
+                //console.log('Data: __DATA');
+                //console.log(__DATA);
+                //console.log('End Data: __DATA');
+                (r.query.diagnostic && r.query.diagnostic.warning) ? symbols.drawError(r.query.diagnostic.warning,queryString) : symbols.doArray('candlestick', __DATA, color);
+            }
+          }
+        }
+      });
+      
+      //Y.later(7000, q, q.send, null, true);
+    }); 
   }
 
 

@@ -3,6 +3,7 @@
 	$(function(){
 
 		//env variables
+		__DATA = null; //global VARIABLE para DATA de grafico
 		var thumbsBox = $('#thumbsBox');
 
 		// make code pretty
@@ -15,6 +16,10 @@
 		ui.linkLinks();
 		//bandeja expande contrae del graphic tool
 		ui.graphicWrapperExpandCollapse();
+		//esconde/muestra los canvas y las opciones de dibujo
+		ui.drawToolsBox();
+		//selectboxes de los indices y mercados
+		ui.selectBoxes();
 
 		// Usage: 
 		// This code loads jQuery and executes some code when jQuery is loaded
@@ -24,9 +29,6 @@
 
 		// carousel
 		//ui.carousel("#myCarousel");
-
-		// draw simple graph
-		ui.graphs("objtc","candlestick");
 
 		// get data with YUI
 		//crawler.simpleQuerybySymbol("YHOO");

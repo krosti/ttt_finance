@@ -66,8 +66,8 @@
 	ENDIF -->
 
 	<!-- include Bancha and the remote API -->
-	<script type="text/javascript" src="Bancha/js/Bancha.js"></script>
-	<script type="text/javascript" src="bancha-api.js"></script>
+	<!--script type="text/javascript" src="Bancha/js/Bancha.js"></script>
+	<script type="text/javascript" src="bancha-api.js"></script-->
 
 	<!-- include code -->
 	<!--script type="text/javascript" src="js/error-handling.js"></script>
