@@ -105,8 +105,9 @@ body{
 				}
 	#menu{
 		background: url(img/backmenu.jpg);
-		width: 100%;
+		width: 960px;
 		height: 55px;
+		top: 0px;
 		float: left;
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
