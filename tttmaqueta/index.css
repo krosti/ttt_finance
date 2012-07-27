@@ -1,5 +1,3 @@
-html{
-}
 body{
 	margin:0px;
 	background:url(img/back.jpg) repeat-x #fff;
@@ -165,3 +163,9 @@ body{
 				float:left;
 				margin:2px;
 			}
+#slider_ads{
+	background: url(img/sliderfake.jpg);
+	width:475px;
+	height:200px;
+	float:left;
+}
