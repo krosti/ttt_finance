@@ -201,7 +201,7 @@ body{
 			width: 457px;
 			height: 560px;
 		}
-			.slide{
+			.caja_slide{
 				padding-top:20px;
 			}
 			.izq_slide{
@@ -267,8 +267,11 @@ body{
 		margin-top:15px;
 		margin-left:30px;
 	}
+		#analisis .cuerpo_seccion{
+			height:500px;
+		}
 		#sit_actual .cuerpo_seccion{
-			height:475px;
+			height:462px;
 		}
 			.hora_slide{
 				float: left;
