@@ -3,7 +3,7 @@
 	$(function(){
 
 		var menuBox = $('#menu');
-		$(window).mousemove(function(){
+		$(window).scroll(function(){
 		    menuBox.css('position', ($(this).scrollTop() > 130) ? 'fixed' : 'relative' );
 		});
 
