@@ -1,0 +1,167 @@
+html{
+}
+body{
+	margin:0px;
+	background:url(img/back.jpg) repeat-x #fff;
+	color:#706f6f;
+	font-family:Helvetica;
+	font-size:11px;
+}
+.cuerpo{
+	width:960px;
+	margin:0px auto;
+}
+.header{
+	width:100%;
+	float:left;
+	height:200px;
+	padding-top:15px;
+}
+	#direccion{ 
+		margin-right:15px;
+		float:left;
+	
+ 		padding-top: 5px;
+ 		margin-left: 10px;
+}
+	#sobre{
+			float:left;
+	
+			width: 285px;
+			padding-top: 5px;
+}
+		#mail_color{
+			padding-left:5px;
+			color:#22b0c2;
+		}
+	#conectar{
+		float:right;
+	}
+		#conectar span{
+			text-decoration:underline;
+			font-size:12px;
+			margin:5px;
+			float:left;
+		}
+		#conectar img{
+			margin-top:5px;
+			float:left;
+			margin-right:5px;
+		}
+	#panel_header{
+		background:#f5f5f3;
+		border:1px solid #ccc;
+		border-bottom:none;
+		float:left;
+		margin-top:5px;
+		padding:25px 0px 0px 15px;
+		border-top-left-radius:10px;
+		border-top-right-radius:10px;
+		width: 943px;
+		height: 88px;
+	}
+		#logoppal{
+			float:left;
+		}
+		#login{
+			float:right;
+			width:350px;
+			margin-top:40px;
+		}
+			#login_user{
+				float:left;
+			}
+				#login_user span{
+					font-weight:bold;
+					float:left;
+					font-size:12px;
+					margin-right:5px;
+					padding-top: 2px;
+				}
+				.input_login{
+					padding-left: 20px;
+					height: 20px;
+					border:1px solid #ccc;
+					border-radius: 5px;
+					width:120px;
+					float:left;
+				}
+				#input_user{
+					background:url(img/user.png) #fbfbfb no-repeat 5px;	
+					margin-right:5px;
+				}
+				#input_pass{
+					background:url(img/pass.png) #fbfbfb no-repeat 5px;
+				}
+				#button_login{
+					background: url(img/button.jpg);
+					border: none;
+					height:20px;
+					width:55px;
+					font-size:11px;
+					color:#3c3c3b;
+					font-weight:bold;
+					margin-left:3px
+				}
+	#menu{
+		background: url(img/backmenu.jpg);
+		width: 100%;
+		height: 55px;
+		float: left;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+		#items{
+			float: left;
+			width: 655px;
+			margin-top: 25px;
+			margin-left: 20px;
+		}
+			.item{
+				color:#fff;
+				float: left;
+				font-size: 13px;
+				font-weight: bold;
+				width: 87px;
+			}
+				#item_cot{
+					width:110px;
+				}
+				#item_ana{
+					width: 106px;
+				}
+				#item_con{
+					width: 98px;
+				}
+				#item_opi{
+					width: 72px;
+				}
+				#item_cur{
+					width: 72px;
+				}
+				#item_not{
+					width: 80px;
+				}
+				#item_nos{
+					width: 80px;
+				}
+		#buscar_input{
+			background:white;
+			border:2px solid #ccc;
+			border-radius:8px;
+			font-weight:bold;
+			height:25px;
+			float:left;
+			color:#3c3c3b;
+			padding-left:8px;
+			margin-top: 18px;
+			margin-right:5px;
+		}
+		#logos_redes{
+			float:left;
+			margin-top: 18px;
+		}
+			#logos_redes img{
+				float:left;
+				margin:2px;
+			}
