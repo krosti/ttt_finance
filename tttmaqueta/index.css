@@ -106,6 +106,7 @@ body{
 		width: 960px;
 		height: 55px;
 		top: 0px;
+		z-index:99s;
 		float: left;
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
