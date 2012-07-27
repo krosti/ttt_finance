@@ -118,31 +118,35 @@ body{
 		}
 			.item{
 				color:#fff;
-				float: left;
+				float: left; /*le da display:inline.block y le ajusta el ancho automaticamente*/
 				font-size: 13px;
 				font-weight: bold;
-				width: 87px;
+				margin-left: 15px;
+				height:30px;
+				border-bottom:0px solid #FF4E00;
+				/*width: 87px;*/
 			}
 				#item_cot{
-					width:110px;
+					/*width:110px;*/
+					margin-left:0px;
 				}
 				#item_ana{
-					width: 106px;
+					/*width: 106px;*/
 				}
 				#item_con{
-					width: 98px;
+					/*width: 98px;*/
 				}
 				#item_opi{
-					width: 72px;
+					/*width: 72px;*/
 				}
 				#item_cur{
-					width: 72px;
+					/*width: 72px;*/
 				}
 				#item_not{
-					width: 80px;
+					/*width: 80px;*/
 				}
 				#item_nos{
-					width: 80px;
+					/*width: 80px;*/
 				}
 		#buscar_input{
 			background:white;
