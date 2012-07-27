@@ -2,18 +2,18 @@
 	margin:0px auto;
 	position:relative;
 	width:450px;
-  height:455px;
+  height:470px;
 }
 #slideshow #slidesContainer {
   margin:0 auto;
   overflow:auto; /* allow scrollbar */
   position:relative;
   width:450px;
-  height:455px;
+  height:470px;
 }
 #slideshow #slidesContainer .slide {
   margin:0 auto;
-  height:455px;
+  height:470px;
 }
 .control,.control2 {
   display:block;
@@ -25,12 +25,12 @@
 }
 #leftControl,#leftControl2 {
   right:60;
-  top:455;
+  top:470;
   background:url(img/flechaizq.jpg) no-repeat;
   z-index:2;
 }
 #rightControl,#rightControl2 {
-  right:25;
+  right:10;
   background:url(img/flechader.jpg) no-repeat ;
   z-index:2;
 }
@@ -38,20 +38,20 @@
   margin:0px auto;
   position:relative;
   width:450px;
-  height:420px;
+  height:435px;
 }
 #slideshow2 #slidesContainer2 {
   margin:0 auto;
   overflow:auto; /* allow scrollbar */
   position:relative;
   width:450px;
-  height:420px;
+  height:435px;
 }
 
 #slideshow2 #slidesContainer2 .slide2 {
   margin:0 auto;
-  height:420px;
+  height:435px;
 }
 #leftControl2 {
-  top:420;
+  top:435;
 }

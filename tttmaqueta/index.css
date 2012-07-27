@@ -106,7 +106,7 @@ body{
 		width: 960px;
 		height: 55px;
 		top: 0px;
-		z-index:99s;
+		z-index:99;
 		float: left;
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
@@ -208,6 +208,7 @@ body{
 		}
 			.caja_slide{
 				padding-top:20px;
+				float:left;
 			}
 			.izq_slide{
 				float:left;
@@ -276,7 +277,7 @@ body{
 			height:500px;
 		}
 		#sit_actual .cuerpo_seccion{
-			height:462px;
+			height:470px;
 		}
 			.hora_slide{
 				float: left;
@@ -284,5 +285,8 @@ body{
 				margin-left: 10px;
 				margin-bottom:10px;
 				font-weight: bold;
+			}
+			#sit_actual .compartir_slide span{
+				margin-right: 45px;
 			}
 
