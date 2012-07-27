@@ -186,7 +186,7 @@ body{
 	}
 	.seccion{
 		width:465px;
-		margin-bottom:35px;
+		margin-bottom:45px;
 		float:left;
 	}
 		.header_seccion{
@@ -361,4 +361,35 @@ body{
 			border-bottom-right-radius: 3px;
 			border-top-right-radius: 3px;
 		}
+#footer{
+	float: left;
+	margin-top: 89px;
+	width: 960px;
+}
+	#logofooter{
+		float: left;
+		margin-right: 30px;
+		margin-top: 2px;
+	}
+	#links_footer{
+		float: left;
+		font-weight: bold;
+	}
+	#unirse{
+		float: right;
+	}
+		#unirse span{
+			float:left;
+			margin-right: 5px;
+			font-weight: bold;
+		}
+		#unirse img{
+			float:left;
+			margin-left:5px;
+		}
+	#copy{
+		float:left;
+		margin-top: 35px;
+		margin-bottom: 15px;
+	}
 
