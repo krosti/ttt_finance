@@ -163,9 +163,117 @@ body{
 				float:left;
 				margin:2px;
 			}
-#slider_ads{
-	background: url(img/sliderfake.jpg);
-	width:475px;
-	height:200px;
-	float:left;
-}
+	#rankings{
+		height:205px;
+		width:960px;
+		float:left;
+	}
+	#slider_ads{
+		background: url(img/sliderfake.jpg);
+		width:475px;
+		height:200px;
+		float:left;
+	}
+	.column{
+		float:left;
+		width:465px;
+	}
+	.seccion{
+		width:465px;
+		height:700px;
+		float:left;
+	}
+		.header_seccion{
+			background: url(img/header_seccion.png) no-repeat;
+			width:465px;
+			height:18px;
+			color: white;
+			font-size: 17px;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.cuerpo_seccion{
+			margin-top: -3px;
+			margin-left: 4px;
+			border: 1px solid #e7e7e7;
+			border-top: none;
+			width: 457px;
+			height: 560px;
+		}
+			.slide{
+				padding-top:20px;
+			}
+			.izq_slide{
+				float:left;
+				padding-left:10px;
+				width:220px;
+			}
+				.img_ppal_slide{
+					border:4px solid #e7e7e7;
+					border-radius:8px;
+				}
+				.thumb_slide{
+					margin-top: 15px;
+				}
+					.thumb_slide img{
+						float:left;
+					}
+					.thumb_slide span{
+						float:left;
+						font-weight: bold;
+						width: 125px;
+						margin-left: 9px;
+						color:#3c3c3b;
+					}
+			.der_slide{
+				float:left;
+				width:220px;
+			}
+				.tit_slide{
+					float: left;
+					width: 100%;
+					font-size: 15px;
+					font-weight: bold;
+				}
+				.cuerpo_slide{
+					margin-top: 7px;
+					float: left;
+					width: 100%;
+				}
+			.separacion_slide{
+				width: 425px;
+				margin-left: 15px;
+				height: 1px;
+				background: #CCC;
+				float: left;
+				margin-top: 20px;
+			}
+			.separacion_inferior{
+				margin-top:10px;
+			}
+			.compartir_slide img{
+				float: left;
+				margin-top: 8px;
+				margin-left: 25px;
+			}
+			.compartir_slide span{
+				float: right;
+				margin-right: 25px;
+				text-decoration: underline;
+				margin-top: 12px;
+			}
+	#col_derecha{
+		margin-top:15px;
+		margin-left:30px;
+	}
+		#sit_actual .cuerpo_seccion{
+			height:475px;
+		}
+			.hora_slide{
+				float: left;
+				width: 465px;
+				margin-left: 10px;
+				margin-bottom:10px;
+				font-weight: bold;
+			}
+
