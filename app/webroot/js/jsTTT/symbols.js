@@ -129,32 +129,7 @@ symbols = {
       , low = 0
       , high = 0;
       
-    switch(type){
-      case 'candlestick':
-        for (var i = 0; i < data.length; i++) {
-          //[date, [low, open, close, adjclose, hight], color]
-          low = data[i].Low;
-          high = data[i].High;
-          
-          min = (min > low) ? low : min;
-          max = (max < high) ? high : max;
-
-          dataArray.push([
-              i+1, 
-              [
-                parseFloat(low), 
-                parseFloat(data[i].Open), 
-                parseFloat(data[i].Close), 
-                parseFloat(data[i].Adj_Close), 
-                parseFloat(high),
-                color,
-                color
-              ], 
-              'black'
-              ]);
-        };
-        break;
-    }
+    
     //console.log('$$$$$$$$$$');
     //console.log(dataArray);
     //console.log('$$$$$$$$$$');
