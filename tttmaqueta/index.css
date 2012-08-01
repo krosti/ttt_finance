@@ -186,7 +186,7 @@ body{
 	}
 	.seccion{
 		width:465px;
-		height:700px;
+		margin-bottom:45px;
 		float:left;
 	}
 		.header_seccion{
@@ -291,4 +291,105 @@ body{
 			#sit_actual .compartir_slide span{
 				margin-right: 45px;
 			}
+	.noticia{
+		float: left;
+		margin-top: 10px;
+		width: 458px;
+	}
+		.noticia img{
+			float: left;
+		}
+		#noticias .separacion_slide{
+			margin-top:10px;
+		}
+		#noticias .cuerpo_seccion{
+			height:480px;
+		}
+		.tit_noticia{
+			font-weight: bold;
+			margin-left: 10px;
+			color: #3C3C3B;
+			font-size: 12px;
+			margin-right: 10px;
+			float: left;
+			margin-top: 3px;
+		}
+		.cuerpo_noticia{
+			margin-top: 3px;
+			font-size: 12px;
+			margin-left: 12px;
+			float: left;
+		}
+	#opiniones .cuerpo_seccion{
+		padding-top:20px;
+		background: #f6f6f6;
+		border:none;
+	}
+	.opinion{
+		width: 458px;
+		background: url(img/backopinion.png) no-repeat;
+		margin-left: -6px;
+		height: 158px;
+		padding-left: 5px;
+		margin-bottom:15px;
+	}
+		.titulo_opinion{
+			float: left;
+			width: 100%;
+			font-weight: bold;
+			font-size: 12px;
+			height: 30px;
+		}
+		.cuerpo_opinion{
+			font-size: 12px;
+			width: 425px;
+			float: left;
+		}
+		.opinion .compartir_slide img{
+			margin-top: 35px;
+			margin-left: 0px;
+		}
+		.opinion .compartir_slide span{
+			margin-top: 39px;
+		}
+		.borde_opinion{
+			float: left;
+			padding: 13px;
+			height: 131px;
+			border: 1px solid #CCC;
+			border-left: none;
+			border-bottom-right-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+#footer{
+	float: left;
+	margin-top: 89px;
+	width: 960px;
+}
+	#logofooter{
+		float: left;
+		margin-right: 30px;
+		margin-top: 2px;
+	}
+	#links_footer{
+		float: left;
+		font-weight: bold;
+	}
+	#unirse{
+		float: right;
+	}
+		#unirse span{
+			float:left;
+			margin-right: 5px;
+			font-weight: bold;
+		}
+		#unirse img{
+			float:left;
+			margin-left:5px;
+		}
+	#copy{
+		float:left;
+		margin-top: 35px;
+		margin-bottom: 15px;
+	}
 
