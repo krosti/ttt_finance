@@ -46,6 +46,27 @@ ui_home = {
 				}, 1500 )
 			});
 		
+	},
 
+	updateFeeds: function(data){
+
+		/*
+		*	desc: actualiza la caja de feeds
+		*/
+		var 	
+				box = $('#noticias > .cuerpo_seccion')
+			,	separadorNoticias = '<div class="separacion_slide"></div>';
+
+		box.find('div').each(function(){
+	      $(this).remove();
+	    });
+	    
+		for (var i = data.length - 1; i >= 0; i--) {
+			var e = document.createElement('div');
+			e.innerHTML = data[i].span.a.content;
+			e.setAttribute('id', i);
+			e.setAttribute('class', 'noticia');
+			box.append(e).append(separadorNoticias);
+		};
 	}
 }

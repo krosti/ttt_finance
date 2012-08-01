@@ -12,6 +12,7 @@
 		// This code loads YUI and executes some code when YUI is loaded
 		ui.loadScript("http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js", function(){
 		  symbols._init('#datosLive');
+		  crawler.getFeeds();
 		});
 		ui.marquesinaAnimada('#datosLive');
 

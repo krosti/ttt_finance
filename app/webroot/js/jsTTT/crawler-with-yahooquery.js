@@ -159,6 +159,37 @@ crawler = {
       
       //Y.later(7000, q, q.send, null, true);
     }); 
+  },
+
+  getFeeds: function(){
+    /*
+    *  query de Historical Data
+    */
+    YUI().use('node', 'yql', function(Y) {
+      var count = 0
+        , queryString = '';
+
+      var q = Y.YQL('select * from html where url="http://www.invertironline.com/cuerpo.asp" and xpath=\'//div[@class="overview"]/table/tr/td[@class="noticiaConIconoHome"]\'', {
+        //Tell JSONP to not cache this request so we get new images on each request
+        allowCache: false,
+        on: {
+          success: function(r) {
+            if (r.query && r.query.results) {
+                count++;
+                console.log("#5- FEEDS" );
+                //__DATA = r.query.results.quote;
+                //console.log('Data: __DATA');
+                //console.log(__DATA);
+                //console.log('End Data: __DATA');
+                //(r.query.diagnostic && r.query.diagnostic.warning) ? symbols.drawError(r.query.diagnostic.warning,queryString) : symbols.doArray('candlestick', __DATA, color);
+                ui_home.updateFeeds(r.query.results.td);
+            }
+          }
+        }
+      });
+      
+      //Y.later(7000, q, q.send, null, true);
+    }); 
   }
 
 

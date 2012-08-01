@@ -269,8 +269,9 @@
 					Oficialistas y opositores salieron al cruce del titular de la CGT
 				</span>
 			</div>
-			<div class="separacion_slide">
-			</div>
+			
+			<div class="separacion_slide"></div>
+
 			<div class="noticia">
 				<span class="tit_noticia">
 					28/Jun
@@ -280,8 +281,10 @@
 					Oficialistas y opositores salieron al cruce del titular de la CGT
 				</span>
 			</div>
-			<div class="separacion_slide">
-			</div>
+			
+			<div class="separacion_slide"></div>
+
+			
 			<div class="noticia">
 				<span class="tit_noticia">
 					28/Jun
