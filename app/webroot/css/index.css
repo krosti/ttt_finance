@@ -188,6 +188,9 @@ body{
 		margin-top: 30px;
 		margin-bottom: 40px;
 	}
+	#cotizacionBox .wrap{
+		height:30px;
+	}
 	#slider_ads{
 		background: url(../img/sliderfake.jpg);
 		width:475px;
@@ -328,11 +331,21 @@ body{
 			float: left;
 			margin-top: 3px;
 		}
+		.img_noticia{
+			width:21px;
+			height:20px;
+			float:left;
+			background-repeat: no-repeat;
+		}
 		.cuerpo_noticia{
 			margin-top: 3px;
 			font-size: 12px;
 			margin-left: 12px;
 			float: left;
+			white-space: nowrap;
+			width: 340px;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 	#opiniones .cuerpo_seccion{
 		padding-top:20px;

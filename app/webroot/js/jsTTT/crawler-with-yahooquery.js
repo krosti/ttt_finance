@@ -169,7 +169,7 @@ crawler = {
       var count = 0
         , queryString = '';
 
-      var q = Y.YQL('select * from html where url="http://www.invertironline.com/cuerpo.asp" and xpath=\'//div[@class="overview"]/table/tr/td[@class="noticiaConIconoHome"]\'', {
+      var q = Y.YQL('select * from html where url="http://www.invertironline.com/cuerpo.asp" and xpath=\'//div[@class="overview"]/table/tr\' | reverse() ', {
         //Tell JSONP to not cache this request so we get new images on each request
         allowCache: false,
         on: {
@@ -182,7 +182,7 @@ crawler = {
                 //console.log(__DATA);
                 //console.log('End Data: __DATA');
                 //(r.query.diagnostic && r.query.diagnostic.warning) ? symbols.drawError(r.query.diagnostic.warning,queryString) : symbols.doArray('candlestick', __DATA, color);
-                ui_home.updateFeeds(r.query.results.td);
+                ui_home.updateFeeds(r.query.results.tr);
             }
           }
         }

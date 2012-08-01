@@ -60,10 +60,15 @@ ui_home = {
 		box.find('div').each(function(){
 	      $(this).remove();
 	    });
-	    
+
 		for (var i = data.length - 1; i >= 0; i--) {
 			var e = document.createElement('div');
-			e.innerHTML = data[i].span.a.content;
+
+			e.innerHTML = 
+				'<span class="tit_noticia">' + data[i].td[0].span.content + '</span>'+
+				'<div class="img_noticia" style="' + data[i].td[1].style.replace(/\//,'./img/').replace(/archivos\//,'') + '"></div>' +
+				'<span class="cuerpo_noticia">'+ data[i].td[1].span.a.content + '</span>';
+
 			e.setAttribute('id', i);
 			e.setAttribute('class', 'noticia');
 			box.append(e).append(separadorNoticias);
