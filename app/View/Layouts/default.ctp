@@ -356,6 +356,132 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					</div>
 				</div>
 			</div>
+			<div class="seccion" id="noticias">
+				<div class="header_seccion">
+					Noticias
+				</div>
+				<div class="cuerpo_seccion">
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+					<div class="separacion_slide">
+					</div>
+					<div class="noticia">
+						<span class="tit_noticia">
+							28/Jun
+						</span>
+						<img src="img/new.jpg" />
+						<span class="cuerpo_noticia">
+							Oficialistas y opositores salieron al cruce del titular de la CGT
+						</span>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="column" id="col_derecha">
 			<div class="seccion" id="sit_actual">
@@ -585,7 +711,91 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					</div>
 				</div>
 			</div>
-			<div class="seccion" id="sit_actual">
+			<div class="seccion" id="opiniones">
+				<div class="header_seccion">
+					Consulta / Opini&oacute;n
+				</div>
+				<div class="cuerpo_seccion">
+					<div class="opinion">
+						<div class="borde_opinion">
+							<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
+							<span class="cuerpo_opinion">
+								<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
+								<br />
+								El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
+							</span>
+							<div class="compartir_slide">
+								<img src="img/compartir_slide.png" />
+								<span>
+									Agregar un comentario
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="opinion">
+						<div class="borde_opinion">
+							<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
+							<span class="cuerpo_opinion">
+								<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
+								<br />
+								El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
+							</span>
+							<div class="compartir_slide">
+								<img src="img/compartir_slide.png" />
+								<span>
+									Agregar un comentario
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="opinion">
+						<div class="borde_opinion">
+							<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
+							<span class="cuerpo_opinion">
+								<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
+								<br />
+								El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
+							</span>
+							<div class="compartir_slide">
+								<img src="img/compartir_slide.png" />
+								<span>
+									Agregar un comentario
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="opinion">
+						<div class="borde_opinion">
+							<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
+							<span class="cuerpo_opinion">
+								<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
+								<br />
+								El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
+							</span>
+							<div class="compartir_slide">
+								<img src="img/compartir_slide.png" />
+								<span>
+									Agregar un comentario
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<img src="img/logofooter.png" id="logofooter" />
+			<div id="links_footer">
+				Ayuda  |  Sugerencias  |  Pol&iacute;tica de privacidad  |  T&eacute;rminos del Servicio  |  Propiedad Intelectual
+			</div>
+			<div id="unirse">
+				<span>&Uacute;nase a nuestra comunidad</span>
+				<img src="img/logofb.png" />
+				<img src="img/logotw.png" />
+				<img src="img/logoln.png" />
+			</div>
+			<div id="copy">
+				Copyright © 2012 Tritango Traders. Todos los derechos reservados.  
 			</div>
 		</div>
 	</div>
