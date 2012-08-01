@@ -1,0 +1,57 @@
+#slideshow {
+	margin:0px auto;
+	position:relative;
+	width:450px;
+  height:470px;
+}
+#slideshow #slidesContainer {
+  margin:0 auto;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+  width:450px;
+  height:470px;
+}
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  height:470px;
+}
+.control,.control2 {
+  display:block;
+  width:25px;
+  height:24px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl,#leftControl2 {
+  right:60;
+  top:470;
+  background:url(img/flechaizq.jpg) no-repeat;
+  z-index:2;
+}
+#rightControl,#rightControl2 {
+  right:10;
+  background:url(img/flechader.jpg) no-repeat ;
+  z-index:2;
+}
+#slideshow2 {
+  margin:0px auto;
+  position:relative;
+  width:450px;
+  height:435px;
+}
+#slideshow2 #slidesContainer2 {
+  margin:0 auto;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+  width:450px;
+  height:435px;
+}
+
+#slideshow2 #slidesContainer2 .slide2 {
+  margin:0 auto;
+  height:435px;
+}
+#leftControl2 {
+  top:435;
+}

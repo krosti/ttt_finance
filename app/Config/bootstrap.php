@@ -182,7 +182,7 @@ CakeLog::config('error', array(
 
 /**
  * Configure the cache for Banchas Remote API.
- */
+ *//*
 Cache::config('_bancha_api_', array(
     'engine' => $engine,
     'prefix' => $prefix . 'bancha_api_',
@@ -190,3 +190,4 @@ Cache::config('_bancha_api_', array(
     'serialize' => ($engine === 'File'),
     'duration' => $duration
 ));
+*/

@@ -1,10 +1,11 @@
 <?php
+App::uses('AppController', 'Controller');
 /**
  * Tags Controller
  *
+ * @property Tag $Tag
  */
 class TagsController extends AppController {
-
 
 /**
  * index method
@@ -19,6 +20,7 @@ class TagsController extends AppController {
 /**
  * view method
  *
+ * @throws NotFoundException
  * @param string $id
  * @return void
  */
@@ -45,13 +47,12 @@ class TagsController extends AppController {
 				$this->Session->setFlash(__('The tag could not be saved. Please, try again.'));
 			}
 		}
-		$articles = $this->Tag->Article->find('list');
-		$this->set(compact('articles'));
 	}
 
 /**
  * edit method
  *
+ * @throws NotFoundException
  * @param string $id
  * @return void
  */
@@ -70,13 +71,13 @@ class TagsController extends AppController {
 		} else {
 			$this->request->data = $this->Tag->read(null, $id);
 		}
-		$articles = $this->Tag->Article->find('list');
-		$this->set(compact('articles'));
 	}
 
 /**
  * delete method
  *
+ * @throws MethodNotAllowedException
+ * @throws NotFoundException
  * @param string $id
  * @return void
  */
@@ -90,7 +91,7 @@ class TagsController extends AppController {
 		}
 		if ($this->Tag->delete()) {
 			$this->Session->setFlash(__('Tag deleted'));
-			$this->redirect(array('action'=>'index'));
+			$this->redirect(array('action' => 'index'));
 		}
 		$this->Session->setFlash(__('Tag was not deleted'));
 		$this->redirect(array('action' => 'index'));

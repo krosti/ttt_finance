@@ -1,21 +1,19 @@
 <?php
+App::uses('AppModel', 'Model');
 /**
- * Tag Model
+ * Tipo Model
  *
+ * @property Post $Post
  */
-class Tag extends AppModel {
-	/**
-	 * Behaviors
-	 */
-	
-	public $actsAs = array(/*'Bancha.BanchaRemotable'*/);
+class Tipo extends AppModel {
+
 /**
  * Validation rules
  *
  * @var array
  */
 	public $validate = array(
-		'string' => array(
+		'titulo' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -30,25 +28,23 @@ class Tag extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * hasAndBelongsToMany associations
+ * hasMany associations
  *
  * @var array
  */
-	public $hasAndBelongsToMany = array(
-		'Article' => array(
-			'className' => 'Article',
-			'joinTable' => 'articles_tags',
-			'foreignKey' => 'tag_id',
-			'associationForeignKey' => 'article_id',
-			'unique' => true,
+	public $hasMany = array(
+		'Post' => array(
+			'className' => 'Post',
+			'foreignKey' => 'tipo_id',
+			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
+			'exclusive' => '',
 			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
+			'counterQuery' => ''
 		)
 	);
 
