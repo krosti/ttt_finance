@@ -102,7 +102,7 @@ crawler = {
     });
   },
 
-  queryYQL: function(simbolos){
+  queryYQL: function(simbolos, boxForUpdate){
     /*
     * query Quant Yahoo Finance Site
     */
@@ -119,7 +119,7 @@ crawler = {
             if (r.query && r.query.results) {
                 count++;
                 console.log("#2- Actualizacion nro: "+count);
-                symbols.updateBox(r.query.results.quote);
+                symbols.updateBox(r.query.results.quote,boxForUpdate);
                 //res.setHTML(r.query.results.quote);
             }
           }

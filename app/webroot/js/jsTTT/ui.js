@@ -191,16 +191,16 @@ ui = {
     * require: jquery.jstockticker-1.1.js
     * desc: anima la marquesina
     */
-    $('#datosLive').jStockTicker({interval: 45});
+    $(contenedor).jStockTicker({interval: 45});
   },
 
   linkLinks: function(){
       /*
       * desc: linkea los links a sus clicks para actualizar la barra de cotizaciones online
       */
-      $('#linkARG').on('click', function(){ window.location.hash = 'argentina'; symbols._init(); });
-      $('#linkUSA').on('click', function(){ window.location.hash = 'usa'; symbols._init(); });
-      $('#linkIND').on('click', function(){ window.location.hash = 'indices'; symbols._init(); });
+      $('#linkARG').on('click', function(){ window.location.hash = 'argentina'; symbols._init('#datosLive'); });
+      $('#linkUSA').on('click', function(){ window.location.hash = 'usa'; symbols._init('#datosLive'); });
+      $('#linkIND').on('click', function(){ window.location.hash = 'indices'; symbols._init('#datosLive'); });
       $('#showLoabels').on('click', function(){ $('.labelsCotizacion').slideToggle(); });
     },
 

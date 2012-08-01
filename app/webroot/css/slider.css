@@ -26,12 +26,12 @@
 #leftControl,#leftControl2 {
   right:60;
   top:470;
-  background:url(img/flechaizq.jpg) no-repeat;
+  background:url(../img/flechaizq.jpg) no-repeat;
   z-index:2;
 }
 #rightControl,#rightControl2 {
   right:10;
-  background:url(img/flechader.jpg) no-repeat ;
+  background:url(../img/flechader.jpg) no-repeat ;
   z-index:2;
 }
 #slideshow2 {

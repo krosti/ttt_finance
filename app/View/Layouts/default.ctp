@@ -29,7 +29,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider'));
+		echo $this->Html->css(array('index','slider','stockTicker'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -127,11 +127,12 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'slider.js',
 		'ui-home',
 		'lightbox',
+		'jquery.jstockticker-1.1',
 		//ourAPPS
-		'jsTTT/application',
+		//'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
-		//'jsTTT/ui',
+		'jsTTT/ui',
 		//'jsTTT/gchart' //for Google SVG Chart
 		'jsTTT/rgraph',
 		'jsTTT/drawCanvas'

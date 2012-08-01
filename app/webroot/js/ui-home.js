@@ -10,7 +10,7 @@ ui_home = {
 	*/
 		var menuBox = $('#menu');
 		$(window).scroll(function(){
-		    menuBox.css('position', ($(this).scrollTop() > 150) ? 'fixed' : 'relative' );
+		    menuBox.css('position', ($(this).scrollTop() > 180) ? 'fixed' : 'relative' );
 		});
 	},
 

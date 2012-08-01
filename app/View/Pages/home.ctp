@@ -1,4 +1,5 @@
-<div id="rankings">
+<div id="cotizacionBox">
+	<div id="datosLive"></div>
 </div>
 <div class="column" id="col_izquierda">
 	<div id="slider_ads">

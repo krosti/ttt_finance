@@ -170,10 +170,23 @@ body{
 				float:left;
 				margin:2px;
 			}
-	#rankings{
-		height:205px;
+
+	#cotizacionBox{
 		width:960px;
-		float:left;
+		height: 35px;
+		background-color: #eee;
+		color: #3e3e3e;
+		border: 1px solid #363636;
+		-webkit-border-top-left-radius: 2px;
+		-webkit-border-top-right-radius: 2px;
+		-moz-border-radius-topleft: 2px;
+		-moz-border-radius-topright: 2px;
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+		box-shadow: 0px 0px 7px #666;
+		float: left;
+		margin-top: 30px;
+		margin-bottom: 40px;
 	}
 	#slider_ads{
 		background: url(../img/sliderfake.jpg);
@@ -393,3 +406,28 @@ body{
 		margin-top: 35px;
 		margin-bottom: 15px;
 	}
+
+#datosLive div{
+	font-family: arial,helvetica,sans;
+	padding:10px;
+	float:left;
+	border-right: 1px solid #303030;
+}
+#datosLive span{
+	margin-left:5px;
+	margin-right:5px;
+	font-size: 13px;
+}
+.positive{
+	color:green;
+	padding-left: 20px;
+	background: url(../img/icons/arrowPos.gif) no-repeat 0px;
+}
+.negative{
+	color:red;
+	padding-left: 20px;
+	background: url(../img/icons/arrowNeg.gif) no-repeat 0px;
+}
+.neutral{
+	color:#7AA9CB;
+}

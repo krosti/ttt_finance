@@ -1,16 +1,18 @@
 symbols = {
 
-  _init:function(){
+  _init:function(box){
     var stringAcciones = '';
 
     stringAcciones = (window.location.hash) ? symbols.listaDeAcciones(window.location.hash.replace('#','')) : symbols.listaDeAcciones('argentina');
 
     console.log(stringAcciones);
-    symbols.getData(crawler.queryYQL(stringAcciones),function(r){
+    symbols.getData(crawler.queryYQL(stringAcciones, box),function(r){
       //mejora de performance para conexiones rápidas o rtas rapidas, si encuentra el resultado en R, simplemente actualiza, 
       //sino espera success en la query de YQL y llama a updateBox otra vez con ese resultado = R = data
       if (r){
-        symbols.updateBox(r); //this
+        console.log('EEEEE');
+        console.log(box);
+        symbols.updateBox(r, box); //this
       }
     });
     // TODO: hacer lo de arriba
@@ -88,11 +90,11 @@ symbols = {
     
     return baseString;
   },
-  updateBox:function(data){
+  updateBox:function(data, boxx){
     /*
     * desc: actualiza una caja con los ultimos datos de un accion por Symbol.
     */
-    var box = $('#datosLive');
+    var box = $(boxx);
     
     box.find('div').each(function(){
       $(this).remove();
