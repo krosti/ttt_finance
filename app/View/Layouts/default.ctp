@@ -43,7 +43,8 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				TriTangoTraders  |  795 Folsom Ave, Suite 600  |  Capital Federal, Bs As, BA 1000  |  P: (11) 456-7890
 			</div>
 			<div id="sobre">
-				<img src="img/sobre.png" /> <span id="mail_color">info@tritangotraders.com</span>
+				<?php echo $this->Html->image('sobre.png'); ?>
+				<span id="mail_color">info@tritangotraders.com</span>
 			</div>
 			<div id="conectar">
 				<span>Conectarse</span>
@@ -95,9 +96,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 
 				<input id="buscar_input" value="Buscar"></input>
 				<div id="logos_redes">
-					<img src="img/fb.png" />
-					<img src="img/tw.png" />
-					<img src="img/ln.png" />
+					<?php echo $this->Html->image('fb.png'); ?>
+					<?php echo $this->Html->image('tw.png'); ?>
+					<?php echo $this->Html->image('ln.png'); ?>
 				</div>
 			</div>
 		</div>
@@ -106,15 +107,15 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		<?php #echo $this->element('sql_dump'); ?>
 		<div id="graphBOX" style="display:none"><?php echo $this->element('posts'); ?></div>
 		<div id="footer">
-			<img src="img/logofooter.png" id="logofooter" />
+			<?php echo $this->Html->image('logofooter.png',array('id'=>'logofooter') ); ?>
 			<div id="links_footer">
 				Ayuda  |  Sugerencias  |  Pol&iacute;tica de privacidad  |  T&eacute;rminos del Servicio  |  Propiedad Intelectual
 			</div>
 			<div id="unirse">
 				<span>&Uacute;nase a nuestra comunidad</span>
-				<img src="img/logofb.png" />
-				<img src="img/logotw.png" />
-				<img src="img/logoln.png" />
+				<?php echo $this->Html->image('logofb.png'); ?>
+				<?php echo $this->Html->image('logotw.png'); ?>
+				<?php echo $this->Html->image('logoln.png'); ?>
 			</div>
 			<div id="copy">
 				Copyright © 2012 Tritango Traders. Todos los derechos reservados.  
