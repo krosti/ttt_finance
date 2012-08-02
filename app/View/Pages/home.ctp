@@ -11,246 +11,47 @@
 		<div class="cuerpo_seccion">
 			<div id="slideshow">
 				<div id="slidesContainer">
-					<div class="slide">
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
+
+						<?php if (sizeof($analisisttt) % 2 == 0) :?>
+						<div class="slide">
+						<?php endif; ?>
+						<?php foreach ($analisisttt as $analisis) {?>
+							
+								<div class="caja_slide">
+									<div class="izq_slide">
+										<img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200"/>
+										<div class="thumb_slide">
+											<!--img src="img/warning.png" /-->
+											<span>
+												<?php echo 'Lorem ipsum ..' ?>
+											</span>
+										</div>
+									</div>
+									<div class="der_slide">
+										<span class="tit_slide">
+											<?php echo $analisis['Post']['titulo']; ?>
+										</span>
+										<span class="cuerpo_slide">
+											<?php echo $analisis['Post']['descripcion']; ?>
+										</span>
+									</div>
+									<div class="separacion_slide">
+									</div>
+									<div class="compartir_slide">
+										<!--img src="img/compartir_slide.png" /-->
+										<span>
+											Agregar un comentario
+										</span>
+									</div>
+									<div class="separacion_slide separacion_inferior">
+									</div>
 								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
+							
+						<?php } ?>
+						<?php if (sizeof($analisisttt) % 2 == 0) : ?>
 						</div>
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-						<div class="caja_slide">
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-								<div class="thumb_slide">
-									<img src="img/warning.png" />
-									<span>
-										Thumbnail caption right here... 
-									</span>
-								</div>
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n23
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
+						<?php endif; ?>
+
 				</div>
 			</div>
 		</div>
@@ -260,7 +61,7 @@
 			Noticias
 		</div>
 		<div class="cuerpo_seccion">
-			
+
 		</div>
 	</div>
 </div>
@@ -272,222 +73,44 @@
 		<div class="cuerpo_seccion">
 			<div id="slideshow2">
 				<div id="slidesContainer2">
-					<div class="slide2">
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
+
+					<?php if (sizeof($situacionesactuales) % 2 == 0) :?>
+					<div class="slide">
+					<?php endif; ?>
+					<?php foreach ($situacionesactuales as $situacion) {?>
+							
+								<div class="caja_slide">
+									<span class="hora_slide">
+										<?php echo date("d-m-Y (H:i A)", strtotime($situacion['Post']['created'])); ?>
+									</span>
+									<div class="izq_slide">
+										<img src="<?php echo $situacion['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200"/>
+									</div>
+									<div class="der_slide">
+										<span class="tit_slide">
+											<?php echo $situacion['Post']['titulo']; ?>
+										</span>
+										<span class="cuerpo_slide">
+											<?php echo $situacion['Post']['descripcion']; ?>
+										</span>
+									</div>
+									<div class="separacion_slide">
+									</div>
+									<div class="compartir_slide">
+										<!--img src="img/compartir_slide.png" /-->
+										<span>
+											<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
+										</span>
+									</div>
+									<div class="separacion_slide separacion_inferior">
+									</div>
+								</div>
+							
+						<?php } ?>
+						<?php if (sizeof($situacionesactuales) % 2 == 0) : ?>
 						</div>
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
-					<div class="slide2">
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
-					<div class="slide2">
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
-					<div class="slide2">
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-						<div class="caja_slide">
-							<span class="hora_slide">
-								DD-MM-YY HH:MM
-							</span>
-							<div class="izq_slide">
-								<img src="img/imgslide.png" class="img_ppal_slide" />
-							</div>
-							<div class="der_slide">
-								<span class="tit_slide">
-									Descripci&oacute;n
-								</span>
-								<span class="cuerpo_slide">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-								</span>
-							</div>
-							<div class="separacion_slide">
-							</div>
-							<div class="compartir_slide">
-								<img src="img/compartir_slide.png" />
-								<span>
-									Agregar un comentario
-								</span>
-							</div>
-							<div class="separacion_slide separacion_inferior">
-							</div>
-						</div>
-					</div>
+						<?php endif; ?>
+
 				</div>
 			</div>
 		</div>
@@ -497,54 +120,6 @@
 			Consulta / Opini&oacute;n
 		</div>
 		<div class="cuerpo_seccion">
-			<div class="opinion">
-				<div class="borde_opinion">
-					<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
-					<span class="cuerpo_opinion">
-						<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
-						<br />
-						El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
-					</span>
-					<div class="compartir_slide">
-						<img src="img/compartir_slide.png" />
-						<span>
-							Agregar un comentario
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="opinion">
-				<div class="borde_opinion">
-					<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
-					<span class="cuerpo_opinion">
-						<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
-						<br />
-						El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
-					</span>
-					<div class="compartir_slide">
-						<img src="img/compartir_slide.png" />
-						<span>
-							Agregar un comentario
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="opinion">
-				<div class="borde_opinion">
-					<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
-					<span class="cuerpo_opinion">
-						<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
-						<br />
-						El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
-					</span>
-					<div class="compartir_slide">
-						<img src="img/compartir_slide.png" />
-						<span>
-							Agregar un comentario
-						</span>
-					</div>
-				</div>
-			</div>
 			<div class="opinion">
 				<div class="borde_opinion">
 					<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>

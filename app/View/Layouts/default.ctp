@@ -29,7 +29,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','stockTicker'));
+		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -47,12 +47,13 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			</div>
 			<div id="conectar">
 				<span>Conectarse</span>
-				<img src="img/logofb.png" />
+				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
+				
 				<span>Registrarse</span>
 			</div>
 			<div id="panel_header">
 				<div id="logoppal">
-					<img src="img/logo.png" />
+					<?php echo $this->Html->image('logo.png',array('url'=>'/')); ?>
 				</div>
 				<div id="login">
 					<div id="login_user">
@@ -70,25 +71,25 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			<div id="menu">
 				<div id="items">
 					<div class="item" id="item_cot">
-						COTIZACIONES
+						<?php echo $this->Html->link('COTIZACIONES','/'); ?>
 					</div>
 					<div class="item" id="item_ana">
-						ANALISIS TTT
+						<?php echo $this->Html->link('ANALISIS TTT','/'); ?>
 					</div>
 					<div class="item" id="item_con">
-						CONSULTAS
+						<?php echo $this->Html->link('CONSULTAS/OPINION','/'); ?>
 					</div>
-					<div class="item" id="item_opi">
-						OPINION
-					</div>
+					<!--div class="item" id="item_opi">
+						<?php echo $this->Html->link('OPINION','/'); ?>
+					</div-->
 					<div class="item" id="item_cur">
-						CURSOS
+						<?php echo $this->Html->link('CURSOS','/cursos'); ?>
 					</div>
 					<div class="item" id="item_not">
-						NOTICIAS
+						<?php echo $this->Html->link('NOTICIAS','/'); ?>
 					</div>
 					<div class="item" id="item_nos">
-						NOSOTROS
+						<?php echo $this->Html->link('NOSOTROS','/nosotros'); ?>
 					</div>
 				</div>
 
@@ -102,7 +103,8 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		</div>
 		
 		<?php echo $this->fetch('content'); ?>
-		
+		<?php #echo $this->element('sql_dump'); ?>
+		<div id="graphBOX" style="display:none"><?php echo $this->element('posts'); ?></div>
 		<div id="footer">
 			<img src="img/logofooter.png" id="logofooter" />
 			<div id="links_footer">
@@ -118,11 +120,13 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				Copyright © 2012 Tritango Traders. Todos los derechos reservados.  
 			</div>
 		</div>
+
 	</div>
 
 </body>
 <?php echo $this->Html->script(array(
 		'jquery',
+		'jquery-ui',
 		'application-site.js',
 		'slider.js',
 		'ui-home',

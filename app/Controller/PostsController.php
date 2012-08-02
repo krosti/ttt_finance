@@ -47,7 +47,7 @@ class PostsController extends AppController {
 				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
 			}
 		}
-		$tipos = $this->Post->Tipo->find('list');
+		$tipos = $this->Post->Tipo->find('list', array( 'fields' => array('Tipo.titulo') ));
 		$this->set(compact('tipos'));
 	}
 

@@ -2,11 +2,12 @@
 
 	$(function(){
 
-		slider.iniciar_slider($('#slideshow'), $('#slidesContainer'),$('.slide'),450,"");
-		slider.iniciar_slider($('#slideshow2'), $('#slidesContainer2'),$('.slide2'),450,"2");
+		//slider.iniciar_slider($('#slideshow'), $('#slidesContainer'),$('.slide'),450,"");
+		//slider.iniciar_slider($('#slideshow2'), $('#slidesContainer2'),$('.slide2'),450,"2");
 
 		ui_home.manejo_scroll();
 		ui_home.menu_animacion_hover();
+		ui_home.agregarComentario();
 		
 		// Usage: 
 		// This code loads YUI and executes some code when YUI is loaded

@@ -43,7 +43,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Post');
 
 /**
  * Displays a view
@@ -52,6 +52,10 @@ class PagesController extends AppController {
  * @return void
  */
 	public function display() {
+		
+		$this->set('analisisttt', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '1') ) ) );
+		$this->set('situacionesactuales', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '2') ) ) );
+		
 		$path = func_get_args();
 
 		$count = count($path);

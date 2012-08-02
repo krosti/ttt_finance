@@ -10,6 +10,11 @@ body{
 	width:960px;
 	margin:0px auto;
 }
+.extra{
+	margin-top:50px;
+	height:250px;
+	float: left;
+}
 .header{
 	width:100%;
 	float:left;
@@ -97,10 +102,13 @@ body{
 					border: none;
 					height:20px;
 					width:55px;
-					font-size:11px;
+					font-size:7px;
 					color:#3c3c3b;
 					font-weight:bold;
-					margin-left:3px
+					margin-left:3px;
+					float: right;
+					margin-right: 20px;
+					margin-top: 2px;
 				}
 	#menu{
 		background: url(../img/backmenu.jpg);
@@ -112,6 +120,7 @@ body{
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
 	}
+	#menu a:link, #menu a:hover, #menu a:visited{ text-decoration: none; color:white; }
 		#items{
 			float: left;
 			width: 655px;
@@ -173,7 +182,7 @@ body{
 
 	#cotizacionBox{
 		width:960px;
-		height: 35px;
+		height: 30px;
 		background-color: #eee;
 		color: #3e3e3e;
 		border: 1px solid #363636;
@@ -185,8 +194,8 @@ body{
 		border-top-right-radius: 2px;
 		box-shadow: 0px 0px 7px #666;
 		float: left;
-		margin-top: 30px;
-		margin-bottom: 40px;
+		margin-top: 60px;
+		margin-bottom: 65px;
 	}
 	#cotizacionBox .wrap{
 		height:30px;
@@ -247,7 +256,7 @@ body{
 					.thumb_slide span{
 						float:left;
 						font-weight: bold;
-						width: 125px;
+						/*width: 125px;*/
 						margin-left: 9px;
 						color:#3c3c3b;
 					}
@@ -264,7 +273,7 @@ body{
 				.cuerpo_slide{
 					margin-top: 7px;
 					float: left;
-					width: 100%;
+					width: 205px;
 				}
 			.separacion_slide{
 				width: 425px;

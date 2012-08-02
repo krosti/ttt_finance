@@ -18,14 +18,16 @@ ui_home = {
 	/*
 	*	desc: agrega animacion al menu cuando se pone el mouse arriba
 	*/
-		$('.item')
-			.on('mouseover',function(){ $(this).animate({
+		var item = $('.item');
+
+		item.find('a')
+			.on('mouseover',function(){ $(this).closest('.item').animate({
 				opacity: 0.9,
 				marginTop: "-2px",
 				color: "#FF4E00",
 				borderBottomWidth: "2px"
 			}, "fast" ) })
-			.on('mouseout',function(){ $(this).animate({
+			.on('mouseout',function(){ $(this).closest('.item').animate({
 				opacity: 1,
 				marginTop: "0px",
 				color: "white",
@@ -61,7 +63,7 @@ ui_home = {
 	      $(this).remove();
 	    });
 
-		for (var i = data.length - 1; i >= 0; i--) {
+		for (var i = 10; i >= 0; i--) {
 			var e = document.createElement('div');
 
 			e.innerHTML = 
@@ -72,6 +74,26 @@ ui_home = {
 			e.setAttribute('id', i);
 			e.setAttribute('class', 'noticia');
 			box.append(e).append(separadorNoticias);
+
+			//fix para la caja - MOMENTANEO
+			//if (i == 11) { break; };
 		};
+	},
+
+	agregarComentario: function(){
+		$('.agregarComment').on('click',function(){
+			//$.ajax('administrator/posts',{
+			//	succeful: function(data){
+
+					$('#graphBOX').dialog({
+						title:'Nuevo Comentario',
+						modal:true,
+						width: 960,
+						draggable: false
+					});
+			//	}
+			//});	
+		});
+		
 	}
 }
