@@ -40,7 +40,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<div class="cuerpo">
 		<div class="header">
 			<div id="direccion">
-				TriTangoTraders  |  795 Folsom Ave, Suite 600  |  Capital Federal, Bs As, BA 1000  |  P: (11) 456-7890
+				TriTangoTraders |
 			</div>
 			<div id="sobre">
 				<?php echo $this->Html->image('sobre.png'); ?>

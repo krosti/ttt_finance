@@ -1,0 +1,47 @@
+#indices_container{
+	width: 100%;
+	height: 200px;
+	margin-top: 40px;
+	float:left;
+}
+#indice_list{
+	float:left;
+	width:80px;
+}
+#indice_list .indice, #indice_list .indice .selected{
+	border: 1px solid #333;
+	padding: 5px;
+	text-align: center; 
+	width: 53px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: #D4D4D4;
+	font-size: 11px;
+	color: white;
+	text-shadow: 1px 1px #333;
+	margin-bottom: 3px;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#D4D4D4), to(#A3A3A3));
+	background: -webkit-linear-gradient(#D4D4D4, #A3A3A3);
+	background: -moz-linear-gradient(#D4D4D4, #A3A3A3);
+	background: -ms-linear-gradient(#D4D4D4, #A3A3A3);
+	background: -o-linear-gradient(#D4D4D4, #A3A3A3);
+	background: linear-gradient(#D4D4D4, #A3A3A3);
+	-pie-background: linear-gradient(#D4D4D4, #A3A3A3);
+	behavior: url(/PIE.htc);
+}
+#indice_list .selected, #indice_list .indice:hover{
+	background: #89AAF0;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#89AAF0), to(#2D4D9F));
+	background: -webkit-linear-gradient(#89AAF0, #2D4D9F);
+	background: -moz-linear-gradient(#89AAF0, #2D4D9F);
+	background: -ms-linear-gradient(#89AAF0, #2D4D9F);
+	background: -o-linear-gradient(#89AAF0, #2D4D9F);
+	background: linear-gradient(#89AAF0, #2D4D9F);
+	-pie-background: linear-gradient(#89AAF0, #2D4D9F);
+}
+
+#indice_detalle{
+	float:left;
+	
+}

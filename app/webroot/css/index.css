@@ -180,6 +180,15 @@ body{
 				margin:2px;
 			}
 
+	.disclaimer{
+		float: left;
+		margin: 10px;
+		font-size: 10px;
+		text-align: center;
+		color: #333;
+		text-shadow: 1px 1px white;
+	}
+
 	#cotizacionBox{
 		width:960px;
 		height: 30px;
