@@ -187,6 +187,9 @@ body{
 		text-align: center;
 		color: #333;
 		text-shadow: 1px 1px white;
+		border: 1px solid #CCC;
+		padding: 10px;
+		border-radius: 10px;
 	}
 
 	#cotizacionBox{
@@ -419,9 +422,11 @@ body{
 	#links_footer{
 		float: left;
 		font-weight: bold;
+		font-size:12px;
 	}
 	#unirse{
 		float: right;
+		font-size:12px;
 	}
 		#unirse span{
 			float:left;

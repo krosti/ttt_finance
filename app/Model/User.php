@@ -1,114 +1,150 @@
 <?php
-/**
- * User Model
- *
- */
 class User extends AppModel {
-	/**
-	 * Bancha behaviour
-	 */
-	public $actsAs = array('Bancha.BanchaRemotable');
-	
-/**
- * Validation rules
- *
- * @var array
- */
-	public $validate = array( // TODO example for validation rule "url" missing
-	   'id' => array(	
-           'numeric' => array(
-               'rule' => array('numeric'),
-               'precision' => 0
-            ),
-	   ),
-	   'name' => array(
-            'notempty' => array(
-                'rule' => array('notempty')
-            ),
-            'minLength' => array(
-                'rule' => array('minLength',3),
-            ),
-            'maxLength' => array(
-                'rule' => array('maxLength',64),
-            ),
+	var $name = 'User';
+	var $displayField = 'name';	
+	var $validate = array(
+		'username'=>array(
+			'usernameRule-1' => array(
+				'rule' => 'notEmpty',
+				'message' => 'Por favor, introduce el nombre de usuario.',
+				'last' => true
+			),
+			'minimo' => array(
+				'rule'=>array('minLength', 3), 
+				'message'=>'Se requiere un nombre de usuario de minimo 3 letras',
+				'last'=>true
+			),
+			'check_username_exists'=>array(
+				'rule'=>'check_username_exists',
+				'message'=>'Nombre de usuario existente.',
+				'on'=>'create'
+			),		
 		),
-		'login' => array(
-            'isUnique' => array( // this has to be checked by the server (so there's nothing onthe frontend for this
-                'rule' => array('isUnique'),
-		        'message' => "Login is already taken."
-            ),
-            'minLength' => array(
-                'rule' => array('minLength', 3),
-                'required' => true, // this one is slick
-            ),
-            'maxLength' => array(
-                'rule' => array('maxLength',64),
-            ),
-            'alphaNumeric' => array(
-                'rule' => array('alphaNumeric')
-            ),
+		'name' => array(
+			'rule'=>array('minLength', 3), 
+			'message'=>'Se requiere un nombre de minimo 3 letras'
 		),
-        'email' => array(
-            'email' => array(
-                'rule' => array('email'),
-                'required' => true,
-            ),
-        ),
-        'created' => array(
-            'created' => array(
-                'rule' => array('date'),
-				'allowEmpty' => true,
-            ),
-        ),
-        'weight' => array(
-            'numeric' => array(
-                'rule' => array('numeric'),
-                'precision' => 2
-            ),
-        ),
-        'height' => array(
-            'numeric' => array(
-                'rule' => array('numeric'),
-                'precision' => 0
-            ),
-            'range' => array(
-                'rule' => array('range', 49, 301),
-                'message' => 'Please enter a value between 50 and 300cm.'
-            )
-        ),
-        'avatar' => array(
-            'file' => array( // this validation rule forces Bancha.scaffold in the frontend to render a fileuploadfield
-                 'rule' => array('file')
-             ),
-            'extension' => array(
-                 'rule' => array('extension', array('gif', 'jpeg', 'png', 'jpg')),
-				 'allowEmpty' => true,
-                 'message' => 'Please supply a valid image.'
-             ),
+		'lastname' => array(
+			'rule'=>array('minLength', 3), 
+			'message'=>'Se requiere un apellido de minimo 3 letras'
 		),
-	);
+		'password' => array(	
+					'rule' => array('between', 5, 15),
+					'message' => 'Debe tener un largo entre 5 y 15 caracteres.'
+		),
+		'passwordrep' => array(
+					'rule' => 'check_password_equals',
+					'message' => 'Las contrasenas no coinciden.'
+		),	
+		'email' => array(
+			'email2' => array(		
+				'rule'=>'notEmpty', 
+				'message'=>'Se requiere un email.',
+				'last' => true
+			),
+			'email3' => array(			
+				'rule' => array('email', true),
+				'message' => 'Por favor indique una direccion de correo electronico valida.'
+			), 	
+		),
+		'emailrep' => array(
+			'emailrep2' => array(		
+				'rule'=>'notEmpty', 
+				'message'=>'Se requiere un email',
+				'last' => true
+			),
+			'emailrep3' => array(			
+				'rule' => array('email', true),
+				'message' => 'Por favor indique una direccion de correo electronico valida.'
+			),
+			'emailrep4' => array(			
+				'rule' => 'check_emails_equals',
+				'message' => 'Los emails no coinciden!!!'
+			),
+		),	
 
+	);
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Article' => array(
-			'className' => 'Article',
-			'foreignKey' => 'user_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
+	/**
+	 * Private User
+	 * @var array
+	 */
+	var $_user = array();	
+	/**
+	 * Check a User is valid
+	 * @param array $check
+	 * @return bool
+	 */
+	function check_user($check) {
+		if(!empty($check['username2']) && !empty($_POST['data']['User']['password2'])) {
+			// get User by username
+			$user = $this->find('first',array('conditions'=>array('User.username'=>$check['username2'])));			
+			// controla si existe el usuario
+			if(empty($user)) {return FALSE;}
+			// compare passwords
+			$salt = Configure::read('Security.salt');
+			if($user['User']['password'] != ($_POST['data']['User']['password2'])) {return FALSE;}
+			// controla que el usuario este activo
+			if($user['User']['estado_id'] != 2) {return FALSE;}			
+			// save User
+			$this->_user = $user;
+		}
+		else
+		{
+			return FALSE;
+		}
+	return TRUE;
+	}	
+	/**
+	 * Check a username exists in the database
+	 * @param array $check
+	 * @return bool
+	 */
+	function check_username_exists($check) {
+		// get User by username
+		if(!empty($check)) {
+			$user = $this->find('first',array('conditions'=>array('User.username'=>$check)));
+			// invalid User
+			if(!empty($user)) {	return FALSE;}
+		}		
+	return TRUE;
+	}	
+	/**
+	 * BeforeSave Callback
+	 */
+	function beforeSave() {
+		// hash Password
+		if(!empty($this->data['User']['password'])) {
+			$salt = Configure::read('Security.salt');
+			$this->data['User']['password'] = ($this->data['User']['password']);
+		} else {
+			// remove Password to prevent overwriting empty value
+			unset($this->data['User']['password']);
+		}		
+	return TRUE;
+	}
+	/**
+	 * Chequea que el password y su repeticion sean iguales
+	 */
+	function check_password_equals() {		
+		if(!empty($this->data['User']['password'])) {
+			if(!empty($this->data['User']['passwordrep'])) {
+				if ($_POST['data']['User']['password'] != $_POST['data']['User']['passwordrep']){ return FALSE;};
+			}
+		} 	
+		return TRUE;
+	}
+	/**
+	 * Chequea que el email y su repeticion sean iguales
+	 */
+	function check_emails_equals() {		
+		if(!empty($this->data['User']['email'])) {
+			if(!empty($this->data['User']['emailrep'])) {
+				if ($_POST['data']['User']['email'] != $_POST['data']['User']['emailrep']){return FALSE;};
+			}
+		} 	
+	return TRUE;
+	}	
+	
+	
 }

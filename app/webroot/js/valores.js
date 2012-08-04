@@ -9,7 +9,7 @@ sliderValores = {
 			'sldW':500,
 			'btnW':200,
 			'itemMgn':0,
-			'indi':"Arrastra para ver mas",
+			'indi':"",
 			'type':'tutorialzine',
 			'shuffle':0
 		});
