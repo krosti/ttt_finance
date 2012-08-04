@@ -222,7 +222,7 @@ jQuery.fn.extend({
 		var sldCaseW=eval($(mopSliderName+" .sliderCase").css("width").split("px")[0]);
 		var sliderLeftMgn=(mopSliderW-sldCaseW)/2;
 		$(mopSliderName+" .sliderCase").css({left:sliderLeftMgn+px});
-		$(mopSliderName+" .slider").css({width:sldW+px});
+		$(mopSliderName+" .slider").css({width:5000});
 		$(mopSliderName+" .sliderBtn").css({width:btnW+px});
 		/*pngFix*/
 		$(this).pngFix();

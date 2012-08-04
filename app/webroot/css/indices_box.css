@@ -51,7 +51,7 @@
 	color: #000;
 	font-weight: bold;
 	font-size: 14px;
-	border-right:1px solid #ccc;
+	border-right: 2px groove white;
 	line-height: 1.4;
 	margin-right: 12px;
 }
@@ -79,6 +79,7 @@
 		width:235px;
 		margin-left:5px;
 		float:left;
+		border-top: 1px solid white;
 	}
 		.bbtop{
 			margin-bottom:5px;

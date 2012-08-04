@@ -106,7 +106,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		
 		<?php echo $this->fetch('content'); ?>
 		<?php #echo $this->element('sql_dump'); ?>
-		<div id="graphBOX" style="display:none"><?php echo $this->element('posts'); ?></div>
+		<div id="graphBOX" style="display:none"><?php #echo $this->element('posts'); ?></div>
 		<div id="footer">
 			<?php echo $this->Html->image('logofooter.png',array('id'=>'logofooter') ); ?>
 			<div id="links_footer">
@@ -133,17 +133,18 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'slider.js',
 		'ui-home',
 		'lightbox',
+		'valores',
 		'jquery.jstockticker-1.1',
 		//ourAPPS
 		//'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
 		'jsTTT/ui',
-		//'jsTTT/gchart' //for Google SVG Chart
-		'jsTTT/rgraph',
-		'jsTTT/drawCanvas',
+		//'jsTTT/gchart'
+		//'jsTTT/rgraph',
+		//'jsTTT/drawCanvas',
+		//extern libreries
 		'mopSlider/mopSlider-2.4',
-		'valores',
 		'pngFix/jquery.pngFix'
 	)); ?>
 </html>
