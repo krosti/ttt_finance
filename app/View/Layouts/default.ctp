@@ -35,6 +35,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 </head>
 <body>
 	<div class="cuerpo">
@@ -140,6 +141,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'jsTTT/ui',
 		//'jsTTT/gchart' //for Google SVG Chart
 		'jsTTT/rgraph',
-		'jsTTT/drawCanvas'
+		'jsTTT/drawCanvas',
+		'mopSlider/mopSlider-2.4',
+		'valores',
+		'pngFix/jquery.pngFix'
 	)); ?>
 </html>

@@ -24,13 +24,13 @@
   cursor: pointer;
 }
 #leftControl,#leftControl2 {
-  right:60;
-  top:470;
+  right:60px;
+  top:470px;
   background:url(../img/flechaizq.jpg) no-repeat;
   z-index:2;
 }
 #rightControl,#rightControl2 {
-  right:10;
+  right:10px;
   background:url(../img/flechader.jpg) no-repeat ;
   z-index:2;
 }
@@ -53,5 +53,5 @@
   height:435px;
 }
 #leftControl2 {
-  top:435;
+  top:435px;
 }

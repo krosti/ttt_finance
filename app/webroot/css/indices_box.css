@@ -45,3 +45,63 @@
 	float: left;
 	width: 880px;
 }
+.box_b{
+	width:250px;
+	float:left;
+	color: #000;
+	font-weight: bold;
+	font-size: 14px;
+	border-right:1px solid #ccc;
+	line-height: 1.4;
+	margin-right: 12px;
+}
+	.texto_box{
+		float: left;
+		width: 75px;
+	}
+		.texto_box span{
+			float:left;
+			width:100%;
+		}
+		.market, .price{
+			float:left;
+			width:230px;
+		}
+		.market{
+			color: #207BA2;
+		}
+	.graph{
+		float:left;
+	}
+	.border_box{
+		background: #ccc;
+		height:1px;
+		width:235px;
+		margin-left:5px;
+		float:left;
+	}
+		.bbtop{
+			margin-bottom:5px;
+		}
+		.bbbottom{
+			margin-top:5px;
+		}
+.box_s{
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.4;
+	float: left;
+	width:115px;
+	border-top: 1px solid #CCC;
+	padding-top: 5px;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 6px;
+}
+	.box_s span{
+		width: 100%;
+		float:left;
+	}
+	.sgraph{
+		float:left;
+		margin-top:10px;
+	}
