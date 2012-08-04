@@ -58,6 +58,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					<?php echo $this->Html->image('logo.png',array('url'=>'/')); ?>
 				</div>
 				<div id="login">
+					<?php echo $this->element('login'); ?>
 					<div id="login_user">
 					<span>Inicio</span>
 					<input class="input_login" id="input_user">
@@ -120,6 +121,13 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			</div>
 			<div id="copy">
 				Copyright © 2012 Tritango Traders. Todos los derechos reservados.  
+			</div>
+			<div class="disclaimer">
+				Bienvenido a TriTangoTraders. Este blog sólo refleja nuestra expectativa respecto al mercado. Es por ello que nada de lo que aquí se produce debe ser tomado como recomendación o consejo de compra o venta. Nuestras visiones son meramente con fines recreativos y educativos.
+				<br/>
+				Usted debe realizar sus propios análisis y sus propias operaciones asumiendo el riesgo que conllevan en forma independiente de lo que aquí se exponga. Tritangotraders para obtener informacion detallada sobre los nuevos cursos bursatiles y contactarnos a los siguientes emails tritangotraders@gmail.com o info@tritangotraders.com
+				<br/>
+				Y recuerde, proteja su capital, utilice siempre stop loss.
 			</div>
 		</div>
 

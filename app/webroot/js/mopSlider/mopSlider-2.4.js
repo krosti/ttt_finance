@@ -136,16 +136,30 @@ jQuery.fn.extend({
 		itemNum=$(this).children().length;
 		var allW=0;
 		var num=0;
-		for (i=1; i<(itemNum+1); i++){
-			var itemW=eval($(this).children().eq(num).css("width").split("px")[0]);
+		$('.box_valores').each(function(index) {
+			var itemW=eval($(this).css("width").split("px")[0]);
+			itemW +=eval($(this).css("margin-right").split("px")[0])+1;
+			console.log(itemW);
+			allW+=itemW;
+		});
+		/*for (i=1; i<(itemNum+1); i++){
+			if ($(this).children().attr('class') == 'box_b')
+			{
+
+			}
+			else
+			{
+
+			}
+			var itemW=eval($(this).children().css("width").split("px")[0]);
 			nextMov.push(itemW);
-			var itemH=eval($(this).children().eq(num).css("height").split("px")[0]);
+			//var itemH=eval($(this).children().eq(num).css("height").split("px")[0]);
 			//var mgn=(mopSliderH-itemH)/2;
 			var mgn= 0;
 			$(this).children().eq(num).css({marginTop:mgn+px});
 			num+=1;
 			allW+=itemW;
-		};
+		};*/
 		/*width of all content & margin*/
 		itemMgnAll=itemMgn*itemNum;
 		boxW=allW+itemMgnAll+itemMgn;
