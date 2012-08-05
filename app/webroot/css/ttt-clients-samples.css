@@ -1,12 +1,12 @@
-body{
+body#backend{
 	padding-top: 20px;
 	margin: auto;
 	font-family: 'Droid Sans', sans-serif;
-	width: 1000px;
+	width: 960px;
 	background-color: #efefef;
 }
 
-header{
+div#tool1 header{
 	font-family: 'Open Sans', sans-serif;
 	font-size:25px;
 	font-weight: 300;
@@ -14,51 +14,51 @@ header{
 	color:#666;
 	text-align: center;
 }
-header span{
+div#tool1 header span{
 	display:inline;
 }
 
-section{
+div#tool1 section{
 	color:#ccc;
 	font-size: 13px;
 	padding: 10px;
 }
-div{
+div#tool1 div{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 }
-button, input{
+div#tool1 button,div#tool1  input{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	border: 1px solid #ccc;
 	border-radius: 2px;
 }
-button{ 
+div#tool1 button{ 
 	cursor:pointer;
 	border: 1px solid #fff;
 	background: #eee;
 }
-p{
+div#tool1 p{
 	float: left;
 }
 
-h1{
+div#tool1 h1{
 	color: #242424;
 	font-size: 70px;
 	text-align: center;
 	text-transform: lowercase;
 }
-article{
+div#tool1 article{
 	margin:20px auto;
 	text-align: center;
 }
-a:link, a:visited{
+div#tool1 a:link,div#tool1  a:visited{
 	color:white;
 }
-a:hover{
+div#tool1 a:hover{
 	color:#ddd;
 }
-#container{ margin-bottom:250px; }
+div#tool1 #container{ margin-bottom:250px; }
 .clear{
 	clear:both;
 }
@@ -92,7 +92,7 @@ a:hover{
 }
 
 #cotizacionBox2{
-	width:1000px;
+	width:960px;
 	height: 35px;
 	background-color: #383838;
 	color: white;
@@ -250,7 +250,7 @@ canvas#imageView, canvas#imageTemp{ display: none; }
 .formOptions .style2 span{ font-weight: 300;}
 .formOptions .style3 span{ font-weight: 300; text-transform: uppercase; }
 #formTitulo{ 
-	width:980px;
+	width:935px;
 	height:40px;
 	font-size: 18px;
 	-webkit-border-radius: 3px;
@@ -262,7 +262,7 @@ canvas#imageView, canvas#imageTemp{ display: none; }
 	padding:10px;
 }
 #formCuerpo{
-	width:980px;
+	width:935px;
 	height:340px;
 	font-size: 18px;
 	-webkit-border-radius: 3px;

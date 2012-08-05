@@ -26,6 +26,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -61,11 +62,11 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					<?php echo $this->element('login'); ?>
 					<div id="login_user">
 					<span>Inicio</span>
-					<input class="input_login" id="input_user">
+					<input class="input_login" id="input_user" placeholder="Usuario">
 					</input>
 					</div>
 					<div id="login_pass">
-					<input class="input_login" id="input_pass">
+					<input class="input_login" id="input_pass" placeholder="Contrase&ntilde;a">
 					</input>
 					</div>
 					<button id="button_login">Log - in</button>

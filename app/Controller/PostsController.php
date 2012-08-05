@@ -100,4 +100,5 @@ class PostsController extends AppController {
 		$this->Session->setFlash(__('Post was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+
 }

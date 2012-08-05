@@ -3,7 +3,10 @@
 	height: 165px;
 	margin-top: 40px;
 	float:left;
+	font-family: Open Sans, Lucida Grande, Helvetica;
 }
+#indices_container a:link, #indices_container a:visited, #indices_container a:hover{ text-decoration: none; color: #207BA2;}
+#indices_container a:hover{ text-decoration: none; color: #3181A3;}
 #indice_list{
 	float:left;
 	width:80px;
@@ -57,21 +60,22 @@
 }
 	.texto_box{
 		float: left;
-		width: 75px;
+		clear:both;
 	}
 		.texto_box span{
 			float:left;
-			width:100%;
+			clear:both;
 		}
 		.market, .price{
 			float:left;
-			width:230px;
+			clear:both;
 		}
 		.market{
 			color: #207BA2;
+			cursor:pointer;
 		}
 	.graph{
-		float:left;
+		margin-left: 70px;
 	}
 	.border_box{
 		background: #ccc;
@@ -85,7 +89,7 @@
 			margin-bottom:5px;
 		}
 		.bbbottom{
-			margin-top:5px;
+			margin-top:30px;
 		}
 .box_s{
 	width:115px;

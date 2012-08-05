@@ -4,17 +4,17 @@
 	#imageTemp { position: absolute; left: 0px; }
 	#thumbsBox { float:left; display:none; }
 	#thumbsBox img, .thumbWrapper { float:left; }
-	div{
+	#tool1 div{
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13px;
 	}
-	button{
+	#tool1 button{
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13px;
 		border: 1px solid #ccc;
 		border-radius: 2px;
 	}
-	p{
+	#tool1 p{
 		float: left;
 	}
 </style>
@@ -88,11 +88,11 @@
 	</div>
 
 	<div class="canvasWrapper">
-		<canvas id="screenView" width="980" height="500" style="display:none;"></canvas>
+		<canvas id="screenView" width="950" height="500" style="display:none;"></canvas>
 
-		<canvas id="myLine" width="980" height="500"></canvas>
+		<canvas id="myLine" width="950" height="500"></canvas>
 
-		<canvas id="imageView" width="980" height="500">
+		<canvas id="imageView" width="950" height="500">
 	        <p>Unfortunately, your browser is currently unsupported by our web 
 	        application.  We are sorry for the inconvenience. Please use one of the 
 	        supported browsers listed below, or draw the image you want using an 

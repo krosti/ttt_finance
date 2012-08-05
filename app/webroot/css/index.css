@@ -6,6 +6,12 @@ body{
 	font-size:11px;
 	font-weight: 100;
 }
+a:link, a:visited{
+	color:#3b5998;
+}
+a:hover{
+	color: #8b9dc3;
+}
 .cuerpo{
 	width:960px;
 	margin:0px auto;
@@ -87,15 +93,15 @@ body{
 					height: 20px;
 					border:1px solid #ccc;
 					border-radius: 5px;
-					width:120px;
+					width:96px;
 					float:left;
 				}
 				#input_user{
-					background:url(../img/user.png) #fbfbfb no-repeat 5px;	
+					background:url(../img/user.png) #fbfbfb no-repeat 4px;	
 					margin-right:5px;
 				}
 				#input_pass{
-					background:url(../img/pass.png) #fbfbfb no-repeat 5px;
+					background:url(../img/pass.png) #fbfbfb no-repeat 4px;
 				}
 				#button_login{
 					background: url(../img/button.jpg);
@@ -107,7 +113,7 @@ body{
 					font-weight:bold;
 					margin-left:3px;
 					float: right;
-					margin-right: 20px;
+					margin-right: 7px;
 					margin-top: 2px;
 				}
 	#menu{
@@ -120,7 +126,7 @@ body{
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
 	}
-	#menu a:link, #menu a:hover, #menu a:visited{ text-decoration: none; color:white; }
+	#menu a:link, #menu a:hover, #menu a:visited{ text-decoration: none; color:white; font-weight: 100;}
 		#items{
 			float: left;
 			width: 655px;
@@ -234,7 +240,7 @@ body{
 			color: white;
 			font-size: 17px;
 			padding: 10px;
-			font-weight: bold;
+			font-weight: 100;
 		}
 		.cuerpo_seccion{
 			margin-top: -3px;
@@ -279,8 +285,11 @@ body{
 				.tit_slide{
 					float: left;
 					width: 100%;
-					font-size: 15px;
+					font-family: Open Sans, Lucida Grande, Helvetica;
+					font-size: 14px;
 					font-weight: bold;
+					width:205px;
+					color: #444;
 				}
 				.cuerpo_slide{
 					margin-top: 7px;
@@ -422,7 +431,7 @@ body{
 	#links_footer{
 		float: left;
 		font-weight: bold;
-		font-size:12px;
+		font-size:10px;
 	}
 	#unirse{
 		float: right;

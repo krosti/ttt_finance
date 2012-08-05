@@ -31,7 +31,7 @@
 											<?php echo $analisis['Post']['titulo']; ?>
 										</span>
 										<span class="cuerpo_slide">
-											<?php echo $analisis['Post']['descripcion']; ?>
+											<?php echo $this->Text->truncate($analisis['Post']['descripcion'], 272, array('ending' => '...','exact' => false) ); ?>
 										</span>
 									</div>
 									<div class="separacion_slide">
@@ -74,7 +74,7 @@
 				<div id="slidesContainer2">
 
 					<?php if (sizeof($situacionesactuales) % 2 == 0) :?>
-					<div class="slide">
+					<div class="slide2">
 					<?php endif; ?>
 					<?php foreach ($situacionesactuales as $situacion) {?>
 							
@@ -90,7 +90,7 @@
 											<?php echo $situacion['Post']['titulo']; ?>
 										</span>
 										<span class="cuerpo_slide">
-											<?php echo $situacion['Post']['descripcion']; ?>
+											<?php echo $this->Text->truncate($situacion['Post']['descripcion'], 222, array('ending' => '...','exact' => false) ); ?>
 										</span>
 									</div>
 									<div class="separacion_slide">
