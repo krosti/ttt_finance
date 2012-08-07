@@ -41,10 +41,10 @@ class PostsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Comentario Guardado - Muchas Gracias'));
+				$this->redirect(array('controller' => 'pages','action' => 'home'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('No se pudo guardar - Intente mas tarde - Muchas Gracias'));
 			}
 		}
 		$tipos = $this->Post->Tipo->find('list', array( 'fields' => array('Tipo.titulo') ));

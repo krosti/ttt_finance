@@ -92,21 +92,32 @@
 			margin-top:30px;
 		}
 .box_s{
-	width:115px;
+	
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.4;
 	float: left;
-	border-top: 1px solid #CCC;
+	/*border-top: 1px solid #CCC;*/
 	padding-top: 5px;
-	border-bottom: 1px solid #CCC;
+	/*border-bottom: 1px solid #CCC;*/
 	padding-bottom: 6px;
+	border-right: 1px dotted #CCC;
+	margin-right: 5px;
+	padding-right: 6px;
 }
 	.box_s span{
-		width: 100%;
+		clear:both;
 		float:left;
+		margin-left: 5px;
+		color:#222;
+	}
+	.box_s .market{
+		color: #207BA2;
 	}
 	.sgraph{
 		float:left;
 		margin-top:10px;
+		clear:both;
+		background: white;
+		margin-left: 5px;
 	}

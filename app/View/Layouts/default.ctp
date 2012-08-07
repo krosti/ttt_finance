@@ -30,13 +30,16 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom'));
+		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom','backend'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+	<?php echo $this->Html->script(array(
+		'jsTTT/error-handler'
+	)); ?>
+	
 </head>
 <body>
 	<div class="cuerpo">
@@ -135,6 +138,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	</div>
 
 </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <?php echo $this->Html->script(array(
 		'jquery',
 		'jquery-ui',
@@ -149,6 +153,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
 		'jsTTT/ui',
+		'jsTTT/error-handler',
 		//'jsTTT/gchart'
 		//'jsTTT/rgraph',
 		//'jsTTT/drawCanvas',
@@ -156,4 +161,5 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'mopSlider/mopSlider-2.4',
 		'pngFix/jquery.pngFix'
 	)); ?>
+
 </html>

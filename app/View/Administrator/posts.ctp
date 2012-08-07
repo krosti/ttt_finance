@@ -19,7 +19,7 @@
 	}
 </style>
 
-<form>
+<form action="/ttt_finance/posts/add" method="post" accept-charset="utf-8">
 	<div class="formLabel">Titulo</div>
 	<div class="formOptions">
 		<span class="style1 Ntooltip">
@@ -29,7 +29,12 @@
 			<span>Estilo 2</span>
 		</span>
 	</div>
-	<input id="formTitulo"/>
+	<input id="formTitulo" name="data[Post][titulo]" maxlength="200">
+
+	<input id="formTipo" name="data[Post][tipo_id]" value="1" style="display:none;">
+
+	<input id="formSerieDatos" name="data[Post][serie_datos]"  value="asd" style="display:none;">
+	
 	<div class="formLabel">Cuerpo</div>
 	<div class="formOptions">
 		<span class="style1 Ntooltip">
@@ -42,7 +47,9 @@
 			<span>Estilo 3</span>
 		</span>
 	</div>
-		<textarea id="formCuerpo"></textarea>
+	<textarea name="data[Post][descripcion]" cols="30" rows="6" id="formCuerpo"></textarea>
+
+	<input type="submit" value="guardar/enviar">
 </form>
 
 <div class="graphicFalseBox" id="graphicFalseBox">
@@ -118,6 +125,7 @@
 
 <div class="buttonsBox">
 	<button id="saveForm">guardar/enviar</button>
+
 	<button id="cleanForm">limpiar/cancelar</button>
 </div>
 

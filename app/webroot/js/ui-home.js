@@ -85,7 +85,7 @@ ui_home = {
 			$.ajax('administrator/posts',{
 				success: function(data){
 
-					$('#graphBOX').append(data).dialog({
+					$('#graphBOX').empty().append(data).dialog({
 						title:'Nuevo Comentario',
 						modal:true,
 						width: 960,

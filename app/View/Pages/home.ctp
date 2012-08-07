@@ -11,19 +11,19 @@
 			<div id="slideshow">
 				<div id="slidesContainer">
 
-						<?php if (sizeof($analisisttt) % 2 == 0) :?>
-						<div class="slide">
-						<?php endif; ?>
+						<?php $i = 0; ?>
 						<?php foreach ($analisisttt as $analisis) {?>
-							
+							<?php if ($i % 2 == 0) :?>
+								<div class="slide">
+							<?php endif; ?>
 								<div class="caja_slide">
 									<div class="izq_slide">
-										<img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200"/>
+										<img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" onError="error_handler.imageError(this)"/>
 										<div class="thumb_slide">
-											<!--img src="img/warning.png" /-->
-											<span>
-												<?php echo 'Lorem ipsum ..' ?>
-											</span>
+											<!--img src="img/warning.png" /
+													tag here
+											-->
+											<span><?php echo 'Lorem ipsum ..' ?></span>
 										</div>
 									</div>
 									<div class="der_slide">
@@ -38,18 +38,30 @@
 									</div>
 									<div class="compartir_slide">
 										<!--img src="img/compartir_slide.png" /-->
+										<a href="http://www.facebook.com/dialog/feed?
+										  app_id=497402490288775&
+										  link=http://developers.facebook.com/docs/reference/dialogs/&
+										  picture=http://ttt.borealdev.com.ar/img/logo.png&
+										  name=TriTangoTraders%20AnalisisTTT%20-%20<?php echo $analisis['Post']['titulo'] ?>&
+										  caption=Reference%20Documentation&
+										  description=Using%20Dialogs%20to%20interact%20with%20users.&
+										  redirect_uri=http://www.example.com/response"
+										  target="_BLANK">
+										  <?php echo $this->Html->image('fb-share.jpeg'); ?>
+										</a>
+										//
 										<span>
-											Agregar un comentario
+											<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
 										</span>
 									</div>
-									<div class="separacion_slide separacion_inferior">
-									</div>
+									<div class="separacion_slide separacion_inferior"></div>
 								</div>
+							<?php $i++; ?>
+							<?php if ( ($i % 2 == 0) ) :?>
+								</div>
+							<?php endif; ?>
 							
 						<?php } ?>
-						<?php if (sizeof($analisisttt) % 2 == 0) : ?>
-						</div>
-						<?php endif; ?>
 
 				</div>
 			</div>
@@ -73,11 +85,11 @@
 			<div id="slideshow2">
 				<div id="slidesContainer2">
 
-					<?php if (sizeof($situacionesactuales) % 2 == 0) :?>
-					<div class="slide2">
-					<?php endif; ?>
+					<?php $i = 0; ?>
 					<?php foreach ($situacionesactuales as $situacion) {?>
-							
+							<?php if ($i % 2 == 0) :?>
+							<div class="slide2">
+							<?php endif; ?>
 								<div class="caja_slide">
 									<span class="hora_slide">
 										<?php echo date("d-m-Y (H:i A)", strtotime($situacion['Post']['created'])); ?>
@@ -96,7 +108,7 @@
 									<div class="separacion_slide">
 									</div>
 									<div class="compartir_slide">
-										<!--img src="img/compartir_slide.png" /-->
+										//
 										<span>
 											<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
 										</span>
@@ -104,11 +116,12 @@
 									<div class="separacion_slide separacion_inferior">
 									</div>
 								</div>
-							
+							<?php $i++; ?>
+							<?php if ($i % 2 == 0) : ?>
+							</div>
+							<?php endif; ?>
 						<?php } ?>
-						<?php if (sizeof($situacionesactuales) % 2 == 0) : ?>
-						</div>
-						<?php endif; ?>
+					
 
 				</div>
 			</div>
@@ -130,7 +143,7 @@
 					<div class="compartir_slide">
 						<img src="img/compartir_slide.png" />
 						<span>
-							Agregar un comentario
+							<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
 						</span>
 					</div>
 				</div>
