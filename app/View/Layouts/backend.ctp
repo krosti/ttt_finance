@@ -16,7 +16,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('resources/css/ext-all','ttt-clients-samples','lightbox','stockTicker'));
+		echo $this->Html->css(array(/*'resources/css/ext-all',*/'ttt-clients-samples','lightbox','stockTicker'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -26,35 +26,36 @@
 	?>
 </head>
 
-<body>
-
-	<header>
-		<span>TriTangoTraders</span>
-		<span style="font-weight:500; letter-spacing:-2px;">ADMINISTRADOR</span>
-		<span>
-			<?php echo $this->Html->image('ttt.png'); ?>
-		</span>
-		<section>
-			<span>please log-in with your account:</span>
-		</section>
-	</header>
-	
-	<div id="container">
-		<div id="content">
-			<?php echo $this->Session->flash(); ?>
-			<?php echo $this->fetch('content'); ?>
+<body id="backend">
+	<div id="tool1">
+		<header>
+			<span>TriTangoTraders</span>
+			<span style="font-weight:500; letter-spacing:-2px;">ADMINISTRADOR</span>
+			<span>
+				<?php echo $this->Html->image('ttt.png'); ?>
+			</span>
+			<section>
+				<span>please log-in with your account:</span>
+			</section>
+		</header>
+		
+		<div id="container">
+			<div id="content">
+				<?php echo $this->Session->flash(); ?>
+				<?php echo $this->fetch('content'); ?>
+			</div>
 		</div>
-	</div>
 
-	<div id="cotizacionBox">
-		<div class="labelsCotizacion">
-			<a href="#argentina" class="miniBtn" id="linkARG">Argentina</a>
-			<a href="#usa" class="miniBtn" id="linkUSA">USA</a>
-			<a href="#indices" class="miniBtn" id="linkIND">Indices</a>
+		<div id="cotizacionBox">
+			<div class="labelsCotizacion">
+				<a href="#argentina" class="miniBtn" id="linkARG">Argentina</a>
+				<a href="#usa" class="miniBtn" id="linkUSA">USA</a>
+				<a href="#indices" class="miniBtn" id="linkIND">Indices</a>
+			</div>
+			<div id="datosLive"></div>
 		</div>
-		<div id="datosLive"></div>
+		<?php #echo $this->element('sql_dump'); ?>
 	</div>
-	<?php #echo $this->element('sql_dump'); ?>
 </body>
 
 	<!-- include ExtJS -->

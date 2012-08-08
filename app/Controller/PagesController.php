@@ -53,7 +53,7 @@ class PagesController extends AppController {
  */
 	public function display() {
 		
-		$this->set('analisisttt', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '1') ) ) );
+		$this->set('analisisttt', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '1'),'order'=>'Post.created DESC' ) ) );
 		$this->set('situacionesactuales', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '2') ) ) );
 		
 		$path = func_get_args();

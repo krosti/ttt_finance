@@ -82,17 +82,17 @@ ui_home = {
 
 	agregarComentario: function(){
 		$('.agregarComment').on('click',function(){
-			//$.ajax('administrator/posts',{
-			//	succeful: function(data){
+			$.ajax('administrator/posts',{
+				success: function(data){
 
-					$('#graphBOX').dialog({
+					$('#graphBOX').empty().append(data).dialog({
 						title:'Nuevo Comentario',
 						modal:true,
 						width: 960,
 						draggable: false
 					});
-			//	}
-			//});	
+				}
+			});	
 		});
 		
 	}

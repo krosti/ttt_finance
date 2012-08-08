@@ -26,16 +26,20 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom'));
+		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom','backend'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+	<?php echo $this->Html->script(array(
+		'jsTTT/error-handler'
+	)); ?>
+	
 </head>
 <body>
 	<div class="cuerpo">
@@ -68,6 +72,19 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				</div>
 				<div id="login">
 					<?php echo $this->element('login'); ?>
+<<<<<<< HEAD
+=======
+					<div id="login_user">
+					<span>Inicio</span>
+					<input class="input_login" id="input_user" placeholder="Usuario">
+					</input>
+					</div>
+					<div id="login_pass">
+					<input class="input_login" id="input_pass" placeholder="Contrase&ntilde;a">
+					</input>
+					</div>
+					<button id="button_login">Log - in</button>
+>>>>>>> b7cd7c73a418c44e1a627dbbd9a6a191b4f783d5
 				</div>
 			</div>
 			<div id="menu">
@@ -106,7 +123,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 		<?php #echo $this->element('sql_dump'); ?>
-		<div id="graphBOX" style="display:none"><?php echo $this->element('posts'); ?></div>
+		<div id="graphBOX" style="display:none"><?php #echo $this->element('posts'); ?></div>
 		<div id="footer">
 			<?php echo $this->Html->image('logofooter.png',array('id'=>'logofooter') ); ?>
 			<div id="links_footer">
@@ -133,6 +150,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	</div>
 
 </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <?php echo $this->Html->script(array(
 		'jquery',
 		'jquery-ui',
@@ -140,17 +158,20 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'slider.js',
 		'ui-home',
 		'lightbox',
+		'valores',
 		'jquery.jstockticker-1.1',
 		//ourAPPS
 		//'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
 		'jsTTT/ui',
-		//'jsTTT/gchart' //for Google SVG Chart
-		'jsTTT/rgraph',
-		'jsTTT/drawCanvas',
+		'jsTTT/error-handler',
+		//'jsTTT/gchart'
+		//'jsTTT/rgraph',
+		//'jsTTT/drawCanvas',
+		//extern libreries
 		'mopSlider/mopSlider-2.4',
-		'valores',
 		'pngFix/jquery.pngFix'
 	)); ?>
+
 </html>

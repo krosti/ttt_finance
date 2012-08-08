@@ -16,7 +16,8 @@
 		<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['titulo']); ?>&nbsp;</td>
 		<td><?php echo h($post['Post']['descripcion']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['serie_datos']); ?>&nbsp;</td>
+		<td><?php echo h($this->Text->truncate($post['Post']['serie_datos'], 22, array('ending' => '...','exact' => false) )); ?>&nbsp;</td>
+		
 		<td>
 			<?php echo $this->Html->link($post['Tipo']['id'], array('controller' => 'tipos', 'action' => 'view', $post['Tipo']['id'])); ?>
 		</td>

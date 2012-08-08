@@ -3,7 +3,10 @@
 	height: 165px;
 	margin-top: 40px;
 	float:left;
+	font-family: Open Sans, Lucida Grande, Helvetica;
 }
+#indices_container a:link, #indices_container a:visited, #indices_container a:hover{ text-decoration: none; color: #207BA2;}
+#indices_container a:hover{ text-decoration: none; color: #3181A3;}
 #indice_list{
 	float:left;
 	width:80px;
@@ -51,27 +54,28 @@
 	color: #000;
 	font-weight: bold;
 	font-size: 14px;
-	border-right:1px solid #ccc;
+	border-right: 2px groove white;
 	line-height: 1.4;
 	margin-right: 12px;
 }
 	.texto_box{
 		float: left;
-		width: 75px;
+		clear:both;
 	}
 		.texto_box span{
 			float:left;
-			width:100%;
+			clear:both;
 		}
 		.market, .price{
 			float:left;
-			width:230px;
+			clear:both;
 		}
 		.market{
 			color: #207BA2;
+			cursor:pointer;
 		}
 	.graph{
-		float:left;
+		margin-left: 70px;
 	}
 	.border_box{
 		background: #ccc;
@@ -79,29 +83,41 @@
 		width:235px;
 		margin-left:5px;
 		float:left;
+		border-top: 1px solid white;
 	}
 		.bbtop{
 			margin-bottom:5px;
 		}
 		.bbbottom{
-			margin-top:5px;
+			margin-top:30px;
 		}
 .box_s{
-	width:115px;
+	
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.4;
 	float: left;
-	border-top: 1px solid #CCC;
+	/*border-top: 1px solid #CCC;*/
 	padding-top: 5px;
-	border-bottom: 1px solid #CCC;
+	/*border-bottom: 1px solid #CCC;*/
 	padding-bottom: 6px;
+	border-right: 1px dotted #CCC;
+	margin-right: 5px;
+	padding-right: 6px;
 }
 	.box_s span{
-		width: 100%;
+		clear:both;
 		float:left;
+		margin-left: 5px;
+		color:#222;
+	}
+	.box_s .market{
+		color: #207BA2;
 	}
 	.sgraph{
 		float:left;
 		margin-top:10px;
+		clear:both;
+		background: white;
+		margin-left: 5px;
 	}

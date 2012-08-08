@@ -1,10 +1,10 @@
-<?php echo $this->Html->css(array());
+<?php /*echo $this->Html->css(array('ttt-clients-samples','lightbox'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 
-		echo $this->Html->script(array()); 
+		echo $this->Html->script(array('lightbox')); */
 ?>
 
 <style type="text/css">
