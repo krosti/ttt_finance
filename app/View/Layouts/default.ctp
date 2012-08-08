@@ -30,7 +30,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom','backend'));
+		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -72,19 +72,6 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				</div>
 				<div id="login">
 					<?php echo $this->element('login'); ?>
-<<<<<<< HEAD
-=======
-					<div id="login_user">
-					<span>Inicio</span>
-					<input class="input_login" id="input_user" placeholder="Usuario">
-					</input>
-					</div>
-					<div id="login_pass">
-					<input class="input_login" id="input_pass" placeholder="Contrase&ntilde;a">
-					</input>
-					</div>
-					<button id="button_login">Log - in</button>
->>>>>>> b7cd7c73a418c44e1a627dbbd9a6a191b4f783d5
 				</div>
 			</div>
 			<div id="menu">

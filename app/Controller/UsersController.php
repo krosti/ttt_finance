@@ -34,6 +34,8 @@ class UsersController extends AppController {
 		$this->redirect("/");	
 	}
 
+	function addfb(){}
+
 	function add() {
 		if (!empty($this->data)) {
 			if ($this->User->save($this->data)) {
@@ -43,7 +45,7 @@ class UsersController extends AppController {
 					$Info = $this->data;
 					$user = $this->User->find('first',array('conditions'=>array('User.username'=>$this->data['User']['username'])));
 					$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-					$mensaje2 = "http://ttt.borealdev.com.ar/cake/users/a987156428774/".$user['User']['id'];
+					$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['User']['id'];
 					$sitioweb = "http://ttt.borealdev.com.ar";
 					$InfoAux = array(
 						"nombre" => $Info['User']['name'],
@@ -82,18 +84,31 @@ class UsersController extends AppController {
 			}
 			else
 			{
-				if ($this->User->check_user($this->data['User']))
-					{ 					
+				$num = $this->User->check_user($this->data['User']);
+				if ($num == 0)
+				{ 					
 					$this->User->id = $this->User->_user['User']['id'];
 					$this->User->saveField('last_login',date("Y-m-d H:i:s"));
 					// save User to Session and redirect
 					$this->Session->write('User', $this->User->_user['User']);
 					$this->Session->write('User.username', $this->data['User']['username']);					
-					}
-					else
-					{
-					$this->Session->setFlash('Contrase&ntilde;a incorrecta','default',array('class'=>'flash_bad'));
-					}			
+				}
+				else if ($num == 1)
+				{
+					$this->Session->setFlash('Error en el envio','default',array('class'=>'flash_bad'));
+				}	
+				else if ($num == 2)
+				{
+					$this->Session->setFlash('Usuario inexistente','default',array('class'=>'flash_bad'));
+				}		
+				else if ($num == 3)
+				{
+					$this->Session->setFlash('Password incorrecto','default',array('class'=>'flash_bad'));
+				}		
+				else if ($num == 4)
+				{
+					$this->Session->setFlash('Usuario Inactivo','default',array('class'=>'flash_bad'));
+				}	
 			}			
 		}
 		$this->redirect("/");			
