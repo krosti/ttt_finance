@@ -51,7 +51,16 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				<span>Conectarse</span>
 				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
-				<span>Registrarse</span>
+				<span><?php if ($this->Session->read('User')) 
+					{
+						echo $this->Html->link("Cerrar Sesión","/users/logout");
+					}
+					else
+					{
+						echo $this->Html->link('Registrarse',array('controller'=>'users','action'=>'add'));
+					}?>
+				</span>
+
 			</div>
 			<div id="panel_header">
 				<div id="logoppal">
@@ -59,16 +68,6 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				</div>
 				<div id="login">
 					<?php echo $this->element('login'); ?>
-					<div id="login_user">
-					<span>Inicio</span>
-					<input class="input_login" id="input_user">
-					</input>
-					</div>
-					<div id="login_pass">
-					<input class="input_login" id="input_pass">
-					</input>
-					</div>
-					<button id="button_login">Log - in</button>
 				</div>
 			</div>
 			<div id="menu">
@@ -104,7 +103,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				</div>
 			</div>
 		</div>
-		
+		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 		<?php #echo $this->element('sql_dump'); ?>
 		<div id="graphBOX" style="display:none"><?php echo $this->element('posts'); ?></div>

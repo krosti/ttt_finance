@@ -76,14 +76,14 @@ class User extends AppModel {
 	 * @return bool
 	 */
 	function check_user($check) {
-		if(!empty($check['username2']) && !empty($_POST['data']['User']['password2'])) {
+		if(!empty($check['username']) && !empty($_POST['data']['User']['password'])) {
 			// get User by username
-			$user = $this->find('first',array('conditions'=>array('User.username'=>$check['username2'])));			
+			$user = $this->find('first',array('conditions'=>array('User.username'=>$check['username'])));			
 			// controla si existe el usuario
 			if(empty($user)) {return FALSE;}
 			// compare passwords
 			$salt = Configure::read('Security.salt');
-			if($user['User']['password'] != ($_POST['data']['User']['password2'])) {return FALSE;}
+			if($user['User']['password'] != ($_POST['data']['User']['password'])) {return FALSE;}
 			// controla que el usuario este activo
 			if($user['User']['estado_id'] != 2) {return FALSE;}			
 			// save User
