@@ -53,9 +53,12 @@ class AppController extends Controller {
 		if ($uid)
 		{
 			$user = $this->User->find('first',array('conditions'=>array('User.fbid'=>$uid)));
-			$this->Session->write('User', $user['User']);
-			$this->Session->write('User.username', $user['User']['username']);	
-			$this->Session->write('User.fbid', $user['User']['fbid']);	
+			if ($user)
+			{
+				$this->Session->write('User', $user['User']);
+				$this->Session->write('User.username', $user['User']['username']);	
+				$this->Session->write('User.fbid', $user['User']['fbid']);	
+			}
 		}
 	}
 }

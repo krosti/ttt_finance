@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 02, 2012 at 01:45 PM
--- Server version: 5.1.44
+-- Generation Time: Aug 09, 2012 at 11:55 AM
+-- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,8 +16,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `ttt`
+-- Database: `ttt_finance`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `articles`
+--
+
+CREATE TABLE IF NOT EXISTS `articles` (
+  `id` int(11) NOT NULL,
+  `num` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `articles`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `articles_tags`
+--
+
+CREATE TABLE IF NOT EXISTS `articles_tags` (
+  `as` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `articles_tags`
+--
+
 
 -- --------------------------------------------------------
 
@@ -35,6 +65,11 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `created` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `comments`
+--
+
 
 -- --------------------------------------------------------
 
@@ -73,11 +108,13 @@ INSERT INTO `posts` (`id`, `titulo`, `descripcion`, `serie_datos`, `tipo_id`, `c
 --
 
 CREATE TABLE IF NOT EXISTS `tags` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(200) NOT NULL,
-  `created` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tags`
+--
+
 
 -- --------------------------------------------------------
 
@@ -91,6 +128,11 @@ CREATE TABLE IF NOT EXISTS `tags_posts` (
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tags_posts`
+--
+
 
 -- --------------------------------------------------------
 
@@ -112,6 +154,41 @@ CREATE TABLE IF NOT EXISTS `tipos` (
 INSERT INTO `tipos` (`id`, `titulo`, `created`) VALUES
 (1, 'Analisis TTT', '2012-08-02'),
 (2, 'Situacion Actual', '2012-08-02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `estado_id` int(11) NOT NULL,
+  `perfil_id` int(11) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `lastname` varchar(80) NOT NULL,
+  `fbid` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `estado_id`, `perfil_id`, `name`, `lastname`, `fbid`) VALUES
+(1, 'andres', '123', 'andreslh90@gmail.com', 2, 2, '', '', ''),
+(12, 'victor', 'victor', 'andreslh90@gmail.com', 1, 2, 'victor', 'victor', ''),
+(4, 'andres1', '12345', 'andreslh_90@hotmail.com', 2, 2, 'andres', 'ledesma', ''),
+(5, 'andres2', '123456', 'andreslh_90@hotmail.com', 2, 2, 'andres', 'ledesma', ''),
+(6, 'andres3', 'aaaaaaaa', 'andreslh90@gmail.com', 1, 2, 'aaaaaa', 'aaaaaa', ''),
+(7, 'andres33', 'asdasd', 'andreslh90@gmail.com', 1, 2, 'asdasd', 'asdasd', ''),
+(8, 'andres3333', '333333', 'andreslh90@gmail.com', 1, 2, '333333', '333333', ''),
+(9, 'andres3333333', '33333333', 'andreslh90@gmail.com', 1, 2, '3333333333', '333333', ''),
+(10, 'andres55', '55555', 'andreslh90@gmail.com', 1, 2, '55555', '55555', ''),
+(11, 'andres65', '123456', 'andreslh90@gmail.com', 1, 2, '123', '12365', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
