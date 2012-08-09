@@ -52,6 +52,7 @@ class UsersController extends AppController {
 		}
 		 
 		if($user){
+		  session_destroy();
 		  $logoutUrl = $facebook->getLogoutUrl(array(
 		  	'redirect_uri'  => 'http://ttt.borealdev.com.ar/',
 		  ));
