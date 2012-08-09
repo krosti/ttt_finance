@@ -25,16 +25,45 @@ class UsersController extends AppController {
 		$this->redirect(array('controller'=>'pages', 'action' => 'home'));		
 	}
 
-	function sesion_desdefb($uid = null)
-	{
-		$user = $this->User->find('first',array('conditions'=>array('User.fbid'=>$uid)));
-		$this->Session->write('User', $user['User']);
-		$this->Session->write('User.username', $user['User']['username']);	
-		$this->Session->write('User.fbid', $user['User']['fbid']);	
-		$this->redirect("/");	
+	function loginfb(){
+		$app_id   = "377583548967953";
+		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
+		$site_url = "http://ttt.borealdev.com.ar/";
+		 
+		try{
+		  include_once "fb/facebook.php";
+		}catch(Exception $e){
+		  error_log($e);
+		}
+		$facebook = new Facebook(array(
+		  'appId'   => $app_id,
+		  'secret'  => $app_secret,
+		  ));
+		 
+		$user = $facebook->getUser();
+		 
+		if($user){
+		  try{
+		    $user_profile = $facebook->api('/me');
+		  }catch(FacebookApiException $e){
+		    error_log($e);
+		    $user = NULL;
+		  }
+		}
+		 
+		if($user){
+		  $logoutUrl = $facebook->getLogoutUrl(array(
+		  	'redirect_uri'  => 'http://ttt.borealdev.com.ar/',
+		  ));
+		  echo "<script>top.location.href = '$logoutUrl'; </script>";
+		}else{
+		  $loginUrl = $facebook->getLoginUrl(array(
+		    'scope'   => 'read_stream, publish_stream, user_birthday, user_location, user_work_history, user_hometown, user_photos',
+		    'redirect_uri'  => $site_url,
+		    ));
+		  echo "<script>top.location.href = '$loginUrl'; </script>";  
+		}
 	}
-
-	function addfb(){}
 
 	function add() {
 		if (!empty($this->data)) {

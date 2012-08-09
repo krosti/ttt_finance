@@ -52,7 +52,16 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				<span id="mail_color">info@tritangotraders.com</span>
 			</div>
 			<div id="conectar">
-				<span>Conectarse</span>
+				<span>
+				<?php if ($this->Session->read('User')) 
+					{
+						echo $this->Html->link("Cerrar Sesión","/users/loginfb");
+					}
+					else
+					{
+						echo $this->Html->link('Conectarse',array('controller'=>'users','action'=>'loginfb'));
+					}?>
+				</span>
 				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
 				<span><?php if ($this->Session->read('User')) 

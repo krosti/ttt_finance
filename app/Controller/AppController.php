@@ -32,4 +32,30 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	var $helpers = array('Html','Session','Form');
+	var $uses = array('User');
+
+	function beforeFilter() {
+		$app_id   = "377583548967953";
+		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
+		$site_url = "http://ttt.borealdev.com.ar/";
+		 
+		try{
+		  include_once "fb/facebook.php";
+		}catch(Exception $e){
+		  error_log($e);
+		}
+		$facebook = new Facebook(array(
+		  'appId'   => $app_id,
+		  'secret'  => $app_secret,
+		  ));
+		 
+		$uid = $facebook->getUser();
+		if ($uid)
+		{
+			$user = $this->User->find('first',array('conditions'=>array('User.fbid'=>$uid)));
+			$this->Session->write('User', $user['User']);
+			$this->Session->write('User.username', $user['User']['username']);	
+			$this->Session->write('User.fbid', $user['User']['fbid']);	
+		}
+	}
 }
