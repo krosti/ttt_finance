@@ -34,7 +34,7 @@ class AppController extends Controller {
 	var $helpers = array('Html','Session','Form');
 	var $uses = array('User');
 
-	function beforeFilter() {
+	public function beforeFilter() {
 		$app_id   = "377583548967953";
 		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
 		$site_url = "http://ttt.borealdev.com.ar/";

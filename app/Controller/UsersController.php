@@ -11,7 +11,7 @@ class UsersController extends AppController {
 	var $uses = array('User');
 	var $components = array('Email');
 	
-	function a987156428774($id){
+	public function a987156428774($id){
 		$this->User->read(null, $id);
 		$this->User->set('estado_id', '2');
 		if ($this->User->save($this->data))
@@ -25,7 +25,7 @@ class UsersController extends AppController {
 		$this->redirect(array('controller'=>'pages', 'action' => 'home'));		
 	}
 
-	function loginfb(){
+	public function loginfb(){
 		$app_id   = "377583548967953";
 		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
 		$site_url = "http://ttt.borealdev.com.ar/";
@@ -65,7 +65,7 @@ class UsersController extends AppController {
 		}
 	}
 
-	function add() {
+	public function add() {
 		if (!empty($this->data)) {
 			if ($this->User->save($this->data)) {
 				//$this->Session->setFlash(__('Muchas gracias por registrarte en TTT', true));
@@ -103,7 +103,7 @@ class UsersController extends AppController {
 			}
 		}
 	}
-	function login()
+	public function login()
 	{
 		if(!empty($this->data))
 		{
@@ -143,7 +143,7 @@ class UsersController extends AppController {
 		$this->redirect("/");			
 	}
 	/** Logout */
-	function logout() {
+	public function logout() {
 		$this->Session->delete('User');
 		$this->redirect("/"); break;
 	}	
