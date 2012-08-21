@@ -191,3 +191,4 @@ Cache::config('_bancha_api_', array(
     'duration' => $duration
 ));
 */
+CakePlugin::load('Facebook');

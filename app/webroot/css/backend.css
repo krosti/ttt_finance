@@ -286,3 +286,34 @@ select {
   top: 6px;
   height: 20px;
 }
+
+p{ color:#444; }
+.paging { color:#3B5998; clear:both; margin-top:15px; margin-bottom:10px; height: 20px; }
+.paging .prev{
+  float:left;
+}
+.paging .next{
+  float:right;
+}
+
+div.actions{
+  margin:auto;
+  text-transform: lowercase;
+  color:#333;
+  width: 200px;
+  background: #444;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+
+}
+.actions ul{
+  padding: 0px;
+}
+.actions ul li{
+  list-style-type: none;
+}
+.actions a:visited, .actions a:hover, .action a:link{
+  color:#999;
+}

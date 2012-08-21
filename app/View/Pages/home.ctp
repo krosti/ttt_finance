@@ -56,7 +56,7 @@
 									</div>
 									<div class="separacion_slide separacion_inferior"></div>
 								</div>
-							<?php $i++; ?>
+							<?php #$i++; ?>
 							<?php if ( ($i % 2 == 0) ) :?>
 								</div>
 							<?php endif; ?>
@@ -132,7 +132,7 @@
 			Consulta / Opini&oacute;n
 		</div>
 		<div class="cuerpo_seccion">
-			<div class="opinion">
+			<!--div class="opinion">
 				<div class="borde_opinion">
 					<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
 					<span class="cuerpo_opinion">
@@ -147,7 +147,8 @@
 						</span>
 					</div>
 				</div>
-			</div>
+			</div-->
+			<?php echo $this->Facebook->livestream(); ?>
 		</div>
 	</div>
 </div>

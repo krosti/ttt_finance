@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 	var $name = 'Users';
-	var $helpers = array('Html', 'Form','Session');
+	var $helpers = array('Html', 'Form','Session','Facebook.Facebook');
 	var $uses = array('User');
 	var $components = array('Email');
 	
@@ -26,9 +26,9 @@ class UsersController extends AppController {
 	}
 
 	public function loginfb(){
-		$app_id   = "377583548967953";
+		/*$app_id   = "377583548967953";
 		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
-		$site_url = "http://ttt.borealdev.com.ar/";
+		$site_url = "http://localhost/ttt_finance";
 		 
 		try{
 		  include_once "fb/facebook.php";
@@ -41,7 +41,7 @@ class UsersController extends AppController {
 		  ));
 		 
 		$user = $facebook->getUser();
-		 
+		debug($user);
 		if($user){
 		  try{
 		    $user_profile = $facebook->api('/me');
@@ -50,20 +50,25 @@ class UsersController extends AppController {
 		    $user = NULL;
 		  }
 		}
-		 
 		if($user){
-		  session_destroy();
-		  $logoutUrl = $facebook->getLogoutUrl(array(
+		  //session_destroy();
+		  $logoutUrl = $facebook->getLogoutUrl(/*array(
 		  	'redirect_uri'  => 'http://ttt.borealdev.com.ar/',
 		  ));
 		  echo "<script>top.location.href = '$logoutUrl'; </script>";
+		  $this->set('logoutUrl',$logoutUrl);
 		}else{
 		  $loginUrl = $facebook->getLoginUrl(array(
-		    'scope'   => 'read_stream, publish_stream, user_birthday, user_location, user_work_history, user_hometown, user_photos',
-		    'redirect_uri'  => $site_url,
+		    //'scope'   => 'read_stream, publish_stream, user_birthday, user_location, user_work_history, user_hometown, user_photos',
+		    //'redirect_uri'  => $site_url
 		    ));
 		  echo "<script>top.location.href = '$loginUrl'; </script>";  
+		  $this->set('loginUrl',$loginUrl);
 		}
+		*/
+
+
+
 	}
 
 	public function add() {
@@ -145,7 +150,8 @@ class UsersController extends AppController {
 	}
 	/** Logout */
 	public function logout() {
-		$this->Session->delete('User');
-		$this->redirect("/"); break;
+		//$this->Session->delete('User');
+		$this->Auth->logout();
+		$this->redirect("/");
 	}	
 }

@@ -139,9 +139,9 @@ jQuery.fn.extend({
 		$('.box_valores').each(function(index) {
 			var itemW=eval($(this).css("width").split("px")[0]);
 			itemW +=eval($(this).css("margin-right").split("px")[0])+2;
-			console.log(itemW);
+			//console.log(itemW);
 			itemW +=eval($(this).css("padding-right").split("px")[0])+2;
-			console.log(itemW);
+			//console.log(itemW);
 			allW+=itemW;
 		});
 		boxW=allW;

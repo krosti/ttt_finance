@@ -21,6 +21,7 @@
  */
 
 App::uses('Controller', 'Controller');
+
 /**
  * Application Controller
  *
@@ -31,11 +32,34 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	var $helpers = array('Html','Session','Form');
-	var $uses = array('User');
+	public $helpers = array('Html','Session','Form','Facebook.Facebook');
+	public $uses = array('User');
+	#public $components = array('Facebook.Connect');
+	/*public $components = array('Session',
+            'Auth' => array(
+                'authorizedActions' => array(
+                    'index', 'view'
+                ),
+                'authorize' => 'Controller'
+            ),
+            'Facebook.Connect'
+        );*/
+	//Example AppController.php components settup with FacebookConnect
+	public $components = array('Session',
+        'Auth' => array(
+            'authenticate' => array(
+                'Form' => array(
+                    'fields' => array('username' => 'email')
+                )
+            ),
+            'authorize' => 'Controller'
+        ),
+        'Facebook.Connect' => array('model' => 'User')
+    );
+
 
 	public function beforeFilter() {
-		$app_id   = "377583548967953";
+		/*$app_id   = "377583548967953";
 		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
 		$site_url = "http://ttt.borealdev.com.ar/";
 		 
@@ -44,21 +68,45 @@ class AppController extends Controller {
 		}catch(Exception $e){
 		  error_log($e);
 		}
+		
 		$facebook = new Facebook(array(
 		  'appId'   => $app_id,
 		  'secret'  => $app_secret,
 		  ));
 		 
 		$uid = $facebook->getUser();
-		if ($uid)
+		debug($uid);*/
+		
+		#$uid = $this->Connect->user();
+		/*if ($uid)
 		{
-			$user = $this->User->find('first',array('conditions'=>array('User.fbid'=>$uid)));
+			
+			$user = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$uid['id'])));
 			if ($user)
 			{
 				$this->Session->write('User', $user['User']);
 				$this->Session->write('User.username', $user['User']['username']);	
-				$this->Session->write('User.fbid', $user['User']['fbid']);	
+				$this->Session->write('User.facebook_id', $user['User']['facebook_id']);
 			}
-		}
+			else {
+				$uid['ttt_status'] = 'false';
+				//esta logeado con facebook pero no registrado en TTT
+			}
+
+		}*/
+		
+		#$this->set('test',$this->Auth->user());
+		$this->set('facebook_user', $this->Connect->user() );
+		
+	}
+
+	public function isAuthorized(){
+		return ($this->Auth->user('id'));
+	}
+
+	//Add an email field to be saved along with creation.
+	function beforeFacebookSave(){
+	    $this->Connect->authUser['User']['email'] = $this->Connect->user('email');
+	    return true; //Must return true or will not save.
 	}
 }

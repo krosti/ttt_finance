@@ -1,7 +1,9 @@
+<?php echo $this->Session->read('user').'this'; ?>
 <div class = "box_login">
-	<?php if ($this->Session->read('User')):	?>					
+	<?php 
+	if ($facebook_user): ?>
 		<div class = "SessionDetails">
-			<span>Bienvenido <?php echo $this->Session->read('User.username');?></span>
+			<span> <?php echo $this->Facebook->login(); ?> </span>
 		</div>
 	<?php	
 	else:
@@ -15,5 +17,6 @@
 		</div>
 		<?php echo $this->Form->button('Log-in',array('id'=>'button_login'));?>
 		<?php echo $this->Form->end(); 
-	endif;	?>
+	endif;	
+	?>
 </div>

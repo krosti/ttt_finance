@@ -19,7 +19,8 @@
 $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--html xmlns="http://www.w3.org/1999/xhtml"-->
+<?php echo $this->Facebook->html(); ?>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
@@ -41,7 +42,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	)); ?>
 	
 </head>
-<body>
+<body><?php #debug($facebook_user); ?>
 	<div class="cuerpo">
 		<div class="header">
 			<div id="direccion">
@@ -53,15 +54,16 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			</div>
 			<div id="conectar">
 				<span>
-				<?php if ($this->Session->read('User')) 
-					{
-						echo $this->Html->link("Cerrar Sesión","/users/loginfb");
-					}
-					else
-					{
-						echo $this->Html->link('Conectarse',array('controller'=>'users','action'=>'loginfb'));
-					}?>
+					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
+					<?php 
+						if ($facebook_user) {
+							echo "Estas conectado con ".$facebook_user['username'];
+							echo $this->Facebook->logout(array('redirect' => array('controller' => 'users', 'action' => 'logout')));
+							echo $this->Facebook->picture($facebook_user['id']);
+						}
+					?>
 				</span>
+
 				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
 				<span><?php if ($this->Session->read('User')) 
@@ -146,7 +148,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	</div>
 
 </body>
-<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script-->
+<?php echo $this->Facebook->init(); ?>
 <?php echo $this->Html->script(array(
 		'jquery',
 		'jquery-ui',

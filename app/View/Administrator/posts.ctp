@@ -33,7 +33,7 @@
 
 	<input id="formTipo" name="data[Post][tipo_id]" value="1" style="display:none;">
 
-	<input id="formSerieDatos" name="data[Post][serie_datos]"  value="asd" style="display:none;">
+	<input id="formSerieDatos" name="data[Post][serie_datos]"  value="test" style="display:none;">
 	
 	<div class="formLabel">Cuerpo</div>
 	<div class="formOptions">

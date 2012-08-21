@@ -45,6 +45,7 @@ class PagesController extends AppController {
  */
 	public $uses = array('Post');
 
+
 /**
  * Displays a view
  *

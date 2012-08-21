@@ -1,6 +1,6 @@
 <?php
 class User extends AppModel {
-	var $name = 'User';
+	var $name = 'Users';
 	var $displayField = 'name';	
 	var $validate = array(
 		'username'=>array(
@@ -61,7 +61,7 @@ class User extends AppModel {
 				'rule' => 'check_emails_equals',
 				'message' => 'Los emails no coinciden!!!'
 			),
-		),	
+		)
 
 	);
 	//The Associations below have been created with all possible keys, those that are not needed can be removed

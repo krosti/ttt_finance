@@ -13,6 +13,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout = 'backend';
 		$this->Post->recursive = 0;
 		$this->set('posts', $this->paginate());
 	}
@@ -38,6 +39,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout = 'backend';
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
@@ -59,6 +61,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->layout = 'backend';
 		$this->Post->id = $id;
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Invalid post'));
@@ -86,6 +89,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->layout = 'backend';
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
