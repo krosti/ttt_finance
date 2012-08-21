@@ -54,7 +54,8 @@ class AppController extends Controller {
             ),
             'authorize' => 'Controller'
         ),
-        'Facebook.Connect' => array('model' => 'User')
+        'Facebook.Connect' => array('model' => 'User'),
+        'DebugKit.Toolbar'
     );
 
 

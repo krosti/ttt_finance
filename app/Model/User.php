@@ -1,6 +1,6 @@
 <?php
 class User extends AppModel {
-	var $name = 'Users';
+	var $name = 'User';
 	var $displayField = 'name';	
 	var $validate = array(
 		'username'=>array(
@@ -62,8 +62,8 @@ class User extends AppModel {
 				'message' => 'Los emails no coinciden!!!'
 			),
 		)
-
 	);
+
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 	/**
 	 * Private User
@@ -145,6 +145,5 @@ class User extends AppModel {
 		} 	
 	return TRUE;
 	}	
-	
-	
+		
 }

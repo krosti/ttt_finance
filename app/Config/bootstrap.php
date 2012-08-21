@@ -192,3 +192,4 @@ Cache::config('_bancha_api_', array(
 ));
 */
 CakePlugin::load('Facebook');
+CakePlugin::load('DebugKit');
