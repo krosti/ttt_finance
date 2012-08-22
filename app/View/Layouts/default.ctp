@@ -42,7 +42,10 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	)); ?>
 	
 </head>
-<body><?php #debug($facebook_user); ?>
+<body><?php debug(isset($facebook_user)); ?>
+	<?php #echo $i++; ?>
+	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
+	<?php #print_r( $this->Session->read('Auth.User'));  ?>
 	<div class="cuerpo">
 		<div class="header">
 			<div id="direccion">
@@ -56,11 +59,14 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				<span>
 					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
 					<?php 
-						if ($facebook_user) {
-							echo "Estas conectado con ".$facebook_user['username'];
-							echo $this->Facebook->logout(array('redirect' => array('controller' => 'users', 'action' => 'logout')));
+						if (isset($facebook_user)) {
+							echo "Estas conectado pero no registrado ".$facebook_user['username']." | ";
+							echo $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout'),'test'));
 							echo $this->Facebook->picture($facebook_user['id']);
+						} else{
+							echo $this->Facebook->login();
 						}
+
 					?>
 				</span>
 

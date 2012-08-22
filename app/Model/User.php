@@ -1,8 +1,11 @@
 <?php
+
+App::uses('AppModel', 'Model');
+
 class User extends AppModel {
-	var $name = 'User';
-	var $displayField = 'name';	
-	var $validate = array(
+	public $name = 'User';
+	public $displayField = 'name';	
+	public $validate = array(
 		'username'=>array(
 			'usernameRule-1' => array(
 				'rule' => 'notEmpty',

@@ -45,7 +45,7 @@ class AppController extends Controller {
             'Facebook.Connect'
         );*/
 	//Example AppController.php components settup with FacebookConnect
-	public $components = array('Session',
+	public $components = array('Session' => array('timeout'=> 200),
         'Auth' => array(
             'authenticate' => array(
                 'Form' => array(
@@ -97,17 +97,17 @@ class AppController extends Controller {
 		}*/
 		
 		#$this->set('test',$this->Auth->user());
-		$this->set('facebook_user', $this->Connect->user() );
-		
+		#$this->set('facebook_user', $this->Connect->user() );
+		if ($this->Auth->user()){
+			$this->Connect->intialize;
+			$this->set('facebook_user', $this->Connect->hasAccount );
+		}
+		#debug($this->Connect);
 	}
 
 	public function isAuthorized(){
-		return ($this->Auth->user('id'));
+		return ($this->Connect->user('id'));
 	}
 
-	//Add an email field to be saved along with creation.
-	function beforeFacebookSave(){
-	    $this->Connect->authUser['User']['email'] = $this->Connect->user('email');
-	    return true; //Must return true or will not save.
-	}
+	
 }

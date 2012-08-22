@@ -1,5 +1,5 @@
-<?php echo $this->Session->read('user').'this'; ?>
-<div class = "box_login">
+<?php #debug( $this->Session->read('user')).'this'; ?>
+<!--div class = "box_login">
 	<?php 
 	if ($facebook_user): ?>
 		<div class = "SessionDetails">
@@ -19,4 +19,4 @@
 		<?php echo $this->Form->end(); 
 	endif;	
 	?>
-</div>
+</div-->

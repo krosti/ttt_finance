@@ -1,5 +1,5 @@
 <div class="users form">
-<?php echo $this->Form->create('User');?>
+<!--?php echo $this->Form->create('User');?>
 	<fieldset>
 		<legend><?php __('Add User'); ?></legend>
 	<?php
@@ -13,4 +13,5 @@
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit'));?>
-</div>
+</div-->
+<?php echo $this->Facebook->registration(array("width" => "500")); ?>

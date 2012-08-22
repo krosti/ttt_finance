@@ -6,10 +6,10 @@ App::uses('AppController', 'Controller');
  * @property Tipo $Tipo
  */
 class UsersController extends AppController {
-	var $name = 'Users';
-	var $helpers = array('Html', 'Form','Session','Facebook.Facebook');
-	var $uses = array('User');
-	var $components = array('Email');
+	public $name = 'Users';
+	public $helpers = array('Html', 'Form','Session','Facebook.Facebook');
+	public $uses = array('User');
+	public $components = array('Email');
 	
 	public function a987156428774($id){
 		$this->User->read(null, $id);
@@ -109,9 +109,8 @@ class UsersController extends AppController {
 			}
 		}
 	}
-	public function login()
-	{
-		if(!empty($this->data))
+	public function login(){
+		/*if(!empty($this->data))
 		{
 			if ($this->User->check_username_exists($this->data['User']['username']))
 			{ 
@@ -146,12 +145,14 @@ class UsersController extends AppController {
 				}	
 			}			
 		}
-		$this->redirect("/");			
+		$this->redirect("/");*/
 	}
-	/** Logout */
+
 	public function logout() {
-		//$this->Session->delete('User');
-		$this->Auth->logout('id');
-		$this->redirect("/");
-	}	
+		$this->redirect($this->Auth->logout());
+	}
+
+	public function myAccount(){
+		
+	}
 }

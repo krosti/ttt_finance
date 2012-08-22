@@ -1,4 +1,4 @@
-<div class = "box_login">
+<!--div class = "box_login">
 	<?php if ($this->Session->read('User')):	?>					
 		<div class = "SessionDetails">
 			<span>Bienvenido <?php echo $this->Session->read('User.username');?></span>
@@ -16,31 +16,4 @@
 		<?php echo $this->Form->button('Log-in',array('id'=>'button_login'));?>
 		<?php echo $this->Form->end(); 
 	endif;	?>
-
-	<?php if ($cookie) { 
-//cookie is set, user is logged in
-$user = json_decode(file_get_contents('https://graph.facebook.com/'.$cookie['uid'])); 
-//Display the facebook user ID, name, gender and Facebook URL in the web browser 
-echo '<br />'; 
-echo 'Your Facebook ID: '.$user->{'id'}; 
-echo '<br />'; 
-echo 'Your name: '.$user->{'name'}; 
-echo '<br />'; 
-echo 'Your gender: '.$user->{'gender'}; 
-echo '<br />'; 
-echo 'Your Facebook URL: '.$user->{'link'}; 
-echo '<br />'; 
-echo '<fb:login-button autologoutlink="true"></fb:login-button>'; 
-} 
-else 
-{ 
-//user is not logged in, display the Facebook login button 
-echo '<h2>Facebook Application Test page</h2>'; 
-echo '<br />'; 
-echo 'This is the most basic Facebook application PHP source code that will grab the user Facebook full name, gender and Facebook URL.'; 
-echo '<br />Then displays those information in the web browser once the user has successfully logged in'; 
-echo '<br /><br />'; 
-echo '<fb:login-button autologoutlink="true"></fb:login-button>'; 
-} 
-?>
-</div>
+</div-->
