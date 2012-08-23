@@ -146,10 +146,15 @@ class UsersController extends AppController {
 			}			
 		}
 		$this->redirect("/");*/
+		$this->Auth->login();
+		$this->redirect("/");
 	}
 
-	public function logout() {
-		$this->redirect($this->Auth->logout());
+	function logout() {
+		$this->Auth->logout();
+
+		$this->Session->destroy();
+		$this->redirect('/');
 	}
 
 	public function myAccount(){

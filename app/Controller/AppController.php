@@ -100,7 +100,7 @@ class AppController extends Controller {
 		#$this->set('facebook_user', $this->Connect->user() );
 		if ($this->Auth->user()){
 			$this->Connect->intialize;
-			$this->set('facebook_user', $this->Connect->hasAccount );
+			$this->set('facebook_user', $this->Connect->user() );
 		}
 		#debug($this->Connect);
 	}

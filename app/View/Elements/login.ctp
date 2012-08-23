@@ -1,9 +1,13 @@
 <?php #debug( $this->Session->read('user')).'this'; ?>
-<!--div class = "box_login">
+<div class = "box_login">
 	<?php 
-	if ($facebook_user): ?>
+	if (isset($facebook_user)): ?>
 		<div class = "SessionDetails">
-			<span> <?php echo $this->Facebook->login(); ?> </span>
+			<span> 
+			<?php 
+				echo $facebook_user['first_name']; 
+				echo $this->Facebook->picture($facebook_user['id']);
+			?> </span>
 		</div>
 	<?php	
 	else:
@@ -19,4 +23,4 @@
 		<?php echo $this->Form->end(); 
 	endif;	
 	?>
-</div-->
+</div>

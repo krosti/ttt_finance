@@ -206,7 +206,7 @@ class ConnectComponent extends Component {
 			$retval = Set::extract("/$field", $this->me);
 			return empty($retval) ? null : $retval[0];
 		}
-		debug($this->me);
+		#debug($this->me);
 		return $this->me;
 	}
 	
