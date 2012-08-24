@@ -94,6 +94,12 @@ ui_home = {
 				}
 			});	
 		});
-		
+	},
+
+	animacionFlashMessage: function(){
+		/*
+		* maneja la animación de los mensajes
+		*/
+		$('#flashMessage').delay(2000).slideToggle(700);
 	}
 }

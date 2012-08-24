@@ -83,12 +83,13 @@ class FacebookHelper extends AppHelper {
 	function registration($options = array(), $label = ''){
 		$options = array_merge(
 			array(
-				'fields' => 'name,birthday,gender,location,email', 
+				'fields' => 'name,birthday,gender,location,email',
 				'redirect-uri' => Router::url($this->here, true),
 				'width' => 350
 			), 
 			$options
 		);
+		#debug($this->__fbTag('fb:registration',$label,$options));
 		return $this->__fbTag('fb:registration',$label,$options);
 	}
 	

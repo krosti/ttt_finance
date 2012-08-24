@@ -53,7 +53,7 @@ class PagesController extends AppController {
  * @return void
  */
 	public function display() {
-		
+
 		$this->set('analisisttt', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '1'),'order'=>'Post.created DESC' ) ) );
 		$this->set('situacionesactuales', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '2') ) ) );
 		
@@ -77,5 +77,7 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
+
+	
 
 }

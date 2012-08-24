@@ -72,28 +72,32 @@ class UsersController extends AppController {
 	}
 
 	public function add() {
-		if (!empty($this->data)) {
-			if ($this->User->save($this->data)) {
+		//if (!empty($this->data)) {
+		if($user = $this->Connect->registrationData()){
+			if ($this->User->save($user)) {
 				//$this->Session->setFlash(__('Muchas gracias por registrarte en TTT', true));
 				unset($_POST);			
 					/* envio del mail al dueño. Le avisa que un usuario se ha registrado*/
-					$Info = $this->data;
-					$user = $this->User->find('first',array('conditions'=>array('User.username'=>$this->data['User']['username'])));
+					$Info = $user;
+					echo $user['user_id']	;
+					$user = $this->User->find('first',array('conditions'=>array('User.email'=>$user['registration']['email'])));
 					$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-					$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['User']['id'];
+					$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['0']['user_id'];
 					$sitioweb = "http://ttt.borealdev.com.ar";
 					$InfoAux = array(
-						"nombre" => $Info['User']['name'],
-						"apellido" => $Info['User']['lastname'],
+						"nombre" => $Info['registration']['first_name'],
+						"apellido" => $Info['registration']['last_name'],
 						"mensaje" => $mensaje,
 						"mensaje2" => $mensaje2,
 						"sitioweb" => $sitioweb,
-						"username" => $Info['User']['username'],
-						"password" => $Info['User']['password'],
-						"email" => $Info['User']['email'],
+						"username" => $Info['registration']['email'],
+						"password" => $Info['registration']['password'],
+						"email" => $Info['registration']['email'],
 					);
-					$this->Email->to = $Info['User']['email'];//ACA LE MANDAMOS EL MAIL CON EL LINK DE CONFIRMACION
-					$this->Email->subject = 'Aviso desde el Sitio Web | TTT.';
+
+					//Envio de e-mail para la confirmaciòn
+					$this->Email->to = $Info['registration']['email'];
+					$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
 					$this->Email->from = "contacto@ttt.com.ar";					
 					$this->Email->template = 'aviso';				
 					$this->Email->sendAs = 'html';
@@ -102,15 +106,17 @@ class UsersController extends AppController {
 						$this->Session->setFlash(__('La cuenta de usuario fue creada. Se te envi&oacute; un email para su activaci&oacute;n.', true));
 						$this->redirect("/");
 					}else{
-						$this->Session->setFlash(__('Hubo un problema, disculpe los inconvenientes.', true));		
+						$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
 						$this->redirect("/users/add");									
 					}
 					/* fin envio del mail*/	
 			}
+		}else{
+			$this->Auth->allow( 'add' ); 
 		}
 	}
 	public function login(){
-		/*if(!empty($this->data))
+		if(!empty($this->data))
 		{
 			if ($this->User->check_username_exists($this->data['User']['username']))
 			{ 
@@ -145,9 +151,10 @@ class UsersController extends AppController {
 				}	
 			}			
 		}
-		$this->redirect("/");*/
-		$this->Auth->login();
 		$this->redirect("/");
+		#if($this->Auth->login()
+		#debug($this->Auth->login());
+		#$this->redirect("/");
 	}
 
 	function logout() {

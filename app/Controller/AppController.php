@@ -45,21 +45,22 @@ class AppController extends Controller {
             'Facebook.Connect'
         );*/
 	//Example AppController.php components settup with FacebookConnect
-	public $components = array('Session' => array('timeout'=> 200),
+	public $components = array('Session',
         'Auth' => array(
-            'authenticate' => array(
+            /*'authenticate' => array(
                 'Form' => array(
                     'fields' => array('username' => 'email')
                 )
-            ),
-            'authorize' => 'Controller'
+            ),*/
+            'authorize' => 'Controller',
+            'authorizedActions' => array('index','view')
         ),
         'Facebook.Connect' => array('model' => 'User'),
         'DebugKit.Toolbar'
     );
 
 
-	public function beforeFilter() {
+	function beforeFilter() {
 		/*$app_id   = "377583548967953";
 		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
 		$site_url = "http://ttt.borealdev.com.ar/";
@@ -98,15 +99,23 @@ class AppController extends Controller {
 		
 		#$this->set('test',$this->Auth->user());
 		#$this->set('facebook_user', $this->Connect->user() );
-		if ($this->Auth->user()){
-			$this->Connect->intialize;
+
+		//global url adress
+		$this->set('site_url','http://localhost/ttt_finance');
+
+		$this->Auth->allow( 'display' ); 
+
+		if ($this->Connect->user()):
+			#$this->Connect->intialize;
 			$this->set('facebook_user', $this->Connect->user() );
-		}
+		endif;
+		
 		#debug($this->Connect);
 	}
 
-	public function isAuthorized(){
-		return ($this->Connect->user('id'));
+	function isAuthorized(){
+		#return ($this->Connect->user('id'));
+		return true;
 	}
 
 	

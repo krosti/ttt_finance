@@ -17,6 +17,7 @@
  */
 
 $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--html xmlns="http://www.w3.org/1999/xhtml"-->
@@ -56,20 +57,25 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				<span id="mail_color">info@tritangotraders.com</span>
 			</div>
 			<div id="conectar">
-				<span>
+				<span style="margin-right: 0px; margin-top: 0px; margin-bottom: -5px;  float:right;">
 					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
 					<?php 
 						if (isset($facebook_user)) {
 							echo "Estas conectado pero no registrado | ";
 							echo $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout'),'test'));
 						} else{
-							echo $this->Facebook->login();
+							echo '<div class="fb">'.
+								$this->Facebook->login(array(
+									'perms' => 'email,publish_stream',
+									'redirect' => true,
+									))
+								.'</div>';
 						}
 
 					?>
 				</span>
 
-				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
+				<?php #echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
 				<span><?php if ($this->Session->read('User')) 
 					{

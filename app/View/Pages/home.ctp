@@ -38,17 +38,7 @@
 									</div>
 									<div class="compartir_slide">
 										<!--img src="img/compartir_slide.png" /-->
-										<a href="http://www.facebook.com/dialog/feed?
-										  app_id=497402490288775&
-										  link=http://developers.facebook.com/docs/reference/dialogs/&
-										  picture=http://ttt.borealdev.com.ar/img/logo.png&
-										  name=TriTangoTraders%20AnalisisTTT%20-%20<?php echo $analisis['Post']['titulo'] ?>&
-										  caption=Reference%20Documentation&
-										  description=Using%20Dialogs%20to%20interact%20with%20users.&
-										  redirect_uri=http://www.example.com/response"
-										  target="_BLANK">
-										  <?php echo $this->Html->image('fb-share.jpeg'); ?>
-										</a>
+										<?php echo $this->Facebook->share(null, array('fbxml' => true)); ?>
 										//
 										<span>
 											<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
@@ -148,7 +138,7 @@
 					</div>
 				</div>
 			</div-->
-			<?php echo $this->Facebook->livestream(); ?>
+			<?php echo $this->Facebook->comments(array('width' => '457')); ?>
 		</div>
 	</div>
 </div>

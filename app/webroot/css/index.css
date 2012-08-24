@@ -46,6 +46,7 @@ a:hover{
 		}
 	#conectar{
 		float:right;
+		height: 30px;
 	}
 		#conectar span{
 			font-size:11px;
@@ -56,6 +57,9 @@ a:hover{
 			margin-top:5px;
 			float:left;
 			margin-right:5px;
+		}
+		#conectar span .fb{
+			width:85px;
 		}
 	#panel_header{
 		background:#f5f5f3;
@@ -476,4 +480,10 @@ a:hover{
 }
 .neutral{
 	color:#7AA9CB;
+}
+#flashMessage.flash_bad{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 700px;
+	color: #ff4e00;
 }

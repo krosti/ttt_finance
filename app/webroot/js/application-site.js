@@ -7,6 +7,7 @@
 		ui_home.manejo_scroll();
 		ui_home.menu_animacion_hover();
 		ui_home.agregarComentario();
+		ui_home.animacionFlashMessage();
 		
 		// Usage: 
 		// This code loads YUI and executes several code when YUI is loaded
