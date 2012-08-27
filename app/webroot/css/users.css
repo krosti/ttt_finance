@@ -1,0 +1,318 @@
+.users table {
+  border-collapse: collapse;
+  border: none;
+  font: normal 11px helvetica, verdana, arial, sans-serif;
+  background-image: url(http://www.acuity.com.br/extern/icant.co.uk/bg_acuity.gif); 
+  background-repeat: repeat;
+  background-color: black;
+  border-spacing: 1px;
+  }
+.users caption {
+  text-align: left;
+  font: normal 11px helvetica, verdana, arial,  sans-serif;
+  background: transparent;
+  }
+.users td, .users th {
+  border: none;
+  padding: .8em;
+  color: #6E6E6E;
+  border:1px dashed #333;
+  }
+.users thead th, .users tfoot th {
+  font: bold 10px helvetica, verdana, arial, sans-serif;
+  border: none;
+  text-align: left;
+  background: #000000;
+  color: #00FF0C;
+  padding-top:4px;
+  }
+.users tbody td a {
+  background: transparent;
+  text-decoration: none;
+  color: #9F9F9F;
+  }
+.users tbody td a:hover {
+  background: transparent;
+  color: #00FF0C;
+  }
+.users tbody th a {
+  font: bold 11px helvetica, verdana, arial, sans-serif;
+  background: transparent;
+  text-decoration: none;
+  font-weight:normal;
+  color: #9F9F9F;
+  }
+   
+   
+.users tbody td+td+td+td a {
+    padding-right: 14px;
+    background: url(http://www.acuity.com.br/extern/icant.co.uk/arrow.gif) transparent no-repeat bottom right;
+    }
+    tbody td+td+td+td a:hover {
+        padding-right: 14px;
+    background: url(http://www.acuity.com.br/extern/icant.co.uk/arrow.gif) transparent no-repeat bottom right;
+    }
+.users tbody th a:hover {
+  background: transparent;
+  color: #00FF0C;
+  }
+.users tbody th, tbody td {
+  vertical-align: top;
+  text-align: left;
+  }
+ 
+.users .odd {
+  background: #000000;
+  }
+.users tbody tr:hover {
+  background: #0E0E0E;
+  }
+.users tbody tr:hover th,
+.users tbody tr.odd:hover th {
+  background: #0E0E0E;
+  }
+
+
+/*THEME FORM*/
+
+.users form {
+  font-family: "Tahoma", "Geneva", sans-serif;
+  color: #929292;
+  padding: 10px;
+  width: 600px;
+}
+.users fieldset {
+  border: 1px solid #929292;
+  padding: 0;
+  padding-left: -1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.users legend {
+  font-size: 1.5em;
+  color: #929292;
+  font-weight: bold;
+  margin-left: 110px;
+  padding: 5px 10px;
+  border: 1px solid #929292;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -border-radius: 5px;
+  -khtml-border-radius: 5px;
+  text-transform: capitalize;
+}
+.users form p {
+  padding: 5px 0;
+  position: relative;
+}
+.users form p:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.users form p.nolabel * {
+  margin-left: 110px;
+}
+.users label {
+  width: 100px;
+  text-align: right;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  text-transform: capitalize;
+  line-height: 33px;
+}
+.users input[type=text], textarea, .users input[type=password] {
+  border: 1px solid #929292;
+  color: #929292;
+  padding: 10px;
+  vertical-align: text-top;
+  width: 300px;
+  -webkit-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  -moz-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -border-radius: 5px;
+  -khtml-border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+  /*position: absolute;*/
+  bottom: 0;
+  left: 110px;
+}
+.users p.nolabel input[type=text], .users p.nolabel textarea, .users p.nolabel input[type=password] {
+  position: relative;
+  left: 0;
+}
+.users textarea {
+  min-height: 100px;
+  max-width: 300px;
+  min-width: 300px;
+  resize: both;
+}
+.users button, .users input[type=submit] {
+  border: 1px solid #929292;
+  color: #FFFFFF;
+  -webkit-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  -moz-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -border-radius: 7px;
+  -khtml-border-radius: 7px;
+  background: -webkit-gradient(linear, left top, left 25, from(#2D4D9F), color-stop(4%, #89AAF0), to(#2D4D9F));  
+  background: -moz-linear-gradient(top, #2D4D9F, #89AAF0 1px, #2D4D9F 25px); 
+  padding: 10px;
+}
+.users input[type=text]:hover, .users input[type=password]:hover, .users textarea:hover, .users input[type=submit]:hover, .users button:hover, .users input[type=radio]:hover:before, .users input[type=checkbox]:hover:before, .users select:hover {
+  -webkit-box-shadow: #666 0 0 3px;
+  box-shadow: #666 0 0 3px;
+  -moz-box-shadow: #666 0 0 3px;
+  color: #929292;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: #666 0 0 3px;
+    box-shadow: #666 0 0 3px;
+    -moz-box-shadow: #666 0 0 3px;
+  }
+  100% {
+    -webkit-box-shadow: #666 0 0 10px;
+    box-shadow: #666 0 0 10px;
+    -moz-box-shadow: #666 0 0 10px;
+  }
+}
+.users input[type=text]:focus, .users input[type=password]:focus, .users textarea:focus, .users input[type=submit]:focus, .users button:focus, .users input[type=radio]:focus:before, .users .radioreplacement:focus, .users input[type=checkbox]:focus:before, .users .checkboxreplacement:focus, .users select:focus {
+  outline: 0;
+  -webkit-box-shadow: #666 0 0 3px;
+  box-shadow: #666 0 0 3px;
+  -moz-box-shadow: #666 0 0 3px;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 9999;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+}
+.users input[type=submit]:active button:active {
+  position: relative;
+  top: 1px;
+}
+.users input[type=radio]:before, .users .radioreplacement {
+  position: relative;
+  top: -2px;
+  left: -2px;
+  display: block;
+  height: 14px;
+  width: 14px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -border-radius: 7px;
+  -khtml-border-radius: 7px;
+  content: " ";
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+  border: 1px solid #929292;
+  color: #505050;
+  -webkit-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+}
+.users input[type=radio]:checked:before {
+  content: "•";
+}
+.users input[type=checkbox]:before, .users .checkboxreplacement {
+  position: relative;
+  top: -2px;
+  left: -2px;
+  display: block;
+  height: 14px;
+  width: 14px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -border-radius: 3px;
+  -khtml-border-radius: 3px;
+  content: " ";
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+  border: 1px solid #929292;
+  color: #505050;
+  -webkit-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+}
+.users input[type=checkbox]:checked:before {
+  content: "✓";
+}
+.users .radioreplacement, .users .checkboxreplacement {
+  position: absolute;
+  top: 15px;
+  left: 110px;
+  vertical-align: top;
+}
+.users .checkboxreplacement {
+  text-indent: -9999px;
+}
+.users .checkboxreplacement.checked {
+  text-indent: 0!important;
+}
+.users input[type=checkbox], .users input[type=radio] {
+  position: relative;
+  top: 6px;
+
+}
+.users select {
+  border: 1px solid #929292;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -border-radius: 3px;
+  -khtml-border-radius: 3px;
+  color: #505050;
+  -webkit-box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  box-shadow: #e3e3e3 0.1em 0.1em 0.2em;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+  position: relative;
+  top: 6px;
+  height: 20px;
+}
+
+.users p{ color:#444; }
+.users .paging { color:#3B5998; clear:both; margin-top:15px; margin-bottom:10px; height: 20px; }
+.users .paging .prev{
+  float:left;
+}
+.users .paging .next{
+  float:right;
+}
+
+.users div.actions{
+  margin:auto;
+  text-transform: lowercase;
+  color:#333;
+  width: 200px;
+  background: #444;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+
+}
+.users .actions ul{
+  padding: 0px;
+}
+.users .actions ul li{
+  list-style-type: none;
+}
+.users .actions a:visited, .users .actions a:hover, .users .action a:link{
+  color:#999;
+}

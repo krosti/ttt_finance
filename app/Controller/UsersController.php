@@ -8,8 +8,21 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 	public $name = 'Users';
 	public $helpers = array('Html', 'Form','Session','Facebook.Facebook');
-	public $uses = array('User');
-	public $components = array('Email');
+	public $uses = array('User','Application');
+	public $components = array('Email',
+		#'Auth' => array( 'authorizedActions' => array('account','add') ) 
+		);
+
+	public function beforeFilter(){
+		$this->Auth->allow(array('add','logout'));
+
+		if ($this->Connect->user()):
+			#$this->Connect->intialize;
+			$this->set('facebook_user', $this->Connect->user() );
+		endif;
+
+		$this->set('site_url',Configure::read('Site.url'));
+	}
 	
 	public function a987156428774($id){
 		$this->User->read(null, $id);
@@ -72,6 +85,7 @@ class UsersController extends AppController {
 	}
 
 	public function add() {
+		//$this->layout = 'none';
 		//if (!empty($this->data)) {
 		if($user = $this->Connect->registrationData()){
 			if ($this->User->save($user)) {
@@ -120,7 +134,7 @@ class UsersController extends AppController {
 		{
 			if ($this->User->check_username_exists($this->data['User']['username']))
 			{ 
-			$this->Session->setFlash('Usuario inexistente','default',array('class'=>'flash_bad'));	
+			$this->Session->setFlash('El usuario no existe','default',array('class'=>'flash_bad'));	
 			}
 			else
 			{

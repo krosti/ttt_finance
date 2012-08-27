@@ -52,8 +52,8 @@ class AppController extends Controller {
                     'fields' => array('username' => 'email')
                 )
             ),*/
-            'authorize' => 'Controller',
-            'authorizedActions' => array('index','view')
+            'authorize' => array('Controller'),
+            'authorizedActions' => array('index','view','add')
         ),
         'Facebook.Connect' => array('model' => 'User'),
         'DebugKit.Toolbar'
@@ -101,16 +101,14 @@ class AppController extends Controller {
 		#$this->set('facebook_user', $this->Connect->user() );
 
 		//global url adress
-		$this->set('site_url','http://localhost/ttt_finance');
+		$this->set('site_url',Configure::read('Site.url'));
 
-		$this->Auth->allow( 'display' ); 
+		$this->Auth->allow('display'); 
 
 		if ($this->Connect->user()):
-			#$this->Connect->intialize;
 			$this->set('facebook_user', $this->Connect->user() );
+			$this->set('fb_user_has_account', $this->Connect->hasAccount );
 		endif;
-		
-		#debug($this->Connect);
 	}
 
 	function isAuthorized(){

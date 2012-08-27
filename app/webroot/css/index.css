@@ -55,11 +55,11 @@ a:hover{
 		}
 		#conectar img{
 			margin-top:5px;
-			float:left;
+			float:right;
 			margin-right:5px;
 		}
 		#conectar span .fb{
-			width:85px;
+			
 		}
 	#panel_header{
 		background:#f5f5f3;
@@ -81,6 +81,29 @@ a:hover{
 			width:350px;
 			margin-top:40px;
 		}
+			#login .SessionDetails{
+				float:right;
+				width: 300px;
+			}
+			#login .SessionDetails span .name{
+				float: right;
+				margin-right: 70px;
+				margin-top: -25px;
+			}
+			#login .SessionDetails span .email{
+				float: right;
+				margin-right: 70px;
+				margin-top: -13px;
+				color:silver;
+			}
+			#login .SessionDetails span .picture{
+				margin-top: -35px;
+				float: right;
+				margin-right: 10px;
+			}
+			#login .SessionDetails span{
+				clear:both;
+			}
 			#login_user{
 				float:left;
 			}

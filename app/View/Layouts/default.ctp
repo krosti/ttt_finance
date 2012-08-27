@@ -57,17 +57,21 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				<span id="mail_color">info@tritangotraders.com</span>
 			</div>
 			<div id="conectar">
-				<span style="margin-right: 0px; margin-top: 0px; margin-bottom: -5px;  float:right;">
+				<span style="float:right;">
 					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
 					<?php 
 						if (isset($facebook_user)) {
-							echo "Estas conectado pero no registrado | ";
-							echo $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout'),'test'));
+							echo (isset($fb_user_has_account) && $fb_user_has_account) ? "Usuario TTT" : "Estas conectado pero no registrado | ";
+							echo ($site_url == "http://localhost/ttt_finance") 
+								? $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout') ))
+								: $this->Html->link('Logout','/users/logout');
 						} else{
 							echo '<div class="fb">'.
 								$this->Facebook->login(array(
-									'perms' => 'email,publish_stream',
-									'redirect' => true,
+									//'perms' => 'email,publish_stream',
+									'custom' => true,
+									'redirect' => '/',
+									'label'=>'LogIn'
 									))
 								.'</div>';
 						}
@@ -75,7 +79,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					?>
 				</span>
 
-				<?php #echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
+				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
 				<span><?php if ($this->Session->read('User')) 
 					{
@@ -83,7 +87,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					}
 					else
 					{
-						echo $this->Html->link('Registrarse',array('controller'=>'users','action'=>'add'));
+						echo $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));
 					}?>
 				</span>
 
@@ -157,6 +161,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		</div>
 
 	</div>
+
+<!--Agrega user-->
+<div id="nuevo_usuario" style="display:none;"> <?php echo $this->element('usersadd'); ?> </div>
 
 </body>
 <?php echo $this->Facebook->init(); ?>

@@ -140,6 +140,7 @@ class FacebookHelper extends AppHelper {
 				'onclick' => $onclick));
 			}
 			else {
+				
 				return $this->Html->link($options['label'], '#', array(
 					'onclick' => $onclick, 'id' => $options['id']));
 			}
@@ -147,6 +148,7 @@ class FacebookHelper extends AppHelper {
 		else {
 			if(!$options['id']){ unset($options['id']); }
 			unset($options['label'], $options['custom'], $options['redirect'], $options['img'], $options['alt']);
+			debug($this->__fbTag('fb:login-button', $label, $options));
 			return $this->__fbTag('fb:login-button', $label, $options);
 		}
 	}

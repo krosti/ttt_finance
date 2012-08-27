@@ -2,12 +2,14 @@
 <div class = "box_login">
 	<?php 
 	if (isset($facebook_user)): ?>
-		<div class = "SessionDetails">
+		<div class="SessionDetails">
 			<span> 
 			<?php 
-				echo $facebook_user['first_name']; 
-				echo $this->Facebook->picture($facebook_user['id']);
-			?> </span>
+				echo '<span class="name">'.$facebook_user['name'] . ' ('.$facebook_user['username'].')' .'</span>'; 
+				echo '<span class="email">'.$facebook_user['email'].'</span>'; 
+				echo '<span class="picture">'.$this->Facebook->picture($facebook_user['id']).'</span>';
+			?> 
+			</span>
 		</div>
 	<?php	
 	else:

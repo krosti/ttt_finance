@@ -101,5 +101,55 @@ ui_home = {
 		* maneja la animación de los mensajes
 		*/
 		$('#flashMessage').delay(2000).slideToggle(700);
+	},
+
+	validarFormLoginHome: function(){
+		/*
+		* valida el form de login, usr y pw solamente del Home
+		*/
+		var
+			usr = $('#input_user'),
+			pw = $('#input_pass');
+
+		$('#button_login').on('click',function(){
+			//console.log('dafa');
+			var
+				ck1 = (usr.val() != '') ? true : false,
+				ck2 = (pw.val() != '') ? true : false,
+				result = false;
+
+			(!ck1 && usr.css('border','1px solid red'));
+			(!ck2 && pw.css('border','1px solid red'));
+
+			return (ck1 && ck2) ? $(this).submit() : false;
+		});
+
+		usr.on('keydown',function(e){
+			var t = $(this); return (t.val != '') ? t.css('border','1px solid #ccc') : t.css('border','1px solid red');
+		});
+		pw.on('keydown',function(e){
+			var t = $(this); return (t.val != '') ? t.css('border','1px solid #ccc') : t.css('border','1px solid red');
+		});
+	},
+
+	popUpRegistration: function(){
+		/*
+		* popup para el form de registracion
+		*/
+		$('#registrarseTTT').on('click',function(){
+			//$.ajax('users/add/',{
+				//success: function(data){
+					//$('#none_body').on('ready',function(){
+						$('#nuevo_usuario')/*.empty().append(data)*/.dialog({
+							title:'Nuevo Usuario',
+							modal: true,
+							width: 640,
+							draggable: false
+						});
+					//});
+					
+				//}
+			//});	
+		});
 	}
 }
