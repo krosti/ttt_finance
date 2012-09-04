@@ -26,8 +26,8 @@
     	{"name":"gender"},
     	{"name":"location"},
     	{"name":"birthday"},
-    	{"name":"password"},
-    	{"name":"captcha"}
+    	{"name":"password"}
+    	
     	]',
     //{"name":"perfil_id","description":"Tipo de usuario","type":"select","options":{"0":"Full Access"},"default":"0"} >> custom_fields
     'width' => 620,

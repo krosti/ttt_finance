@@ -1,233 +1,88 @@
 <?php echo $this->Html->css(array('indices_box')); ?>
+<?php 
+	$indicesARG = array(
+			array('id' => "ALUA.BA", 'name' => '')
+          , array('id' => "APBR.BA", 'name' => '')
+          , array('id' => "BMA.BA", 'name' => '')
+          , array('id' => "CEPU2.BA", 'name' => '')
+          , array('id' => "COME.BA", 'name' => '')
+          , array('id' => "EDN.BA", 'name' => '')
+          , array('id' => "ERAR.BA", 'name' => '')
+          , array('id' => "FRAN.BA", 'name' => '')
+          , array('id' => "GGAL.BA", 'name' => '')
+          , array('id' => "LEDE.BA", 'name' => '')
+          , array('id' => "MOLI.BA", 'name' => '')
+          , array('id' => "PAMP.BA", 'name' => '')
+          , array('id' => "PESA.BA", 'name' => '')
+          , array('id' => "TECO2.BA", 'name' => '')
+          , array('id' => "TS.BA", 'name' => '')
+          , array('id' => "YPFD.BA", 'name' => '')
+		);
+	$indicesIndices = array(
+			array('id' => "^MERV")
+          , array('id' => "^GSPC") //S&P
+          , array('id' => "^DJI") //dow jones
+          , array('id' => "^IXIC") //nasdaq
+          , array('id' => "^BVSP") 
+		);
+	$indicesUsa = array(
+			array('id' => '^DJA')
+		,	array('id' => '^DJI')
+		,	array('id' => '^DJT')
+		,	array('id' => '^DJU')
+		);
 
+	if(isset($setVal)):
+		switch ($setVal) {
+			case 'argentino':
+				$indices = $indicesARG;
+				break;
+			case 'indices':
+				$indices = $indicesIndices;
+				break;
+			case 'usa':
+				$indices = $indicesUsa;
+				break;
+			default:
+				$indices = $indicesARG;
+				break;
+		}
+	else:
+		$indices = $indicesARG;
+	endif;
+
+?>
+<?php if (!isset($setVal)): ?>
 <div id="indices_container">
 	<div id="indice_list">
-		<div class="indice selected">Indices</div>
-		<div class="indice">Argentino</div>
-		<div class="indice">USA</div>
+		<div class="indice" id="indices">Indices</div>
+		<div class="indice selected" id="argentino">Argentino</div>
+		<div class="indice" id="usa">USA</div>
 	</div>
 	<div id="indice_detalles">
 		<div id="slider">
-			<!--div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
+			<?php foreach ($indices as $value): ?>
+				<div class="box_valores box_s" id="<?php echo str_replace('.', '_', $value['id']); ?>">
+					<span class="market"><?php echo $value['id']; ?></span>
+					<span class="price"></span>
+					<span class="diff"></span>
+					<span class="perc"></span>
+					<div class="sgraph"><?php echo $this->Html->image('http://ichart.finance.yahoo.com/h?s='.$value['id'].'&amp;lang=en-US&amp;region=ar');?></div>
 				</div>
-				<div class="graph"><?php echo $this->Html->image('http://ichart.finance.yahoo.com/h?s=^MERV&amp;lang=en-US&amp;region=ar');?></div>
-
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div-->
-			<div class="box_valores box_s">
-				<span class="market">^MERV</span>
-				<span class="price">xx,30</span>
-				<span class="diff">x0,00</span>
-				<span class="perc">x0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('http://ichart.finance.yahoo.com/h?s=^MERV&amp;lang=en-US&amp;region=ar');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_b">
-				<div class="border_box bbtop"></div>
-				<span class="market">Merval</span>
-				<span class="price">2.276,42</span>
-				<div class="texto_box">
-					<span class="diff">0,00</span>
-					<span class="perc">0,00%</span>
-				</div>
-				<div class="graph"><?php echo $this->Html->image('grafico.jpg');?></div>
-				<div class="border_box bbbottom"></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">YPF S.A. D 1V</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
-			<div class="box_valores box_s">
-				<span class="market">ultimo</span>
-				<span class="price">77,30</span>
-				<span class="diff">0,00</span>
-				<span class="perc">0,00%</span>
-				<div class="sgraph"><?php echo $this->Html->image('smallgrafico.jpg');?></div>
-			</div>
+			<?php endforeach ?>
 		</div>	
 	</div>
 </div>
+
+<?php else: ?>
+	<?php foreach ($indices as $value): ?>
+		<?php $id = ($setVal == 'argentino') ? str_replace('.', '_', $value['id']) : str_replace('^', '^', $value['id']) ; ?>
+		<div class="box_valores box_s" id="<?php echo $id; ?>">
+			<span class="market"><?php echo $value['id']; ?></span>
+			<span class="price"></span>
+			<span class="diff"></span>
+			<span class="perc"></span>
+			<div class="sgraph"><?php echo $this->Html->image('http://ichart.finance.yahoo.com/h?s='.$value['id'].'&amp;lang=en-US&amp;region=ar');?></div>
+		</div>
+	<?php endforeach ?>
+<?php endif; ?>

@@ -6,7 +6,7 @@ symbols = {
     stringAcciones = (window.location.hash) ? symbols.listaDeAcciones(window.location.hash.replace('#','')) : symbols.listaDeAcciones('argentina');
 
     console.log(stringAcciones);
-    symbols.getData(crawler.queryYQL(stringAcciones, box),function(r){
+    symbols.getData(crawler.queryYQL(stringAcciones, box, null),function(r){
       //mejora de performance para conexiones rápidas o rtas rapidas, si encuentra el resultado en R, simplemente actualiza, 
       //sino espera success en la query de YQL y llama a updateBox otra vez con ese resultado = R = data
       if (r){
@@ -90,6 +90,7 @@ symbols = {
     
     return baseString;
   },
+
   updateBox:function(data, boxx){
     /*
     * desc: actualiza una caja con los ultimos datos de un accion por Symbol.
@@ -121,6 +122,7 @@ symbols = {
       //console.log(data[i]);
     };
   },
+
   doArray: function(type, data, color){
     /*
     *   arma un array con la estructura para los graficos
@@ -167,6 +169,31 @@ symbols = {
     
     ui.graphs(dataArray,"candlestick",max,min);
 
+  },
+
+  updateHomeFeeds: function(data){
+    var box = $('#slider');
+
+    for (var i = data.length - 1; i >= 0; i--) {
+      var idVal = data[i].symbol.replace(/\./g,'_').replace(/\^/g,'\\^')
+        , e = box.find('#'+idVal )
+        , ChangeRealtime = data[i].ChangeRealtime
+        , ChangeinPercent = data[i].ChangeinPercent;
+
+      ChangeRealtime = ( ChangeRealtime.search(/\+[0-9]/g) >= 0 ) ? '<span class="positive">'+ChangeRealtime+'</span>' : 
+                            ( ChangeRealtime.search(/0.00/g) >= 0 ) ? '<span class="neutral">'+ChangeRealtime+'</span>' : 
+                                '<span class="negative">'+ChangeRealtime+'</span>';
+
+      ChangeinPercent = ( ChangeinPercent.search(/\+[0-9]/g) >= 0 ) ? '<span class="positive">'+ChangeinPercent+'</span>' : 
+                            ( ChangeinPercent.search(/0.00\%/g) >= 0 ) ? '<span class="neutral">'+ChangeinPercent+'</span>' : 
+                                '<span class="negative">'+ChangeinPercent+'</span>';
+
+
+      e.find('.price').empty().text(data[i].LastTradePriceOnly);
+      e.find('.diff').empty().append(ChangeRealtime);
+      e.find('.perc').empty().append(ChangeinPercent);
+    };
+    document.getElementById('spinner').style.display = 'none';
   }
 
   

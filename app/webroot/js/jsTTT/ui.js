@@ -212,7 +212,7 @@ ui = {
     $('#graphicFalseBox').on('click', function(){
       //muestra/oculta el grafico
       var box = $(this);
-
+console.log('yay');
       box.find('.iconExpanded').toggleClass('iconCollapsed');
 
       $('#graphic-wrapper').slideToggle(1000);

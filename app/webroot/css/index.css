@@ -12,6 +12,7 @@ a:link, a:visited{
 a:hover{
 	color: #8b9dc3;
 }
+#spinner{ position:relative; top:310px; margin:auto; }
 .cuerpo{
 	width:960px;
 	margin:0px auto;
@@ -247,10 +248,12 @@ a:hover{
 		height:30px;
 	}
 	#slider_ads{
-		background: url(../img/sliderfake.jpg);
+		/*background: url(../img/sliderfake.jpg);*/
 		width:475px;
 		height:200px;
 		float:left;
+		margin-bottom: 25px;
+		margin-top: 10px;
 	}
 	.column{
 		float:left;
@@ -284,14 +287,23 @@ a:hover{
 				padding-top:20px;
 				float:left;
 			}
+			.caja_slide .compartir_slide{
+				width: 440px;
+				margin-left: 15px;
+			}
+			.slide3 .caja_slide{
+				padding-top:5px;
+				float:left;
+			}
 			.izq_slide{
 				float:left;
 				padding-left:10px;
-				width:220px;
+				width:440px;
 			}
 				.img_ppal_slide{
 					border:4px solid #e7e7e7;
 					border-radius:8px;
+					margin-left:10px;
 				}
 				.thumb_slide{
 					margin-top: 15px;
@@ -308,7 +320,9 @@ a:hover{
 					}
 			.der_slide{
 				float:left;
-				width:220px;
+				width: 440px;
+				margin-top: 10px;
+				margin-left: 5px;
 			}
 				.tit_slide{
 					float: left;
@@ -316,13 +330,20 @@ a:hover{
 					font-family: Open Sans, Lucida Grande, Helvetica;
 					font-size: 14px;
 					font-weight: bold;
-					width:205px;
+					width:430px;
 					color: #444;
+					margin-top: -10px;
+					margin-bottom: 10px;
 				}
 				.cuerpo_slide{
 					margin-top: 7px;
 					float: left;
-					width: 205px;
+					width: 440px;
+					height: 115px;
+					text-align: justify;
+				}
+				.cuerpo_slide_fix{
+					height: 75px;
 				}
 			.separacion_slide{
 				width: 425px;
@@ -448,7 +469,7 @@ a:hover{
 		}
 #footer{
 	float: left;
-	margin-top: 89px;
+	margin-top: 55px;
 	width: 960px;
 }
 	#logofooter{

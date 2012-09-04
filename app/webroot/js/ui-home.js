@@ -4,6 +4,36 @@ ui_home = {
 
 	},
 
+	loadScript: function(url, callback){
+	    /*
+	    * desc: method para levantar asyncronicamente librerias y saber su estado
+	    */
+	      var head = document.getElementsByTagName("head")[0];
+	      var script = document.createElement("script");
+	      script.src = url;
+
+	      // Attach handlers for all browsers
+	      var done = false;
+	      script.onload = script.onreadystatechange = function()
+	      {
+	        if( !done && ( !this.readyState 
+	                        || this.readyState == "loaded" 
+	                        || this.readyState == "complete") )
+	        {
+	          done = true;
+
+	          // Continue your code
+	          callback();
+
+	          // Handle memory leak in IE
+	          script.onload = script.onreadystatechange = null;
+	          head.removeChild( script );
+	        }
+	      };
+
+	      head.appendChild(script);
+	  },
+
 	manejo_scroll: function(){
 	/*
 	*	desc: maneja el header para que se pase a fixed
@@ -82,9 +112,9 @@ ui_home = {
 
 	agregarComentario: function(){
 		$('.agregarComment').on('click',function(){
-			$.ajax('administrator/posts',{
+			$.ajax('widget/graficador/'+$(this).attr('id'),{
 				success: function(data){
-
+					
 					$('#graphBOX').empty().append(data).dialog({
 						title:'Nuevo Comentario',
 						modal:true,
@@ -151,5 +181,61 @@ ui_home = {
 				//}
 			//});	
 		});
+	},
+
+	BTNindicesBox: function(){
+		/*
+		*  bindeo de los botones de cambio de indice
+		*/
+		var indices = $('#indice_list')
+		,	valores = $('#slider');
+
+		indices.find('div').on('click', function(){
+			document.getElementById('spinner').style.display = 'block';
+
+			var e = $(this);
+
+			indices.find('div').each(function(){
+				$(this).removeClass('selected');
+			});
+
+			$.ajax('widget/indices/'+e.attr('id'),{
+				success: function(data){
+					valores.empty().append(data);
+				},
+				error: function(){
+					valores.empty().text('<div class="warning text">Ocurrio un error, intentelo nuevamente. Si el problema persiste intente en unos minutos.</div>');
+				}
+			});
+
+			e.addClass('selected');
+			
+			crawler.queryYQL(
+				 symbols.listaDeAcciones(e.attr('id'))
+				,null
+				,__updateInterval);
+		});
+	},
+
+	loadSpinnerJs: function(){
+		var opts = {
+		  lines: 7, // The number of lines to draw
+		  length: 1, // The length of each line
+		  width: 4, // The line thickness
+		  radius: 10, // The radius of the inner circle
+		  corners: 1, // Corner roundness (0..1)
+		  rotate: 12, // The rotation offset
+		  color: '#2D4D9F', // #rgb or #rrggbb
+		  speed: 1, // Rounds per second
+		  trail: 60, // Afterglow percentage
+		  shadow: false, // Whether to render a shadow
+		  hwaccel: false, // Whether to use hardware acceleration
+		  className: 'spinner', // The CSS class to assign to the spinner
+		  zIndex: 2e9, // The z-index (defaults to 2000000000)
+		  top: 'auto', // Top position relative to parent in px
+		  left: 'auto' // Left position relative to parent in px
+		};
+		var target = document.getElementById('spinner');
+		var spinner = new Spinner(opts).spin(target);
 	}
 }

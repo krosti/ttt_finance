@@ -102,7 +102,7 @@ crawler = {
     });
   },
 
-  queryYQL: function(simbolos, boxForUpdate){
+  queryYQL: function(simbolos, boxForUpdate, interval){
     /*
     * query Quant Yahoo Finance Site
     */
@@ -118,15 +118,15 @@ crawler = {
           success: function(r) {
             if (r.query && r.query.results) {
                 count++;
-                console.log("#2- Actualizacion nro: "+count);
-                symbols.updateBox(r.query.results.quote,boxForUpdate);
+                console.log("#2- Actualizacion nro: "+count+" - "+boxForUpdate);
+                (boxForUpdate != null) ? symbols.updateBox(r.query.results.quote,boxForUpdate) : symbols.updateHomeFeeds(r.query.results.quote);
                 //res.setHTML(r.query.results.quote);
             }
           }
         }
       });
       
-      //Y.later(7000, q, q.send, null, true);
+      (interval != null) ? Y.later(interval, q, q.send, null, true) : console.log('sin Actualizacion automatica - '+boxForUpdate);
     });
     
   },

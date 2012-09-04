@@ -32,13 +32,14 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','stockTicker','jquery-ui-1.8.22.custom'));
+		echo $this->Html->css(array('index','slider','jquery-ui-1.8.22.custom'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
 	<?php echo $this->Html->script(array(
+		'jquery',
 		'jsTTT/error-handler'
 	)); ?>
 	
@@ -46,6 +47,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 <body><?php #debug(isset($facebook_user)); ?>
 	<?php #echo $i++; ?>
 	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
+
 	<?php #print_r( $this->Session->read('Auth.User'));  ?>
 	<div class="cuerpo">
 		<div class="header">
@@ -133,6 +135,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				</div>
 			</div>
 		</div>
+		<div id="spinner"></div>
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 		<?php #echo $this->element('sql_dump'); ?>
@@ -165,13 +168,16 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 <!--Agrega user-->
 <div id="nuevo_usuario" style="display:none;"> <?php echo $this->element('usersadd'); ?> </div>
 
+<!--graficador-->
+
 </body>
 <?php echo $this->Facebook->init(); ?>
 <?php echo $this->Html->script(array(
 		'jquery',
 		'jquery-ui',
-		'application-site.js',
-		'slider.js',
+		'spin.min',
+		'application-site',
+		'slider',
 		'ui-home',
 		'lightbox',
 		'valores',
@@ -180,14 +186,14 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		//'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
-		'jsTTT/ui',
+		//'jsTTT/ui',
 		'jsTTT/error-handler',
 		//'jsTTT/gchart'
 		//'jsTTT/rgraph',
 		//'jsTTT/drawCanvas',
 		//extern libreries
 		'mopSlider/mopSlider-2.4',
-		'pngFix/jquery.pngFix'
+		'pngFix/jquery.pngFix',
 	)); ?>
 
 </html>

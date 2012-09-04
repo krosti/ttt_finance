@@ -4,7 +4,7 @@
  *
  */
 class ArticlesController extends AppController {
-
+	#public $components = array('RequestHandler');
 
 /**
  * index method
@@ -109,4 +109,6 @@ class ArticlesController extends AppController {
 		$this->Session->setFlash(__('Article was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+
+	
 }

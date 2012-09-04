@@ -2,6 +2,15 @@
 
 <div class="column" id="col_izquierda">
 	<div id="slider_ads">
+		<div id="slideshow3">
+			<div id="slidesContainer3">
+				<div class="slide3">
+					<div class="caja_slide"><?php echo $this->Html->image('http://placehold.it/465x200'); ?> </div>
+					<div class="caja_slide"><?php echo $this->Html->image('http://placehold.it/465x200/red'); ?> </div>
+					<div class="caja_slide"><?php echo $this->Html->image('http://placehold.it/465x200'); ?> </div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="seccion" id="analisis">
 		<div class="header_seccion">
@@ -10,49 +19,7 @@
 		<div class="cuerpo_seccion">
 			<div id="slideshow">
 				<div id="slidesContainer">
-
-						<?php $i = 0; ?>
-						<?php foreach ($analisisttt as $analisis) {?>
-							<?php if ($i % 2 == 0) :?>
-								<div class="slide">
-							<?php endif; ?>
-								<div class="caja_slide">
-									<div class="izq_slide">
-										<img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" onError="error_handler.imageError(this)"/>
-										<div class="thumb_slide">
-											<!--img src="img/warning.png" /
-													tag here
-											-->
-											<span><?php echo 'Lorem ipsum ..' ?></span>
-										</div>
-									</div>
-									<div class="der_slide">
-										<span class="tit_slide">
-											<?php echo $analisis['Post']['titulo']; ?>
-										</span>
-										<span class="cuerpo_slide">
-											<?php echo $this->Text->truncate($analisis['Post']['descripcion'], 272, array('ending' => '...','exact' => false) ); ?>
-										</span>
-									</div>
-									<div class="separacion_slide">
-									</div>
-									<div class="compartir_slide">
-										<!--img src="img/compartir_slide.png" /-->
-										<?php echo $this->Facebook->share(null, array('fbxml' => true)); ?>
-										//
-										<span>
-											<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
-										</span>
-									</div>
-									<div class="separacion_slide separacion_inferior"></div>
-								</div>
-							<?php #$i++; ?>
-							<?php if ( ($i % 2 == 0) ) :?>
-								</div>
-							<?php endif; ?>
-							
-						<?php } ?>
-
+						<?php echo $this->element('post_home', array('analisisTTT' => $analisisttt, 'slideNum' => '') ); ?>
 				</div>
 			</div>
 		</div>
@@ -74,45 +41,7 @@
 		<div class="cuerpo_seccion">
 			<div id="slideshow2">
 				<div id="slidesContainer2">
-
-					<?php $i = 0; ?>
-					<?php foreach ($situacionesactuales as $situacion) {?>
-							<?php if ($i % 2 == 0) :?>
-							<div class="slide2">
-							<?php endif; ?>
-								<div class="caja_slide">
-									<span class="hora_slide">
-										<?php echo date("d-m-Y (H:i A)", strtotime($situacion['Post']['created'])); ?>
-									</span>
-									<div class="izq_slide">
-										<img src="<?php echo $situacion['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200"/>
-									</div>
-									<div class="der_slide">
-										<span class="tit_slide">
-											<?php echo $situacion['Post']['titulo']; ?>
-										</span>
-										<span class="cuerpo_slide">
-											<?php echo $this->Text->truncate($situacion['Post']['descripcion'], 222, array('ending' => '...','exact' => false) ); ?>
-										</span>
-									</div>
-									<div class="separacion_slide">
-									</div>
-									<div class="compartir_slide">
-										//
-										<span>
-											<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
-										</span>
-									</div>
-									<div class="separacion_slide separacion_inferior">
-									</div>
-								</div>
-							<?php $i++; ?>
-							<?php if ($i % 2 == 0) : ?>
-							</div>
-							<?php endif; ?>
-						<?php } ?>
-					
-
+					<?php echo $this->element('post_home', array('analisisTTT' => $situacionesactuales, 'slideNum' => 2) ); ?>
 				</div>
 			</div>
 		</div>

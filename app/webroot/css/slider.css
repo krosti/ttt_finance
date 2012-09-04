@@ -1,3 +1,37 @@
+/*********************************************/
+/*********************************************/
+/*********************************************/
+/*BEGIN shared*/
+.control,.control2,.control3 {
+  display:block;
+  width:25px;
+  height:24px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl,#leftControl2,#leftControl3 {
+  right:60px;
+  top:470px;
+  background:url(../img/flechaizq.jpg) no-repeat;
+  z-index:2;
+}
+#rightControl,#rightControl2,#rightControl3 {
+  right:10px;
+  background:url(../img/flechader.jpg) no-repeat ;
+  z-index:2;
+}
+/*END shared*/
+/*********************************************/
+/*********************************************/
+/*********************************************/
+
+
+
+
+
+/*custom 1*/
+/*********************************************/
 #slideshow {
 	margin:0px auto;
 	position:relative;
@@ -15,25 +49,9 @@
   margin:0 auto;
   height:470px;
 }
-.control,.control2 {
-  display:block;
-  width:25px;
-  height:24px;
-  text-indent:-10000px;
-  position:absolute;
-  cursor: pointer;
-}
-#leftControl,#leftControl2 {
-  right:60px;
-  top:470px;
-  background:url(../img/flechaizq.jpg) no-repeat;
-  z-index:2;
-}
-#rightControl,#rightControl2 {
-  right:10px;
-  background:url(../img/flechader.jpg) no-repeat ;
-  z-index:2;
-}
+
+/*custom 2*/
+/*********************************************/
 #slideshow2 {
   margin:0px auto;
   position:relative;
@@ -54,4 +72,28 @@
 }
 #leftControl2 {
   top:435px;
+}
+
+/*custom 3*/
+/*********************************************/
+#slideshow3 {
+  margin:0px auto;
+  position:relative;
+  width:480px;
+  height:210px;
+}
+#slideshow3 #slidesContainer3 {
+  margin:0 auto;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+  width:480px;
+  height: 210px;
+}
+
+#slideshow3 #slidesContainer3 .slide3 {
+  margin:0 auto;
+  height:210px;
+}
+#leftControl3 {
+  top:210px;
 }

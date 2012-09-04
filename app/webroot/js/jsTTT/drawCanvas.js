@@ -17,7 +17,8 @@ drawCanvas = {
 		var tool;
 		var tool_default = 'line';
 
-		var testDiv = $('#imageTemp'); var offset = testDiv.offset();
+		var testDiv = $('#imageTemp');
+		var offset = testDiv.offset();
 
 		function init () {
 				

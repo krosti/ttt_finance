@@ -26,7 +26,7 @@
 		ui.loadScript("http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js", function(){
 		  symbols._init('#datosLive');
 		});
-
+console.log('a');
 		// carousel
 		//ui.carousel("#myCarousel");
 
