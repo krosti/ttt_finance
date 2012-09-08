@@ -156,9 +156,11 @@ a:hover{
 	#menu a:link, #menu a:hover, #menu a:visited{ text-decoration: none; color:white; font-weight: 100;}
 		#items{
 			float: left;
-			width: 655px;
-			margin-top: 25px;
+			width: 680px;
+			margin-top: 20px;
 			margin-left: 20px;
+			font-family: Open Sans, Lucida Grande, Helvetica, sans-serif;
+			font-size: 11px;
 		}
 			.item{
 				color:#fff;
@@ -166,7 +168,7 @@ a:hover{
 				font-size: 13px;
 				font-weight: bold;
 				margin-left: 15px;
-				height:30px;
+				height:35px;
 				border-bottom:0px solid #FF4E00;
 				/*width: 87px;*/
 			}
@@ -201,9 +203,9 @@ a:hover{
 			float:left;
 			color:#3c3c3b;
 			padding-left:8px;
-			margin-top: 16px;
+			margin-top: 12px;
 			margin-right:5px;
-			margin-left:40px;
+			margin-left:35px;
 		}
 		#logos_redes{
 			float:left;
@@ -469,7 +471,7 @@ a:hover{
 		}
 #footer{
 	float: left;
-	margin-top: 55px;
+	margin-top: 85px;
 	width: 960px;
 }
 	#logofooter{

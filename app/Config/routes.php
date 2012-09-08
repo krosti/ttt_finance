@@ -27,6 +27,12 @@
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 	Router::connect('/nosotros', array('controller' => 'pages', 'action' => 'display', 'nosotros'));
+	Router::connect('/casos_de_exito', array('controller' => 'pages', 'action' => 'display', 'casosexito'));
+	Router::connect('/eventos', array('controller' => 'pages', 'action' => 'display', 'eventos'));
+	Router::connect('/divan', array('controller' => 'pages', 'action' => 'display', 'divan'));
+	Router::connect('/situacion_actual', array('controller' => 'posts', 'action' => 'situacionactual'));
+	Router::connect('/analisis_ttt', array('controller' => 'posts', 'action' => 'analisisttt'));
+	Router::connect('/opinion', array('controller' => 'comments', 'action' => 'opinion'));
 	Router::connect('/nuevo_usuario', array('controller' => 'users', 'action' => 'add'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.

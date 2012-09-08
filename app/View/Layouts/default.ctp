@@ -105,22 +105,25 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			<div id="menu">
 				<div id="items">
 					<div class="item" id="item_cot">
-						<?php echo $this->Html->link('COTIZACIONES','/'); ?>
+						<?php echo $this->Html->link('COTIZACION','/'); ?>
 					</div>
 					<div class="item" id="item_ana">
-						<?php echo $this->Html->link('ANALISIS TTT','/'); ?>
+						<?php echo $this->Html->link('SITUACI&Oacute;N ACTUAL','/situacion_actual',array('escape'=>false)); ?>
 					</div>
 					<div class="item" id="item_con">
-						<?php echo $this->Html->link('CONSULTAS/OPINION','/'); ?>
+						<?php echo $this->Html->link('ANALISIS TTT','/analisis_ttt'); ?>
 					</div>
-					<!--div class="item" id="item_opi">
-						<?php echo $this->Html->link('OPINION','/'); ?>
-					</div-->
+					<div class="item" id="item_opi">
+						<?php echo $this->Html->link('OPINION','/opinion'); ?>
+					</div>
+					<div class="item" id="item_opi">
+						<?php echo $this->Html->link('DIV&Aacute;N','/divan',array('escape'=>false)); ?>
+					</div>
 					<div class="item" id="item_cur">
-						<?php echo $this->Html->link('CURSOS','/cursos'); ?>
+						<?php echo $this->Html->link('EVENTOS','/eventos'); ?>
 					</div>
 					<div class="item" id="item_not">
-						<?php echo $this->Html->link('NOTICIAS','/'); ?>
+						<?php echo $this->Html->link('CASOS DE EXITO','/casos_de_exito'); ?>
 					</div>
 					<div class="item" id="item_nos">
 						<?php echo $this->Html->link('NOSOTROS','/nosotros'); ?>

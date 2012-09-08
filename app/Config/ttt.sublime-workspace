@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"indices"
+			],
+			[
+				"indi",
+				"indicesARG"
+			],
+			[
+				"indices",
+				"indicesUsa"
+			],
+			[
+				"set",
+				"setVal"
+			],
+			[
+				"change",
+				"changeRealTime"
+			],
+			[
+				"box",
+				"box_selector"
+			],
+			[
+				"slid",
+				"slideNum"
+			],
+			[
+				"ana",
+				"analisisTTT"
+			],
+			[
 				"margin-",
 				"margin-bottom"
 			],
@@ -64,10 +96,6 @@
 				"margin-left"
 			],
 			[
-				"in",
-				"indices_container"
-			],
-			[
 				"font-",
 				"font-family"
 			],
@@ -116,10 +144,6 @@
 				"graphicName"
 			],
 			[
-				"box",
-				"boxAcciones"
-			],
-			[
 				"selectbo",
 				"selectboxIndices"
 			],
@@ -163,7 +187,7 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js",
 			"settings":
 			{
-				"buffer_size": 8560,
+				"buffer_size": 8579,
 				"line_ending": "Windows"
 			}
 		},
@@ -171,7 +195,7 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/application.js",
 			"settings":
 			{
-				"buffer_size": 970,
+				"buffer_size": 987,
 				"line_ending": "Unix"
 			}
 		},
@@ -179,7 +203,7 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/crawler-with-yahooquery.js",
 			"settings":
 			{
-				"buffer_size": 6890,
+				"buffer_size": 7078,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,31 +211,25 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/symbols.js",
 			"settings":
 			{
-				"buffer_size": 4884,
+				"buffer_size": 6136,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 5273 files for \"registrarseTTT\"\n\n/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp:\n   89  					else\n   90  					{\n   91: 						echo $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));\n   92  					}?>\n   93  				</span>\n\n/Users/ceafernando/Development/ttt_finance/app/webroot/js/ui-home.js:\n  137  		* popup para el form de registracion\n  138  		*/\n  139: 		$('#registrarseTTT').on('click',function(){\n  140  			//$.ajax('users/add/',{\n  141  				//success: function(data){\n\n2 matches across 2 files\n\n\nSearching 5277 files for \"drawToolBoxButton\"\n\n/Users/ceafernando/Development/ttt_finance/app/View/Administrator/posts.ctp:\n   72  	<button id=\"updateGraphic\">Actualizar</button>\n   73  \n   74: 	<button id=\"drawToolBoxButton\">Drawing/Dibujo</button>\n   75  	<div id=\"drawToolsBox\">\n   76  		<p style=\"float:left;\">\n\n/Users/ceafernando/Development/ttt_finance/app/View/Elements/graficador.ctp:\n   73  		<button id=\"updateGraphic\">Actualizar</button>\n   74  \n   75: 		<button id=\"drawToolBoxButton\">Drawing/Dibujo</button>\n   76  		<div id=\"drawToolsBox\">\n   77  			<p style=\"float:left;\">\n\n/Users/ceafernando/Development/ttt_finance/app/View/Elements/posts.ctp:\n   74  	<button id=\"updateGraphic\">Actualizar</button>\n   75  \n   76: 	<button id=\"drawToolBoxButton\">Drawing/Dibujo</button>\n   77  	<div id=\"drawToolsBox\">\n   78  		<p style=\"float:left;\">\n\n/Users/ceafernando/Development/ttt_finance/app/webroot/css/ttt-clients-samples.css:\n  108  	box-shadow: 0px 0px 7px #666;\n  109  }\n  110: #drawToolBoxButton{ float:left; }\n  111  #drawToolsBox{\n  112  	background-color: #D4D4D4;\n\n/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js:\n  233      * desc: caja de dibujo y canvas de dibujo, las muestra y/o esconde\n  234      */\n  235:     $('#drawToolBoxButton').on('click', function(){\n  236        $('#drawToolsBox').slideToggle();\n  237        $('#imageView').slideToggle();\n\n5 matches across 5 files\n\n\nSearching 5277 files for \"yay\"\n\n/Users/ceafernando/Development/ttt_finance/app/lib/Cake/Test/Case/Cache/Engine/MemcacheEngineTest.php:\n  330  		Cache::config('some_file', array('engine' => 'File'));\n  331  \n  332: 		$this->assertTrue(Cache::write('duration_test', 'yay', 'long_memcache'));\n  333  		$this->assertTrue(Cache::write('short_duration_test', 'boo', 'short_memcache'));\n  334  \n  335: 		$this->assertEquals('yay', Cache::read('duration_test', 'long_memcache'), 'Value was not read %s');\n  336  		$this->assertEquals('boo', Cache::read('short_duration_test', 'short_memcache'), 'Value was not read %s');\n  337  \n  338  		sleep(1);\n  339: 		$this->assertEquals('yay', Cache::read('duration_test', 'long_memcache'), 'Value was not read %s');\n  340  \n  341  		sleep(2);\n\n/Users/ceafernando/Development/ttt_finance/app/Plugin/BanchaDeveloperRemoteApi/Vendor/phpDocumentor2/data/syntax_highlighter/tests/cases/001_basic.html:\n   18  			// this is great!\\\n   19  			for(var i = 0; i &lt;= 1; i++)\\\n   20: 				alert(\"yay\");\\\n   21  		}\\\n   22  		';\n\n/Users/ceafernando/Development/ttt_finance/app/Plugin/BanchaDeveloperRemoteApi/Vendor/phpDocumentor2/data/syntax_highlighter/tests/cases/012_server_side.html:\n    4  	// this is great!\n    5  	for(var i = 0; i <= 1; i++)\n    6: 		alert(\"yay\");\n    7  }\n    8  </script>\n\n/Users/ceafernando/Development/ttt_finance/app/Plugin/BanchaDeveloperRemoteApi/Vendor/phpDocumentor2/src/Zend/Locale/Data/az.xml:\n 1621  				<long>\n 1622  					<standard>Orta Avropa</standard>\n 1623: 					<daylight>Orta Avropa/yay</daylight>\n 1624  				</long>\n 1625  				<short>\n ....\n 1631  				<long>\n 1632  					<standard>Şərq Avropa</standard>\n 1633: 					<daylight>Şərq Avropa/yay</daylight>\n 1634  				</long>\n 1635  				<short>\n ....\n 1642  				<long>\n 1643  					<standard>Kuybuşev</standard>\n 1644: 					<daylight>Kuybuşev/yay</daylight>\n 1645  				</long>\n 1646  			</metazone>\n ....\n 1649  					<generic>Moskva</generic>\n 1650  					<standard>Moskva/standart</standard>\n 1651: 					<daylight>Moskva/yay</daylight>\n 1652  				</long>\n 1653  				<commonlyUsed>true</commonlyUsed>\n ....\n 1656  				<long>\n 1657  					<standard>Samara</standard>\n 1658: 					<daylight>Samara/yay</daylight>\n 1659  				</long>\n 1660  			</metazone>\n ....\n 1662  				<long>\n 1663  					<standard>Türkiya</standard>\n 1664: 					<daylight>Türkiya/yay</daylight>\n 1665  				</long>\n 1666  				<commonlyUsed>true</commonlyUsed>\n ....\n 1669  				<long>\n 1670  					<standard>Volqoqrad</standard>\n 1671: 					<daylight>Volqoqrad/yay</daylight>\n 1672  				</long>\n 1673  			</metazone>\n\n/Users/ceafernando/Development/ttt_finance/app/Plugin/BanchaDeveloperRemoteApi/Vendor/phpDocumentor2/src/Zend/Locale/Data/rw.xml:\n  106  			<language type=\"tw\">Inyetuwi</language>\n  107  			<language type=\"ug\">Ikiwiguri</language>\n  108: 			<language type=\"uk\">Ikinyayukereni</language>\n  109  			<language type=\"ur\">Inyeyurudu</language>\n  110  			<language type=\"uz\">Inyeyuzubeki</language>\n\n/Users/ceafernando/Development/ttt_finance/app/Plugin/BanchaDeveloperRemoteApi/Vendor/phpDocumentor2/src/Zend/Locale/Data/trv.xml:\n  401  			<metazone type=\"Atlantic\">\n  402  				<long>\n  403: 					<generic>Jikan Yayun Tasiyan</generic>\n  404: 					<standard>Snegun Jikan Yayun Tasiyan</standard>\n  405: 					<daylight>Jikan Yayun Tasiyan o Karat Rbagan</daylight>\n  406  				</long>\n  407  				<short>\n\n/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js:\n  234      */\n  235      $('#drawToolBoxButton').on('click', function(){\n  236:       console.log('yay');\n  237        $('#drawToolsBox').slideToggle();\n  238        $('#imageView').slideToggle();\n\n/Users/ceafernando/Development/ttt_finance/lib/Cake/Test/Case/Cache/Engine/MemcacheEngineTest.php:\n  330  		Cache::config('some_file', array('engine' => 'File'));\n  331  \n  332: 		$this->assertTrue(Cache::write('duration_test', 'yay', 'long_memcache'));\n  333  		$this->assertTrue(Cache::write('short_duration_test', 'boo', 'short_memcache'));\n  334  \n  335: 		$this->assertEquals('yay', Cache::read('duration_test', 'long_memcache'), 'Value was not read %s');\n  336  		$this->assertEquals('boo', Cache::read('short_duration_test', 'short_memcache'), 'Value was not read %s');\n  337  \n  338  		sleep(1);\n  339: 		$this->assertEquals('yay', Cache::read('duration_test', 'long_memcache'), 'Value was not read %s');\n  340  \n  341  		sleep(2);\n\n20 matches across 8 files\n\n\nSearching 5277 files for \"graphicWrapperExpandCollapse\"\n\n/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/application.js:\n   16  		ui.linkLinks();\n   17  		//bandeja expande contrae del graphic tool\n   18: 		ui.graphicWrapperExpandCollapse();\n   19  		//esconde/muestra los canvas y las opciones de dibujo\n   20  		ui.drawToolsBox();\n\n/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js:\n  205      },\n  206  \n  207:   graphicWrapperExpandCollapse: function(){\n  208      /*\n  209      * desc: bindea los links y cosas para expandir y mostrar la secciones de graficos\n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 7028,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
 			"settings":
 			{
-				"buffer_size": 6782,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Administrator/posts.ctp",
-			"settings":
-			{
-				"buffer_size": 5067,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/ttt-clients-samples.css",
-			"settings":
-			{
-				"buffer_size": 7644,
+				"buffer_size": 6784,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +237,15 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
 			"settings":
 			{
-				"buffer_size": 6590,
+				"buffer_size": 6646,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/graficador.ctp",
+			"settings":
+			{
+				"buffer_size": 5276,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,15 +253,7 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
 			"settings":
 			{
-				"buffer_size": 4886,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/View/Helper/FacebookHelper.php",
-			"settings":
-			{
-				"buffer_size": 18528,
+				"buffer_size": 2252,
 				"line_ending": "Unix"
 			}
 		},
@@ -243,15 +261,7 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/ui-home.js",
 			"settings":
 			{
-				"buffer_size": 3616,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
-			"settings":
-			{
-				"buffer_size": 817,
+				"buffer_size": 6184,
 				"line_ending": "Unix"
 			}
 		},
@@ -259,39 +269,23 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
 			"settings":
 			{
-				"buffer_size": 9176,
+				"buffer_size": 9522,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/slider.css",
+			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
 			"settings":
 			{
-				"buffer_size": 1881,
+				"buffer_size": 1152,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
+			"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/WidgetController.php",
 			"settings":
 			{
-				"buffer_size": 5533,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
-			"settings":
-			{
-				"buffer_size": 1147,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
-			"settings":
-			{
-				"buffer_size": 3389,
+				"buffer_size": 713,
 				"line_ending": "Unix"
 			}
 		}
@@ -352,22 +346,39 @@
 	},
 	"file_history":
 	[
+		"/Users/ceafernando/Development/ttt_finance/app/View/Administrator/posts.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/post_home.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/AdministratorController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/backend.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/posts.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/indices_box.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/ttt-clients-samples.css",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/WidgetController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/usersadd.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/PagesController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/ArticlesController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/indices_box.css",
+		"/Users/ceafernando/Development/k12/js/google_mail.js",
+		"/Users/ceafernando/Development/k12/js/google_drive.js",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/View/Helper/FacebookHelper.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/error-handler.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/slider.css",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/slider.js",
 		"/Users/ceafernando/Development/ttt_finance/app/Config/bootstrap.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Config/facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Users/add.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/usersadd.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/users.css",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/none.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/Model/User.php",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/backend.css",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/PagesController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/backend.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Lib/FacebookInfo.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Config/routes.php",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/View/Helper/FacebookHelper.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/readme.markdown",
 		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Controller/Component/ConnectComponent.php",
 		"/Users/ceafernando/Development/ttt_finance/lib/Cake/Controller/Component/AuthComponent.php",
@@ -388,25 +399,17 @@
 		"/Users/ceafernando/Development/ttt_finance/lib/Cake/Console/Templates/skel/Controller/PagesController.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Config/facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/Component/FacebookComponent.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Vendor/fb/facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Vendor/fb/base_facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/PostsController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/mopSlider/mopSlider-2.4.js",
 		"/Users/ceafernando/Desktop/html",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/extjs-login/app/controller/LoginController.js",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/error-handler.js",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/indices_box.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/indices_box.css",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/index.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/AdministratorController.php",
 		"/Users/ceafernando/Desktop/{\"yrb_token\" : \"YFT_MARKET_CLOSED\", \"tt\" : \"134417",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/posts.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/nosotros.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/NoticiasController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/slider.css",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/lightbox.js",
 		"/Users/ceafernando/Development/ttt_finance/tttmaqueta/index.html",
 		"/Users/ceafernando/Development/ttt_finance/bootstrap/assets/js/symbols.js",
@@ -432,7 +435,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"/Users/ceafernando/Development/ttt_finance",
@@ -444,6 +447,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"offset",
+			"graphicWrapperExpandCollapse",
+			"yay",
+			"drawToolBoxButton",
+			"registrarseTTT",
+			"class",
+			":",
+			"}",
+			"{",
+			"negative",
+			"positive",
+			"ChangeRealtime",
+			"ChangeRealTime",
+			"ChangeRealtime",
+			"ChangeRealTime",
+			"ChangeRealtime",
+			"changeRealTime",
+			"changeRealtime",
+			"ChangeRealTime",
+			"changeRealTime",
+			".",
+			"Things",
+			"queryYQL",
+			"^MERV",
+			")",
+			"=>)",
+			":",
+			"id",
+			"{",
+			"{'",
+			"}",
 			"475x200",
 			"class=\"slide",
 			"id=\"slidesContainer",
@@ -580,7 +614,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 546.0,
+						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -590,15 +624,15 @@
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js",
 					"settings":
 					{
-						"buffer_size": 8560,
+						"buffer_size": 8579,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2467,
-								2467
+								6721,
+								6749
 							]
 						],
 						"settings":
@@ -608,7 +642,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3516.0,
+						"translation.y": 2697.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -618,15 +652,15 @@
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/application.js",
 					"settings":
 					{
-						"buffer_size": 970,
+						"buffer_size": 987,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								757,
-								757
+								32,
+								0
 							]
 						],
 						"settings":
@@ -645,15 +679,15 @@
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/crawler-with-yahooquery.js",
 					"settings":
 					{
-						"buffer_size": 6890,
+						"buffer_size": 7078,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6076,
-								6076
+								4621,
+								4621
 							]
 						],
 						"settings":
@@ -663,7 +697,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2286.0,
+						"translation.y": 1433.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -673,15 +707,15 @@
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/symbols.js",
 					"settings":
 					{
-						"buffer_size": 4884,
+						"buffer_size": 6136,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2832,
-								2768
+								4875,
+								4875
 							]
 						],
 						"settings":
@@ -691,57 +725,185 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1858.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
 					"settings":
 					{
-						"buffer_size": 6782,
+						"buffer_size": 7028,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										214,
+										228
+									],
+									[
+										410,
+										424
+									],
+									[
+										756,
+										773
+									],
+									[
+										1027,
+										1044
+									],
+									[
+										1293,
+										1310
+									],
+									[
+										1541,
+										1558
+									],
+									[
+										1810,
+										1827
+									],
+									[
+										2238,
+										2241
+									],
+									[
+										2391,
+										2394
+									],
+									[
+										2643,
+										2646
+									],
+									[
+										2992,
+										2995
+									],
+									[
+										3262,
+										3265
+									],
+									[
+										3523,
+										3526
+									],
+									[
+										3679,
+										3682
+									],
+									[
+										3829,
+										3832
+									],
+									[
+										4007,
+										4010
+									],
+									[
+										4179,
+										4182
+									],
+									[
+										4330,
+										4333
+									],
+									[
+										4508,
+										4511
+									],
+									[
+										4830,
+										4833
+									],
+									[
+										5172,
+										5175
+									],
+									[
+										5231,
+										5234
+									],
+									[
+										5284,
+										5287
+									],
+									[
+										5533,
+										5536
+									],
+									[
+										5861,
+										5864
+									],
+									[
+										6014,
+										6017
+									],
+									[
+										6266,
+										6269
+									],
+									[
+										6627,
+										6655
+									],
+									[
+										6853,
+										6881
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								6401,
+								6401
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"detect_indentation": false,
+							"output_tag": 4,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3741.0,
+						"translation.y": 2580.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Administrator/posts.ctp",
+					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
 					"settings":
 					{
-						"buffer_size": 5067,
+						"buffer_size": 6784,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1041,
-								1041
+								342,
+								342
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -752,45 +914,18 @@
 				},
 				{
 					"buffer": 7,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/ttt-clients-samples.css",
-					"settings":
-					{
-						"buffer_size": 7644,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5,
-								12
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
 					"settings":
 					{
-						"buffer_size": 6590,
+						"buffer_size": 6646,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2495,
-								2495
+								6629,
+								6629
 							]
 						],
 						"settings":
@@ -799,7 +934,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1182.0,
+						"translation.y": 2406.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/graficador.ctp",
+					"settings":
+					{
+						"buffer_size": 5276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1476,
+								1476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 182.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -809,23 +971,15 @@
 					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
 					"settings":
 					{
-						"buffer_size": 4886,
+						"buffer_size": 2252,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								271,
-								271
-							],
-							[
-								372,
-								372
-							],
-							[
-								477,
-								477
+								2088,
+								2102
 							]
 						],
 						"settings":
@@ -834,52 +988,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/View/Helper/FacebookHelper.php",
-					"settings":
-					{
-						"buffer_size": 18528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4232,
-								4232
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1701.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/ui-home.js",
 					"settings":
 					{
-						"buffer_size": 3616,
+						"buffer_size": 6184,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3257,
-								3257
+								2945,
+								2945
 							]
 						],
 						"settings":
@@ -888,7 +1015,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1577.0,
+						"translation.y": 1664.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
+					"settings":
+					{
+						"buffer_size": 9522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8571,
+								8571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6688.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -898,15 +1052,15 @@
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
 					"settings":
 					{
-						"buffer_size": 817,
+						"buffer_size": 1152,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								285,
-								285
+								1125,
+								1125
 							]
 						],
 						"settings":
@@ -922,136 +1076,28 @@
 				},
 				{
 					"buffer": 13,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
+					"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/WidgetController.php",
 					"settings":
 					{
-						"buffer_size": 9176,
+						"buffer_size": 713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4605,
-								4605
+								563,
+								568
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3373.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/slider.css",
-					"settings":
-					{
-						"buffer_size": 1881,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1645,
-								1661
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 741.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
-					"settings":
-					{
-						"buffer_size": 5533,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
-					"settings":
-					{
-						"buffer_size": 1147,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								333,
-								333
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
-					"settings":
-					{
-						"buffer_size": 3389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3096,
-								3096
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1056.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1101,6 +1147,74 @@
 		"selected_items":
 		[
 			[
+				"posts",
+				"app/View/Administrator/posts.ctp"
+			],
+			[
+				"post_",
+				"app/View/Elements/post_home.ctp"
+			],
+			[
+				"admini",
+				"app/Controller/AdministratorController.php"
+			],
+			[
+				"wid",
+				"app/Controller/WidgetController.php"
+			],
+			[
+				"in",
+				"app/View/Elements/indices_box.ctp"
+			],
+			[
+				"back",
+				"app/View/Layouts/backend.ctp"
+			],
+			[
+				"post",
+				"app/View/Administrator/posts.ctp"
+			],
+			[
+				"post_h",
+				"app/View/Elements/post_home.ctp"
+			],
+			[
+				"widget",
+				"app/Controller/WidgetController.php"
+			],
+			[
+				"userscon",
+				"app/Controller/UsersController.php"
+			],
+			[
+				"pagescon",
+				"app/Controller/PagesController.php"
+			],
+			[
+				"indic",
+				"app/webroot/css/indices_box.css"
+			],
+			[
+				"appl",
+				"app/webroot/js/application-site.js"
+			],
+			[
+				"appli",
+				"app/webroot/js/jsTTT/application.js"
+			],
+			[
+				"indice",
+				"app/View/Elements/indices_box.ctp"
+			],
+			[
+				"indices",
+				"app/webroot/css/indices_box.css"
+			],
+			[
+				"error-h",
+				"app/webroot/js/jsTTT/error-handler.js"
+			],
+			[
 				"slid",
 				"app/webroot/js/slider.js"
 			],
@@ -1131,10 +1245,6 @@
 			[
 				"user",
 				"app/Model/User.php"
-			],
-			[
-				"back",
-				"app/webroot/css/backend.css"
 			],
 			[
 				"backend",
@@ -1213,10 +1323,6 @@
 				"app/webroot/css/backend.css"
 			],
 			[
-				"post",
-				"app/Controller/PostsController.php"
-			],
-			[
 				"mop",
 				"app/webroot/js/mopSlider/mopSlider-2.4.js"
 			],
@@ -1229,20 +1335,12 @@
 				"app/View/Layouts/default.ctp"
 			],
 			[
-				"posts",
-				"app/Controller/PostsController.php"
-			],
-			[
 				"mopslide",
 				"app/webroot/js/mopSlider/mopSlider-2.4.js"
 			],
 			[
 				"appcont",
 				"app/Controller/AppController.php"
-			],
-			[
-				"userscon",
-				"app/Controller/UsersController.php"
 			],
 			[
 				"defau",
@@ -1253,16 +1351,8 @@
 				"app/webroot/css/index.css"
 			],
 			[
-				"pagescon",
-				"app/Controller/PagesController.php"
-			],
-			[
 				"backs",
 				"app/webroot/css/backend.css"
-			],
-			[
-				"indices",
-				"app/webroot/css/indices_box.css"
 			],
 			[
 				"backen",
@@ -1271,10 +1361,6 @@
 			[
 				"mopsli",
 				"app/webroot/js/mopSlider/mopSlider-2.4.js"
-			],
-			[
-				"admini",
-				"app/Controller/AdministratorController.php"
 			],
 			[
 				"ttt-",
@@ -1359,10 +1445,6 @@
 			[
 				"craw",
 				"app/webroot/js/jsTTT/crawler-with-yahooquery.js"
-			],
-			[
-				"appli",
-				"app/webroot/js/jsTTT/application.js"
 			],
 			[
 				"ui.",

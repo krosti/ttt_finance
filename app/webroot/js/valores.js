@@ -4,7 +4,7 @@ sliderValores = {
   },
   iniciar_sliderValores: function (){/*Div gral, Contenedor de slides, slide, Medida ancho del slide*/
 	    $("#slider").mopSlider({
-			'w':800,
+			'w':885,
 			'h':120,
 			'sldW':500,
 			'btnW':200,

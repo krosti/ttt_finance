@@ -178,7 +178,8 @@ symbols = {
       var idVal = data[i].symbol.replace(/\./g,'_').replace(/\^/g,'\\^')
         , e = box.find('#'+idVal )
         , ChangeRealtime = data[i].ChangeRealtime
-        , ChangeinPercent = data[i].ChangeinPercent;
+        , ChangeinPercent = data[i].ChangeinPercent
+        , borderBox = '';
 
       ChangeRealtime = ( ChangeRealtime.search(/\+[0-9]/g) >= 0 ) ? '<span class="positive">'+ChangeRealtime+'</span>' : 
                             ( ChangeRealtime.search(/0.00/g) >= 0 ) ? '<span class="neutral">'+ChangeRealtime+'</span>' : 
@@ -188,7 +189,11 @@ symbols = {
                             ( ChangeinPercent.search(/0.00\%/g) >= 0 ) ? '<span class="neutral">'+ChangeinPercent+'</span>' : 
                                 '<span class="negative">'+ChangeinPercent+'</span>';
 
+      borderBox = ChangeinPercent.search(/\+[0-9]/g) >= 0 ) ? 'green' : 
+                    ( ChangeinPercent.search(/0.00\%/g) >= 0 ) ? '#3B5998' : 
+                        'red';
 
+      e.css('borderBottom','2px solid '+borderBox);
       e.find('.price').empty().text(data[i].LastTradePriceOnly);
       e.find('.diff').empty().append(ChangeRealtime);
       e.find('.perc').empty().append(ChangeinPercent);
