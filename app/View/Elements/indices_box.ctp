@@ -55,9 +55,9 @@
 <?php if (!isset($setVal)): ?>
 <div id="indices_container">
 	<div id="indice_list">
-		<div class="indice" id="indices">Indices</div>
-		<div class="indice selected" id="argentino">Argentino</div>
-		<div class="indice" id="usa">USA</div>
+		<div class="indice side-nav-button" id="indices">Indices</div>
+		<div class="indice selected side-nav-button" id="argentino">Argentino</div>
+		<div class="indice side-nav-button" id="usa">USA</div>
 	</div>
 	<div id="indice_detalles">
 		<div id="slider">

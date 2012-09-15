@@ -189,9 +189,11 @@ symbols = {
                             ( ChangeinPercent.search(/0.00\%/g) >= 0 ) ? '<span class="neutral">'+ChangeinPercent+'</span>' : 
                                 '<span class="negative">'+ChangeinPercent+'</span>';
 
-      borderBox = ChangeinPercent.search(/\+[0-9]/g) >= 0 ) ? 'green' : 
-                    ( ChangeinPercent.search(/0.00\%/g) >= 0 ) ? '#3B5998' : 
-                        'red';
+      borderBox = (ChangeinPercent.search(/\+[0-9]/g) >= 0 ) 
+                    ? 'green' 
+                    : ( ChangeinPercent.search(/0.00\%/g) >= 0 ) 
+                      ? '#3B5998' 
+                        : 'red';
 
       e.css('borderBottom','2px solid '+borderBox);
       e.find('.price').empty().text(data[i].LastTradePriceOnly);
