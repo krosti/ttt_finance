@@ -105,4 +105,16 @@ class PostsController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
+	public function situacionactual() {
+		$this->set('posts', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '2'),'order'=>'Post.created DESC' ) ) );
+	}
+
+	public function analisisttt() {
+		$this->set('posts', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '1'),'order'=>'Post.created DESC' ) ) );
+	}
+
+	public function opinion() {
+		$this->set('posts', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '3'),'order'=>'Post.created DESC' ) ) );
+	}
+
 }

@@ -258,7 +258,7 @@ class FacebookHelper extends AppHelper {
 		}
 		$defaults = array(
 			'style' => 'button',
-			'label' => 'share',
+			'label' => 'Compartir',
 			'anchor' => 'fb_share',
 			'fbxml' => false
 		);

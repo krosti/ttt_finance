@@ -48,26 +48,10 @@
 	</div>
 	<div class="seccion" id="opiniones">
 		<div class="header_seccion">
-			Consulta / Opini&oacute;n
+			Opini&oacute;n
 		</div>
 		<div class="cuerpo_seccion">
-			<!--div class="opinion">
-				<div class="borde_opinion">
-					<span class="titulo_opinion">Re: Consultas o comentarios sobre el Foro</span>
-					<span class="cuerpo_opinion">
-						<u>Notapor JIR el Mar Abr 19, 2011 3:16 pm</u>
-						<br />
-						El intercambio de mails es para situaciones particulares, excepcionales, no para pedir u ofrecer masivamente. Saludos.
-					</span>
-					<div class="compartir_slide">
-						<img src="img/compartir_slide.png" />
-						<span>
-							<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('class'=>'agregarComment') ); ?>
-						</span>
-					</div>
-				</div>
-			</div-->
-			<?php echo $this->Facebook->comments(array('width' => '457')); ?>
+			<?php echo $this->element('post_home', array('analisisTTT' => $opiniones, 'slideNum' => 3) ); ?>
 		</div>
 	</div>
 </div>

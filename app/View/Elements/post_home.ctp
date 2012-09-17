@@ -6,9 +6,18 @@
 		<div class="caja_slide">
 			<div class="izq_slide">
 				<span class="tit_slide">
-					<?php echo $this->Html->link($analisis['Post']['titulo'],'/posts/view/'.$analisis['Post']['id']); ?>
+					<?php if (isset($facebook_user)): ?>
+						<?php echo $this->Html->link($analisis['Post']['titulo'],'/posts/view/'.$analisis['Post']['id']); ?>
+					<?php else: ?>
+						<?php echo $analisis['Post']['id']; ?>
+					<?php endif; ?>
 				</span>
-				<img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="400" height="200" onError="error_handler.imageError(this)"/>
+				<?php if (isset($facebook_user)): ?>
+					<a href="<?php echo 'posts/view/'.$analisis['Post']['id']; ?>"><img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="400" height="200" onError="error_handler.imageError(this)"/></a>
+				<?php else: ?>
+					<img src="<?php echo $analisis['Post']['serie_datos']; ?>" class="img_ppal_slide" width="400" height="200" onError="error_handler.imageError(this)"/>
+				<?php endif; ?>
+				
 				<div class="thumb_slide">
 					<!--img src="img/warning.png" /
 							tag here
@@ -24,17 +33,14 @@
 				<span class="cuerpo_slide <?php echo $cuerpoHeight; ?>">
 					<?php $postLength = ($slideNum != '') ? 275: 450; ?>
 					<?php echo $this->Text->truncate($analisis['Post']['descripcion'], $postLength, array('ending' => '...','exact' => false) ); ?>
+					<?php if (isset($facebook_user)): ?>
+						<?php echo $this->Html->link('Ver M&aacute;s','/posts/view/'.$analisis['Post']['id'],array('escape'=>false)); ?>
+					<?php endif; ?>
 				</span>
 			</div>
-			<div class="separacion_slide">
-			</div>
+			<div class="separacion_slide"></div>
 			<div class="compartir_slide">
-				<!--img src="img/compartir_slide.png" /-->
-				<?php echo $this->Facebook->share(null, array('fbxml' => true)); ?>
-				
-				<span>
-					<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('id'=>$analisis['Post']['id'],'class'=>'agregarComment') ); ?>
-				</span>
+				<?php echo $this->element('opts_posts', array('post' => $analisis) ); ?>
 			</div>
 			<div class="separacion_slide separacion_inferior"></div>
 		</div>

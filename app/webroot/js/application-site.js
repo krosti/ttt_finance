@@ -4,10 +4,12 @@
 		//GLOBAL SCOPE
 		__updateInterval = 20000; //miliseconds
 
-		slider.iniciar_slider($('#slideshow'), $('#slidesContainer'),$('.slide'),450,"");
-		slider.iniciar_slider($('#slideshow2'), $('#slidesContainer2'),$('.slide2'),450,"2");
-		slider.iniciar_slider($('#slideshow3'), $('#slidesContainer3'),$('.slide3'),465,"3");
-		sliderValores.iniciar_sliderValores();
+		try{
+			sliderValores.iniciar_sliderValores();
+		}catch(e){
+			console.log(e)
+		}
+
 		ui_home.loadSpinnerJs();
 		ui_home.manejo_scroll();
 		ui_home.menu_animacion_hover();
@@ -27,6 +29,9 @@
 		});
 		//ui.marquesinaAnimada('#datosLive');
 
+		slider.iniciar_slider($('#slideshow'), $('#slidesContainer'),$('.slide'),450,"");
+		slider.iniciar_slider($('#slideshow2'), $('#slidesContainer2'),$('.slide2'),450,"2");
+		slider.iniciar_slider($('#slideshow3'), $('#slidesContainer3'),$('.slide3'),465,"3");
 	});
 
 	

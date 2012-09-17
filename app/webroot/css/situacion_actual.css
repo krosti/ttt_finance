@@ -1,0 +1,34 @@
+.extra{
+	height:auto;
+}
+.extra a:link, .extra a:visited{
+	color: white;
+	font-family: Helvetica;
+	font-weight: bold;
+	padding-top: 4px;
+	position: relative;
+	float: left;
+	padding-left: 4px;
+}
+.extra a:hover{
+	color:#ddd;
+}
+
+.caja_slide{
+	border-bottom:2px groove #ddd;
+	padding:20px;
+	background: #eee;
+}
+	.tit_slide{
+		font-family: Lucida Grande, Helvetica;
+		font-size: 15px;
+		width:100%;
+		background: url(../images/titulo_btn.png) repeat-x 0 -1px;
+		height:25px;
+		border-left: 1px solid #333;
+		border-right: 1px solid #333;
+		border-radius: 2px;
+	}
+		a:link.agregarComment{
+			color:#006a96;
+		}
