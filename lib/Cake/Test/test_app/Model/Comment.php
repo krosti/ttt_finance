@@ -1,34 +1,78 @@
 <?php
+App::uses('AppModel', 'Model');
 /**
- * Test App Comment Model
+ * Comment Model
  *
- *
- *
- * PHP 5
- *
- * CakePHP : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2012, Cake Software Foundation, Inc.
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc.
- * @link          http://cakephp.org CakePHP Project
- * @package       Cake.Test.test_app.Model
- * @since         CakePHP v 1.2.0.7726
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @property Post $Post
+ * @property Comment $Comment
+ * @property User $User
+ * @property Comment $Comment
  */
 class Comment extends AppModel {
 
-	public $useTable = 'comments';
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'mensaje';
 
-	public $name = 'Comment';
-
-	public $belongsTo = array(
-		
+/**
+ * Validation rules
+ *
+ * @var array
+ */
+	public $validate = array(
+		'id' => array(
+			'blank' => array(
+				'rule' => array('blank'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'post_id' => array(
+			'blank' => array(
+				'rule' => array('blank'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'user_id' => array(
+			'blank' => array(
+				'rule' => array('blank'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'created' => array(
+			'datetime' => array(
+				'rule' => array('datetime'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 	);
 
-	public $hasOne = array(
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
 		'Post' => array(
 			'className' => 'Post',
 			'foreignKey' => 'post_id',
@@ -36,16 +80,41 @@ class Comment extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Users' => array(
+		'Comment' => array(
+			'className' => 'Comment',
+			'foreignKey' => 'comment_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'User' => array(
 			'className' => 'User',
 			'foreignKey' => 'user_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+		)
 	);
 
-	//public $hasMany = array('Comment');
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Comment' => array(
+			'className' => 'Comment',
+			'foreignKey' => 'comment_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
 
-	public $hasAndBelongsToMany = array('Comment');
 }

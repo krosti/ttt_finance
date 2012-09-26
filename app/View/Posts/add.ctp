@@ -6,7 +6,10 @@
 		echo $this->Form->input('titulo');
 		echo $this->Form->input('descripcion');
 		echo $this->Form->input('serie_datos');
+		echo $this->Form->input('serie_datos_pie');
 		echo $this->Form->input('tipo_id');
+		echo $this->Form->input('visitas');
+		echo $this->Form->input('created_by');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -1,29 +1,29 @@
 <?php echo $this->Html->css(array('indices_box')); ?>
 <?php 
 	$indicesARG = array(
-			array('id' => "ALUA.BA", 'name' => '')
-          , array('id' => "APBR.BA", 'name' => '')
-          , array('id' => "BMA.BA", 'name' => '')
-          , array('id' => "CEPU2.BA", 'name' => '')
-          , array('id' => "COME.BA", 'name' => '')
-          , array('id' => "EDN.BA", 'name' => '')
-          , array('id' => "ERAR.BA", 'name' => '')
-          , array('id' => "FRAN.BA", 'name' => '')
-          , array('id' => "GGAL.BA", 'name' => '')
-          , array('id' => "LEDE.BA", 'name' => '')
-          , array('id' => "MOLI.BA", 'name' => '')
-          , array('id' => "PAMP.BA", 'name' => '')
-          , array('id' => "PESA.BA", 'name' => '')
-          , array('id' => "TECO2.BA", 'name' => '')
-          , array('id' => "TS.BA", 'name' => '')
-          , array('id' => "YPFD.BA", 'name' => '')
+			array('id' => "ALUA.BA")
+          , array('id' => "APBR.BA")
+          , array('id' => "BMA.BA")
+          , array('id' => "CEPU2.BA")
+          , array('id' => "COME.BA")
+          , array('id' => "EDN.BA")
+          , array('id' => "ERAR.BA")
+          , array('id' => "FRAN.BA")
+          , array('id' => "GGAL.BA")
+          , array('id' => "LEDE.BA")
+          , array('id' => "MOLI.BA")
+          , array('id' => "PAMP.BA")
+          , array('id' => "PESA.BA")
+          , array('id' => "TECO2.BA")
+          , array('id' => "TS.BA")
+          , array('id' => "YPFD.BA")
 		);
 	$indicesIndices = array(
-			array('id' => "^MERV")
-          , array('id' => "^GSPC") //S&P
-          , array('id' => "^DJI") //dow jones
-          , array('id' => "^IXIC") //nasdaq
-          , array('id' => "^BVSP") 
+			array('id' => "^MERV", 'name' => 'Merval')
+          , array('id' => "^GSPC", 'name'=>'S&P') //S&P
+          , array('id' => "^DJI", 'name'=>'Dow Jones') //dow jones
+          , array('id' => "^IXIC", 'name'=>'Nasdaq') //nasdaq
+          , array('id' => "^BVSP", 'name'=>'Bovespa') 
 		);
 	$indicesUsa = array(
 			array('id' => '^DJA')
@@ -63,7 +63,7 @@
 		<div id="slider">
 			<?php foreach ($indices as $value): ?>
 				<div class="box_valores box_s" id="<?php echo str_replace('.', '_', $value['id']); ?>">
-					<span class="market"><?php echo $value['id']; ?></span>
+					<span class="market"><?php echo (isset($value['name'])) ? $value['name'] : $value['id']; ?></span>
 					<span class="price"></span>
 					<span class="diff"></span>
 					<span class="perc"></span>
@@ -78,7 +78,7 @@
 	<?php foreach ($indices as $value): ?>
 		<?php $id = ($setVal == 'argentino') ? str_replace('.', '_', $value['id']) : str_replace('^', '^', $value['id']) ; ?>
 		<div class="box_valores box_s" id="<?php echo $id; ?>">
-			<span class="market"><?php echo $value['id']; ?></span>
+			<span class="market"><?php echo (isset($value['name'])) ? $value['name'] : $value['id']; ?></span>
 			<span class="price"></span>
 			<span class="diff"></span>
 			<span class="perc"></span>

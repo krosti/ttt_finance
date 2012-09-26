@@ -62,6 +62,11 @@ class Post extends AppModel {
  *
  * @var array
  */
+	/**
+ * belongsTo associations
+ *
+ * @var array
+ */
 	public $belongsTo = array(
 		'Tipo' => array(
 			'className' => 'Tipo',
@@ -72,7 +77,48 @@ class Post extends AppModel {
 		)
 	);
 
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
 	public $hasMany = array(
-		'Comment'
-		);
+		'Comment' => array(
+			'className' => 'Comment',
+			'foreignKey' => 'post_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Tag' => array(
+			'className' => 'Tag',
+			'joinTable' => 'tags_posts',
+			'foreignKey' => 'post_id',
+			'associationForeignKey' => 'tag_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
 }

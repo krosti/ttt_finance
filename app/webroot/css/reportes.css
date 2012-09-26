@@ -1,0 +1,106 @@
+.extra{
+	margin-top:0px;
+	height: auto;
+}
+
+.reportes .top{
+	width: 960px;
+	border-bottom: 2px groove white;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	height: 25px;
+}
+
+	.reportes .top .nombre{ float:left; font-size: 13px; font-weight: bold; }
+	.reportes .top .fecha{ float:left; font-size: 13px; font-weight: bold; }
+	.reportes .top .social{
+		float: right;
+		height: 22px;
+	}
+	.reportes .top .social span{
+		float: right;
+		margin-top: -20px;
+	}
+
+.reportes .left{
+	float: left;
+	width: 480px;
+	padding: 15px;
+	min-height: 350px;
+	padding-left: 0px;
+}
+.reportes .left .tituloPost{
+	color: #456B98;
+	font-size: 16px;
+	margin-bottom: 15px;
+	border-bottom: 1px double #DDD;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.reportes .right{
+	float: left;
+	width: 420px;
+	padding: 15px;
+	min-height: 350px;
+}
+
+.reportes .bottomHeader{
+	float: left;
+	width: 960px;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	border-top: 2px groove white;
+	border-bottom: 2px groove white;
+}
+	.reportes .bottom span{ float:right; }
+
+	.reportes .bottom .tituloComentario{
+		color:#456B98;
+		float:left;
+		font-size: 16px;
+		margin-bottom:5px;
+
+	}
+	.reportes .bottom .noHayComments{
+		font-size: 14px;
+		color: #999;
+		margin-top: 10px;
+		float: left;
+		width: 900px;
+		border-radius: 2px;
+		background: #F5F3F4;
+		padding: 30px;
+		text-align: center;
+	}
+
+	.reportes .bottom .comentarioFecha{
+		font-size: 11px;
+		color: #3C3C3C;
+		text-decoration: underline;
+		margin-bottom: 2px;
+	}
+	.reportes .bottom .comentarioTitulo{
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		color: #3C3C3C;
+	}
+	.reportes .bottom .comentarioBox{
+		float: left;
+		width: 915px;
+		padding: 20px;
+		border-left: 5px solid #6E6E6E;
+		background: #F6F6F6;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-top: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+		border-right: 1px solid #DDD;
+		box-shadow: 1px 1px #BFBFBF;
+	}
+	.reportes .bottom .social span{ margin-top: 5px; display: none }
+	.reportes .bottom .social{
+		padding-top: 20px;
+		margin-bottom: -15px;
+	}

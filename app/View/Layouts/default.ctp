@@ -24,6 +24,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 <?php echo $this->Facebook->html(); ?>
 <head>
 	<?php echo $this->Html->charset(); ?>
+	<?php setlocale(LC_TIME, 'Spanish'); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>

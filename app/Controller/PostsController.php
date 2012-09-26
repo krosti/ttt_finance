@@ -6,7 +6,8 @@ App::uses('AppController', 'Controller');
  * @property Post $Post
  */
 class PostsController extends AppController {
-	public $uses = array('Post','Comment','User');
+	public $helpers = array('Time');
+	public $uses = array('Post','Comment','User','Tag');
 /**
  * index method
  *
@@ -119,11 +120,15 @@ class PostsController extends AppController {
 
 	public function reporte($id = null){
 		$this->Post->id = $id;
-		$this->Post->recursive = 4;
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Reporte no encontrado'));
 		}
-		$this->set('post', $this->Post->read(null, $id));
+		$post = $this->Post->read(null, $id);
+		#echo "<pre>";
+		#print_r($this->Post);
+		#echo "</pre>";
+		$this->set('post', $post);
+		#$this->set('user',$this->Post->User->find('list'));
 	}
 
 }
