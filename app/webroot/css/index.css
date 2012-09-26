@@ -205,7 +205,7 @@ a:hover{
 			padding-left:8px;
 			margin-top: 12px;
 			margin-right:5px;
-			margin-left:35px;
+			margin-left:7px;
 		}
 		#logos_redes{
 			float:left;
@@ -263,7 +263,7 @@ a:hover{
 	}
 	.seccion{
 		width:465px;
-		margin-bottom:45px;
+		margin-bottom: 20px;
 		float:left;
 	}
 		.header_seccion{
@@ -289,7 +289,14 @@ a:hover{
 				padding-top:20px;
 				float:left;
 			}
-			.caja_slide .compartir_slide{
+		.cuerpo_seccionSmall{ height: 575px; }
+		.cuerpo_seccionSmall #slideshow #slidesContainer{ height: 519px; }
+		
+		.cuerpo_seccionSmall .caja_slide{ padding-top: 7px; }
+		.cuerpo_seccionSmall .caja_slide .separacion_slide{ margin-top: 0px; display:none; }
+		.cuerpo_seccionSmall .caja_slide .compartir_slide{ margin-top: -3px; float: left; margin-bottom: 5px; border-top: 1px solid #DDD; margin-bottom: 3px; }
+
+		.caja_slide .compartir_slide{
 				width: 440px;
 				margin-left: 25px;
 				margin-top: 5px;
@@ -303,7 +310,7 @@ a:hover{
 			.izq_slide{
 				float:left;
 				padding-left:10px;
-				width:440px;
+				width: 235px;
 			}
 				.img_ppal_slide{
 					border:4px solid #e7e7e7;
@@ -325,25 +332,45 @@ a:hover{
 					}
 			.der_slide{
 				float:left;
-				width: 440px;
-				margin-top: 10px;
+				width: 180px;
+				margin-top: 28px;
 				margin-left: 5px;
 			}
 				.tit_slide{
 					float: left;
-					width: 100%;
-					font-family: Open Sans, Lucida Grande, Helvetica;
-					font-size: 14px;
-					font-weight: bold;
-					width:430px;
-					color: #444;
-					margin-top: -10px;
-					margin-bottom: 10px;
+					color:white;
+					font-family: Helvetica;
+					font-size: 13px;
+					margin-top: 3px;
+					margin-bottom: -30px;
+					margin-left: 225px;
+					background: url(../images/btn-desc.png) no-repeat -3px -3px;
+					width: 180px;
+					height: 17px;
+					padding-left: 15px;
+					padding-top: 8px;
+					border-right: 1px solid;
+				}
+				.tit_slide:hover{
+					background: url(../images/btn-desc-hover.png) no-repeat -3px -3px;
+				}
+				.tit_slide a:hover{
+					color:#333;
+
+				}
+				.tit_slide a:link, .tit_slide a:visited {
+					margin-top: -4px;
+					float: left;
+					height:20px;
+					white-space: nowrap;
+					width: 180px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					color: white;
+					text-decoration: none;
 				}
 				.cuerpo_slide{
-					margin-top: 7px;
 					float: left;
-					width: 440px;
 					height: 115px;
 					text-align: justify;
 				}
@@ -377,7 +404,7 @@ a:hover{
 		margin-left:30px;
 	}
 		#analisis .cuerpo_seccion{
-			height:500px;
+			height:555px;
 		}
 		#sit_actual .cuerpo_seccion{
 			height:470px;
@@ -394,24 +421,25 @@ a:hover{
 			}
 	.noticia{
 		float: left;
-		margin-top: 10px;
+		margin-top: 4px;
 		width: 458px;
+}
 	}
 		.noticia img{
 			float: left;
 		}
 		#noticias .separacion_slide{
-			margin-top:10px;
+			margin-top:6px;
 		}
 		#noticias .cuerpo_seccion{
-			height:480px;
+			height:366px;
 		}
 		.tit_noticia{
 			font-weight: bold;
-			margin-left: 10px;
+			margin-left: 15px;
 			color: #3C3C3B;
 			font-size: 12px;
-			margin-right: 10px;
+			margin-right: 5px;
 			float: left;
 			margin-top: 3px;
 		}
@@ -423,8 +451,8 @@ a:hover{
 		}
 		.cuerpo_noticia{
 			margin-top: 3px;
-			font-size: 12px;
-			margin-left: 12px;
+			font-size: 10px;
+			margin-left: 7px;
 			float: left;
 			white-space: nowrap;
 			width: 340px;
@@ -432,9 +460,10 @@ a:hover{
 			text-overflow: ellipsis;
 		}
 	#opiniones .cuerpo_seccion{
-		padding-top:20px;
 		background: #f6f6f6;
 		border:none;
+		height: 660px;
+		overflow: hidden;
 	}
 	.opinion{
 		width: 458px;

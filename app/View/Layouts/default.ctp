@@ -116,9 +116,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					<div class="item" id="item_opi">
 						<?php echo $this->Html->link('OPINION','/opinion'); ?>
 					</div>
-					<div class="item" id="item_opi">
+					<!--div class="item" id="item_opi">
 						<?php echo $this->Html->link('DIV&Aacute;N','/divan',array('escape'=>false)); ?>
-					</div>
+					</div-->
 					<div class="item" id="item_cur">
 						<?php echo $this->Html->link('EVENTOS','/eventos'); ?>
 					</div>

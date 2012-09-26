@@ -67,6 +67,8 @@ class User extends AppModel {
 		)
 	);
 
+	public $belongsTo = array('Comment');
+
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 	/**
 	 * Private User

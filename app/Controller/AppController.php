@@ -56,7 +56,7 @@ class AppController extends Controller {
             'authorizedActions' => array('index','view','add')
         ),
         'Facebook.Connect' => array('model' => 'User'),
-        'DebugKit.Toolbar'
+        #"TwitterBootstrap.TwitterBootstrap"
     );
 
 

@@ -10,7 +10,7 @@
 					<?php if (isset($facebook_user)): ?>
 						<?php echo $this->Html->link($post['Post']['titulo'],'/posts/view/'.$post['Post']['id']); ?>
 					<?php else: ?>
-						<?php echo $post['Post']['id']; ?>
+						<?php echo $post['Post']['titulo']; ?>
 					<?php endif; ?>
 				</span>
 				<img src="<?php echo $post['Post']['serie_datos']; ?>" class="img_ppal_slide" width="400" height="200" onError="error_handler.imageError(this)"/>

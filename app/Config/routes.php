@@ -34,6 +34,7 @@
 	Router::connect('/analisis_ttt', array('controller' => 'posts', 'action' => 'analisisttt'));
 	Router::connect('/opinion', array('controller' => 'posts', 'action' => 'opinion'));
 	Router::connect('/nuevo_usuario', array('controller' => 'users', 'action' => 'add'));
+	Router::connect('/reporte/:id', array('controller' => 'posts', 'action' => 'reporte'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

@@ -54,9 +54,29 @@ class PagesController extends AppController {
  */
 	public function display() {
 
-		$this->set('analisisttt', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '1'),'order'=>'Post.created DESC' ) ) );
-		$this->set('situacionesactuales', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '2'),'order'=>'Post.created DESC' ) ) );
-		$this->set('opiniones', $this->Post->find('all', array('conditions' => array('Post.tipo_id' => '3'),'order'=>'Post.created DESC' ) ) );
+		$this->set('analisisttt', 
+			$this->Post->find('all', array(
+				'conditions' => array('Post.tipo_id' => '1'),
+				'order'=>'Post.created DESC',
+				'limit'=>6
+				) 
+			) 
+			);
+		$this->set('situacionesactuales', 
+			$this->Post->find('all', array(
+				'conditions' => array('Post.tipo_id' => '2'),
+				'order'=>'Post.created DESC',
+				'limit'=>4 
+				) 
+			) 
+			);
+		$this->set('opiniones', 
+			$this->Post->find('all', array(
+				'conditions' => array('Post.tipo_id' => '3'),
+				'order'=>'Post.created DESC' 
+				) 
+			) 
+			);
 		
 		$path = func_get_args();
 

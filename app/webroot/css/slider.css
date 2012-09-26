@@ -21,6 +21,8 @@
   background:url(../img/flechader.jpg) no-repeat ;
   z-index:2;
 }
+#leftControl3{ top:181px; right:40px; border-radius: 7px; }
+#rightControl3{ top:181px; right:15px; border-radius: 7px; }
 /*END shared*/
 /*********************************************/
 /*********************************************/
@@ -43,7 +45,7 @@
   overflow:auto; /* allow scrollbar */
   position:relative;
   width:450px;
-  height:470px;
+  height: 690px;
 }
 #slideshow #slidesContainer .slide {
   margin:0 auto;
@@ -86,14 +88,11 @@
   margin:0 auto;
   overflow:auto; /* allow scrollbar */
   position:relative;
-  width:480px;
+  width:465px;
   height: 210px;
 }
 
 #slideshow3 #slidesContainer3 .slide3 {
   margin:0 auto;
   height:210px;
-}
-#leftControl3 {
-  top:210px;
 }

@@ -71,4 +71,8 @@ class Post extends AppModel {
 			'order' => ''
 		)
 	);
+
+	public $hasMany = array(
+		'Comment'
+		);
 }

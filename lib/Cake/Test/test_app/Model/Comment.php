@@ -24,4 +24,28 @@ class Comment extends AppModel {
 
 	public $name = 'Comment';
 
+	public $belongsTo = array(
+		
+	);
+
+	public $hasOne = array(
+		'Post' => array(
+			'className' => 'Post',
+			'foreignKey' => 'post_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Users' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+	);
+
+	//public $hasMany = array('Comment');
+
+	public $hasAndBelongsToMany = array('Comment');
 }
