@@ -63,7 +63,18 @@ symbols = {
           , {'id' : "YPFD.BA"}
         ]
       , accionesUSA = [
-            {'id' : "^STI"}
+            {'id' : 'TS'}
+          , {'id' : 'C'}
+          , {'id' : 'AAPL'}
+          , {'id' : 'GOOG'}
+          , {'id' : 'X'}
+          , {'id' : 'XOM'}
+          , {'id' : 'PG'}
+          , {'id' : 'MSFT'}
+          , {'id' : 'AAPL'}
+          , {'id' : 'BAC'}
+          , {'id' : 'AA'}
+          , {'id' : 'IBM'}
         ]
       , accionesIndices = [
             {'id' : "^MERV"}
@@ -190,10 +201,10 @@ symbols = {
                                 '<span class="negative">'+ChangeinPercent+'</span>';
 
       borderBox = (ChangeinPercent.search(/\+[0-9]/g) >= 0 ) 
-                    ? 'green' 
+                    ? _POSITIVE 
                     : ( ChangeinPercent.search(/0.00\%/g) >= 0 ) 
-                      ? '#3B5998' 
-                        : 'red';
+                      ? _NEUTRAL 
+                        : _NEGATIVE;
 
       e.css('borderBottom','2px solid '+borderBox);
       e.find('.price').empty().text(data[i].LastTradePriceOnly);

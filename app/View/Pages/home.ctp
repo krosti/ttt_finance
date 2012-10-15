@@ -19,7 +19,7 @@
 	</div>
 	<div class="seccion" id="analisis">
 		<div class="header_seccion">
-			An&aacute;lisis TTT
+			<span class="titulo_seccion">An&aacute;lisis TTT</span>
 		</div>
 		<div class="cuerpo_seccion cuerpo_seccionSmall">
 			<div id="slideshow">
@@ -31,7 +31,7 @@
 	</div>
 	<div class="seccion" id="noticias">
 		<div class="header_seccion">
-			Noticias
+			<span class="titulo_seccion">Noticias</span>
 		</div>
 		<div class="cuerpo_seccion">
 
@@ -41,7 +41,7 @@
 <div class="column" id="col_derecha">
 	<div class="seccion" id="sit_actual">
 		<div class="header_seccion">
-			Situaci&oacute;n Actual
+			<span class="titulo_seccion">Situaci&oacute;n Actual</span>
 		</div>
 		<div class="cuerpo_seccion">
 			<div id="slideshow2">
@@ -53,7 +53,7 @@
 	</div>
 	<div class="seccion" id="opiniones">
 		<div class="header_seccion">
-			Opini&oacute;n
+			<span class="titulo_seccion">Opini&oacute;n</span>
 		</div>
 		<div class="cuerpo_seccion">
 			<div id="slideshow">

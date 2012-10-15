@@ -26,10 +26,18 @@
           , array('id' => "^BVSP", 'name'=>'Bovespa') 
 		);
 	$indicesUsa = array(
-			array('id' => '^DJA')
-		,	array('id' => '^DJI')
-		,	array('id' => '^DJT')
-		,	array('id' => '^DJU')
+			array('id' => 'TS')
+		,	array('id' => 'C')
+		,	array('id' => 'AAPL')
+		,	array('id' => 'GOOG')
+		,	array('id' => 'X')
+		,	array('id' => 'XOM')
+		,	array('id' => 'PG')
+		,	array('id' => 'MSFT')
+		,	array('id' => 'AAPL')
+		,	array('id' => 'BAC')
+		,	array('id' => 'AA')
+		,	array('id' => 'IBM')
 		);
 
 	if(isset($setVal)):

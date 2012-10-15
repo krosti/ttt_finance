@@ -1,5 +1,5 @@
 .extra{
-	margin-top:0px;
+	margin-top: 24px;
 	height: auto;
 }
 
@@ -15,11 +15,22 @@
 	.reportes .top .fecha{ float:left; font-size: 13px; font-weight: bold; }
 	.reportes .top .social{
 		float: right;
-		height: 22px;
+		height: 30px;
+		width: 350px;
+	}
+	
+	.reportes .top .social a{
+		margin-top: -15px;
+		float: right;
 	}
 	.reportes .top .social span{
 		float: right;
-		margin-top: -20px;
+		margin-top: 0px;
+	}
+	.reportes .top .social .fbwrapper{
+		float: left;
+		margin-top: 0px;
+		margin-right: 3px;
 	}
 
 .reportes .left{
@@ -30,7 +41,7 @@
 	padding-left: 0px;
 }
 .reportes .left .tituloPost{
-	color: #456B98;
+	color: #006995;
 	font-size: 16px;
 	margin-bottom: 15px;
 	border-bottom: 1px double #DDD;
@@ -56,7 +67,7 @@
 	.reportes .bottom span{ float:right; }
 
 	.reportes .bottom .tituloComentario{
-		color:#456B98;
+		color:#006995;
 		float:left;
 		font-size: 16px;
 		margin-bottom:5px;

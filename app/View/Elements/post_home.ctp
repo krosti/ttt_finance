@@ -20,9 +20,9 @@
 					<?php endif; ?>
 					
 					<div class="thumb_slide">
-						<!--img src="img/warning.png" /
-								tag here
-						-->
+						<?php if($analisisTTT[$r]['Post']['tipo_id'] == 2): ?>
+							<div class="fecha"><?php echo $this->Time->format('d/m/Y h:m',$analisisTTT[$r]['Post']['created']); ?></div>
+						<?php endif; ?>
 						<?php if(isset($analisisTTT[$r]['Post']['serie_datos_pie']) && $analisisTTT[$r]['Post']['serie_datos_pie'] != ''): ?>
 							<span><?php echo $analisisTTT[$r]['Post']['serie_datos_pie']; ?></span>
 						<?php endif; ?>

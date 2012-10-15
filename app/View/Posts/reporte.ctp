@@ -6,7 +6,7 @@
 	
 	<div class="top">
 		<div class="nombre"><?php echo $post['Post']['created_by'] ?></div>
-		<div class="fecha"><?php echo $this->Time->niceShort($post['Post']['created']); ?></div>
+		<div class="fecha"><?php echo $this->Time->format('d/m/Y h:m',$post['Post']['created']); ?></div>
 		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post) ); ?></div>
 	</div>
 	<div class="left">

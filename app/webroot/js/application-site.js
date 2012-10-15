@@ -3,6 +3,10 @@
 	$(function(){
 		//GLOBAL SCOPE
 		__updateInterval = 20000; //miliseconds
+		//GLOBAL colors
+	    _POSITIVE = '#329634';
+	    _NEGATIVE = '#c80509';
+	    _NEUTRAL = '#006995';
 
 		try{
 			sliderValores.iniciar_sliderValores();

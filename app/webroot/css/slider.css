@@ -21,8 +21,8 @@
   background:url(../img/flechader.jpg) no-repeat ;
   z-index:2;
 }
-#leftControl3{ top:181px; right:40px; border-radius: 7px; }
-#rightControl3{ top:181px; right:15px; border-radius: 7px; }
+#leftControl3{ top:181px; right:32px; border-radius: 7px; }
+#rightControl3{ top:181px; right:7px; border-radius: 7px; }
 /*END shared*/
 /*********************************************/
 /*********************************************/
@@ -65,7 +65,7 @@
   overflow:auto; /* allow scrollbar */
   position:relative;
   width:450px;
-  height:435px;
+  height:458px;
 }
 
 #slideshow2 #slidesContainer2 .slide2 {

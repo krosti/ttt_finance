@@ -53,9 +53,9 @@ jQuery.fn.extend({
 			backImg.src="mopSlider/paperBack.gif";
 			sldcLeftImg.src="mopSlider/sliderBackLeftLeftW.png";
 			sldcRightImg.src="mopSlider/sliderBackRightRightW.png";
-			sldBackLeft.src="mopSlider/sliderBackLeftW.png";
-			sldBackCenter.src="mopSlider/sliderBackW.png";
-			sldBackRight.src="mopSlider/sliderBackRightW.png";
+			//sldBackLeft.src="mopSlider/sliderBackLeftW.png";
+			//sldBackCenter.src="mopSlider/sliderBackW.png";
+			//sldBackRight.src="mopSlider/sliderBackRightW.png";
 		}else if(mopSliderType=="black"){
 			btnLeft.src="mopSlider/sliderBtnLeft.png";
 			btnLeftF.src="mopSlider/sliderBtnLeft_f.png";
@@ -84,9 +84,9 @@ jQuery.fn.extend({
 /*			backImg.src="mopSlider/paperBack.gif";*/
 			sldcLeftImg.src="app/webroot/js/mopSlider/sliderBackLeftLeftW.png";
 			sldcRightImg.src="app/webroot/js/mopSlider/sliderBackRightRightW.png";
-			sldBackLeft.src="app/webroot/js/mopSlider/sliderBackLeftW.png";
-			sldBackCenter.src="app/webroot/js/mopSlider/sliderBackW.png";
-			sldBackRight.src="app/webroot/js/mopSlider/sliderBackRightW.png";
+			//sldBackLeft.src="app/webroot/js/mopSlider/sliderBackLeftW.png";
+			//sldBackCenter.src="app/webroot/js/mopSlider/sliderBackW.png";
+			//sldBackRight.src="app/webroot/js/mopSlider/sliderBackRightW.png";
 
 		}
 		

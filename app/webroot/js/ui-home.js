@@ -98,7 +98,7 @@ ui_home = {
 
 			e.innerHTML = 
 				'<span class="tit_noticia">' + data[i].td[0].span.content + '</span>'+
-				'<div class="img_noticia" style="' + data[i].td[1].style.replace(/\//,'../img/').replace(/archivos\//,'') + '"></div>' +
+				'<div class="img_noticia" style="' + data[i].td[1].style.replace(/\//,'./img/').replace(/archivos\//,'') + '"></div>' +
 				'<span class="cuerpo_noticia">'+ data[i].td[1].span.a.content + '</span>';
 
 			e.setAttribute('id', i);
