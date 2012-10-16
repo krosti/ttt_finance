@@ -105,10 +105,12 @@ class AppController extends Controller {
 
 		$this->Auth->allow('display'); 
 
+		
 		if ($this->Connect->user()):
 			$this->set('facebook_user', $this->Connect->user() );
 			$this->Auth->allow('reporte'); 
 			$this->set('fb_user_has_account', $this->Connect->hasAccount );
+			$this->Session->setFlash('Usuario Conectado !');
 		endif;
 	}
 

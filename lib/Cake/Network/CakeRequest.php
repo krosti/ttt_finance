@@ -165,7 +165,7 @@ class CakeRequest implements ArrayAccess {
 			$this->data = $_POST;
 		} elseif ($this->is('put') || $this->is('delete')) {
 			$this->data = $this->_readInput();
-			if (env('CONTENT_TYPE') === 'application/x-www-form-urlencoded') {
+			if (strpos(env('CONTENT_TYPE'), 'application/x-www-form-urlencoded') === 0) {
 				parse_str($this->data, $this->data);
 			}
 		}
@@ -675,7 +675,7 @@ class CakeRequest implements ArrayAccess {
 	public function accepts($type = null) {
 		$raw = $this->parseAccept();
 		$accept = array();
-		foreach ($raw as $value => $types) {
+		foreach ($raw as $types) {
 			$accept = array_merge($accept, $types);
 		}
 		if ($type === null) {
