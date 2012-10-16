@@ -10,7 +10,7 @@
 						<?php if (isset($facebook_user)): ?>
 							<?php echo $this->Html->link($analisisTTT[$r]['Post']['titulo'],'/posts/reporte/'.$analisisTTT[$r]['Post']['id']); ?>
 						<?php else: ?>
-							<?php echo $analisisTTT[$r]['Post']['titulo']; ?>
+							<span class="loginPopUp"><?php echo $analisisTTT[$r]['Post']['titulo']; ?></span>
 						<?php endif; ?>
 					</span>
 					<?php if (isset($facebook_user)): ?>

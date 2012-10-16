@@ -237,5 +237,15 @@ ui_home = {
 		};
 		var target = document.getElementById('spinner');
 		var spinner = new Spinner(opts).spin(target);
+	},
+
+	setLoginPopup: function(){
+		/*
+		* bindea todos los dialogos de login si esta deslogeado
+		*/
+		
+		$('.loginPopUp').on('click',function(){
+
+		});
 	}
 }

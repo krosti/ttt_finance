@@ -176,13 +176,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 
 </body>
 <?php echo $this->Facebook->init(); ?>
-	
-<script type="text/javascript">
-	//__CAKEPHP =;
-</script>
-<pre>
- <?php #print_r ($_SERVER); ?> 
- </pre>
+
 
 <?php echo $this->Html->script(array(
 		'jquery',
