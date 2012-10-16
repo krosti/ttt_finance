@@ -140,9 +140,7 @@ class ConnectComponent extends Component {
 		// User is logged in but doesn't have a 
 		if($Auth->user('id')){
 			$this->hasAccount = true;
-			#debug($Auth->user());
 			$this->User->id = $Auth->user($this->User->primaryKey);
-			#debug($this->User->field('facebook_id'));
 			if (!$this->User->field('facebook_id')) {
 				$this->User->saveField('facebook_id', $this->uid);
 			}
@@ -206,7 +204,7 @@ class ConnectComponent extends Component {
 			$retval = Set::extract("/$field", $this->me);
 			return empty($retval) ? null : $retval[0];
 		}
-		#debug($this->me);
+		
 		return $this->me;
 	}
 	

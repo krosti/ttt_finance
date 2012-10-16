@@ -83,13 +83,12 @@ class FacebookHelper extends AppHelper {
 	function registration($options = array(), $label = ''){
 		$options = array_merge(
 			array(
-				'fields' => 'name,birthday,gender,location,email',
+				'fields' => 'name,birthday,gender,location,email', 
 				'redirect-uri' => Router::url($this->here, true),
 				'width' => 350
 			), 
 			$options
 		);
-		#debug($this->__fbTag('fb:registration',$label,$options));
 		return $this->__fbTag('fb:registration',$label,$options);
 	}
 	
@@ -140,7 +139,6 @@ class FacebookHelper extends AppHelper {
 				'onclick' => $onclick));
 			}
 			else {
-				
 				return $this->Html->link($options['label'], '#', array(
 					'onclick' => $onclick, 'id' => $options['id']));
 			}
@@ -148,7 +146,6 @@ class FacebookHelper extends AppHelper {
 		else {
 			if(!$options['id']){ unset($options['id']); }
 			unset($options['label'], $options['custom'], $options['redirect'], $options['img'], $options['alt']);
-			debug($this->__fbTag('fb:login-button', $label, $options));
 			return $this->__fbTag('fb:login-button', $label, $options);
 		}
 	}
@@ -258,7 +255,7 @@ class FacebookHelper extends AppHelper {
 		}
 		$defaults = array(
 			'style' => 'button',
-			'label' => 'Compartir',
+			'label' => 'share',
 			'anchor' => 'fb_share',
 			'fbxml' => false
 		);
