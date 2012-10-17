@@ -57,6 +57,7 @@ class AppController extends Controller {
         ),
         'Facebook.Connect' => array('model' => 'User'),
         #"TwitterBootstrap.TwitterBootstrap"
+        //'DebugKit.Toolbar'
     );
 
 
@@ -105,11 +106,15 @@ class AppController extends Controller {
 
 		$this->Auth->allow('display'); 
 
+		$userLoggedIn = $this->Connect->user();
 		
-		if ($this->Connect->user()):
-			$this->set('facebook_user', $this->Connect->user() );
+		if ($userLoggedIn):
+			$this->set('facebook_user', $userLoggedIn );
 			$this->Auth->allow('reporte'); 
-			$this->set('fb_user_has_account', $this->Connect->hasAccount );
+
+			$result = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$userLoggedIn['id'])));
+			
+			$this->set('fb_user_has_account', $result );
 			$this->Session->setFlash('Usuario Conectado !');
 		endif;
 	}

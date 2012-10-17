@@ -162,6 +162,35 @@ ui_home = {
 		});
 	},
 
+	validarFormLoginDialog: function(){
+		/*
+		* valida el form de login, usr y pw solamente del Home
+		*/
+		var
+			usr = $('#input_login_dialog'),
+			pw = $('#input_pass_dialog');
+
+		$('#button_login_dialog').on('click',function(){
+			//console.log('dafa');
+			var
+				ck1 = (usr.val() != '') ? true : false,
+				ck2 = (pw.val() != '') ? true : false,
+				result = false;
+
+			(!ck1 && usr.css('border','1px solid red'));
+			(!ck2 && pw.css('border','1px solid red'));
+
+			return (ck1 && ck2) ? $(this).submit() : false;
+		});
+
+		usr.on('keydown',function(e){
+			var t = $(this); return (t.val != '') ? t.css('border','1px solid #ccc') : t.css('border','1px solid red');
+		});
+		pw.on('keydown',function(e){
+			var t = $(this); return (t.val != '') ? t.css('border','1px solid #ccc') : t.css('border','1px solid red');
+		});
+	},
+
 	popUpRegistration: function(){
 		/*
 		* popup para el form de registracion
@@ -245,7 +274,12 @@ ui_home = {
 		*/
 		
 		$('.loginPopUp').on('click',function(){
-
+			$('#box_login_dialog').dialog({
+				title:'LogIn',
+				modal:true,
+				width: 400,
+				draggable: false
+			});
 		});
 	}
 }

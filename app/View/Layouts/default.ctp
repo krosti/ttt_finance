@@ -33,7 +33,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','jquery-ui-1.8.22.custom'));
+		echo $this->Html->css(array('index','slider','jquery-ui-1.8.22.custom','tooltips'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -45,11 +45,11 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	)); ?>
 	
 </head>
-<body><?php #debug(isset($facebook_user)); ?>
-	<?php #echo $i++; ?>
+<body>
+	
 	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
 
-	<?php #print_r( $this->Session->read('Auth.User'));  ?>
+	
 	<div class="cuerpo">
 		<div class="header">
 			<div id="direccion">
@@ -64,7 +64,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
 					<?php 
 						if (isset($facebook_user)) {
-							echo (isset($fb_user_has_account) && $fb_user_has_account) ? "Usuario TTT" : "Estas conectado pero no registrado | ";
+							echo (isset($fb_user_has_account) && $fb_user_has_account) 
+								? "" 
+								: "Estas conectado pero no registrado | ";
 							echo ($site_url == "http://localhost/ttt_finance") 
 								? $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout') ))
 								: $this->Html->link('Logout','/users/logout');
@@ -90,7 +92,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					}
 					else
 					{
-						echo $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));
+						echo (isset($fb_user_has_account) && $fb_user_has_account) ? $fb_user_has_account['User']['username'] : $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));
 					}?>
 				</span>
 
@@ -172,7 +174,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 <!--Agrega user-->
 <div id="nuevo_usuario" style="display:none;"> <?php echo $this->element('usersadd'); ?> </div>
 
-<!--graficador-->
+<!--please log in user-->
+<div id="box_login_dialog" style="display:none;"> <?php echo $this->element('login_dialog'); ?> </div>
+
 
 </body>
 <?php echo $this->Facebook->init(); ?>

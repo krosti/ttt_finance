@@ -1,0 +1,13 @@
+.login_dialog{
+	padding: 10px;
+	text-align: center;
+	color: #777;
+	border-radius: 2px;
+	border: 1px solid #DFDFDF;
+}
+
+.login_dialog .divisor{
+	width:280px;
+	height:2px;
+	margin:auto;
+}

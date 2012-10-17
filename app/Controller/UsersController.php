@@ -87,22 +87,29 @@ class UsersController extends AppController {
 	public function add() {
 		//$this->layout = 'none';
 		//if (!empty($this->data)) {
+
 		if($user = $this->Connect->registrationData()){
-			if ($this->User->save($user)) {
+			$userData['User'] = $user['registration'];
+			$userData['User']['location'] = $userData['User']['location']['name'];
+			//$userData['User']['username'] = $userData['User']['email'];
+			//debug($userData);
+			
+
+			if ($this->User->save($userData)) {
 				//$this->Session->setFlash(__('Muchas gracias por registrarte en TTT', true));
 				unset($_POST);			
 					/* envio del mail al dueño. Le avisa que un usuario se ha registrado*/
 					$Info = $user;
-					echo $user['user_id']	;
+					//echo $user['user_id']	;
 					$user = $this->User->find('first',array('conditions'=>array('User.email'=>$user['registration']['email'])));
 					$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-					$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['0']['user_id'];
+					//$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['0']['user_id'];
 					$sitioweb = "http://ttt.borealdev.com.ar";
 					$InfoAux = array(
 						"nombre" => $Info['registration']['first_name'],
 						"apellido" => $Info['registration']['last_name'],
 						"mensaje" => $mensaje,
-						"mensaje2" => $mensaje2,
+						//"mensaje2" => $mensaje2,
 						"sitioweb" => $sitioweb,
 						"username" => $Info['registration']['email'],
 						"password" => $Info['registration']['password'],
@@ -123,10 +130,16 @@ class UsersController extends AppController {
 						$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
 						$this->redirect("/users/add");									
 					}
-					/* fin envio del mail*/	
+					/* fin envio del mail*/
+					$this->Session->setFlash('Usuario creado correctamente!');
+					$this->redirect('/');
 			}
-		}else{
-			$this->Auth->allow( 'add' ); 
+		}elseif (!empty($this->data)) {
+			//registraciòn sin facebook
+			$this->Auth->allow( 'add' );
+			debug($this->data);
+			$this->User->save($this->data);
+			$this->Session->setFlash(__('La cuenta de usuario fue creada. Se te envi&oacute; un email para su activaci&oacute;n.', true));
 		}
 	}
 	public function login(){

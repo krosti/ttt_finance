@@ -20,6 +20,7 @@
 <?php echo $this->Facebook->registration(array(
     'fields' => '[
     	{"name":"name"},
+    	{"name":"username","description":"Nombre de Usuario","type":"text"},
     	{"name":"first_name"},
     	{"name":"last_name"},
     	{"name":"email"},
@@ -30,6 +31,7 @@
     	
     	]',
     //{"name":"perfil_id","description":"Tipo de usuario","type":"select","options":{"0":"Full Access"},"default":"0"} >> custom_fields
+    
     'width' => 620,
     'redirect-uri' => $site_url.'/users/add/'
 )); ?>

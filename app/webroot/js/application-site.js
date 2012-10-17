@@ -20,8 +20,10 @@
 		ui_home.agregarComentario();
 		ui_home.animacionFlashMessage();
 		ui_home.validarFormLoginHome();
+		ui_home.validarFormLoginDialog();
 		ui_home.popUpRegistration();
 		ui_home.BTNindicesBox();
+		ui_home.setLoginPopup();
 		
 		var stringAcciones = (window.location.hash) ? symbols.listaDeAcciones(window.location.hash.replace('#','')) : symbols.listaDeAcciones('argentina');
 		// Usage: 

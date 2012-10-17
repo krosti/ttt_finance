@@ -62,6 +62,12 @@ a:hover{
 		#conectar span .fb{
 			
 		}
+		.usrCheck{
+			background:url(../img/icons/ok.png) no-repeat;
+			width: 16px;
+			height: 16px;
+			float: right;
+		}
 	#panel_header{
 		background:#f5f5f3;
 		border:1px solid #ccc;
@@ -370,7 +376,7 @@ a:hover{
 					color:#333;
 
 				}
-				.tit_slide a:link, .tit_slide a:visited {
+				.tit_slide a:link, .tit_slide a:visited, .tit_slide span {
 					margin-top: -4px;
 					float: left;
 					height:20px;
@@ -577,7 +583,7 @@ a:hover{
 .neutral{
 	color:#006995;
 }
-#flashMessage.flash_bad,pre{
+#flashMessage.flash_bad{
 	position: absolute;
 	margin-top: 100px;
 	margin-left: 700px;
@@ -612,4 +618,8 @@ a:hover{
 #analisis .compartir_slide span a{
 	float: right;
 	margin-top: 3px;
+}
+
+.loginPopUp{
+	cursor: pointer;
 }

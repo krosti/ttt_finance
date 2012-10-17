@@ -6,11 +6,11 @@
 				
 			<div class="caja_slide">
 				<div class="izq_slide">
-					<span class="tit_slide">
+					<span class="tit_slide <?php if(!isset($facebook_user)){echo 'loginPopUp';} ?>">
 						<?php if (isset($facebook_user)): ?>
 							<?php echo $this->Html->link($analisisTTT[$r]['Post']['titulo'],'/posts/reporte/'.$analisisTTT[$r]['Post']['id']); ?>
 						<?php else: ?>
-							<span class="loginPopUp"><?php echo $analisisTTT[$r]['Post']['titulo']; ?></span>
+							<span><?php echo $analisisTTT[$r]['Post']['titulo']; ?></span>
 						<?php endif; ?>
 					</span>
 					<?php if (isset($facebook_user)): ?>
