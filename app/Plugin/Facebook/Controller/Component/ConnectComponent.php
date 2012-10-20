@@ -188,9 +188,20 @@ class ConnectComponent extends Component {
 	public function user($field = null){
 		if(isset($this->uid)){
 			if($this->Controller->Session->read('FB.Me') == null){
-				$this->Controller->Session->write('FB.Me', $this->FB->api('/me'));
+				/*try {
+					// Proceed knowing you have a logged in user who's authenticated.
+					#$user_profile = $facebook->api('/me');
+					$this->Controller->Session->write('FB.Me', $this->FB->api('/me'));
+				} catch (FacebookApiException $e) {
+					error_log($e);
+					$this->Controller->Session->write('FB.Me', null);
+				}*/
+				$usr = $this->FB->getUser();
+				debug($usr);
+
 			}
 			$this->me = $this->Controller->Session->read('FB.Me');
+			#debug($this->me);
 		} 
 		else {
 			$this->Controller->Session->delete('FB');

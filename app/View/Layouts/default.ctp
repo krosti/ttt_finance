@@ -60,6 +60,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 				<span id="mail_color">info@tritangotraders.com</span>
 			</div>
 			<div id="conectar">
+				<!--nocache-->
 				<span style="float:right;">
 					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
 					<?php 
@@ -75,7 +76,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 								$this->Facebook->login(array(
 									//'perms' => 'email,publish_stream',
 									'custom' => true,
-									'redirect' => '/',
+									//'redirect' => '/',
 									'label'=>'LogIn'
 									))
 								.'</div>';
@@ -95,7 +96,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 						echo (isset($fb_user_has_account) && $fb_user_has_account) ? $fb_user_has_account['User']['username'] : $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));
 					}?>
 				</span>
-
+				<!--/nocache-->
 			</div>
 			<div id="panel_header">
 				<div id="logoppal">

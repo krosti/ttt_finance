@@ -177,8 +177,10 @@ symbols = {
     min = parseInt(min);
     //fixx
     min = (max < min) ? 0 : min;
-    
-    ui.graphs(dataArray,"candlestick",max,min);
+      
+    if (typeof(ui) !== 'undefined') {
+      ui.graphs(dataArray,"candlestick",max,min);
+    };
 
   },
 

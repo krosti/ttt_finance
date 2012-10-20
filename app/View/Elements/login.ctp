@@ -1,4 +1,6 @@
 <?php #debug( $this->Session->read('user')).'this'; ?>
+
+<!--nocache-->
 <div class = "box_login">
 	<?php 
 	if (isset($facebook_user)): ?>
@@ -57,3 +59,4 @@
 	endif;	
 	?>
 </div>
+<!--/nocache-->

@@ -53,61 +53,25 @@ class AppController extends Controller {
                 )
             ),*/
             'authorize' => array('Controller'),
-            'authorizedActions' => array('index','view','add')
+            'allowedActions' => array('index','view','display','loginFb'),
+            'authError' => "No posee autorizacion para acceder a esta seccion. Por favor inicie sesion o registrese gratis."
         ),
         'Facebook.Connect' => array('model' => 'User'),
         #"TwitterBootstrap.TwitterBootstrap"
-        //'DebugKit.Toolbar'
+        'DebugKit.Toolbar'
     );
 
 
 	function beforeFilter() {
-		/*$app_id   = "377583548967953";
-		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
-		$site_url = "http://ttt.borealdev.com.ar/";
-		 
-		try{
-		  include_once "fb/facebook.php";
-		}catch(Exception $e){
-		  error_log($e);
-		}
-		
-		$facebook = new Facebook(array(
-		  'appId'   => $app_id,
-		  'secret'  => $app_secret,
-		  ));
-		 
-		$uid = $facebook->getUser();
-		debug($uid);*/
-		
-		#$uid = $this->Connect->user();
-		/*if ($uid)
-		{
-			
-			$user = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$uid['id'])));
-			if ($user)
-			{
-				$this->Session->write('User', $user['User']);
-				$this->Session->write('User.username', $user['User']['username']);	
-				$this->Session->write('User.facebook_id', $user['User']['facebook_id']);
-			}
-			else {
-				$uid['ttt_status'] = 'false';
-				//esta logeado con facebook pero no registrado en TTT
-			}
-
-		}*/
-		
-		#$this->set('test',$this->Auth->user());
-		#$this->set('facebook_user', $this->Connect->user() );
 
 		//global url adress
 		$this->set('site_url',Configure::read('Site.url'));
 
-		$this->Auth->allow('display'); 
+		//$this->Auth->allow('display'); 
 
 		$userLoggedIn = $this->Connect->user();
-		
+		#debug($this->FB);
+
 		if ($userLoggedIn):
 			$this->set('facebook_user', $userLoggedIn );
 			$this->Auth->allow('reporte');		

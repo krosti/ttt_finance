@@ -13,7 +13,7 @@ class UsersController extends AppController {
 		#'Auth' => array( 'authorizedActions' => array('account','add') ) 
 		);
 
-	public function beforeFilter(){
+	/*public function beforeFilter(){
 		$this->Auth->allow(array('add','logout'));
 
 		if ($this->Connect->user()):
@@ -22,7 +22,7 @@ class UsersController extends AppController {
 		endif;
 
 		$this->set('site_url',Configure::read('Site.url'));
-	}
+	}*/
 	
 	public function a987156428774($id){
 		$this->User->read(null, $id);
@@ -38,8 +38,8 @@ class UsersController extends AppController {
 		$this->redirect(array('controller'=>'pages', 'action' => 'home'));		
 	}
 
-	public function loginfb(){
-		/*$app_id   = "377583548967953";
+	/*public function loginfb(){
+		$app_id   = "377583548967953";
 		$app_secret = "aa995450f1f9fb14f0405ca9b71d1922";
 		$site_url = "http://localhost/ttt_finance";
 		 
@@ -78,11 +78,11 @@ class UsersController extends AppController {
 		  echo "<script>top.location.href = '$loginUrl'; </script>";  
 		  $this->set('loginUrl',$loginUrl);
 		}
-		*/
+		
 
 
 
-	}
+	}*/
 
 	public function add() {
 		//$this->layout = 'none';
@@ -183,8 +183,12 @@ class UsersController extends AppController {
 					$this->Session->setFlash('Usuario Inactivo, por favor active su cuenta. <br> Si no cuenta con un link de activacion <br>por favor contacte a soporte@tttonline.com.ar','default',array('class'=>'flash_bad'));
 				}	
 			}			
+		}else{
+			//sin logearse	
+			//debug($this->data);
+			$this->redirect("/");
 		}
-		$this->redirect("/");
+		//$this->redirect("/");
 		#if($this->Auth->login()
 		#debug($this->Auth->login());
 		#$this->redirect("/");
@@ -199,5 +203,10 @@ class UsersController extends AppController {
 
 	public function myAccount(){
 		
+	}
+
+	public function loginFb(){
+
+		debug($this->data);
 	}
 }
