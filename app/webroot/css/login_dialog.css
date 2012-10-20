@@ -7,7 +7,11 @@
 }
 
 .login_dialog .divisor{
-	width:280px;
-	height:2px;
-	margin:auto;
+	width:345px;
+	margin: 7px auto;
+	border-top: 1px solid #DFDFDF;
+	padding-bottom: 15px;
+}
+.login_dialog a:link, .login_dialog a:visited{
+	color:#006995;
 }

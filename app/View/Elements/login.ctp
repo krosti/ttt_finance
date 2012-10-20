@@ -5,7 +5,12 @@
 		<div class="SessionDetails">
 			<span> 
 			<?php 
-				$tooltip = "<span class='tooltip'><span></span>Usuario registrado en TTT</span>";
+				$tooltip = "<span class='tooltip'>".
+								"<span></span>".
+								$this->Html->image('logofooter.png')."<br><br>".
+								"Usuario registrado en TTT".
+							"</span>";
+
 				$userLoggedId = (isset($fb_user_has_account) && $fb_user_has_account) ? "<a href='#' class='usrCheck'>".$tooltip."</a>" : "";
 				echo '<span class="name">'.
 						$facebook_user['name'] .
@@ -15,6 +20,26 @@
 				echo '<span class="email">'.$facebook_user['email'].'</span>'; 
 				echo '<span class="picture">'.$this->Facebook->picture($facebook_user['id']).'</span>';
 			?> 
+			</span>
+		</div>
+	<?php elseif ($this->Session->read('User')): ?>
+		<div class="SessionDetails">
+			<span>
+			<?php
+			$userLoggedIn = $this->Session->read('User');
+			$tooltip = "<span class='tooltip'>".
+							"<span></span>".
+							$this->Html->image('logofooter.png')."<br><br>".
+							"Usuario registrado en TTT <br> Cuenta de Facebook no Asociada".
+						"</span>";
+
+			echo '<span class="name">'.
+					$userLoggedIn['first_name'] .' '. $userLoggedIn['last_name'] .
+					' ('."<a href='#' class=''>".$userLoggedIn['username'].$tooltip."</a>".')' .
+				 '</span>'; 
+			echo '<span class="email">'.$userLoggedIn['email'].'</span>'; 
+			echo '<span class="picture">'.$this->Html->image('icons/user_logged_in.png').'</span>';
+			?>
 			</span>
 		</div>
 	<?php	

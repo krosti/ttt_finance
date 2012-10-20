@@ -110,12 +110,32 @@ class AppController extends Controller {
 		
 		if ($userLoggedIn):
 			$this->set('facebook_user', $userLoggedIn );
-			$this->Auth->allow('reporte'); 
+			$this->Auth->allow('reporte');		
+			$this->Auth->allow('situacionactual');
+			$this->Auth->allow('nosotros');
+			$this->Auth->allow('casosexito');
+			$this->Auth->allow('eventos');
+			$this->Auth->allow('divan');
+			$this->Auth->allow('analisisttt');
+			$this->Auth->allow('opinion');
+			$this->Auth->allow('usuario_creado');
 
 			$result = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$userLoggedIn['id'])));
 			
 			$this->set('fb_user_has_account', $result );
-			$this->Session->setFlash('Usuario Conectado !');
+			#$this->Session->setFlash('Usuario Facebook Conectado !');
+		elseif ($this->Session->read('User')):
+			$this->Auth->allow('reporte');		
+			$this->Auth->allow('situacionactual');
+			$this->Auth->allow('nosotros');
+			$this->Auth->allow('casosexito');
+			$this->Auth->allow('eventos');
+			$this->Auth->allow('divan');
+			$this->Auth->allow('analisisttt');
+			$this->Auth->allow('opinion');
+			$this->Auth->allow('usuario_creado');
+			
+				
 		endif;
 	}
 

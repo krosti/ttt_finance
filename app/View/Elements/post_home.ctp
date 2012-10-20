@@ -1,22 +1,31 @@
-<?php #for ($j=1; $j <= 2 ; $j++) {  ?>
-	
+<?php 
+	$hayUsuarioFb = (isset($facebook_user)) ? true : false; 
+	$hayUsuarioTtt = ($this->Session->read('User')) ? true : false;
+	$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : '';
+?>
+	<?php #echo (!$hayUsuarioFb) ? 'fb' : ''; ?>
+	<?php #echo (!$hayUsuarioTtt) ? 'ttt' : ''; ?>
 	<div class="<?php echo 'slide'.$slideNum; ?>">
 		<?php for ($r = 0; $r < (($i*2)-1); $r++){ ?>
 		<?php if (isset($analisisTTT[$r])): ?>
 				
 			<div class="caja_slide">
 				<div class="izq_slide">
-					<span class="tit_slide <?php if(!isset($facebook_user)){echo 'loginPopUp';} ?>">
-						<?php if (isset($facebook_user)): ?>
+					<span class="tit_slide <?php echo $mostrarDialog; ?>">
+						<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
 							<?php echo $this->Html->link($analisisTTT[$r]['Post']['titulo'],'/posts/reporte/'.$analisisTTT[$r]['Post']['id']); ?>
 						<?php else: ?>
 							<span><?php echo $analisisTTT[$r]['Post']['titulo']; ?></span>
 						<?php endif; ?>
 					</span>
-					<?php if (isset($facebook_user)): ?>
-						<a href="<?php echo 'posts/reporte/'.$analisisTTT[$r]['Post']['id']; ?>"><img src="<?php echo $analisisTTT[$r]['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" height="120" onError="error_handler.imageError(this)"/></a>
+					<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
+						<a href="<?php echo 'posts/reporte/'.$analisisTTT[$r]['Post']['id']; ?>">
+							<img src="<?php echo $analisisTTT[$r]['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" height="120" onError="error_handler.imageError(this)"/>
+						</a>
 					<?php else: ?>
-						<img src="<?php echo $analisisTTT[$r]['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" height="120" onError="error_handler.imageError(this)"/>
+						<a href="#" class="<?php echo $mostrarDialog; ?>">
+							<img src="<?php echo $analisisTTT[$r]['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" height="120" onError="error_handler.imageError(this)"/>
+						</a>
 					<?php endif; ?>
 					
 					<div class="thumb_slide">
@@ -34,7 +43,7 @@
 					<span class="cuerpo_slide <?php echo $cuerpoHeight; ?>">
 						<?php $postLength = ($slideNum != '') ? 260: 230; ?>
 						<?php echo $this->Text->truncate($analisisTTT[$r]['Post']['descripcion'], $postLength, array('ending' => '...','exact' => false) ); ?>
-						<?php if (isset($facebook_user)): ?>
+						<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
 							<?php echo $this->Html->link('Ver M&aacute;s','/posts/reporte/'.$analisisTTT[$r]['Post']['id'],array('escape'=>false)); ?>
 						<?php endif; ?>
 					</span>

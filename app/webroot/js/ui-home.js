@@ -119,7 +119,10 @@ ui_home = {
 						title:'Nuevo Comentario',
 						modal:true,
 						width: 960,
-						draggable: false
+						draggable: false,
+						show:'fold',
+						hide:'fold',
+						resizable: false
 					});
 				}
 			});	
@@ -130,7 +133,7 @@ ui_home = {
 		/*
 		* maneja la animación de los mensajes
 		*/
-		$('#flashMessage').delay(2000).slideToggle(700);
+		$('#flashMessage').delay(5000).slideToggle(700);
 	},
 
 	validarFormLoginHome: function(){
@@ -203,7 +206,10 @@ ui_home = {
 							title:'Nuevo Usuario',
 							modal: true,
 							width: 640,
-							draggable: false
+							draggable: false,
+							show:'fold',
+							hide:'fold',
+							resizable: false
 						});
 					//});
 					
@@ -278,7 +284,25 @@ ui_home = {
 				title:'LogIn',
 				modal:true,
 				width: 400,
-				draggable: false
+				draggable: false,
+				show:'fold',
+				hide:'fold',
+				resizable: false
+			});
+		});
+	},
+
+	bindRegistrarseAnimacion: function(){
+		$('#registrarse_button_animado').on('click',function(){
+			$('#box_login_dialog').dialog('close');
+			$('#nuevo_usuario').dialog({
+				title:'Registrar usuario',
+				modal:true,
+				width: 640,
+				draggable: false,
+				show:'fold',
+				hide:'fold',
+				resizable: false
 			});
 		});
 	}

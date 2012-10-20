@@ -585,9 +585,12 @@ a:hover{
 }
 #flashMessage.flash_bad{
 	position: absolute;
-	margin-top: 100px;
+	margin-top: 70px;
 	margin-left: 700px;
-	color: #ff4e00;
+	color: #FF4E00;
+	width: auto;
+	font-size: 10px;
+	padding: 10px;
 }
 
 #sit_actual .twwrapper,#sit_actual .fbwrapper,
@@ -622,4 +625,26 @@ a:hover{
 
 .loginPopUp{
 	cursor: pointer;
+}
+#flashMessage{
+	width: 915px;
+	font-size: 18px;
+	padding: 20px;
+	float: left;
+	color: #C80509;
+	margin-bottom: 10px;
+	border: 2px solid;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background: white;
+}
+.error-message{
+	position: absolute;
+	margin-top: -35px;
+	margin-left: 440px;
+	width: 120px;
+	color:red;
 }

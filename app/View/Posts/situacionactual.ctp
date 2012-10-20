@@ -28,7 +28,7 @@
 
 				</span>
 			</div>
-			<?php echo $this->Html->link('Ver M&aacute;s','/posts/view/'.$post['Post']['id'],array('escape'=>false)); ?>
+			<?php echo $this->Html->link('Ver M&aacute;s','/posts/view/'.$post['Post']['id'],array('escape'=>false,'class'=>'vermas')); ?>
 			<div class="separacion_slide"></div>
 			<div class="compartir_slide">
 				<?php echo $this->element('opts_posts', array('post' => $post) ); ?>

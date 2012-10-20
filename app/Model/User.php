@@ -27,7 +27,11 @@ class User extends AppModel {
 			'rule'=>array('minLength', 3), 
 			'message'=>'Se requiere un nombre de minimo 3 letras'
 		),
-		'lastname' => array(
+		'first_name' => array(
+			'rule'=>array('minLength', 3), 
+			'message'=>'Se requiere un nombre de minimo 3 letras'
+		),
+		'last_name' => array(
 			'rule'=>array('minLength', 3), 
 			'message'=>'Se requiere un apellido de minimo 3 letras'
 		),

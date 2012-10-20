@@ -1,7 +1,6 @@
 <style type="text/css">
-
+/*fix for facebook*/
 .fb_edge_widget_with_comment>span,.fb_edge_widget_with_comment>span>iframe { width:52px !important; height:24px !important; }
-
 </style>
 
 <div class="fbwrapper">
@@ -14,6 +13,11 @@
 </div>
 
 <span>
-	<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('id'=>$post['Post']['id'],'class'=>'agregarComment') ); ?>
+	<?php 
+		$hayUsuarioFb = (isset($facebook_user)) ? true : false; 
+		$hayUsuarioTtt = ($this->Session->read('User')) ? true : false;
+		$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : ''; 
+	?>
+	<?php echo $this->Html->link('Agregar un Comentario ('.count($post['Comment']).')','#idnro',array('id'=>$post['Post']['id'],'class'=>'agregarComment '.$mostrarDialog) ); ?>
 </span>
 

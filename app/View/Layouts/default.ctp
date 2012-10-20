@@ -135,9 +135,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 
 				<input id="buscar_input" value="Buscar"></input>
 				<div id="logos_redes">
-					<?php echo $this->Html->image('fb.png'); ?>
-					<?php echo $this->Html->image('tw.png'); ?>
-					<?php echo $this->Html->image('ln.png'); ?>
+					<?php echo $this->Html->image('fb.png',array('url'=>'http://www.facebook.com/tritangotraders?fref=ts') ); ?>
+					<?php echo $this->Html->image('tw.png',array('url'=>'http://twitter.com/tritangotraders') ); ?>
+					<?php echo $this->Html->image('ln.png',array('url'=>'http://linkedin.com/ttt') ); ?>
 				</div>
 			</div>
 		</div>
@@ -153,9 +153,9 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			</div>
 			<div id="unirse">
 				<span>&Uacute;nase a nuestra comunidad</span>
-				<?php echo $this->Html->image('logofb.png'); ?>
-				<?php echo $this->Html->image('logotw.png'); ?>
-				<?php echo $this->Html->image('logoln.png'); ?>
+				<?php echo $this->Html->image('logofb.png',array('url'=>'http://www.facebook.com/tritangotraders?fref=ts')); ?>
+				<?php echo $this->Html->image('logotw.png',array('url'=>'http://twitter.com/tritangotraders')); ?>
+				<?php echo $this->Html->image('logoln.png',array('url'=>'http://linkedin.com/ttt')); ?>
 			</div>
 			<div id="copy">
 				Copyright © 2012 Tritango Traders. Todos los derechos reservados.  

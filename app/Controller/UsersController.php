@@ -124,7 +124,7 @@ class UsersController extends AppController {
 					$this->Email->sendAs = 'html';
 					$this->set('infos', $InfoAux);
 					if($this->Email->send()){
-						$this->Session->setFlash(__('La cuenta de usuario fue creada. Se te envi&oacute; un email para su activaci&oacute;n.', true));
+						$this->Session->setFlash(__('La cuenta de usuario fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
 						$this->redirect("/");
 					}else{
 						$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
@@ -136,10 +136,16 @@ class UsersController extends AppController {
 			}
 		}elseif (!empty($this->data)) {
 			//registraciòn sin facebook
-			$this->Auth->allow( 'add' );
-			debug($this->data);
-			$this->User->save($this->data);
-			$this->Session->setFlash(__('La cuenta de usuario fue creada. Se te envi&oacute; un email para su activaci&oacute;n.', true));
+			
+			if ($this->User->save($this->data)):
+				$this->Session->setFlash(__('La cuenta de usuario '.$this->data['User']['username'].' fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
+				$this->set('user',$this->data);
+				#$this->set('usuario_creado',true);
+				$this->redirect(array(
+						'controller'=>'pages',
+						'action'=>'display'
+					));
+			endif;
 		}
 	}
 	public function login(){
@@ -174,7 +180,7 @@ class UsersController extends AppController {
 				}		
 				else if ($num == 4)
 				{
-					$this->Session->setFlash('Usuario Inactivo','default',array('class'=>'flash_bad'));
+					$this->Session->setFlash('Usuario Inactivo, por favor active su cuenta. <br> Si no cuenta con un link de activacion <br>por favor contacte a soporte@tttonline.com.ar','default',array('class'=>'flash_bad'));
 				}	
 			}			
 		}

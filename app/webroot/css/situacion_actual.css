@@ -21,14 +21,56 @@
 }
 	.tit_slide{
 		font-family: Lucida Grande, Helvetica;
-		font-size: 15px;
-		width:100%;
+		font-size: 12px;
+		width: 435px;
 		background: url(../images/titulo_btn.png) repeat-x 0 -1px;
-		height:25px;
+		height: 17px;
 		border-left: 1px solid #333;
 		border-right: 1px solid #333;
 		border-radius: 2px;
+		margin-left: 450px;
+		vertical-align: middle;
+	}
+	.tit_slide{
+		border:none;
 	}
 		a:link.agregarComment{
 			color:#006a96;
+			float: right; 
+			margin-right: -30px;
 		}
+
+.der_slide{
+	float: left;
+	width: 440px;
+	margin-top: 36px;
+	margin-left: 225px;
+}
+	.separacion_slide{
+		width: 443px;
+		margin-left: 220px;
+		height: 1px;
+		background: #CCC;
+		float: left;
+		margin-top: 35px;
+	}
+	.caja_slide .compartir_slide{
+		width: 440px;
+		margin-left: 220px;
+		margin-top: 0px;
+		float: left;
+		margin-bottom: -7px;
+		height: 25px;
+	}
+	.fbwrapper{ 
+		float:left;
+	}
+	.twwrapper{ 
+		float:left; 
+		margin-top:5px;
+	}
+	.extra a.vermas{
+		margin-left: 620px;
+		color: #666;
+		font-weight: 100;
+	}
