@@ -52,13 +52,13 @@ class AppController extends Controller {
                     'fields' => array('username' => 'email')
                 )
             ),*/
-            'authorize' => array('Controller'),
-            'allowedActions' => array('index','view','display','loginFb'),
+            //'authorize' => array('Controller'),
+            'allowedActions' => array('index','view','display'),
             'authError' => "No posee autorizacion para acceder a esta seccion. Por favor inicie sesion o registrese gratis."
         ),
         'Facebook.Connect' => array('model' => 'User'),
         #"TwitterBootstrap.TwitterBootstrap"
-        'DebugKit.Toolbar'
+        //'DebugKit.Toolbar'
     );
 
 
@@ -69,11 +69,11 @@ class AppController extends Controller {
 
 		//$this->Auth->allow('display'); 
 
-		$userLoggedIn = $this->Connect->user();
 		#debug($this->FB);
 
-		if ($userLoggedIn):
-			$this->set('facebook_user', $userLoggedIn );
+		if ($this->Connect->user()):
+			$usrLoggedIn = $this->Connect->user();
+			$this->set('facebook_user', $usrLoggedIn );
 			$this->Auth->allow('reporte');		
 			$this->Auth->allow('situacionactual');
 			$this->Auth->allow('nosotros');
@@ -84,9 +84,10 @@ class AppController extends Controller {
 			$this->Auth->allow('opinion');
 			$this->Auth->allow('usuario_creado');
 
-			$result = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$userLoggedIn['id'])));
-			
-			$this->set('fb_user_has_account', $result );
+			$result = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$usrLoggedIn['id'])));
+			if ($result['User']['username'] != ''):
+				$this->set('fb_user_has_account', $result );
+			endif;
 			#$this->Session->setFlash('Usuario Facebook Conectado !');
 		elseif ($this->Session->read('User')):
 			$this->Auth->allow('reporte');		
@@ -98,7 +99,8 @@ class AppController extends Controller {
 			$this->Auth->allow('analisisttt');
 			$this->Auth->allow('opinion');
 			$this->Auth->allow('usuario_creado');
-			
+		else:
+			//$this->Session->setFlash('Ningun usuario Conectado !');
 				
 		endif;
 	}

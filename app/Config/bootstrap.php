@@ -193,5 +193,7 @@ Cache::config('_bancha_api_', array(
 */
 CakePlugin::load('Facebook');
 CakePlugin::load('DebugKit');
-Configure::write('Site.url','http://localhost/ttt_finance');
+Configure::write('Site.url','http://ttt.borealdev.com.ar');
 #CakePlugin::load('TwitterBootstrap');
+
+header('P3P: CP="CAO PSA OUR"');

@@ -23,19 +23,26 @@ class UsersController extends AppController {
 
 		$this->set('site_url',Configure::read('Site.url'));
 	}*/
+
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allow('login', 'logout','add','a987156428774','testEmail');
+	}
 	
 	public function a987156428774($id){
-		$this->User->read(null, $id);
-		$this->User->set('estado_id', '2');
-		if ($this->User->save($this->data))
-		{ 
-			$this->Session->setFlash(__('Cuenta activada', true));
-		}		
-		else
-		{
-			$this->Session->setFlash(__('Error', true));
-		}		
-		$this->redirect(array('controller'=>'pages', 'action' => 'home'));		
+		$this->User->id = $id;
+		if (!$this->User->exists()) {
+			$this->Session->setFlash(__('El usuario no existe.', true));
+		}else{
+			$this->User->set('estado_id', '2');
+			//se puede agregar aca si fue activada previamente o no.
+			if ($this->User->save($this->data)){ 
+				$this->Session->setFlash(__('La cuenta fue activada.', true));
+			}else{
+				$this->Session->setFlash(__('Error de activaci&oacute;n. Intente mas tarde.', true));
+			}	
+		}	
+		$this->redirect('/');		
 	}
 
 	/*public function loginfb(){
@@ -92,59 +99,83 @@ class UsersController extends AppController {
 			$userData['User'] = $user['registration'];
 			$userData['User']['location'] = $userData['User']['location']['name'];
 			//$userData['User']['username'] = $userData['User']['email'];
-			//debug($userData);
+			debug($user);
 			
 
 			if ($this->User->save($userData)) {
 				//$this->Session->setFlash(__('Muchas gracias por registrarte en TTT', true));
 				unset($_POST);			
-					/* envio del mail al dueño. Le avisa que un usuario se ha registrado*/
-					$Info = $user;
-					//echo $user['user_id']	;
-					$user = $this->User->find('first',array('conditions'=>array('User.email'=>$user['registration']['email'])));
-					$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-					//$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['0']['user_id'];
-					$sitioweb = "http://ttt.borealdev.com.ar";
-					$InfoAux = array(
-						"nombre" => $Info['registration']['first_name'],
-						"apellido" => $Info['registration']['last_name'],
-						"mensaje" => $mensaje,
-						//"mensaje2" => $mensaje2,
-						"sitioweb" => $sitioweb,
-						"username" => $Info['registration']['email'],
-						"password" => $Info['registration']['password'],
-						"email" => $Info['registration']['email'],
-					);
+				/* envio del mail al dueño. Le avisa que un usuario se ha registrado*/
+				
+				$savedUser = $this->User->find('first',array('conditions'=>array('User.email'=>$userData['User']['email'])));
+				$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
+				$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$savedUser['User']['id'];
+				$sitioweb = "http://ttt.borealdev.com.ar";
+				$InfoAux = array(
+					"nombre" => $user['registration']['first_name'],
+					"apellido" => $user['registration']['last_name'],
+					"mensaje" => $mensaje,
+					"mensaje2" => $mensaje2,
+					"sitioweb" => $sitioweb,
+					"username" => $user['registration']['email'],
+					"password" => $user['registration']['password'],
+					"email" => $user['registration']['email'],
+				);
 
-					//Envio de e-mail para la confirmaciòn
-					$this->Email->to = $Info['registration']['email'];
-					$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
-					$this->Email->from = "contacto@ttt.com.ar";					
-					$this->Email->template = 'aviso';				
-					$this->Email->sendAs = 'html';
-					$this->set('infos', $InfoAux);
-					if($this->Email->send()){
-						$this->Session->setFlash(__('La cuenta de usuario fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
-						$this->redirect("/");
-					}else{
-						$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
-						$this->redirect("/users/add");									
-					}
-					/* fin envio del mail*/
-					$this->Session->setFlash('Usuario creado correctamente!');
-					$this->redirect('/');
+				//Envio de e-mail para la confirmaciòn
+				$this->Email->to = $user['registration']['email'];
+				$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
+				$this->Email->from = "contacto@ttt.com.ar";					
+				$this->Email->template = 'aviso';				
+				$this->Email->sendAs = 'html';
+				$this->set('infos', $InfoAux);
+				if($this->Email->send()){
+					$this->Session->setFlash(__('La cuenta de usuario fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
+					$this->redirect("/");
+				}else{
+					$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
+					$this->redirect("/users/add");									
+				}
+				/* fin envio del mail*/
+				//$this->Session->setFlash('Usuario creado correctamente!');
+				//$this->redirect('/');
 			}
 		}elseif (!empty($this->data)) {
 			//registraciòn sin facebook
 			
 			if ($this->User->save($this->data)):
-				$this->Session->setFlash(__('La cuenta de usuario '.$this->data['User']['username'].' fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
-				$this->set('user',$this->data);
-				#$this->set('usuario_creado',true);
-				$this->redirect(array(
-						'controller'=>'pages',
-						'action'=>'display'
-					));
+				$userData = $this->data;
+				$savedUser = $this->User->find('first',array('conditions'=>array('User.email'=>$userData['User']['email'])));
+				$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
+				$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$savedUser['User']['id'];
+				$sitioweb = "http://ttt.borealdev.com.ar";
+				$InfoAux = array(
+					"nombre" => $userData['User']['first_name'],
+					"apellido" => $userData['User']['last_name'],
+					"mensaje" => $mensaje,
+					"mensaje2" => $mensaje2,
+					"sitioweb" => $sitioweb,
+					"username" => $userData['User']['email'],
+					"password" => $userData['User']['password'],
+					"email" => $userData['User']['email'],
+				);
+
+				//Envio de e-mail para la confirmaciòn
+				$this->Email->to = $userData['User']['email'];
+				$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
+				$this->Email->from = "contacto@ttt.com.ar";					
+				$this->Email->template = 'aviso';				
+				$this->Email->sendAs = 'html';
+				$this->set('infos', $InfoAux);
+				if($this->Email->send()){
+					$this->Session->setFlash(__('La cuenta de usuario '.$userData['User']['username'].' fue creada. Se le envi&oacute; un email ('.$userData['User']['email']	.') para su activaci&oacute;n.', true));
+					$this->set('user',$this->data);
+					$this->redirect("/");
+				}else{
+					$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
+					$this->redirect("/users/add");									
+				}
+				
 			endif;
 		}
 	}
@@ -182,13 +213,14 @@ class UsersController extends AppController {
 				{
 					$this->Session->setFlash('Usuario Inactivo, por favor active su cuenta. <br> Si no cuenta con un link de activacion <br>por favor contacte a soporte@tttonline.com.ar','default',array('class'=>'flash_bad'));
 				}	
-			}			
+			}
+			
 		}else{
 			//sin logearse	
 			//debug($this->data);
 			$this->redirect("/");
 		}
-		//$this->redirect("/");
+		$this->redirect("/");
 		#if($this->Auth->login()
 		#debug($this->Auth->login());
 		#$this->redirect("/");
@@ -208,5 +240,45 @@ class UsersController extends AppController {
 	public function loginFb(){
 
 		debug($this->data);
+	}
+
+	public function testEmail(){
+		$Info = array(
+			'registration'=>array(
+					'first_name'=>'Nombre',
+					'last_name'=>'Apellido',
+					'email'=>'ceafernando@gmail.com',
+					'password'=>'myPassword'
+				)
+			);
+		$user = $this->User->find('first',array('conditions'=>array('User.email'=>'ceafernando+test@gmail.com')));
+		$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
+		$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['User']['id'];
+		$sitioweb = "http://ttt.borealdev.com.ar";
+		$InfoAux = array(
+			"nombre" => $Info['registration']['first_name'],
+			"apellido" => $Info['registration']['last_name'],
+			"mensaje" => $mensaje,
+			"mensaje2" => $mensaje2,
+			"sitioweb" => $sitioweb,
+			"username" => $Info['registration']['email'],
+			"password" => $Info['registration']['password'],
+			"email" => $Info['registration']['email'],
+		);
+
+		//Envio de e-mail para la confirmaciòn
+		$this->Email->to = $Info['registration']['email'];
+		$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
+		$this->Email->from = "contacto@ttt.com.ar";					
+		$this->Email->template = 'aviso';				
+		$this->Email->sendAs = 'html';
+		$this->set('infos', $InfoAux);
+		if($this->Email->send()){
+			$this->Session->setFlash(__('La cuenta de usuario fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
+			$this->redirect("/");
+		}else{
+			$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
+			$this->redirect("/users/add");									
+		}
 	}
 }

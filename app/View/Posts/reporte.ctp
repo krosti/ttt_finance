@@ -10,17 +10,18 @@
 		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post) ); ?></div>
 	</div>
 	<div class="left">
-		<div class="tituloPost"><?php echo $post['Post']['titulo'] ?></div>
-		<div class="descripcion"><?php echo $post['Post']['descripcion'] ?></div>
-	</div>
-	<div class="right">
 		<div class="infoTag">
 
 		</div>
 		<div class="graficoTag">
-			<img src="<?php echo $post['Post']['serie_datos']; ?>" class="img_ppal_slide" width="430" onError="error_handler.imageError(this)"/>
+			<img src="<?php echo $post['Post']['serie_datos']; ?>" class="img_ppal_slide" width="770" onError="error_handler.imageError(this)"/>
 		</div>
 	</div>
+	<div class="right">
+		<div class="tituloPost"><?php echo $post['Post']['titulo'] ?></div>
+		<div class="descripcion"><?php echo $post['Post']['descripcion'] ?></div>
+	</div>
+	
 	<div class="bottom">
 		<div class="bottomHeader">
 			<div class="tituloComentario">Comentarios</div>
@@ -41,6 +42,7 @@
 		<?php else: ?>
 			<div class="noHayComments">No hay comentarios</div>
 		<?php endif; ?>
+		<?php echo $this->Facebook->comments(array('href'=>$this->here,'width'=>960)); ?>
 	</div>
 	<div class="nombre"><?php echo $post['Post']['created_by'] ?></div>
 </div>

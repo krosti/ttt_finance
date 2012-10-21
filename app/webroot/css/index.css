@@ -600,19 +600,19 @@ a:hover{
 	margin-top: 4px;
 }
 #analisis .fbwrapper{
-	margin-top: -1px;
+	margin-top: 1px;
 }
 #sit_actual .fbwrapper,
 #opiniones .fbwrapper{
-	margin-top: -1px;
+	margin-top: 1px;
 	margin-left: -10px;
 }
 #analisis .twwrapper{
-	margin-left: 55px;
+	margin-left: 81px;
 }
 #sit_actual .twwrapper,
 #opiniones .twwrapper{
-	margin-left: 45px;
+	margin-left: 71px;
 }
 
 #analisis .compartir_slide span{

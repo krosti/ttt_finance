@@ -33,14 +33,15 @@
 		margin-right: 3px;
 	}
 
-.reportes .left{
-	float: left;
-	width: 480px;
+.reportes .right{
+	width: 615px;
 	padding: 15px;
-	min-height: 350px;
+	min-height: 149px;
 	padding-left: 0px;
+	font-size: 13px;
+	margin: auto;
 }
-.reportes .left .tituloPost{
+.reportes .right .tituloPost{
 	color: #006995;
 	font-size: 16px;
 	margin-bottom: 15px;
@@ -49,11 +50,11 @@
 	margin-top: 10px;
 }
 
-.reportes .right{
-	float: left;
-	width: 420px;
+.reportes .left{
+	width: 780px;
 	padding: 15px;
 	min-height: 350px;
+	margin:auto;
 }
 
 .reportes .bottomHeader{

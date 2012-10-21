@@ -49,7 +49,6 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 	
 	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
 
-	
 	<div class="cuerpo">
 		<div class="header">
 			<div id="direccion">
@@ -61,22 +60,21 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 			</div>
 			<div id="conectar">
 				<!--nocache-->
+				<!--div id="jsFbStatus"></div-->
 				<span style="float:right;">
-					<?php #echo ($facebook_user) ? $this->Facebook->logout(array('redirect_to'=>'users/logout')) : $this->Facebook->login(); ?>
+					
 					<?php 
 						if (isset($facebook_user)) {
 							echo (isset($fb_user_has_account) && $fb_user_has_account) 
 								? "" 
 								: "Estas conectado pero no registrado | ";
-							echo ($site_url == "http://localhost/ttt_finance") 
-								? $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout') ))
-								: $this->Html->link('Logout','/users/logout');
+							echo $this->Facebook->logout(array('label'=>'Logout','redirect' => array('controller' => 'users', 'action' => 'logout') ));
 						} else{
 							echo '<div class="fb">'.
 								$this->Facebook->login(array(
-									//'perms' => 'email,publish_stream',
+									'perms' => 'email,publish_stream',
 									'custom' => true,
-									//'redirect' => '/',
+									'redirect' => '/',
 									'label'=>'LogIn'
 									))
 								.'</div>';
@@ -87,13 +85,13 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 
 				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
-				<span><?php if ($this->Session->read('User')) 
-					{
+				<span><?php 
+					if ($this->Session->read('User')) {
 						echo $this->Html->link("Cerrar Sesión","/users/logout");
-					}
-					else
-					{
-						echo (isset($fb_user_has_account) && $fb_user_has_account) ? $fb_user_has_account['User']['username'] : $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));
+					} else{
+						echo (isset($fb_user_has_account) && $fb_user_has_account) 
+							? $fb_user_has_account['User']['username'] 
+							: $this->Html->link('Registrarse','#',array('id'=>'registrarseTTT'));
 					}?>
 				</span>
 				<!--/nocache-->
@@ -178,6 +176,8 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 <!--please log in user-->
 <div id="box_login_dialog" style="display:none;"> <?php echo $this->element('login_dialog'); ?> </div>
 
+<!--chrome fix-->
+<?php echo $this->element('chrome-fix'); ?>
 
 </body>
 <?php echo $this->Facebook->init(); ?>

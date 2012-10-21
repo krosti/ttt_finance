@@ -77,7 +77,7 @@ class PagesController extends AppController {
 				) 
 			) 
 			);
-		
+		#pr(Debugger::trace());
 		$path = func_get_args();
 
 		$count = count($path);

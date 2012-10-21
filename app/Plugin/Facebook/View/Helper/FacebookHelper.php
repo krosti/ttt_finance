@@ -541,6 +541,7 @@ class FacebookHelper extends AppHelper {
 			if(response.authResponse) {
 				// user is logged in
 				// console.log('Welcome!');
+				// document.getElementById('jsFbStatus').innerHTML = response.status;
 				if(redirection != null && redirection != ''){
 					top.location.href = redirection;
 				}

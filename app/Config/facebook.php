@@ -9,7 +9,7 @@
   		'apiKey' => '377583548967953',
   		'secret' => 'aa995450f1f9fb14f0405ca9b71d1922',
   		'cookie' => true,
-  		//'locale' => 'en_ES',
+  		'locale' => 'en_ES',
   		)
   	);
 ?>
