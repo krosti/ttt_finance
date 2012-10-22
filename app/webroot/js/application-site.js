@@ -25,6 +25,7 @@
 		ui_home.BTNindicesBox();
 		ui_home.setLoginPopup();
 		ui_home.bindRegistrarseAnimacion();
+		ui_home.bindBuscarInputRequest();
 		
 		var stringAcciones = (window.location.hash) ? symbols.listaDeAcciones(window.location.hash.replace('#','')) : symbols.listaDeAcciones('argentina');
 		// Usage: 

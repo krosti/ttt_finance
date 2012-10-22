@@ -54,7 +54,7 @@ class AppController extends Controller {
             ),*/
             //'authorize' => array('Controller'),
             'allowedActions' => array('index','view','display'),
-            'authError' => "No posee autorizacion para acceder a esta seccion. Por favor inicie sesion o registrese gratis."
+            'authError' => "No posee autorizacion para acceder a esta seccion."
         ),
         'Facebook.Connect' => array('model' => 'User'),
         #"TwitterBootstrap.TwitterBootstrap"

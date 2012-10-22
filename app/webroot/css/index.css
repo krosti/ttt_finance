@@ -200,7 +200,7 @@ a:hover{
 				#item_nos{
 					/*width: 80px;*/
 				}
-		#buscar_input{
+		.buscar_input{
 			background:white;
 			border:2px solid #ccc;
 			border-radius:8px;
@@ -212,6 +212,12 @@ a:hover{
 			margin-top: 12px;
 			margin-right:5px;
 			margin-left:7px;
+		}
+		.buscar_button{
+			float:left;
+			border:none;
+			background: none;
+			cursor:pointer;
 		}
 		#logos_redes{
 			float:left;

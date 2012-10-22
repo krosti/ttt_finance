@@ -36,6 +36,7 @@
 	Router::connect('/nuevo_usuario', array('controller' => 'users', 'action' => 'add'));
 	Router::connect('/usuario_creado', array('controller' => 'users', 'action' => 'usuario_creado'));
 	Router::connect('/reporte/:id', array('controller' => 'posts', 'action' => 'reporte'));
+	Router::connect('/buscar', array('controller' => 'posts', 'action' => 'search'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

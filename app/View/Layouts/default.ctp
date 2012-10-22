@@ -132,7 +132,11 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 					</div>
 				</div>
 
-				<input id="buscar_input" value="Buscar"></input>
+				<?php #echo $this->Form->create('Post', array('controller'=>'post','action' => "search",'class'=>'loginsearch'));?>
+					<input class="buscar_input" placeholder="Buscar"></input>
+					<a href="#" class="buscar_button">hola</a>
+					<?php #echo $this->Form->button($this->Html->image('icons/search.png',array('width'=>14) ),array('id'=>''));?>
+				<?php #echo $this->Form->end(); ?>
 				<div id="logos_redes">
 					<?php echo $this->Html->image('fb.png',array('url'=>'http://www.facebook.com/tritangotraders?fref=ts') ); ?>
 					<?php echo $this->Html->image('tw.png',array('url'=>'http://twitter.com/tritangotraders') ); ?>

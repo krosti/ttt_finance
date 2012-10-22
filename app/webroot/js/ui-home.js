@@ -305,5 +305,17 @@ ui_home = {
 				resizable: false
 			});
 		});
+	},
+
+	bindBuscarInputRequest: function(){
+		$('.buscar_button').on('click',function(){
+
+			var value = $('.buscar_input').val()
+				,	url = 'http://localhost/ttt_finance/'+"buscar/"+encodeURIComponent(value)
+				,	e = $(this);
+
+			e.attr('href',url);
+			e.trigger('click');
+		});
 	}
 }

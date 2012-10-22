@@ -8,6 +8,12 @@ App::uses('AppController', 'Controller');
 class PostsController extends AppController {
 	public $helpers = array('Time');
 	public $uses = array('Post','Comment','User','Tag');
+
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allow('reporte','search');
+	}
+
 /**
  * index method
  *
@@ -129,6 +135,21 @@ class PostsController extends AppController {
 		#echo "</pre>";
 		$this->set('post', $post);
 		#$this->set('user',$this->Post->User->find('list'));
+	}
+
+	public function search($value){
+		#debug($this->request->post);
+		$result = $this->Post->find('all',array(
+				'conditions'=>array(
+					'OR'=>array(
+						'Post.titulo LIKE'=>'%'.$value.'%',
+						'Post.descripcion LIKE'=>'%'.$value.'%'
+						)
+					)
+				) 
+			);
+		#debug($result);
+		$this->set('results', $result);
 	}
 
 }
