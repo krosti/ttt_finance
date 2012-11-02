@@ -147,6 +147,7 @@ crawler = {
             if (r.query && r.query.results) {
                 count++;
                 console.log("#3- HistoricalData "+symbol+' -#'+count+' -desde'+startDate+' -hasta'+endDate);
+                __DATA = {};
                 __DATA = r.query.results.quote;
                 //console.log('Data: __DATA');
                 //console.log(__DATA);

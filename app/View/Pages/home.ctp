@@ -34,7 +34,7 @@
 			<span class="titulo_seccion">Noticias</span>
 		</div>
 		<div class="cuerpo_seccion">
-
+			<?php echo $this->Html->image('loading.gif',array('class'=>'loading') ); ?>
 		</div>
 	</div>
 </div>

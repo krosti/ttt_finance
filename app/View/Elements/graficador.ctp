@@ -21,8 +21,9 @@
 	}
 </style>
 <div id="graficador-wrapper">
-	<form action="/ttt_finance/posts/add" method="post" accept-charset="utf-8">
-		<div class="formLabel">Titulo</div>
+	<?php echo $this->Form->create('Comments',array('action'=>'add' )); ?>
+	<form action="/ttt_finance/comments/add" method="post" accept-charset="utf-8">
+		<!--div class="formLabel">Titulo</div>
 		<div class="formOptions">
 			<span class="style1 Ntooltip">
 				<span>Estilo 1</span>
@@ -31,9 +32,9 @@
 				<span>Estilo 2</span>
 			</span>
 		</div>
-		<input id="formTitulo" name="data[Post][titulo]" maxlength="200">
+		<input id="formTitulo" name="data[Post][titulo]" maxlength="200"-->
 
-		<input id="formTipo" name="data[Post][tipo_id]" value="1" style="display:none;">
+		<input id="formTipo" name="data[Comment][tipo_id]" value="1" style="display:none;">
 
 		<input id="formSerieDatos" name="data[Post][serie_datos]"  value="test" style="display:none;">
 		
@@ -60,7 +61,7 @@
 	</div>
 
 	<!--START-graphic box-->
-	<div id="graphic-wrapper">
+	<!--div id="graphic-wrapper-2">
 		<div id="chart_div"></div>
 		<select id="selectboxIndices">
 			<option default>Elegir Uno</option>
@@ -83,8 +84,7 @@
 			        <option value="pencil">Lapiz</option>
 			    </select></label>
 			    <div class="commands">
-			        <!--button id="btnUndo" href="#">Undo</button>
-			        <button id="btnRedo" href="#">Redo</button-->
+			        
 			        <button id="btnClear" href="#">Limpiar</button>
 			        <button id="take-screenshot">Tomar Foto</button>
 			        <div id="cambiar-color0" style="width:15px;height:15px;float:left;"><div class="button-circle-color lightBlue"></div></div>
@@ -94,7 +94,7 @@
 			        <button id="showLoabels"></button>
 			    </div>
 			</p>
-		</div>
+		</div-->
 
 		<div class="canvasWrapper">
 			<canvas id="screenView" width="950" height="500" style="display:none;"></canvas>
@@ -112,7 +112,7 @@
 		          href="http://www.konqueror.org">Konqueror</a>.</p>
 		    </canvas>
 		</div>
-	</div>
+	<!--/div-->
 
 	<div class="graphicFalseBox" id="imageFalseBox">
 		<span>Im&aacute;gen/Image</span>
@@ -123,13 +123,14 @@
 		<input type="file" />
 	</div>
 
+
 	<div id="thumbsBox"></div>
 
-	<div class="buttonsBox">
+	<!--div class="buttonsBox">
 		<button id="saveForm">guardar/enviar</button>
 
 		<button id="cleanForm">limpiar/cancelar</button>
-	</div>
+	</div-->
 </div>
 
 <?php 
@@ -144,10 +145,10 @@
 		'RGraph/libraries/RGraph.line',
 		'RGraph/libraries/RGraph.scatter',
 		'jCanvaScript.1.5.15',
-		'lightbox',
+		//'lightbox',
 		//ourAPPS
-		'jsTTT/application',
-		'jsTTT/crawler-with-yahooquery',
+		//'jsTTT/application',
+		//'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
 		'jsTTT/ui',
 		//'jsTTT/gchart' //for Google SVG Chart

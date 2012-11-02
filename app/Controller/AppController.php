@@ -67,10 +67,6 @@ class AppController extends Controller {
 		//global url adress
 		$this->set('site_url',Configure::read('Site.url'));
 
-		//$this->Auth->allow('display'); 
-
-		#debug($this->FB);
-
 		if ($this->Connect->user()):
 			$usrLoggedIn = $this->Connect->user();
 			$this->set('facebook_user', $usrLoggedIn );
@@ -83,6 +79,8 @@ class AppController extends Controller {
 			$this->Auth->allow('analisisttt');
 			$this->Auth->allow('opinion');
 			$this->Auth->allow('usuario_creado');
+			$this->Auth->allow('posts');
+			$this->Auth->allow('graficador');
 
 			$result = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$usrLoggedIn['id'])));
 			if ($result['User']['username'] != ''):
@@ -99,6 +97,9 @@ class AppController extends Controller {
 			$this->Auth->allow('analisisttt');
 			$this->Auth->allow('opinion');
 			$this->Auth->allow('usuario_creado');
+			$this->Auth->allow('posts');
+			$this->Auth->allow('graficador');
+			$this->Auth->allow('fileuploader');
 		else:
 			//$this->Session->setFlash('Ningun usuario Conectado !');
 				

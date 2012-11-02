@@ -6,6 +6,13 @@ App::uses('AppController', 'Controller');
  * @property Comment $Comment
  */
 class CommentsController extends AppController {
+	public $uses = array('Post','User','Tag');
+
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add');
+    }
+
 
 /**
  * index method
@@ -13,6 +20,7 @@ class CommentsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout = 'backend';
 		$this->Comment->recursive = 0;
 		$this->set('comments', $this->paginate());
 	}
@@ -38,19 +46,21 @@ class CommentsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout = 'backend';
 		if ($this->request->is('post')) {
 			$this->Comment->create();
 			if ($this->Comment->save($this->request->data)) {
-				$this->Session->setFlash(__('The comment has been saved'));
+				$this->Session->setFlash(__('Gracias por su comentario! - TTTOnline'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('El comentario no se pudo guardar. Por favor intente en unos minutos.'));
 			}
 		}
-		$posts = $this->Comment->Post->find('list');
+		/*$posts = $this->Comment->Post->find('list');
 		$comments = $this->Comment->Comment->find('list');
 		$users = $this->Comment->User->find('list');
-		$this->set(compact('posts', 'comments', 'users'));
+		$this->set(compact('posts', 'comments', 'users'));*/
+		#$this->set('comments',$this->Comment->find('list'));
 	}
 
 /**

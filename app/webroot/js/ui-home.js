@@ -51,18 +51,22 @@ ui_home = {
 		var item = $('.item');
 
 		item.find('a')
-			.on('mouseover',function(){ $(this).closest('.item').animate({
-				opacity: 0.9,
-				marginTop: "-2px",
-				color: "#FF4E00",
-				borderBottomWidth: "2px"
-			}, "fast" ) })
-			.on('mouseout',function(){ $(this).closest('.item').animate({
-				opacity: 1,
-				marginTop: "0px",
-				color: "white",
-				borderBottomWidth: "0px"
-			}, "fast" ) });
+			.on('mouseover',function(){ 
+				$(this).closest('.item').animate({
+					opacity: 0.9,
+					marginTop: "-2px",
+					color: "#FF4E00",
+					borderBottomWidth: "2px"
+				}, "fast" );
+			})
+			.on('mouseout',function(){ 
+				$(this).closest('.item').animate({
+					opacity: 1,
+					marginTop: "0px",
+					color: "white",
+					borderBottomWidth: "0px"
+				}, "fast" );
+			});
 	},
 
 	links_animacion_hover: function(){
@@ -92,6 +96,7 @@ ui_home = {
 		box.find('div').each(function(){
 	      $(this).remove();
 	    });
+	    box.find('img').remove();
 
 		for (var i = 10; i >= 0; i--) {
 			var e = document.createElement('div');
@@ -118,7 +123,7 @@ ui_home = {
 					$('#graphBOX').empty().append(data).dialog({
 						title:'Nuevo Comentario',
 						modal:true,
-						width: 960,
+						width: 560,
 						draggable: false,
 						show:'fold',
 						hide:'fold',
@@ -310,12 +315,15 @@ ui_home = {
 	bindBuscarInputRequest: function(){
 		$('.buscar_button').on('click',function(){
 
-			var value = $('.buscar_input').val()
-				,	url = 'http://localhost/ttt_finance/'+"buscar/"+encodeURIComponent(value)
-				,	e = $(this);
-
-			e.attr('href',url);
-			e.trigger('click');
+			var 	e = $(this)
+				,	original_url = e.closest('a').attr('href')
+				,	value = $('.buscar_input').val()
+				,	url = original_url+encodeURIComponent(value);
+			if(e.val() != ''){
+				e.closest('a').attr('href',url);
+			}else{
+				e.preventDefault();
+			}
 		});
 	}
 }

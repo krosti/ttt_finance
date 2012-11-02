@@ -20,17 +20,17 @@
 					</span>
 					<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
 						<a href="<?php echo 'posts/reporte/'.$analisisTTT[$r]['Post']['id']; ?>">
-							<img src="<?php echo $analisisTTT[$r]['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" height="120" onError="error_handler.imageError(this)"/>
+							<?php echo $this->Html->image('/files/'.$analisisTTT[$r]['Post']['image'],array('class'=>'imb_ppal_slide','width'=>200,'height'=>120,'style'=>'float:left;','onError'=>'error_handler.imageError(this)') ); ?>
 						</a>
 					<?php else: ?>
 						<a href="#" class="<?php echo $mostrarDialog; ?>">
-							<img src="<?php echo $analisisTTT[$r]['Post']['serie_datos']; ?>" class="img_ppal_slide" width="200" height="120" onError="error_handler.imageError(this)"/>
+							<?php echo $this->Html->image('/files/'.$analisisTTT[$r]['Post']['image'],array('class'=>'imb_ppal_slide','width'=>200,'height'=>120,'style'=>'float:left;','onError'=>'error_handler.imageError(this)') ); ?>
 						</a>
 					<?php endif; ?>
 					
 					<div class="thumb_slide">
 						<?php if($analisisTTT[$r]['Post']['tipo_id'] == 2): ?>
-							<div class="fecha"><?php echo $this->Time->format('d/m/Y h:m',$analisisTTT[$r]['Post']['created']); ?></div>
+							<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$analisisTTT[$r]['Post']['created']); ?></div>
 						<?php endif; ?>
 						<?php if(isset($analisisTTT[$r]['Post']['serie_datos_pie']) && $analisisTTT[$r]['Post']['serie_datos_pie'] != ''): ?>
 							<span><?php echo $analisisTTT[$r]['Post']['serie_datos_pie']; ?></span>
@@ -41,7 +41,7 @@
 					
 					<?php $cuerpoHeight = ($slideNum != '') ? 'cuerpo_slide_fix': ''; ?>
 					<span class="cuerpo_slide <?php echo $cuerpoHeight; ?>">
-						<?php $postLength = ($slideNum != '') ? 260: 230; ?>
+						<?php $postLength = ($slideNum != '') ? 260: 220; ?>
 						<?php echo $this->Text->truncate($analisisTTT[$r]['Post']['descripcion'], $postLength, array('ending' => '...','exact' => false) ); ?>
 						<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
 							<?php echo $this->Html->link('Ver M&aacute;s','/posts/reporte/'.$analisisTTT[$r]['Post']['id'],array('escape'=>false)); ?>

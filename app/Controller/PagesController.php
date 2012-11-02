@@ -58,7 +58,7 @@ class PagesController extends AppController {
 			$this->Post->find('all', array(
 				'conditions' => array('Post.tipo_id' => '1'),
 				'order'=>'Post.created DESC',
-				'limit'=>6
+				'limit'=>8
 				) 
 			) 
 			);
@@ -66,7 +66,7 @@ class PagesController extends AppController {
 			$this->Post->find('all', array(
 				'conditions' => array('Post.tipo_id' => '2'),
 				'order'=>'Post.created DESC',
-				'limit'=>4 
+				'limit'=>6
 				) 
 			) 
 			);

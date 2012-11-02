@@ -6,7 +6,7 @@
 	
 	<div class="top">
 		<div class="nombre"><?php echo $post['Post']['created_by'] ?></div>
-		<div class="fecha"><?php echo $this->Time->format('d/m/Y h:m',$post['Post']['created']); ?></div>
+		<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$post['Post']['created']); ?></div>
 		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post) ); ?></div>
 	</div>
 	<div class="left">
@@ -14,7 +14,7 @@
 
 		</div>
 		<div class="graficoTag">
-			<img src="<?php echo $post['Post']['serie_datos']; ?>" class="img_ppal_slide" width="770" onError="error_handler.imageError(this)"/>
+			<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>770,'onError'=>'error_handler.imageError(this)') ); ?>
 		</div>
 	</div>
 	<div class="right">

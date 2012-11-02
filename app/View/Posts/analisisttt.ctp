@@ -1,4 +1,4 @@
-<div class="extra">
+<div class="extra situacion_actual">
 	<?php echo $this->Html->css(array('situacion_actual')); ?>
 	<?php 
 		$slideNum = '';
@@ -7,13 +7,9 @@
 		<div class="caja_slide">
 			<div class="izq_slide">
 				<span class="tit_slide">
-					<?php if (isset($facebook_user)): ?>
-						<?php echo $this->Html->link($post['Post']['titulo'],'/posts/view/'.$post['Post']['id']); ?>
-					<?php else: ?>
-						<?php echo $post['Post']['titulo']; ?>
-					<?php endif; ?>
+					<?php echo $this->Html->link($post['Post']['titulo'],'/posts/reporte/'.$post['Post']['id']); ?>
 				</span>
-				<img src="<?php echo $post['Post']['serie_datos']; ?>" class="img_ppal_slide" width="400" height="200" onError="error_handler.imageError(this)"/>
+				<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>400,'height'=>200,'onError'=>'error_handler.imageError(this)') ); ?>
 				<div class="thumb_slide">
 					<!--img src="img/warning.png" /
 							tag here
@@ -29,13 +25,11 @@
 				<span class="cuerpo_slide <?php echo $cuerpoHeight; ?>">
 					<?php $postLength = ($slideNum != '') ? 275: 450; ?>
 					<?php echo $this->Text->truncate($post['Post']['descripcion'], $postLength, array('ending' => '...','exact' => false) ); ?>
+
 				</span>
 			</div>
-			<?php if (isset($facebook_user)): ?>
-				<?php echo $this->Html->link('Ver M&aacute;s','/posts/view/'.$post['Post']['id'],array('escape'=>false)); ?>
-			<?php endif; ?>
-			<div class="separacion_slide">
-			</div>
+			<?php echo $this->Html->link('Ver M&aacute;s','/posts/view/'.$post['Post']['id'],array('escape'=>false,'class'=>'vermas')); ?>
+			<div class="separacion_slide"></div>
 			<div class="compartir_slide">
 				<?php echo $this->element('opts_posts', array('post' => $post) ); ?>
 			</div>

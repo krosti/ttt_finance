@@ -6,12 +6,13 @@ App::uses('AppController', 'Controller');
  * @property Post $Post
  */
 class PostsController extends AppController {
-	public $helpers = array('Time');
+	public $helpers = array('Time'/*,'AjaxMultiUpload.Upload'*/);
 	public $uses = array('Post','Comment','User','Tag');
+	#public $components = array('AjaxMultiUpload.Upload');
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
-	    $this->Auth->allow('reporte','search');
+	    $this->Auth->allow('reporte','search','add','isUploadedFile');
 	}
 
 /**
@@ -50,8 +51,8 @@ class PostsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('Comentario Guardado - Muchas Gracias'));
-				$this->redirect(array('controller' => 'pages','action' => 'home'));
+				$this->Session->setFlash(__('Guardado - Muchas Gracias'));
+				$this->redirect('/');
 			} else {
 				$this->Session->setFlash(__('No se pudo guardar - Intente mas tarde - Muchas Gracias'));
 			}
@@ -137,19 +138,41 @@ class PostsController extends AppController {
 		#$this->set('user',$this->Post->User->find('list'));
 	}
 
-	public function search($value){
-		#debug($this->request->post);
-		$result = $this->Post->find('all',array(
-				'conditions'=>array(
-					'OR'=>array(
-						'Post.titulo LIKE'=>'%'.$value.'%',
-						'Post.descripcion LIKE'=>'%'.$value.'%'
+	public function search($value = null){
+		if (isset($value) && $value) {
+
+			$result = $this->Post->find('all',array(
+					'conditions'=>array(
+						'OR'=>array(
+							'Post.titulo LIKE'=>'%'.$value.'%',
+							'Post.descripcion LIKE'=>'%'.$value.'%'
+							)
 						)
-					)
-				) 
-			);
-		#debug($result);
-		$this->set('results', $result);
+					) 
+				);
+
+			$this->set('results', $result);
+		}else{
+			$this->Session->setFlash(__('Escriba una palabra a buscar'));
+			//$this->redirect('/');
+		}
+	}
+
+	public function isUploadedFile() {
+		$this->autoRender = false;
+        $this->autoLayout = false; 
+        $this->viewPath = 'Elements';
+        
+	    $val = $this->request->params;
+	    #debug($val);
+	    if ((isset($val['form']['images']['error']) && $val['form']['images']['error'] == 0) ||
+	        (!empty( $val['form']['images']['tmp_name']) && $val['form']['images']['tmp_name'] != 'none')
+	    ) {
+	        if (move_uploaded_file(strval($val['form']['images']['tmp_name'][0]),ROOT.DS.APP_DIR.'/webroot/files/'.strval($val['form']['images']['name'][0])) ){
+	        	return strval($val['form']['images']['name'][0]);
+	        }
+	    }
+	    return false;
 	}
 
 }

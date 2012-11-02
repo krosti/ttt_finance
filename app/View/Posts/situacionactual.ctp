@@ -7,9 +7,9 @@
 		<div class="caja_slide">
 			<div class="izq_slide">
 				<span class="tit_slide">
-					<?php echo $this->Html->link($post['Post']['titulo'],'/posts/view/'.$post['Post']['id']); ?>
+					<?php echo $this->Html->link($post['Post']['titulo'],'/posts/reporte/'.$post['Post']['id']); ?>
 				</span>
-				<img src="<?php echo $post['Post']['serie_datos']; ?>" class="img_ppal_slide" width="400" height="200" onError="error_handler.imageError(this)"/>
+				<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>400,'height'=>200,'onError'=>'error_handler.imageError(this)') ); ?>
 				<div class="thumb_slide">
 					<!--img src="img/warning.png" /
 							tag here

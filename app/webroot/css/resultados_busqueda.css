@@ -1,0 +1,29 @@
+.resultados_busqueda ul{
+	margin:0;
+	padding:0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	background: white;
+	width: 960px;
+	border: 1px solid #dfdfdf;
+}
+.resultados_busqueda li{
+	font-family: Open Sans, Helvetica;
+	font-size: 14px;
+	font-weight: 100;
+	list-style-type: none;
+	padding: 10px;
+	border-radius: 2px;
+	border-bottom: 1px solid #006995;
+}
+.resultados_busqueda li img{
+	
+}
+.resultados_busqueda li:hover{
+	background: #ddd;
+}
+.resultados_busqueda{
+	margin-bottom: 30px;
+	height: auto;
+}

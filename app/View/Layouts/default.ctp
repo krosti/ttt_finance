@@ -17,14 +17,14 @@
  */
 
 $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
-
+setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--html xmlns="http://www.w3.org/1999/xhtml"-->
 <?php echo $this->Facebook->html(); ?>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<?php setlocale(LC_TIME, 'Spanish'); ?>
+	
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
@@ -134,7 +134,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 
 				<?php #echo $this->Form->create('Post', array('controller'=>'post','action' => "search",'class'=>'loginsearch'));?>
 					<input class="buscar_input" placeholder="Buscar"></input>
-					<a href="#" class="buscar_button">hola</a>
+					<?php echo $this->Html->image('icons/search.png',array('width'=>14, 'url'=>'/posts/search/','class'=>'buscar_button') ) ?>
 					<?php #echo $this->Form->button($this->Html->image('icons/search.png',array('width'=>14) ),array('id'=>''));?>
 				<?php #echo $this->Form->end(); ?>
 				<div id="logos_redes">
@@ -181,7 +181,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 <div id="box_login_dialog" style="display:none;"> <?php echo $this->element('login_dialog'); ?> </div>
 
 <!--chrome fix-->
-<?php echo $this->element('chrome-fix'); ?>
+<?php #echo $this->element('graficador'); ?>
 
 </body>
 <?php echo $this->Facebook->init(); ?>
@@ -189,7 +189,7 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 
 <?php echo $this->Html->script(array(
 		'jquery',
-		'jquery-ui',
+		'jquery-ui-1.9.0.custom',
 		'spin.min',
 		'application-site',
 		'slider',
@@ -198,14 +198,14 @@ $cakeDescription = __d('cake_dev', 'TriTangoTraders - Argentina');
 		'valores',
 		'jquery.jstockticker-1.1',
 		//ourAPPS
-		//'jsTTT/application',
+		'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
-		//'jsTTT/ui',
+		'jsTTT/ui',
 		'jsTTT/error-handler',
-		//'jsTTT/gchart'
-		//'jsTTT/rgraph',
-		//'jsTTT/drawCanvas',
+		//'jsTTT/gchart',
+		'jsTTT/rgraph',
+		'jsTTT/drawCanvas',
 		//extern libreries
 		'mopSlider/mopSlider-2.4',
 		'pngFix/jquery.pngFix',

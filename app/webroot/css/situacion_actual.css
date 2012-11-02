@@ -1,11 +1,18 @@
 .extra{
 	height:auto;
+	background: #EEE;
+	border-radius: 4px;
+	box-shadow: 0px 0px 7px -2px;
+	border: 1px solid #DFDFDF;
+	margin-top: 0px;
+	padding: 3px;
+	padding-bottom: 10px;
 }
 .extra a:link, .extra a:visited{
 	color: white;
 	font-family: Helvetica;
 	font-weight: bold;
-	padding-top: 4px;
+	padding-top: 3px;
 	position: relative;
 	float: left;
 	padding-left: 4px;
@@ -23,16 +30,17 @@
 		font-family: Lucida Grande, Helvetica;
 		font-size: 12px;
 		width: 435px;
-		background: url(../images/titulo_btn.png) repeat-x 0 -1px;
 		height: 17px;
-		border-left: 1px solid #333;
-		border-right: 1px solid #333;
+		border:none;
 		border-radius: 2px;
 		margin-left: 450px;
 		vertical-align: middle;
+		background: #00BAFE;
+		box-shadow: 1px 1px 3px 0px #888;
+		margin-top: 0px;
 	}
-	.tit_slide{
-		border:none;
+	.tit_slide:hover{
+		background: #999;
 	}
 		a:link.agregarComment{
 			color:#006a96;
@@ -74,3 +82,11 @@
 		color: #666;
 		font-weight: 100;
 	}
+
+.situacion_actual .tit_slide{
+	background:#ff4f20;
+}
+
+.opiniones .tit_slide{
+	background: #00e368
+}

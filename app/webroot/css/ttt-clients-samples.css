@@ -225,10 +225,17 @@ canvas#imageView, canvas#imageTemp{ display: none; }
 }
 /*FORM DESIGN*/
 .formLabel{
-	color:#303030;
+	color:#999;
 	font-weight: 300px;
 	float:left;
-	margin-top: 20px;
+	margin-left: 230px;
+	margin-top: -9px;
+	padding: 2px;
+	position: absolute;
+	text-align: center;
+	width: 70px;
+	background: white;
+	border-radius: 2px;
 }
 .formOptions{
 	float:right;
@@ -250,7 +257,7 @@ canvas#imageView, canvas#imageTemp{ display: none; }
 .formOptions .style2 span{ font-weight: 300;}
 .formOptions .style3 span{ font-weight: 300; text-transform: uppercase; }
 #formTitulo{ 
-	width:935px;
+	width:500px;
 	height:40px;
 	font-size: 18px;
 	-webkit-border-radius: 3px;
@@ -262,17 +269,22 @@ canvas#imageView, canvas#imageTemp{ display: none; }
 	padding:10px;
 }
 #formCuerpo{
-	width:935px;
-	height:340px;
+	height: 340px;
 	font-size: 18px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	border:1px solid #CCC;
+	border: 1px solid #CCC;
 	color: #383838;
 	background-color: #DDD;
 	margin-bottom: 20px;
-	padding:10px;
+	padding: 10px;
+	box-shadow: none;
+	background: #DDD;
+	width: 500px;
+	max-width: 1000px;
+	bottom: 0;
+	left: 0;
 }
 #uploadPhotoBox{
 	margin-top: 10px;
