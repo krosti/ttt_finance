@@ -20,6 +20,7 @@
 	<div class="right">
 		<div class="tituloPost"><?php echo $post['Post']['titulo'] ?></div>
 		<div class="descripcion"><?php echo $post['Post']['descripcion'] ?></div>
+		<?php echo $this->Html->image('tags/tag_'.$post['Post']['tipo_id'].'.png'); ?>
 	</div>
 	
 	<div class="bottom">

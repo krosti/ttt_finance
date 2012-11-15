@@ -46,6 +46,11 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 	
 </head>
 <body>
+	<?php 
+		$hayUsuarioFb = (isset($facebook_user)) ? true : false; 
+		$hayUsuarioTtt = ($this->Session->read('User')) ? true : false;
+		$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : '';
+	?>
 	
 	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
 
@@ -110,19 +115,28 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 						<?php echo $this->Html->link('COTIZACION','/'); ?>
 					</div>
 					<div class="item" id="item_ana">
-						<?php echo $this->Html->link('SITUACI&Oacute;N ACTUAL','/situacion_actual',array('escape'=>false)); ?>
+						<?php echo ($mostrarDialog != '') 
+								? $this->Html->link('SITUACI&Oacute;N ACTUAL','#',array('escape'=>false,'class'=>$mostrarDialog))
+								: $this->Html->link('SITUACI&Oacute;N ACTUAL','/situacion_actual',array('escape'=>false));
+						?>
 					</div>
 					<div class="item" id="item_con">
-						<?php echo $this->Html->link('ANALISIS TTT','/analisis_ttt'); ?>
+						<?php echo ($mostrarDialog != '') 
+								? $this->Html->link('ANALISIS TTT','#',array('escape'=>false,'class'=>$mostrarDialog))
+								: $this->Html->link('ANALISIS TTT','/analisis_ttt',array('escape'=>false));
+						?>
 					</div>
 					<div class="item" id="item_opi">
-						<?php echo $this->Html->link('OPINION','/opinion'); ?>
+						<?php echo ($mostrarDialog != '') 
+								? $this->Html->link('OPINION','#',array('escape'=>false,'class'=>$mostrarDialog))
+								: $this->Html->link('OPINION','/opinion',array('escape'=>false));
+						?>
 					</div>
 					<!--div class="item" id="item_opi">
-						<?php echo $this->Html->link('DIV&Aacute;N','/divan',array('escape'=>false)); ?>
+						<?php echo $this->Html->link('DIV&Aacute;N','/divan',array('escape'=>false,)); ?>
 					</div-->
 					<div class="item" id="item_cur">
-						<?php echo $this->Html->link('EVENTOS','/eventos'); ?>
+						<?php echo $this->Html->link('EVENTOS','/eventos',array()); ?>
 					</div>
 					<div class="item" id="item_not">
 						<?php echo $this->Html->link('CASOS DE EXITO','/casos_de_exito'); ?>

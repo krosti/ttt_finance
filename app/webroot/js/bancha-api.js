@@ -1,0 +1,2 @@
+Ext.ns('Bancha');
+Bancha.REMOTE_API={"url":"\/borealdev_payments\/bancha-dispatcher.php","namespace":"Bancha.RemoteStubs","type":"remoting","metadata":{"_UID":"5094ae1c3972a480195262","_CakeDebugLevel":2,"_CakeError":false},"actions":{"Customer":[{"name":"getAll","len":0},{"name":"read","len":1},{"name":"create","len":1},{"name":"update","len":1},{"name":"destroy","len":1},{"name":"submit","len":1,"formHandler":true}],"Bancha":[{"name":"loadMetaData","len":1},{"name":"logError","len":1}]}}

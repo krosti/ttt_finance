@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0065)http://docs.banchaproject.org/resources/How-to-Expose-Models.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/css" rel="stylesheet" type="text/css"> 
+    
+    
+    <title>How to Expose Models — Bancha 1.2.0 Stable documentation</title>
+    
+    <link rel="stylesheet" href="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/nature.css" type="text/css">
+    <link rel="stylesheet" href="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/pygments.css" type="text/css">
+    
+    <script type="text/javascript" async="" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/ga.js"></script><script type="text/javascript" async="" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/0UXfPisT7dSYfaE0il292w.js"></script><script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.2.0 Stable',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/jquery.js"></script>
+    <script type="text/javascript" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/underscore.js"></script>
+    <script type="text/javascript" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/doctools.js"></script>
+    <link rel="shortcut icon" href="http://docs.banchaproject.org/_static/favicon.ico">
+    <link rel="top" title="Bancha 1.2.0 Stable documentation" href="http://docs.banchaproject.org/index.html">
+    <link rel="up" title="Usage in CakePHP" href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html">
+    <link rel="next" title="Manual Controller Augmentation - Alternative 1" href="http://docs.banchaproject.org/resources/Controller-Augmentation-Alternative-1.html">
+    <link rel="prev" title="Usage in CakePHP" href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html"> 
+  <style type="text/css" media="print">#uvTab {display:none !important;}</style></head>
+  <body><div id="uvTab" style="background-image: url(http://widget.uservoice.com/images/clients/widget2/tab-right-light.png); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: solid none solid solid; border-top-left-radius: 4px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 4px; -webkit-box-shadow: rgba(255, 255, 255, 0.901961) 1px 1px 1px inset, rgba(0, 0, 0, 0.498039) 0px 1px 2px; box-shadow: rgba(255, 255, 255, 0.901961) 1px 1px 1px inset, rgba(0, 0, 0, 0.498039) 0px 1px 2px; font-style: normal; font-variant: normal; font-weight: bold; font-size: 14px; line-height: 1em; font-family: Arial, sans-serif; position: fixed; right: 0px; top: 50%; z-index: 9999; background-color: rgb(102, 51, 51); border-color: rgb(102, 51, 51); margin-top: -99px; margin-right: 0px; display: block; background-position: 50% 0px; background-repeat: no-repeat no-repeat;"><a id="uvTabLabel" style="background-color: transparent; display:block;padding:39px 5px 10px 5px;text-decoration:none;" href="javascript:return false;"><img src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/feedback-tab.png" alt="feedback &amp; support" style="border:0; background-color: transparent; padding:0; margin:0;"></a></div>  
+
+    <div class="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="http://docs.banchaproject.org/genindex.html" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="http://docs.banchaproject.org/resources/Controller-Augmentation-Alternative-1.html" title="Manual Controller Augmentation - Alternative 1" accesskey="N">next</a> |</li>
+        <li class="right">
+          <a href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html" title="Usage in CakePHP" accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.banchaproject.org/index.html">Bancha 1.2.0 Stable documentation</a> »</li>
+          <li><a href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html" accesskey="U">Usage in CakePHP</a> »</li> 
+      </ul>
+    </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="how-to-expose-models">
+<h1>How to Expose Models<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#how-to-expose-models" title="Permalink to this headline">¶</a></h1>
+<p>To expose the crud methods of an model to ExtJS follow these steps:</p>
+<ol class="arabic simple">
+<li>Add <tt class="docutils literal"><span class="pre">public</span> <span class="pre">$actsAs</span> <span class="pre">=</span> <span class="pre">array("Bancha.BanchaRemotable");</span></tt> to the
+models you want to expose</li>
+<li>Setup your controller (see below)</li>
+</ol>
+<div class="section" id="setup-your-controller-for-bancha">
+<h2>Setup your controller for Bancha<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#setup-your-controller-for-bancha" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-easy-way-baking-your-controller">
+<h3>The easy way: Baking your controller<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#the-easy-way-baking-your-controller" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way is to just bake a controller using the CakePHP bake
+console with Banchas controller template:</p>
+<div class="figure align-center">
+<img alt="How to bake a controller" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/bake-a-bancha-controller.png">
+<p class="caption">How to bake a controller</p>
+</div>
+<p>For more details see the
+<a class="reference external" href="http://book.cakephp.org/2.0/en/console-and-shells/code-generation-with-bake.html">CakePHP documentation</a>.</p>
+</div>
+<div class="section" id="for-already-existing-controllers">
+<h3>For already existing controllers<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#for-already-existing-controllers" title="Permalink to this headline">¶</a></h3>
+<p>The changes to your controller are actually quite easy. You only need to
+provide a return value for every controller function. Bancha will use
+this value to generate the response. Here you can find two samples of
+how to extend your controller to wirk with Bancha:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="http://docs.banchaproject.org/resources/Controller-Augmentation-Alternative-1.html">Manual Controller Augmentation - Alternative 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://docs.banchaproject.org/resources/Controller-Augmentation-Alternative-2.html">Manual Controller Augmentation - Alternative 2</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="what-s-next">
+<h3>What’s next<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#what-s-next" title="Permalink to this headline">¶</a></h3>
+<p>That’s it, now you can write normal ExtJS code using
+Bancha.onModelReady(modelName,fn) and Bancha.getModel(modelName) or you
+take a look at our powerfull <a class="reference external" href="http://scaffold.banchaproject.org/">Scaffolding library</a>,
+which uses all the Bancha meta data to create grids grids and forms with an minimal markup.
+For example: <em>Ext.create(“Ext.grid.Panel”,{scaffold:’User’});</em></p>
+</div>
+</div>
+<div class="section" id="fine-tuning">
+<h2>Fine tuning<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#fine-tuning" title="Permalink to this headline">¶</a></h2>
+<p>Bancha will expose only the CRUD functions which are implemented in the
+controller. This gives you all options for security like any normal
+cakephp site.</p>
+<p>Bancha will automatically recognize model validation rules, and provide
+them as well on the client side in ExtJS. See <a class="reference external" href="http://docs.banchaproject.org/resources/Supported-Validation-Rules.html">Supported Validation
+Rules</a></p>
+<div class="highlight-python"><pre>Note: Currently Bancha can not handle Controller::setFlash() and Controller::redirect()</pre>
+</div>
+<p>Side note: Bancha augments the models a bit, validations and save
+operations are only are executed on defined fields, validation will not
+fail if a field is missing - this is because ExtJS only send the changed
+fields in an edit request. If you don’t like this set the BanchaBehavior
+setup config to <em>array(‘useOnlyDefinedFields’=&gt;false)</em>. Keep in mind to
+then use <em>$model-&gt;saveFields($data, $options)</em> for Bancha requests instead
+of <em>$model-&gt;save()</em>.</p>
+</div>
+<div class="section" id="trouble-shooting">
+<h2>Trouble Shooting<a class="headerlink" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#trouble-shooting" title="Permalink to this headline">¶</a></h2>
+<p>We are currently only aware of one constraint. Please make sure that the
+primary’s field of the model is called <em>id</em> (cake default). That’s it.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="http://docs.banchaproject.org/index.html">
+              <img class="logo" src="./How to Expose Models — Bancha 1.2.0 Stable documentation_files/bancha-logo.png" alt="Logo">
+            </a></p>
+  <h3><a href="http://docs.banchaproject.org/index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#">How to Expose Models</a><ul>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#setup-your-controller-for-bancha">Setup your controller for Bancha</a><ul>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#the-easy-way-baking-your-controller">The easy way: Baking your controller</a></li>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#for-already-existing-controllers">For already existing controllers</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#what-s-next">What’s next</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#fine-tuning">Fine tuning</a></li>
+<li><a class="reference internal" href="http://docs.banchaproject.org/resources/How-to-Expose-Models.html#trouble-shooting">Trouble Shooting</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html" title="previous chapter">Usage in CakePHP</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="http://docs.banchaproject.org/resources/Controller-Augmentation-Alternative-1.html" title="next chapter">Manual Controller Augmentation - Alternative 1</a></p>
+<div id="searchbox" style="">
+  <h3>Quick search</h3>
+    <form class="search" action="http://docs.banchaproject.org/search.html" method="get">
+      <input type="text" name="q">
+      <input type="submit" value="Go">
+      <input type="hidden" name="check_keywords" value="yes">
+      <input type="hidden" name="area" value="default">
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="http://docs.banchaproject.org/genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="http://docs.banchaproject.org/resources/Controller-Augmentation-Alternative-1.html" title="Manual Controller Augmentation - Alternative 1">next</a> |</li>
+        <li class="right">
+          <a href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html" title="Usage in CakePHP">previous</a> |</li>
+        <li><a href="http://docs.banchaproject.org/index.html">Bancha 1.2.0 Stable documentation</a> »</li>
+          <li><a href="http://docs.banchaproject.org/resources/Usage-in-CakePHP.html">Usage in CakePHP</a> »</li> 
+      </ul>
+    </div>
+    </div>
+    <div class="footer">
+        © Copyright 2012, StudioQ OG. All rights reserved.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+
+
+<!-- Add a feedback widget -->
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/0UXfPisT7dSYfaE0il292w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+
+<!-- add some analytics -->
+<script type="text/javascript">if(document.location.href.substr(0,16)!=="http://localhost" && document.location.href.substr(0,17)!=="https://localhost") {var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-10118336-4"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();}</script>
+  
+</body></html>

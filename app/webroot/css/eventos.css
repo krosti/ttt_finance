@@ -3,6 +3,25 @@
 	margin:auto;
 }
 .evento{
-	margin-top:30px;
-	margin-left: 40px;
+	border-bottom: 2px solid #e3e3e3;
+	width: 960px;
+	float: left;
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+	text-align: center;
+	font-size: 23px;
+	text-shadow: -1px -1px 0px #ddd;
+	color: #222;
+	margin-top: 4px;
+	border-radius: 2px;
+}
+.evento img{
+	margin-left:20px;
+	border:1px solid;
+	display: block;
+	margin:auto;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px 1px #ccc;
 }

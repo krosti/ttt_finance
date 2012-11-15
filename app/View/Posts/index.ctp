@@ -19,7 +19,7 @@
 		<td><?php echo h($this->Text->truncate($post['Post']['serie_datos'], 22, array('ending' => '...','exact' => false) )); ?>&nbsp;</td>
 		
 		<td>
-			<?php echo $this->Html->link($post['Tipo']['id'], array('controller' => 'tipos', 'action' => 'view', $post['Tipo']['id'])); ?>
+			<?php echo $this->Html->link($post['Tipo']['titulo'], array('controller' => 'tipos', 'action' => 'view', $post['Tipo']['id'])); ?>
 		</td>
 		<td><?php echo h($post['Post']['created']); ?>&nbsp;</td>
 		<td class="actions">

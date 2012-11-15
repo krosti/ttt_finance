@@ -1,4 +1,4 @@
-<div class="extra situacion_actual">
+<div class="extra analisis_ttt">
 	<?php echo $this->Html->css(array('situacion_actual')); ?>
 	<?php 
 		$slideNum = '';
@@ -6,8 +6,10 @@
 	?>
 		<div class="caja_slide">
 			<div class="izq_slide">
-				<span class="tit_slide">
+				<span class="tit_slide ">
+					<div class="icon2"></div>
 					<?php echo $this->Html->link($post['Post']['titulo'],'/posts/reporte/'.$post['Post']['id']); ?>
+					<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$post['Post']['created']); ?></div>
 				</span>
 				<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>400,'height'=>200,'onError'=>'error_handler.imageError(this)') ); ?>
 				<div class="thumb_slide">

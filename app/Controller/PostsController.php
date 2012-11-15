@@ -12,7 +12,16 @@ class PostsController extends AppController {
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
-	    $this->Auth->allow('reporte','search','add','isUploadedFile');
+	    
+	    if($this->Session->read('User')){
+	    	
+	    	$this->Auth->allow('reporte','search');
+	    	
+	    	if($this->Session->read('User.perfil_id') == 100){
+		    	//admin options
+		    	$this->Auth->allow('index','add','isUploadedFile','edit');
+	    	}
+	    }
 	}
 
 /**
@@ -84,7 +93,7 @@ class PostsController extends AppController {
 		} else {
 			$this->request->data = $this->Post->read(null, $id);
 		}
-		$tipos = $this->Post->Tipo->find('list');
+		$tipos = $this->Post->Tipo->find('list', array( 'fields' => array('Tipo.titulo') ));
 		$this->set(compact('tipos'));
 	}
 
@@ -168,7 +177,12 @@ class PostsController extends AppController {
 	    if ((isset($val['form']['images']['error']) && $val['form']['images']['error'] == 0) ||
 	        (!empty( $val['form']['images']['tmp_name']) && $val['form']['images']['tmp_name'] != 'none')
 	    ) {
-	        if (move_uploaded_file(strval($val['form']['images']['tmp_name'][0]),ROOT.DS.APP_DIR.'/webroot/files/'.strval($val['form']['images']['name'][0])) ){
+	        if (move_uploaded_file(
+	        	strval(
+	        		$val['form']['images']['tmp_name'][0]),
+	        		ROOT.DS.APP_DIR.'/webroot/files/'.strval(date("dmY-hms").'_'.$val['form']['images']['name'][0])
+	        		)
+	        ){
 	        	return strval($val['form']['images']['name'][0]);
 	        }
 	    }

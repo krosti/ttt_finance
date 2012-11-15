@@ -110,6 +110,7 @@ a:hover{
 			}
 			#login .SessionDetails span{
 				clear:both;
+				z-index: 106;
 			}
 			#login_user{
 				float:left;
@@ -429,6 +430,7 @@ a:hover{
 				}
 				.cuerpo_slide_fix{
 					height: 75px;
+					overflow: hidden;
 				}
 			.separacion_slide{
 				width: 425px;
@@ -560,7 +562,7 @@ a:hover{
 		}
 #footer{
 	float: left;
-	margin-top: 164px;
+	margin-top: 145px;
 	width: 960px;
 }
 	#logofooter{

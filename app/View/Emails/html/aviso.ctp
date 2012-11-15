@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
-	<title>Sample</title>
+	<title>TTT Online</title>
 	<style type="text/css" media="screen">a{ style="color:#00aeef; text-decoration:underline;" }</style>
 </head>
 <body style="padding:0; margin:0; background:#FFFFFF">

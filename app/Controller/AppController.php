@@ -53,7 +53,7 @@ class AppController extends Controller {
                 )
             ),*/
             //'authorize' => array('Controller'),
-            'allowedActions' => array('index','view','display'),
+            'allowedActions' => array('view','display'),
             'authError' => "No posee autorizacion para acceder a esta seccion."
         ),
         'Facebook.Connect' => array('model' => 'User'),
@@ -63,7 +63,6 @@ class AppController extends Controller {
 
 
 	function beforeFilter() {
-
 		//global url adress
 		$this->set('site_url',Configure::read('Site.url'));
 

@@ -22,7 +22,7 @@
 </style>
 <div id="graficador-wrapper">
 	<?php echo $this->Form->create('Comments',array('action'=>'add' )); ?>
-	<form action="/ttt_finance/comments/add" method="post" accept-charset="utf-8">
+	<form action="/ttt_finance/comments/add" method="POST" accept-charset="utf-8">
 		<!--div class="formLabel">Titulo</div>
 		<div class="formOptions">
 			<span class="style1 Ntooltip">
@@ -34,9 +34,11 @@
 		</div>
 		<input id="formTitulo" name="data[Post][titulo]" maxlength="200"-->
 
-		<input id="formTipo" name="data[Comment][tipo_id]" value="1" style="display:none;">
+		<input id="formTipo" name="data[Comment][user_id]" value="<?php echo $this->Session->read('User.id')?>" type="hidden">
+		<!--input id="formTipo" name="data[Comment][comment_id]" value="1" type="hidden"-->
+		<input id="formTipo" name="data[Comment][post_id]" value="<?php echo $this->viewVars['id']; ?>" type="hidden">
 
-		<input id="formSerieDatos" name="data[Post][serie_datos]"  value="test" style="display:none;">
+		<input id="formSerieDatos" name="data[Comment][serie_datos]"  value="test" style="display:none;">
 		
 		<div class="formLabel">Cuerpo</div>
 		<div class="formOptions">
@@ -50,7 +52,7 @@
 				<span>Estilo 3</span>
 			</span>
 		</div>
-		<textarea name="data[Post][descripcion]" cols="30" rows="6" id="formCuerpo"></textarea>
+		<textarea name="data[Comment][mensaje]" cols="30" rows="6" id="formCuerpo"></textarea>
 
 		<input type="submit" value="guardar/enviar">
 	</form>
@@ -96,7 +98,7 @@
 			</p>
 		</div-->
 
-		<div class="canvasWrapper">
+		<div class="canvasWrapper" style="display:none">
 			<canvas id="screenView" width="950" height="500" style="display:none;"></canvas>
 
 			<canvas id="myLine" width="950" height="500"></canvas>

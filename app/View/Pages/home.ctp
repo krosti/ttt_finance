@@ -4,15 +4,22 @@
 	<div id="slider_ads">
 		<div id="slideshow3">
 			<div id="slidesContainer3">
-				<div class="slide3">
-					<div class="caja_slide"><?php echo $this->Html->image('http://placehold.it/465x200'); ?> </div>
-				</div>
-				<div class="slide3">
-					<div class="caja_slide"><?php echo $this->Html->image('http://placehold.it/465x200/red'); ?> </div>
-				</div>
-				<div class="slide3">
-					<div class="caja_slide"><?php echo $this->Html->image('http://placehold.it/465x200'); ?> </div>
-				</div>
+				<?php foreach ($homebanners as $banner) { ?>
+					<div class="slide3">
+						<div class="caja_slide">
+							<?php echo $this->Html->image(
+								'/files/'.$banner['Banner']['image'],
+								array(
+									'class'=>'',
+									'width'=>465,
+									'height'=>200,
+									'style'=>'float:left;',
+									'onError'=>'error_handler.imageError(this)',
+									'url'=>$banner['Banner']['url']
+							)); ?> 
+						</div>
+					</div>
+				<?php } ?>
 
 			</div>
 		</div>

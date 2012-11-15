@@ -59,7 +59,7 @@ drawCanvas = {
 			// Get the tool select input.
 			var tool_select = document.getElementById('dtool');
 			if (!tool_select) {
-				alert('Error: failed to get the dtool element!');
+				console.log('Error: failed to get the dtool element!');
 				return;
 			}
 			tool_select.addEventListener('change', ev_tool_change, false);

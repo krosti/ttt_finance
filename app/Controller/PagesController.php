@@ -43,7 +43,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Post');
+	public $uses = array('Post','Banner');
 
 
 /**
@@ -77,6 +77,22 @@ class PagesController extends AppController {
 				) 
 			) 
 			);
+		$this->set('homebanners', 
+			$this->Banner->find('all', array(
+				'conditions' => array('Banner.banner_tipo_id' => '0'),
+				'order'=>'Banner.created DESC' 
+				) 
+			) 
+			);
+
+		$this->set('eventosbanners', 
+			$this->Banner->find('all', array(
+				'conditions' => array('Banner.banner_tipo_id' => '1'),
+				'order'=>'Banner.created DESC' 
+				) 
+			) 
+			);
+
 		#pr(Debugger::trace());
 		$path = func_get_args();
 

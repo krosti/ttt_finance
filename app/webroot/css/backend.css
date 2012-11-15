@@ -46,12 +46,12 @@ tbody th a {
    
    
 tbody td+td+td+td a {
-    padding-right: 14px;
-    background: url(http://www.acuity.com.br/extern/icant.co.uk/arrow.gif) transparent no-repeat bottom right;
-    }
+  padding-right: 21px;
+  background: url(../img/gem_options.png) no-repeat bottom right;
+}
     tbody td+td+td+td a:hover {
-        padding-right: 14px;
-    background: url(http://www.acuity.com.br/extern/icant.co.uk/arrow.gif) transparent no-repeat bottom right;
+      padding-right: 21px;
+      background: url(../img/gem_options.png) no-repeat bottom right;
     }
 tbody th a:hover {
   background: transparent;
@@ -316,4 +316,13 @@ div.actions{
 }
 .actions a:visited, .actions a:hover, .action a:link{
   color:#999;
+}
+
+.posts fieldset{
+  width: 960px;
+}
+.posts input[type="text"], textarea, input[type="password"]{
+  width: 800px;
+  max-width: 1000px;
+  border:1px solid #e3e3e3;
 }

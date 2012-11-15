@@ -1,3 +1,28 @@
+<script type="text/javascript" src="http://cdn.aloha-editor.org/latest/lib/require.js"></script>
+ 
+<!-- load the Aloha Editor core and some plugins -->
+<script src="http://cdn.aloha-editor.org/latest/lib/aloha.js"
+                   data-aloha-plugins="common/ui,
+                                        common/format,
+                                        common/list,
+                                        common/link,
+                                        common/paste,
+                                        common/undo">
+</script>
+
+<!-- load the Aloha Editor CSS styles -->
+<link href="http://cdn.aloha-editor.org/latest/css/aloha.css" rel="stylesheet" type="text/css" />
+
+<!-- make all elements with class="editable" editable with Aloha Editor -->
+<script type="text/javascript">
+     Aloha.ready( function() {
+            var $ = Aloha.jQuery;
+            $('.editable').aloha();
+     });
+</script>
+
+<!--END EDITOR-->
+
 <style type="text/css">
 
 	#main {
@@ -33,7 +58,7 @@
 			<legend><?php echo __('Agregar Nuevo Posteo'); ?></legend>
 		<?php
 			echo $this->Form->input('titulo');
-			echo $this->Form->input('descripcion',array('width'=>500) );
+			echo $this->Form->input('descripcion',array('rows'=>25,'class'=>'editable') );
 			#echo $this->Form->input('serie_datos');
 			echo $this->Form->input('serie_datos_pie',array('label'=>'Pie de foto') );
 			echo $this->Form->input('tipo_id');
@@ -44,7 +69,7 @@
 			echo $this->Form->input('image',array('type'=>'hidden'));
 		?>
 		</fieldset>
-	<?php echo $this->Form->end(__('Submit')); ?>
+	<?php echo $this->Form->end(__('Guardar')); ?>
 	<div id="main">
 		<form method="post" enctype="multipart/form-data"  action="upload.php">
     		<input type="file" name="file" id="images" multiple />

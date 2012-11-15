@@ -8,13 +8,12 @@
 		<div class="caja_slide">
 			<div class="izq_slide">
 				<span class="tit_slide">
+					<div class="icon3"></div>
 					<?php echo $this->Html->link($post['Post']['titulo'],'/posts/reporte/'.$post['Post']['id']); ?>
+					<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$post['Post']['created']); ?></div>
 				</span>
 				<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>400,'height'=>200,'onError'=>'error_handler.imageError(this)') ); ?>
 				<div class="thumb_slide">
-					<!--img src="img/warning.png" /
-							tag here
-					-->
 					<?php if(isset($post['Post']['serie_datos_pie']) && $post['Post']['serie_datos_pie'] != ''): ?>
 						<span><?php echo $post['Post']['serie_datos_pie']; ?></span>
 					<?php endif; ?>

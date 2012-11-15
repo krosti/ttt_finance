@@ -1,16 +1,18 @@
 <?php #debug( $this->Session->read('user')).'this'; ?>
+<?php $dot = $this->Html->image('dot.png'); ?>
 
 <!--nocache-->
 <div class = "box_login">
 	<?php 
 	if (isset($facebook_user)): ?>
+
 		<div class="SessionDetails">
 			<span> 
 			<?php 
 				$tooltip = "<span class='tooltip'>".
 								"<span></span>".
 								$this->Html->image('logofooter.png')."<br><br>".
-								"Usuario registrado en TTT".
+								$dot."Usuario registrado en TTT".
 							"</span>";
 
 				$userLoggedId = (isset($fb_user_has_account) && $fb_user_has_account) ? "<a href='#' class='usrCheck'>".$tooltip."</a>" : "";
@@ -29,10 +31,18 @@
 			<span>
 			<?php
 			$userLoggedIn = $this->Session->read('User');
+			$userAdmin = ($this->Session->read('User.perfil_id') == 100) ? true : false;
+			$userAdminImg = ($userAdmin) ? $this->Html->image('boss.png') : '';
+			$userAdminOpts = ($userAdmin) ? 'Usuario Administrador de TTTOnline' : '';
+
 			$tooltip = "<span class='tooltip'>".
 							"<span></span>".
 							$this->Html->image('logofooter.png')."<br><br>".
-							"Usuario registrado en TTT <br> Cuenta de Facebook no Asociada".
+							$dot."Usuario registrado en TTT".
+							" <br> ".
+							$dot."Cuenta de Facebook no Asociada".
+							" <br> ".
+							$dot.$userAdminOpts.
 						"</span>";
 
 			echo '<span class="name">'.
@@ -40,7 +50,9 @@
 					' ('."<a href='#' class=''>".$userLoggedIn['username'].$tooltip."</a>".')' .
 				 '</span>'; 
 			echo '<span class="email">'.$userLoggedIn['email'].'</span>'; 
-			echo '<span class="picture">'.$this->Html->image('icons/user_logged_in.png').'</span>';
+			echo '<span class="picture">'.$this->Html->image('icons/user_logged_in.png').
+					'<div style="margin-top: -25px; margin-left: 25px;">'.$userAdminImg.'</div>'.
+				  '</span>';
 			?>
 			</span>
 		</div>

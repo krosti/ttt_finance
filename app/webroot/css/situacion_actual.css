@@ -1,12 +1,19 @@
 .extra{
 	height:auto;
 	background: #EEE;
-	border-radius: 4px;
-	box-shadow: 0px 0px 7px -2px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	box-shadow: 0px 4px 8px -2px;
 	border: 1px solid #DFDFDF;
-	margin-top: 0px;
+	margin-top: 10px;
 	padding: 3px;
 	padding-bottom: 10px;
+	padding-top: 20px;
+
 }
 .extra a:link, .extra a:visited{
 	color: white;
@@ -16,14 +23,17 @@
 	position: relative;
 	float: left;
 	padding-left: 4px;
+	text-shadow: -1px -1px 8px #777;
+	margin-top: -5px;
+
 }
 .extra a:hover{
 	color:#ddd;
 }
 
 .caja_slide{
-	border-bottom:2px groove #ddd;
-	padding:20px;
+	border-bottom: 2px solid rgb(233, 231, 231);
+	padding: 26px 11px 45px 11px;
 	background: #eee;
 }
 	.tit_slide{
@@ -32,12 +42,26 @@
 		width: 435px;
 		height: 17px;
 		border:none;
-		border-radius: 2px;
+		border-radius: 3px;
 		margin-left: 450px;
 		vertical-align: middle;
 		background: #00BAFE;
 		box-shadow: 1px 1px 3px 0px #888;
 		margin-top: 0px;
+		border: 1px solid;
+		box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #999;
+		-moz-transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+		transition: 0.8s;
+		-moz-animation: pulse 2s infinite;
+		-webkit-animation: pulse 2s infinite;
+
 	}
 	.tit_slide:hover{
 		background: #999;
@@ -83,10 +107,55 @@
 		font-weight: 100;
 	}
 
-.situacion_actual .tit_slide{
+.analisis_ttt .tit_slide{
 	background:#ff4f20;
+}
+.analisis_ttt .tit_slide:hover{
+	background:#ff9f25;
 }
 
 .opiniones .tit_slide{
-	background: #00e368
+	background: #00e368;
+}
+.opiniones .tit_slide:hover{
+	background: rgb(3, 150, 89);
+}
+.izq_slide img{
+	border:1px solid;
+	box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+}
+
+.icon1{
+	background: url(../img/glyph_icons.png) no-repeat -99px -380px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: -7px;
+	margin-top: -5px;
+}
+
+.icon2{
+	background: url(../img/glyph_icons.png) no-repeat -50px -58px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: -7px;
+	margin-top: -5px;
+}
+
+.icon3{
+	background: url(../img/glyph_icons.png) no-repeat -198px -173px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: -7px;
+	margin-top: -5px;
+}
+
+.fecha{
+	color: #dfdfdf;
+	font-size: 9px;
+	float: right;
+	margin-right: 4px;
+	text-shadow: -1px 0px 1px #333;
 }
