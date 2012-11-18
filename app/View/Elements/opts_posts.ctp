@@ -24,7 +24,8 @@
 		$hayUsuarioFb = (isset($facebook_user)) ? true : false; 
 		$hayUsuarioTtt = ($this->Session->read('User')) ? true : false;
 		$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : 'agregarComment'; 
+		$clases = (isset($reporte)) ? $mostrarDialog.' '.$reporte : $mostrarDialog;
 	?>
-	<?php echo $this->Html->link('Agregar un Comentario ('.count($post['Comment']).')','#'.$post['Post']['id'],array('id'=>$post['Post']['id'],'class'=>$mostrarDialog) ); ?>
+	<?php echo $this->Html->link('Agregar un Comentario ('.count($post['Comment']).')','#'.$post['Post']['id'],array('id'=>$post['Post']['id'],'class'=>$clases) ); ?>
 </span>
 

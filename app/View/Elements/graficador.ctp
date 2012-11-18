@@ -20,22 +20,41 @@
 		float: left;
 	}
 </style>
+<style type="text/css">
+
+	#main {
+		width: 300px;
+		margin:auto;
+		background: #ececec;
+		padding: 20px;
+		border: 1px solid #ccc;
+	}
+
+	#image-list {
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	#image-list li {
+		background: #fff;
+		border: 1px solid #ccc;
+		text-align:center;
+		padding:20px;
+		margin-bottom:19px;
+	}
+	#image-list li img {
+		width: 258px;
+		vertical-align: middle;
+		border:1px solid #474747;
+	}
+
+</style>
 <div id="graficador-wrapper">
 	<?php echo $this->Form->create('Comments',array('action'=>'add' )); ?>
 	<form action="/ttt_finance/comments/add" method="POST" accept-charset="utf-8">
-		<!--div class="formLabel">Titulo</div>
-		<div class="formOptions">
-			<span class="style1 Ntooltip">
-				<span>Estilo 1</span>
-			</span>
-			<span class="style2 Ntooltip">
-				<span>Estilo 2</span>
-			</span>
-		</div>
-		<input id="formTitulo" name="data[Post][titulo]" maxlength="200"-->
-
+		
 		<input id="formTipo" name="data[Comment][user_id]" value="<?php echo $this->Session->read('User.id')?>" type="hidden">
-		<!--input id="formTipo" name="data[Comment][comment_id]" value="1" type="hidden"-->
+		<input id="CommentImage" name="data[Comment][image]" value="" type="hidden">
 		<input id="formTipo" name="data[Comment][post_id]" value="<?php echo $this->viewVars['id']; ?>" type="hidden">
 
 		<input id="formSerieDatos" name="data[Comment][serie_datos]"  value="test" style="display:none;">
@@ -62,42 +81,6 @@
 		<div class="iconExpanded"></div>
 	</div>
 
-	<!--START-graphic box-->
-	<!--div id="graphic-wrapper-2">
-		<div id="chart_div"></div>
-		<select id="selectboxIndices">
-			<option default>Elegir Uno</option>
-			<option value="argentina">argentina</option>
-			<option value="usa">usa</option>
-			<option value="indices">indices</option>
-		</select>
-		<select id="selectboxAcciones"></select>
-		<input id="startDate" placeholder="yyyy-mm-dd [desde]"/>
-		<input id="endDate" placeholder="yyyy-mm-dd [hasta]"/>
-		<button id="updateGraphic">Actualizar</button>
-
-		<button id="drawToolBoxButton">Drawing/Dibujo</button>
-		<div id="drawToolsBox">
-			<p style="float:left;">
-				<label>Drawing tool: <select id="dtool">
-			        <option value="line">Linea</option>
-			        <option value="linePointToPoint">Linea Punto a Punto</option>
-			        <option value="rect">Rectangulo</option>
-			        <option value="pencil">Lapiz</option>
-			    </select></label>
-			    <div class="commands">
-			        
-			        <button id="btnClear" href="#">Limpiar</button>
-			        <button id="take-screenshot">Tomar Foto</button>
-			        <div id="cambiar-color0" style="width:15px;height:15px;float:left;"><div class="button-circle-color lightBlue"></div></div>
-			        <div id="cambiar-color1" style="width:15px;height:15px;float:left;"><div class="button-circle-color blue"></div></div>
-			        <div id="cambiar-color2" style="width:15px;height:15px;float:left;"><div class="button-circle-color orange"></div></div>
-			        <div id="cambiar-color3" style="width:15px;height:15px;float:left;"><div class="button-circle-color green"></div></div>
-			        <button id="showLoabels"></button>
-			    </div>
-			</p>
-		</div-->
-
 		<div class="canvasWrapper" style="display:none">
 			<canvas id="screenView" width="950" height="500" style="display:none;"></canvas>
 
@@ -121,6 +104,29 @@
 		<div class="iconExpanded"></div>
 	</div>
 
+	<div id="main">
+		<form method="post" enctype="multipart/form-data"  action="upload.php">
+    		<input type="file" name="file" id="images" multiple />
+    		<button type="submit" id="btn">Upload Files!</button>
+    		<?php 
+    			echo $this->Html->link('url',
+						    			array('controller'=>'posts','action'=>'isUploadedFile'), 
+						    			array('style'=>'display:none;','id'=>'URLSITE') 
+	    		); 
+    		?>
+    	</form>
+
+  		<div id="response"></div>
+		<ul id="image-list">
+
+		</ul>
+		
+		<div style="display:none;">
+			<?php echo $this->Html->image('loading.gif', array('id'=>'uploading_gif') ); ?>
+		</div>
+
+	</div>
+
 	<div id="uploadPhotoBox">
 		<input type="file" />
 	</div>
@@ -128,11 +134,6 @@
 
 	<div id="thumbsBox"></div>
 
-	<!--div class="buttonsBox">
-		<button id="saveForm">guardar/enviar</button>
-
-		<button id="cleanForm">limpiar/cancelar</button>
-	</div-->
 </div>
 
 <?php 
@@ -159,3 +160,64 @@
 	));
 
 ?>
+
+<!--UPOAD FILE-->
+<script type="text/javascript">
+	(function () {
+		var input = document.getElementById("images"), 
+			formdata = false;
+
+		function showUploadedItem (source) {
+	  		var list = document.getElementById("image-list"),
+		  		li   = document.createElement("li"),
+		  		img  = document.createElement("img");
+	  		img.src = source;
+	  		li.appendChild(img);
+			list.appendChild(li);
+		}   
+
+		if (window.FormData) {
+	  		formdata = new FormData();
+	  		document.getElementById("btn").style.display = "none";
+		}
+		
+	 	input.addEventListener("change", function (evt) {
+	 		document.getElementById("response").innerHTML = document.getElementById('uploading_gif').innerHTML;
+	 		var i = 0, len = this.files.length, img, reader, file;
+		
+			for ( ; i < len; i++ ) {
+				file = this.files[i];
+		
+				if (!!file.type.match(/image.*/)) {
+					if ( window.FileReader ) {
+						reader = new FileReader();
+						reader.onloadend = function (e) { 
+							showUploadedItem(e.target.result, file.fileName);
+						};
+						reader.readAsDataURL(file);
+					}
+					if (formdata) {
+						formdata.append("images[]", file);
+					}
+				}	
+			}
+		
+			if (formdata) {
+				$.ajax($('#URLSITE').attr('href'),{
+					type: "POST",
+					data: formdata,
+					processData: false,
+					contentType: false,
+					success: function (res) {
+						if (res) {
+							$('#images').slideToggle();
+							$('#CommentImage').val(res);
+							document.getElementById("response").innerHTML = 'La imagen fue subida correctamente';
+						}
+						
+					}
+				});
+			}
+		}, false);
+	}());
+</script>

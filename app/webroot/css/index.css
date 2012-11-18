@@ -384,6 +384,26 @@ a:hover{
 				margin-top: 28px;
 				margin-left: 5px;
 			}
+				.vermas_button a:link, .vermas_button a:visited{
+					color:#213B94;
+				}
+				#analisis .vermas_button{
+					margin-top: 5px;
+					margin-left: 2px;
+					float:left;
+					color: #333;
+				}
+				#sit_actual .vermas_button{
+					margin-top: 5px;
+					margin-left: 2px;
+					float:left;
+				}
+				#opiniones .vermas_button{
+					margin-top: 5px;
+					margin-left: 2px;
+					float:left;
+				}
+
 				.tit_slide{
 					float: left;
 					color:white;
@@ -471,8 +491,16 @@ a:hover{
 				margin-bottom:10px;
 				font-weight: bold;
 			}
+			#analisis .compartir_slide{
+				margin-left: 11px;
+				width: 420px;
+			}
+			#sit_actual .separacion_slide{
+				width: 420px;
+				margin-left: 15px;
+			}
 			#sit_actual .compartir_slide span{
-				margin-right: 25px;
+				margin-right: 35px;
 			}
 			#sit_actual .compartir_slide .agregarComment{
 				margin-top: 2px;

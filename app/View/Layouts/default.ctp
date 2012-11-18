@@ -51,7 +51,7 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 		$hayUsuarioTtt = ($this->Session->read('User')) ? true : false;
 		$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : '';
 	?>
-	
+
 	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
 
 	<div class="cuerpo">
@@ -210,16 +210,16 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 		'ui-home',
 		'lightbox',
 		'valores',
-		'jquery.jstockticker-1.1',
+		//'jquery.jstockticker-1.1',
 		//ourAPPS
-		'jsTTT/application',
+		//'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',
 		'jsTTT/symbols',
-		'jsTTT/ui',
+		//'jsTTT/ui',
 		'jsTTT/error-handler',
 		//'jsTTT/gchart',
-		'jsTTT/rgraph',
-		'jsTTT/drawCanvas',
+		//'jsTTT/rgraph',
+		//'jsTTT/drawCanvas',
 		//extern libreries
 		'mopSlider/mopSlider-2.4',
 		'pngFix/jquery.pngFix',

@@ -33,7 +33,7 @@
 			$userLoggedIn = $this->Session->read('User');
 			$userAdmin = ($this->Session->read('User.perfil_id') == 100) ? true : false;
 			$userAdminImg = ($userAdmin) ? $this->Html->image('boss.png') : '';
-			$userAdminOpts = ($userAdmin) ? 'Usuario Administrador de TTTOnline' : '';
+			$userAdminOpts = ($userAdmin) ? $dot.'Usuario Administrador de TTTOnline' : '';
 
 			$tooltip = "<span class='tooltip'>".
 							"<span></span>".
@@ -42,7 +42,7 @@
 							" <br> ".
 							$dot."Cuenta de Facebook no Asociada".
 							" <br> ".
-							$dot.$userAdminOpts.
+							$userAdminOpts.
 						"</span>";
 
 			echo '<span class="name">'.

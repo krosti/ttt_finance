@@ -139,12 +139,17 @@ class PostsController extends AppController {
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Reporte no encontrado'));
 		}
+		//$this->Post->recursive = 4;
 		$post = $this->Post->read(null, $id);
 		#echo "<pre>";
 		#print_r($this->Post);
 		#echo "</pre>";
+		//debug($post);
 		$this->set('post', $post);
-		#$this->set('user',$this->Post->User->find('list'));
+		if(isset($post['Comment']) && isset($post['Comment'][0])):
+			$this->set('users', $this->User->findById($post['Comment'][0]['user_id']));
+		endif;
+		//$this->set('user', $this->Post->User->find('all'));
 	}
 
 	public function search($value = null){
@@ -180,7 +185,7 @@ class PostsController extends AppController {
 	        if (move_uploaded_file(
 	        	strval(
 	        		$val['form']['images']['tmp_name'][0]),
-	        		ROOT.DS.APP_DIR.'/webroot/files/'.strval(date("dmY-hms").'_'.$val['form']['images']['name'][0])
+	        		ROOT.DS.APP_DIR.'/webroot/files/'.$val['form']['images']['name'][0]
 	        		)
 	        ){
 	        	return strval($val['form']['images']['name'][0]);

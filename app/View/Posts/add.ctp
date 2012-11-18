@@ -87,8 +87,9 @@
 
 		</ul>
 		
-		<div style="display:none;">
-			<?php echo $this->Html->image('loading.gif', array('id'=>'uploading_gif') ); ?>
+		<div style="" id="">
+			<?php echo $this->Html->image('/icons/loading.gif', array('id'=>'uploading_gif','style'=>'display:none;') ); ?>
+			<br>
 		</div>
 
 	</div>
@@ -121,7 +122,7 @@
 		}
 		
 	 	input.addEventListener("change", function (evt) {
-	 		document.getElementById("response").innerHTML = document.getElementById('uploading_gif').innerHTML;
+	 		//document.getElementById("response").innerHTML = document.getElementById('uploading_gif').innerHTML;
 	 		var i = 0, len = this.files.length, img, reader, file;
 		
 			for ( ; i < len; i++ ) {
@@ -147,11 +148,17 @@
 					data: formdata,
 					processData: false,
 					contentType: false,
+					beforeSend: function(){
+						$('#uploading_gif').show();
+					},
 					success: function (res) {
 						if (res) {
 							$('#images').slideToggle();
 							$('#PostImage').val(res);
-							document.getElementById("response").innerHTML = 'La imagen fue subida correctamente';
+							document.getElementById("response").innerHTML += 'La imagen fue subida correctamente';
+							$('#uploading_gif').hide();
+						}else{
+							document.getElementById("response").innerHTML += 'Error. Intente nuevamente.';
 						}
 						
 					}

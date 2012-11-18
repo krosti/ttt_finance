@@ -58,8 +58,8 @@ class CommentsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Comment->create();
 			if ($this->Comment->save($this->request->data)) {
-				$this->Session->setFlash(__('The comment has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Gracias por comentar en TTTOnline'));
+				$this->redirect('/');
 			} else {
 				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'));
 			}

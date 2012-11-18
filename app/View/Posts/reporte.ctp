@@ -7,7 +7,7 @@
 	<div class="top">
 		<div class="nombre"><?php echo $post['Post']['created_by'] ?></div>
 		<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$post['Post']['created']); ?></div>
-		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post) ); ?></div>
+		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post, 'reporte'=>'reporte') ); ?></div>
 	</div>
 	<div class="left">
 		<div class="infoTag">
@@ -27,23 +27,36 @@
 		<div class="bottomHeader">
 			<div class="tituloComentario">Comentarios</div>
 			<span>
-				<?php echo $this->Html->link('Agregar un Comentario','#idnro',array('id'=>$post['Post']['id'],'class'=>'agregarComment') ); ?>
+				<?php echo $this->Html->link('Agregar un Comentario  ('.count($post['Comment']).')','#idnro',array('id'=>$post['Post']['id'],'class'=>'agregarComment reporte') ); ?>
 			</span>
 		</div>
+		<?php #echo debug($users); ?>
 		<?php if (count($post['Comment']) > 0) : ?>
 			<?php foreach ($post['Comment'] as $comentario) { ?>
 				<div class="comentarioBox">
 					<div class="comentarioTitulo"><?php echo 'Re: '.$post['Post']['titulo'] ?> </div>
-					<div class="comentarioFrom"><?php #echo $comentario['User']['id'] ?> </div>
+					<div class="comentarioFrom"><?php echo 'De: '.$users['User']['first_name'].' '.$users['User']['last_name'] ?> </div>
 					<div class="comentarioFecha"><?php echo $comentario['created'] ?> </div>
 					<div class="comentarioMensaje"><?php echo $comentario['mensaje'] ?> </div>
+					<div class="comentarioAttach">
+						<?php 
+							$imagenAttach = ($comentario['image']) ? $comentario['image'] : false; 
+							if($imagenAttach):
+								echo $this->Html->image('/files/'.$imagenAttach,array('width'=>30) );
+							else:
+								echo 'sin img';
+							endif;
+
+						?>
+					</div>
 					<div class="social"><?php echo $this->element('opts_posts', array('Post' => $comentario['id']) ); ?></div>
 				</div>	
 			<?php } ?>
 		<?php else: ?>
 			<div class="noHayComments">No hay comentarios</div>
 		<?php endif; ?>
-		<?php echo $this->Facebook->comments(array('href'=>$this->here,'width'=>960)); ?>
+		<?php #echo 'http://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];?>
+		<?php #echo $this->Facebook->comments(array('href'=>'http://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"],'width'=>960)); ?>
 	</div>
 	<div class="nombre"><?php echo $post['Post']['created_by'] ?></div>
 </div>

@@ -71,7 +71,27 @@ class User extends AppModel {
 		)
 	);
 
-	//public $belongsTo = array('Comment');
+	/**
+	 * hasMany associations
+	 *
+	 * @var array
+	 */
+		public $hasMany = array(
+			'Comment' => array(
+				'className' => 'Comment',
+				'foreignKey' => 'user_id',
+				'dependent' => false,
+				'conditions' => '',
+				'fields' => '',
+				'order' => '',
+				'limit' => '',
+				'offset' => '',
+				'exclusive' => '',
+				'finderQuery' => '',
+				'counterQuery' => ''
+			)
+	);
+
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 	/**

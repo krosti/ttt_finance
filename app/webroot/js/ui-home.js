@@ -117,7 +117,8 @@ ui_home = {
 
 	agregarComentario: function(){
 		$('.agregarComment').on('click',function(){
-			$.ajax('widget/graficador/'+$(this).attr('id'),{
+			var url = ($(this).hasClass('reporte')) ? '../../widget/graficador/' : 'widget/graficador/';
+			$.ajax(url+$(this).attr('id'),{
 				success: function(data){
 					
 					$('#graphBOX').empty().append(data).dialog({

@@ -6,7 +6,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('titulo');
 		echo $this->Form->input('url' );
-		echo $this->Form->input('image',array('type'=>'hidden','value'=>'null') );
+		#echo $this->Form->input('image',array('type'=>'hidden') );
 		echo $this->Form->input('created');
 		echo '<br>'.$this->Form->input('banner_tipo_id' );
 	?>
