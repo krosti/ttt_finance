@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class PostsController extends AppController {
 	public $helpers = array('Time');
-	public $uses = array('User','Post','Comment','Tag');
+	public $uses = array('Post','User','Comment','Tag');
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
@@ -15,10 +15,11 @@ class PostsController extends AppController {
 	    if($this->Session->read('User')){
 	    	//auth user logged in
 	    	#general user logged in actions
-	    	$this->Auth->allow('reporte','search','situacionactual','analisisttt','opinion','isUploadedFile');
-	    	if(!empty($this->Session->read['User']) && $this->Session->read('User.perfil_id') == 100){
+	    	$this->Auth->allow(array('reporte','search','situacionactual','analisisttt','opinion','isUploadedFile'));
+	    	#debug($this->Session->read('User'));
+	    	if($this->Session->read('User') && $this->Session->read('User.perfil_id') == 100){
 		    	#admin options
-		    	$this->Auth->allow('index','add','edit');
+		    	$this->Auth->allow(array('index','add','edit'));
 	    	}
 	    }else{
 	    	//facebook user
@@ -37,7 +38,7 @@ class PostsController extends AppController {
 					}	
 				}
 				if ($hasPermissions):
-					$this->Auth->allow('index','add','edit');
+					$this->Auth->allow(array('index','add','edit'));
 					#'es FB y tiene permisos admin';
 				else:
 					$this->Auth->deny(array('index','add','edit'));

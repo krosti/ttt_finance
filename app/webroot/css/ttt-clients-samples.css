@@ -5,6 +5,9 @@ body#backend{
 	width: 960px;
 	background-color: #efefef;
 }
+#graficador-wrapper{
+	overflow: hidden;
+}
 
 div#tool1 header{
 	font-family: 'Open Sans', sans-serif;

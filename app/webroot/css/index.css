@@ -405,8 +405,8 @@ a:hover{
 					margin-bottom: -46px;
 				}
 				#opiniones .vermas_button{
-					margin-top: 45px;
-					margin-right: 25px;
+					margin-top: 5px;
+					margin-right: -25px;
 					float: right;
 					margin-bottom: -50px;
 				}
@@ -672,9 +672,12 @@ a:hover{
 #analisis .fbwrapper{
 	margin-top: 1px;
 }
-#sit_actual .fbwrapper,
-#opiniones .fbwrapper{
+#sit_actual .fbwrapper{
 	margin-top: 1px;
+	margin-left: -10px;
+}
+#opiniones .fbwrapper{
+	margin-top: 20px;
 	margin-left: -10px;
 }
 #analisis .twwrapper{
@@ -778,63 +781,99 @@ a:hover{
 	margin-bottom: 2px;
 }
 .opiniones .comentarioTitulo{
-	font-size: 12px;
-	font-weight: bold;
+	width: 187px;
 	margin-bottom: 10px;
 	color: #3C3C3C;
-	width: 365px;
+	/***/
+	font-size: 12px;
+	font-weight: bold;
 }
 .opiniones .comentarioBox{
 	float: left;
-	width: 400px;
+	width: 179px;
 	padding: 20px;
-	border-left: 5px solid #6E6E6E;
-	background: #F6F6F6;
+	background: #fff;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-top: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
-	border-right: 1px solid #DDD;
-	box-shadow: 1px 1px #BFBFBF;
+	border: 1px solid #ddd;
+	margin-left: 9px;
+	border-radius: 3px;
+	box-shadow: inset -1px 1px 3px -1px #ddd;
+	padding-right: 10px;
 }
 .opiniones .comentarioMensaje{
 	margin-top: 12px;
 	color: #222;
 	font-size: 12px;
-	width: 370px;
+	width: 185px;
 }
 .opiniones .comentarioAttach{
-	float: right;
+	float: left;
 	border: 1px solid;
 	padding: 2px;
-	margin-top: -40px;
+	margin-top: 5px;
 }
 .opiniones .comentarioPicture{
 	float: left;
-	height: 60px;
+	height: 80px;
 	background: #ccc;
-	width: 60px;
+	width: 80px;
 	margin-left: -10px;
 	margin-right: 10px;
-	border: 1px solid;
+	border: 1px solid #999;
+	border-radius: 4px;
+	box-shadow: inset 0px 0px 8px 0px #888;
+	margin-top: -10px;
+}
+.opiniones .comentarioBubble{
+	margin-left: -10px;
+	float: left;
+	width: 163px;
+	height: auto;
+	border-radius: 4px;
+	padding: 10px;
+	padding-left: 0px;
+}
+.opiniones .comentarioFrom{
+	margin-top: -70px;
+	margin-left: 90px;
+	width: 103px;
+	font-size: 12px;
+	color: #555;
+	font-weight: 700;
+}
+.opiniones .comentarioFrom span{
+	font-size: 11px;
+	color:#ddd;
+	margin-top: 39px;
+	float: left;
 }
 .opiniones .comentarioPicture img{
 	vertical-align: middle;
 	text-align: center;
 	margin: auto;
 	display: block;
-	margin-top: 1px;
+	margin-top: 6px;
+	margin-bottom: -78px;
+	height: 70px;
+	width: 70px;
+	border-radius: 3px;
+}
+.opiniones .comentarioPicture .transparent{
 	opacity: 0.2;
+	margin-top: 9px;
 }
 .opiniones .social{
 	float: left;
 	height: 15px;
-	margin-top: 15px;
+	margin-top: 30px;
 	width: 100%;
 }
 .opiniones .social span{
 	float: right;
+	margin-top:-19px;
 }
 #opiniones .social .twwrapper{
 	margin-top:1px;
+	margin-left:93px;
 }

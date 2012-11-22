@@ -9,14 +9,14 @@
 		<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$post['Post']['created']); ?></div>
 		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post, 'reporte'=>'reporte') ); ?></div>
 	</div>
-	<?php if ($post['Post']['tipo_id'] != 3): ?>
+	<?php #if ($post['Post']['tipo_id'] != 3): ?>
 		<div class="left">
 			<div class="infoTag"></div>
 			<div class="graficoTag">
 				<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>770,'onError'=>'error_handler.imageError(this)') ); ?>
 			</div>
 		</div>
-	<?php endif ?>
+	<?php #endif ?>
 	<div class="right">
 		<div class="tituloPost"><?php echo $post['Post']['titulo'] ?></div>
 		<div class="descripcion"><?php echo $post['Post']['descripcion'] ?></div>
