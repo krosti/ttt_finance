@@ -33,14 +33,14 @@ crawler = {
             &&  typeof d.results.td[b].strong != "null"
             &&  typeof d.results.td[b].strong != "undefined"
             ) {
-              console.log(d.results.td[b].strong.span.content);
+              //console.log(d.results.td[b].strong.span.content);
               values += d.results.td[b].strong.span.content;
               values += "<br>";
             }
             
             
           }
-          console.log(name);
+          //console.log(name);
           document.getElementById("results").innerHTML = name;
           document.getElementById("results2").innerHTML = values;
         }
@@ -85,7 +85,7 @@ crawler = {
           success: function(r) {
             if (r.query && r.query.results) {
                 count++;
-                console.log("#1- Actualizacion nro: "+count);
+                //console.log("#1- Actualizacion nro: "+count);
                 //res.setHTML('<h2>Recent Flickr Photos <em>(query #' + count + ')</em></h2>');
                 res.setHTML(r.query.results.stock.SixMonths.replace(/p/g,"span"));
                 //Y.each(r.query.results.stock, function(v) {
@@ -106,7 +106,7 @@ crawler = {
     /*
     * query Quant Yahoo Finance Site
     */
-    console.log('#1- OK - queryYQL');
+    //console.log('#1- OK - queryYQL');
 
     YUI().use('node', 'yql', function(Y) {
       var res = Y.one('#datosLive')
@@ -118,7 +118,7 @@ crawler = {
           success: function(r) {
             if (r.query && r.query.results) {
                 count++;
-                console.log("#2- Actualizacion nro: "+count+" - "+boxForUpdate);
+                //console.log("#2- Actualizacion nro: "+count+" - "+boxForUpdate);
                 (boxForUpdate != null) ? symbols.updateBox(r.query.results.quote,boxForUpdate) : symbols.updateHomeFeeds(r.query.results.quote);
                 //res.setHTML(r.query.results.quote);
             }
@@ -126,7 +126,7 @@ crawler = {
         }
       });
       
-      (interval != null) ? Y.later(interval, q, q.send, null, true) : console.log('sin Actualizacion automatica - '+boxForUpdate);
+      (interval != null) ? Y.later(interval, q, q.send, null, true) : console.info('no automatic update: '+boxForUpdate);
     });
     
   },
@@ -146,7 +146,7 @@ crawler = {
           success: function(r) {
             if (r.query && r.query.results) {
                 count++;
-                console.log("#3- HistoricalData "+symbol+' -#'+count+' -desde'+startDate+' -hasta'+endDate);
+                //console.log("#3- HistoricalData "+symbol+' -#'+count+' -desde'+startDate+' -hasta'+endDate);
                 __DATA = {};
                 __DATA = r.query.results.quote;
                 //console.log('Data: __DATA');
@@ -177,7 +177,7 @@ crawler = {
           success: function(r) {
             if (r.query && r.query.results) {
                 count++;
-                console.log("#5- FEEDS" );
+                //console.log("#5- FEEDS" );
                 //__DATA = r.query.results.quote;
                 //console.log('Data: __DATA');
                 //console.log(__DATA);

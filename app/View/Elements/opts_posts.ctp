@@ -1,12 +1,8 @@
-<style type="text/css">
-/*fix for facebook
-.fb_edge_widget_with_comment>span,.fb_edge_widget_with_comment>span>iframe { width:52px !important; height:24px !important; }*/
-</style>
-
 <div class="fbwrapper">
-	<?php #echo $this->Facebook->like(array('url'=>'https://tttonline.com.ar/posts/reportes/'.$post['Post']['id'],'width'=>25)); ?>
-	<?php echo $this->Facebook->like(array(
-			'href' => 'https://ttt.borealdev.com.ar/posts/reportes/'.$post['Post']['id'],
+	<?php 
+		$urlToLink = 'https://ttt.borealdev.com.ar/posts/reportes/'.$post['Post']['id'];
+		echo $this->Facebook->like(array(
+			'href' => $urlToLink,
 			'font' => 'verdana', 
 			'layout' => 'button_count', 
 			'action' => 'like', 
@@ -26,6 +22,13 @@
 		$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : 'agregarComment'; 
 		$clases = (isset($reporte)) ? $mostrarDialog.' '.$reporte : $mostrarDialog;
 	?>
-	<?php echo $this->Html->link('Agregar un Comentario ('.count($post['Comment']).')','#'.$post['Post']['id'],array('id'=>$post['Post']['id'],'class'=>$clases) ); ?>
+	<?php 
+		echo $this->Html->link('Agregar un Comentario ('.count($post['Comment']).')',
+								'#comment',array(
+											'id'=>$post['Post']['id'],
+											'class'=>$clases
+											) 
+								); 
+	?>
 </span>
 

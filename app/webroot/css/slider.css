@@ -96,3 +96,6 @@
   margin:0 auto;
   height:210px;
 }
+#slideshow3 #slidesContainer3 .slide3 img{
+  border-radius: 5px;
+}

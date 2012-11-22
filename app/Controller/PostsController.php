@@ -6,22 +6,53 @@ App::uses('AppController', 'Controller');
  * @property Post $Post
  */
 class PostsController extends AppController {
-	public $helpers = array('Time'/*,'AjaxMultiUpload.Upload'*/);
-	public $uses = array('Post','Comment','User','Tag');
-	#public $components = array('AjaxMultiUpload.Upload');
+	public $helpers = array('Time');
+	public $uses = array('User','Post','Comment','Tag');
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
 	    
 	    if($this->Session->read('User')){
-	    	
-	    	$this->Auth->allow('reporte','search');
-	    	
-	    	if($this->Session->read('User.perfil_id') == 100){
-		    	//admin options
-		    	$this->Auth->allow('index','add','isUploadedFile','edit');
+	    	//auth user logged in
+	    	#general user logged in actions
+	    	$this->Auth->allow('reporte','search','situacionactual','analisisttt','opinion','isUploadedFile');
+	    	if(!empty($this->Session->read['User']) && $this->Session->read('User.perfil_id') == 100){
+		    	#admin options
+		    	$this->Auth->allow('index','add','edit');
 	    	}
-	    }
+	    }else{
+	    	//facebook user
+    		if ($this->Connect->user()){
+    			$this->Auth->allow('reporte','search','situacionactual','analisisttt','opinion','isUploadedFile');
+    			$usrfb = $this->Connect->user();
+    			$result = $this->User->find('all',array('conditions'=>array('User.facebook_id'=>$usrfb['id'])));
+				$hasPermissions = false;
+				if (count($result) == 1) {
+					#un resultado
+					if ($result[0]['User']['perfil_id'] == 100) { $hasPermissions = true; }
+				}else{
+					#muchos resultados
+					foreach ($result as $user) {
+						if ($user['User']['perfil_id'] == 100) { $hasPermissions = true; }
+					}	
+				}
+				if ($hasPermissions):
+					$this->Auth->allow('index','add','edit');
+					#'es FB y tiene permisos admin';
+				else:
+					$this->Auth->deny(array('index','add','edit'));
+					#general user logged in actions
+	    			#$this->Auth->allow('reporte','search');
+					$thisActionAllowed = in_array($this->Auth->request->params['action'], $this->Auth->allowedActions);
+					if (!$thisActionAllowed) {
+						$this->Session->setFlash(__('Solo para admins.'));
+						$this->redirect('/');	
+					}
+					
+					#'es FB y NO tiene permisos';
+				endif;
+    		}
+    	}
 	}
 
 /**
@@ -140,15 +171,26 @@ class PostsController extends AppController {
 			throw new NotFoundException(__('Reporte no encontrado'));
 		}
 		//$this->Post->recursive = 4;
+
 		$post = $this->Post->read(null, $id);
 		#echo "<pre>";
 		#print_r($this->Post);
 		#echo "</pre>";
-		//debug($post);
-		$this->set('post', $post);
-		if(isset($post['Comment']) && isset($post['Comment'][0])):
+		#$this->Comment->recursive = 3;
+		#$comments = $this->Comment->find('all',array('conditions'=>'Comment.post_id ='.$id,'fields'=>'user_id'));
+		#debug( $this->User->findById(array($comments[0]['Comment']['user_id'],$comments[2]['Comment']['user_id'])) );
+		
+		
+		/*if(isset($post['Comment']) && isset($post['Comment'][0])):
 			$this->set('users', $this->User->findById($post['Comment'][0]['user_id']));
-		endif;
+		endif;*/
+		
+		$i = 0;
+		foreach ($post['Comment'] as $comment) {
+			array_push($post['Comment'][$i++], $this->User->findById($comment['user_id']) );
+		}
+		$this->set('post', $post);
+		#debug( $post );
 		//$this->set('user', $this->Post->User->find('all'));
 	}
 
@@ -185,10 +227,10 @@ class PostsController extends AppController {
 	        if (move_uploaded_file(
 	        	strval(
 	        		$val['form']['images']['tmp_name'][0]),
-	        		ROOT.DS.APP_DIR.'/webroot/files/'.$val['form']['images']['name'][0]
+	        		ROOT.DS.APP_DIR.'/webroot/files/'.strval(date("dmY-hms").'_'.$val['form']['images']['name'][0])
 	        		)
 	        ){
-	        	return strval($val['form']['images']['name'][0]);
+	        	return strval(date("dmY-hms").'_'.$val['form']['images']['name'][0]);
 	        }
 	    }
 	    return false;

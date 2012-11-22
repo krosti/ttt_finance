@@ -41,9 +41,23 @@ class AdministratorController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Article');
+	public $uses = array('Article','User');
 
 	public $layout = "backend";
+
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    
+	    if($this->Session->read('User')){
+	    	
+	    	#$this->Auth->allow('reporte','search');
+	    	
+	    	if($this->Session->read('User.perfil_id') == 100){
+		    	//admin options
+		    	$this->Auth->allow('index');
+	    	}
+	    }
+	}
 
 /**
  * Displays a view
@@ -52,6 +66,11 @@ class AdministratorController extends AppController {
  */
 	public function display() {
 		
+	}
+
+	public function index() {
+		$this->set('users',$this->User->find('all'));
+		$this->set('usersActivos',$this->User->findByEstadoId('2'));
 	}
 
 	public function posts() {

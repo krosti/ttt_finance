@@ -119,8 +119,11 @@ ui_home = {
 		$('.agregarComment').on('click',function(){
 			var url = ($(this).hasClass('reporte')) ? '../../widget/graficador/' : 'widget/graficador/';
 			$.ajax(url+$(this).attr('id'),{
+				beforeSend:function(){
+					document.getElementById('spinner').style.display = 'block';
+				},
 				success: function(data){
-					
+					document.getElementById('spinner').style.display = 'none';
 					$('#graphBOX').empty().append(data).dialog({
 						title:'Nuevo Comentario',
 						modal:true,
@@ -128,7 +131,8 @@ ui_home = {
 						draggable: false,
 						show:'fold',
 						hide:'fold',
-						resizable: false
+						resizable: false,
+						dialogClass: 'fixed-dialog'
 					});
 				}
 			});	

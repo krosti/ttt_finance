@@ -52,7 +52,12 @@ class User extends AppModel {
 			'email3' => array(			
 				'rule' => array('email', true),
 				'message' => 'Por favor indique una direccion de correo electronico valida.'
-			), 	
+			),
+			'check_email_exists'=>array(
+				'rule'=>'check_email_exists',
+				'message'=>'Direccion de correo existente.',
+				'on'=>'create'
+			)
 		),
 		'emailrep' => array(
 			'emailrep2' => array(		

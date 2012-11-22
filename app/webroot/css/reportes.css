@@ -118,6 +118,12 @@
 		border-right: 1px solid #DDD;
 		box-shadow: 1px 1px #BFBFBF;
 	}
+	.reportes .bottom .comentarioMensaje{
+		margin-top: 10px;
+		color: #222;
+		font-size: 12px;
+		width: 860px;
+	}
 	.reportes .bottom .comentarioAttach{
 		float: right;
 		border: 1px solid;

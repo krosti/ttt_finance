@@ -35,7 +35,7 @@
 				<?php echo $this->Html->image('ttt.png'); ?>
 			</span>
 			<section>
-				<span>please log-in with your account:</span>
+				<span>usuario conectado: <?php echo $this->Session->read('User.username') ?></span>
 			</section>
 		</header>
 		
@@ -56,6 +56,8 @@
 		</div>
 		<?php #echo $this->element('sql_dump'); ?>
 	</div>
+
+	<footer>BorealDev | soporte@borealdev.com</footer>
 </body>
 
 	<!-- include ExtJS -->

@@ -40,16 +40,16 @@
 				<div class="der_slide">
 					<?php $cuerpoHeight = ($slideNum != '') ? 'cuerpo_slide_fix': ''; ?>
 					<span class="cuerpo_slide <?php echo $cuerpoHeight; ?>">
-						<?php $postLength = ($slideNum != '') ? 260: 220; ?>
-						<?php echo $this->Text->truncate($analisisTTT[$r]['Post']['descripcion'], $postLength, array('ending' => '...','exact' => false) ); ?>
+						<?php $postLength = ($slideNum != '') ? 260: 200; ?>
+						<?php echo $this->Text->truncate($analisisTTT[$r]['Post']['descripcion'], $postLength, array('ending' => '...','exact' => true) ); ?>
 					</span>
-					<span class="vermas_button">
-						<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
-							<?php echo $this->Html->link('Ver M&aacute;s','/posts/reporte/'.$analisisTTT[$r]['Post']['id'],array('escape'=>false)); ?>
-						<?php else: ?>
-							<?php echo $this->Html->link('Ver M&aacute;s','#'.$analisisTTT[$r]['Post']['id'],array('escape'=>false,'class'=>$mostrarDialog)); ?>
-						<?php endif; ?>
-					</span>
+				</div>
+				<div class="vermas_button">
+					<?php if ($hayUsuarioFb || $hayUsuarioTtt): ?>
+						<?php echo $this->Html->link('Ver M&aacute;s','/posts/reporte/'.$analisisTTT[$r]['Post']['id'],array('escape'=>false)); ?>
+					<?php else: ?>
+						<?php echo $this->Html->link('Ver M&aacute;s','#'.$analisisTTT[$r]['Post']['id'],array('escape'=>false,'class'=>$mostrarDialog)); ?>
+					<?php endif; ?>
 				</div>
 				<div class="separacion_slide"></div>
 				<div class="compartir_slide">

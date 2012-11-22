@@ -58,7 +58,7 @@ class AppController extends Controller {
         ),
         'Facebook.Connect' => array('model' => 'User'),
         #"TwitterBootstrap.TwitterBootstrap"
-        //'DebugKit.Toolbar'
+        #'DebugKit.Toolbar'
     );
 
 
@@ -69,23 +69,27 @@ class AppController extends Controller {
 		if ($this->Connect->user()):
 			$usrLoggedIn = $this->Connect->user();
 			$this->set('facebook_user', $usrLoggedIn );
-			$this->Auth->allow('reporte');		
-			$this->Auth->allow('situacionactual');
+			#$this->Auth->allow('situacionactual');
 			$this->Auth->allow('nosotros');
 			$this->Auth->allow('casosexito');
 			$this->Auth->allow('eventos');
 			$this->Auth->allow('divan');
-			$this->Auth->allow('analisisttt');
-			$this->Auth->allow('opinion');
+			#$this->Auth->allow('analisisttt');
+			#$this->Auth->allow('opinion');
 			$this->Auth->allow('usuario_creado');
-			$this->Auth->allow('posts');
-			$this->Auth->allow('graficador');
-
-			$result = $this->User->find('first',array('conditions'=>array('User.facebook_id'=>$usrLoggedIn['id'])));
-			if ($result['User']['username'] != ''):
-				$this->set('fb_user_has_account', $result );
+			
+			$result = $this->User->find('all',array('conditions'=>array('User.facebook_id'=>$usrLoggedIn['id'])));
+			$hasAccount = false;
+			foreach ($result as $user) {
+				if ($user['User']['username'] != '') {
+					$hasAccount = true;
+					$val = $user;
+				}
+			}
+			if ($hasAccount):
+				$this->set('fb_user_has_account', $val );
 			endif;
-			#$this->Session->setFlash('Usuario Facebook Conectado !');
+
 		elseif ($this->Session->read('User')):
 			$this->Auth->allow('reporte');		
 			$this->Auth->allow('situacionactual');

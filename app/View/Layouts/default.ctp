@@ -33,7 +33,7 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','jquery-ui-1.8.22.custom','tooltips'));
+		echo $this->Html->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -51,7 +51,7 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 		$hayUsuarioTtt = ($this->Session->read('User')) ? true : false;
 		$mostrarDialog = ( (!$hayUsuarioFb && !$hayUsuarioTtt) ) ? 'loginPopUp' : '';
 	?>
-
+	<a href="comment"></a>
 	<div class="flash_message" style="color:red; background:yellow;"><?php echo $this->Session->flash('auth'); ?></div>
 
 	<div class="cuerpo">
@@ -80,7 +80,7 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 									'perms' => 'email,publish_stream',
 									'custom' => true,
 									'redirect' => '/',
-									'label'=>'LogIn'
+									'label'=>'Login'
 									))
 								.'</div>';
 						}
@@ -90,8 +90,8 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 
 				<?php echo $this->Html->image('logofb.png',array('url'=>'/')); ?>
 				
-				<span><?php 
-					if ($this->Session->read('User')) {
+				<span><?php 					
+					if ($this->Session->read('User') && empty($fb_user_has_account) ) {
 						echo $this->Html->link("Cerrar Sesión","/users/logout");
 					} else{
 						echo (isset($fb_user_has_account) && $fb_user_has_account) 

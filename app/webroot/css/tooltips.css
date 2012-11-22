@@ -108,3 +108,9 @@ div > .tooltip, li > .tooltip, a > .tooltip, span > .tooltip {
 			*display: none !important;
 			*display: none;
 		}
+
+.tooltip .dot{
+	margin-top: 1px;
+	display: inline;
+	margin-bottom: -3px;
+}

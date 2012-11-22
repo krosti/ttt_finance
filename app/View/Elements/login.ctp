@@ -1,5 +1,5 @@
 <?php #debug( $this->Session->read('user')).'this'; ?>
-<?php $dot = $this->Html->image('dot.png'); ?>
+<?php $dot = $this->Html->image('dot.png',array('class'=>'dot') ); ?>
 
 <!--nocache-->
 <div class = "box_login">
@@ -9,12 +9,18 @@
 		<div class="SessionDetails">
 			<span> 
 			<?php 
+				$userAdmin = ($this->Session->read('Auth.User.perfil_id') == 100) ? true : false;
+				$userAdminImg = ($userAdmin) ? $this->Html->image('boss.png') : '';
+				$userAdminOpts = ($userAdmin) ? $dot.'Usuario Administrador de TTTOnline' : '';
+
 				$tooltip = "<span class='tooltip'>".
 								"<span></span>".
 								$this->Html->image('logofooter.png')."<br><br>".
 								$dot."Usuario registrado en TTT".
+								" <br> ".
+								$userAdminOpts.
 							"</span>";
-
+				#debug($this->Session->read());
 				$userLoggedId = (isset($fb_user_has_account) && $fb_user_has_account) ? "<a href='#' class='usrCheck'>".$tooltip."</a>" : "";
 				echo '<span class="name">'.
 						$facebook_user['name'] .

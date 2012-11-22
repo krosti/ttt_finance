@@ -8,7 +8,7 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 	public $name = 'Users';
 	public $helpers = array('Html', 'Form','Session','Facebook.Facebook');
-	public $uses = array('User','Application');
+	public $uses = array('User','Comment','Post','Application');
 	public $components = array('Email',
 		#'Auth' => array( 'authorizedActions' => array('account','add') ) 
 		);
@@ -99,7 +99,7 @@ class UsersController extends AppController {
 			$userData['User'] = $user['registration'];
 			$userData['User']['location'] = $userData['User']['location']['name'];
 			//$userData['User']['username'] = $userData['User']['email'];
-			debug($user);
+			//debug($user);
 			
 
 			if ($this->User->save($userData)) {

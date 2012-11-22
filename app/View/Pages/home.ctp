@@ -65,7 +65,8 @@
 		<div class="cuerpo_seccion">
 			<div id="slideshow">
 				<div id="slidesContainer">
-			<?php echo $this->element('post_home', array('analisisTTT' => $opiniones, 'slideNum' => 4,'i'=>3) ); ?>
+					<?php #echo $this->element('post_home', array('analisisTTT' => $opiniones, 'slideNum' => 4,'i'=>3) ); ?>
+					<?php echo $this->element('opiniones',array('opiniones'=>$opiniones) ); ?>
 				</div>
 			</div>
 		</div>

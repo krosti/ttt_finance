@@ -9,14 +9,14 @@
 		<div class="fecha"><?php echo $this->Time->format('d F Y h:m',$post['Post']['created']); ?></div>
 		<div class="social"><?php echo $this->element('opts_posts', array('Post' => $post, 'reporte'=>'reporte') ); ?></div>
 	</div>
-	<div class="left">
-		<div class="infoTag">
-
+	<?php if ($post['Post']['tipo_id'] != 3): ?>
+		<div class="left">
+			<div class="infoTag"></div>
+			<div class="graficoTag">
+				<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>770,'onError'=>'error_handler.imageError(this)') ); ?>
+			</div>
 		</div>
-		<div class="graficoTag">
-			<?php echo $this->Html->image('/files/'.$post['Post']['image'],array('class'=>'imb_ppal_slide','width'=>770,'onError'=>'error_handler.imageError(this)') ); ?>
-		</div>
-	</div>
+	<?php endif ?>
 	<div class="right">
 		<div class="tituloPost"><?php echo $post['Post']['titulo'] ?></div>
 		<div class="descripcion"><?php echo $post['Post']['descripcion'] ?></div>
@@ -31,25 +31,26 @@
 			</span>
 		</div>
 		<?php #echo debug($users); ?>
+
 		<?php if (count($post['Comment']) > 0) : ?>
 			<?php foreach ($post['Comment'] as $comentario) { ?>
 				<div class="comentarioBox">
-					<div class="comentarioTitulo"><?php echo 'Re: '.$post['Post']['titulo'] ?> </div>
-					<div class="comentarioFrom"><?php echo 'De: '.$users['User']['first_name'].' '.$users['User']['last_name'] ?> </div>
-					<div class="comentarioFecha"><?php echo $comentario['created'] ?> </div>
-					<div class="comentarioMensaje"><?php echo $comentario['mensaje'] ?> </div>
+					<div class="comentarioTitulo"><?php echo 'Re: '.$post['Post']['titulo']; ?> </div>
+					<div class="comentarioFrom"><?php echo 'De: '.$comentario[0]['User']['username']; ?> </div>
+					<div class="comentarioFecha"><?php echo $this->Time->format('d/m/Y h:m',$comentario['created']); ?> </div>
+					<div class="comentarioMensaje"><?php echo $comentario['mensaje']; ?> </div>
 					<div class="comentarioAttach">
 						<?php 
-							$imagenAttach = ($comentario['image']) ? $comentario['image'] : false; 
+							$imagenAttach = ($comentario['image']) ? $comentario['image'] : false;
 							if($imagenAttach):
 								echo $this->Html->image('/files/'.$imagenAttach,array('width'=>30) );
 							else:
-								echo 'sin img';
+								echo '...';
 							endif;
 
 						?>
 					</div>
-					<div class="social"><?php echo $this->element('opts_posts', array('Post' => $comentario['id']) ); ?></div>
+					<div class="social"><?php echo $this->element('opts_posts', array('post' => $post) ); ?></div>
 				</div>	
 			<?php } ?>
 		<?php else: ?>
