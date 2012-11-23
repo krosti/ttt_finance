@@ -1,12 +1,13 @@
 <div class="comments index">
+	<?php #echo debug($comments); ?>
 	<h2><?php echo __('Comments'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('mensaje'); ?></th>
-			<th><?php echo $this->Paginator->sort('post_id'); ?></th>
+			<!--th><?php echo $this->Paginator->sort('post_id'); ?></th-->
 			<th><?php echo $this->Paginator->sort('comment_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+			<!--th><?php echo $this->Paginator->sort('user_id'); ?></th-->
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -15,15 +16,15 @@
 	<tr>
 		<td><?php echo h($comment['Comment']['id']); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['mensaje']); ?>&nbsp;</td>
-		<td>
+		<!--td>
 			<?php echo $this->Html->link($comment['Post']['titulo'], array('controller' => 'posts', 'action' => 'view', $comment['Post']['id'])); ?>
-		</td>
+		</td-->
 		<td>
 			<?php echo $this->Html->link($comment['Comment']['id'], array('controller' => 'comments', 'action' => 'view', $comment['Comment']['id'])); ?>
 		</td>
-		<td>
+		<!--td>
 			<?php echo $this->Html->link($comment['User']['name'], array('controller' => 'users', 'action' => 'view', $comment['User']['id'])); ?>
-		</td>
+		</td-->
 		<td><?php echo h($comment['Comment']['created']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $comment['Comment']['id'])); ?>

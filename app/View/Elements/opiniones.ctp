@@ -45,14 +45,9 @@
 						<?php echo $this->Html->link('Ver M&aacute;s','#'.$opinion['Post']['id'],array('escape'=>false,'class'=>$mostrarDialog)); ?>
 					<?php endif; ?>
 				</div>
-				<?php if (!$opinion['User']['facebook_id'] || !$opinion['User']['image']): ?>
+				<?php if ((!$opinion['User']['facebook_id'] || !$opinion['User']['image']) && $opinion['Post']['image']): ?>
 					<div class="comentarioAttach">
-						<?php 
-							$imagenAttach = ($opinion['Post']['image']) ? $opinion['Post']['image'] : false;
-							if($imagenAttach):
-								echo $this->Html->image('/files/'.$imagenAttach,array('width'=>30) );
-							endif;
-						?>
+						<?php echo $this->Html->image('/files/'.$opinion['Post']['image'],array('width'=>30) );?>
 					</div>
 				<?php endif ?>
 			</div>

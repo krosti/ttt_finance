@@ -15,7 +15,7 @@ class Comment extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'mensaje';
+	#public $displayField = 'mensaje';
 
 /**
  * Validation rules
