@@ -194,6 +194,7 @@ Cache::config('_bancha_api_', array(
 CakePlugin::load('Facebook');
 CakePlugin::load('DebugKit');
 CakePlugin::load('AjaxMultiUpload');
+CakePlugin::load(array('Minify' => array('routes' => true)));
 
 Configure::write('Site.url','http://ttt.borealdev.com.ar');
 #CakePlugin::load('TwitterBootstrap');

@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	public $helpers = array('Html','Session','Form','Facebook.Facebook');
+	public $helpers = array('Html','Session','Form','Facebook.Facebook','Minify.Minify');
 	public $uses = array('User');
 	#public $components = array('Facebook.Connect');
 	/*public $components = array('Session',
@@ -63,6 +63,12 @@ class AppController extends Controller {
 
 
 	function beforeFilter() {
+		if ($this->name == 'CakeError') {  
+			debug($this);
+			$this->Session->setFlash(__('URL no encontrada en TTTOnline'));
+	        $this->redirect('/');  
+	    }
+
 		//global url adress
 		$this->set('site_url',Configure::read('Site.url'));
 

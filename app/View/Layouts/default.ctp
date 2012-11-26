@@ -33,14 +33,14 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
-
+		#echo $this->Html->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
+echo $this->Minify->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
+#echo $this->Minify->script(array('jquery', 'interface'));
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
 	<?php echo $this->Html->script(array(
-		'jquery',
 		'jsTTT/error-handler'
 	)); ?>
 	
@@ -194,14 +194,11 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 <!--please log in user-->
 <div id="box_login_dialog" style="display:none;"> <?php echo $this->element('login_dialog'); ?> </div>
 
-<!--chrome fix-->
-<?php #echo $this->element('graficador'); ?>
-
 </body>
 <?php echo $this->Facebook->init(); ?>
 
-
-<?php echo $this->Html->script(array(
+<?php #echo $this->Html->script(array(
+	echo $this->Minify->script(array(
 		'jquery',
 		'jquery-ui-1.9.0.custom',
 		'spin.min',
