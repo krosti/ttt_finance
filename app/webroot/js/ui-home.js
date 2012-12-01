@@ -330,5 +330,13 @@ ui_home = {
 				e.preventDefault();
 			}
 		});
-	}
+	},
+
+	marquesinaAnimada: function(contenedor){
+		/*
+		* require: jquery.jstockticker-1.1.js
+		* desc: anima la marquesina
+		*/
+		$(contenedor).jStockTicker({interval: 45});
+	},
 }

@@ -3,7 +3,7 @@ sliderValores = {
 
   },
   iniciar_sliderValores: function (){/*Div gral, Contenedor de slides, slide, Medida ancho del slide*/
-	    $("#slider").mopSlider({
+	    /*$("#slider").mopSlider({
 			'w':845,
 			'h':108,
 			'sldW':800,
@@ -12,6 +12,6 @@ sliderValores = {
 			'indi':"",
 			'type':'tutorialzine',
 			'shuffle':0
-		});
+		});*/
     }
 }

@@ -2,9 +2,13 @@
 	width: 960px;
 	height: 126px;
 	margin-top: 4px;
+	margin-bottom: 6px;
 	float: left;
-	font-family: Open Sans, Lucida Grande, Helvetica;
+	font-family: 'Open Sans', Lucida Grande, Helvetica;
 	font-weight: 100;
+}
+#indices_container #slider{
+	position: relative;
 }
 #indices_container a:link, #indices_container a:visited, #indices_container a:hover{ text-decoration: none; color: #207BA2;}
 #indices_container a:hover{ text-decoration: none; color: #3181A3;}

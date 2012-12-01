@@ -34,7 +34,7 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 		echo $this->Html->meta('icon');
 
 		#echo $this->Html->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
-echo $this->Minify->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
+echo $this->Minify->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips','stockTicker'));
 #echo $this->Minify->script(array('jquery', 'interface'));
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -177,6 +177,9 @@ echo $this->Minify->css(array('index','slider','jquery-ui-1.8.16.custom','toolti
 			<div id="copy">
 				Copyright © 2012 Tritango Traders. Todos los derechos reservados.  
 			</div>
+			<div id="design" style="padding-top: 38px;margin-right: -240px;float: right;">
+				<?php echo $this->Html->image('borealdesign.png',array('url'=>'http://borealdev.com')); ?>
+			</div>
 			<div class="disclaimer">
 				Bienvenido a TriTangoTraders. Este blog sólo refleja nuestra expectativa respecto al mercado. Es por ello que nada de lo que aquí se produce debe ser tomado como recomendación o consejo de compra o venta. Nuestras visiones son meramente con fines recreativos y educativos.
 				<br/>
@@ -207,7 +210,7 @@ echo $this->Minify->css(array('index','slider','jquery-ui-1.8.16.custom','toolti
 		'ui-home',
 		'lightbox',
 		'valores',
-		//'jquery.jstockticker-1.1',
+		'jquery.jstockticker-1.1',
 		//ourAPPS
 		//'jsTTT/application',
 		'jsTTT/crawler-with-yahooquery',

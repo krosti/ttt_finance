@@ -35,7 +35,7 @@
 		  crawler.queryYQL(stringAcciones,null,__updateInterval);
 		  crawler.getFeeds();
 		});
-		//ui.marquesinaAnimada('#datosLive');
+		ui_home.marquesinaAnimada('#slider');
 
 		slider.iniciar_slider($('#slideshow'), $('#slidesContainer'),$('.slide'),450,"");
 		slider.iniciar_slider($('#slideshow2'), $('#slidesContainer2'),$('.slide2'),450,"2");
