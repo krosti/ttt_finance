@@ -62,9 +62,9 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => '190.228.29.67',
-		'login' => 'krosti',
-		'password' => 'cuadrilatero2',
+		'host' => '127.0.0.1',
+		'login' => 'root',
+		'password' => '',
 		'database' => 'ttt',
 		'prefix' => '',
 		'encoding' => 'utf8',

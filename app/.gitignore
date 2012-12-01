@@ -1,5 +1,6 @@
 .DS_Store
 
+/Config/database.php
 /tmp/cache/
 /tmp/cache/models/bancha_*
 /tmp/cache/models/cake_*
