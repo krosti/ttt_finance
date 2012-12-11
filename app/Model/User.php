@@ -136,6 +136,7 @@ class User extends AppModel {
 	 */
 	function check_username_exists($check) {
 		// get User by username
+		//print_r($check);
 		if(!empty($check)) {
 			$user = $this->find('first',array('conditions'=>array('User.username'=>$check)));
 			// invalid User
@@ -143,6 +144,23 @@ class User extends AppModel {
 		}		
 	return TRUE;
 	}	
+
+	/**
+	 * Check a email exists in the database
+	 * @param array $check
+	 * @return bool
+	 */
+	function check_email_exists($check) {
+		// get User by username
+		if(!empty($check)) {
+			$email = $this->find('first',array('conditions'=>array('User.email'=>$check)));
+			// invalid User
+			if(!empty($email)) { return FALSE; }
+		}		
+	return TRUE;
+	}
+
+
 	/**
 	 * BeforeSave Callback
 	 */

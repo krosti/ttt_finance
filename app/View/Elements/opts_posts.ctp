@@ -1,6 +1,6 @@
 <div class="fbwrapper">
 	<?php 
-		$urlToLink = 'https://ttt.borealdev.com.ar/posts/reportes/'.$post['Post']['id'];
+		$urlToLink = 'https://tttonline.com.ar/posts/reportes/'.$post['Post']['id'];
 		echo $this->Facebook->like(array(
 			'href' => $urlToLink,
 			'font' => 'verdana', 

@@ -21,8 +21,20 @@
   background:url(../img/flechader.jpg) no-repeat ;
   z-index:2;
 }
-#leftControl3{ top:181px; right:32px; border-radius: 7px; }
-#rightControl3{ top:181px; right:7px; border-radius: 7px; }
+#leftControl3{ 
+  top: 181px;
+  right: 42px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 1px 1px #999;
+  background:white url(../img/glyph_icons.png) no-repeat -195px -55px;
+}
+#rightControl3{ 
+  top: 181px;
+  right: 15px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 1px 1px #999;
+  background:white url(../img/glyph_icons.png) no-repeat -243px -55px;
+}
 /*END shared*/
 /*********************************************/
 /*********************************************/
@@ -86,10 +98,15 @@
 }
 #slideshow3 #slidesContainer3 {
   margin:0 auto;
-  overflow:auto; /* allow scrollbar */
+  overflow:none; /* allow scrollbar */
   position:relative;
   width:465px;
-  height: 210px;
+  height: 200px;
+  /*box-shadow: 0px 10px 3px 1px #999;*/
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-left: 2px;
 }
 
 #slideshow3 #slidesContainer3 .slide3 {

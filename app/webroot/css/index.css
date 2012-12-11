@@ -1,6 +1,6 @@
 body{
 	margin:0px;
-	background:url(../images/bg.png) repeat-x #fff;
+	background:url(../images/bg2.png) repeat-x #fff;
 	color:#706f6f;
 	font-family:Lucida Grande, Helvetica, sans-serif;
 	font-size:11px;
@@ -351,7 +351,7 @@ a:hover{
 			height: 25px;
 		}
 			.slide3 .caja_slide{
-				padding-top:5px;
+				padding-top:0px;
 				float:left;
 			}
 			.izq_slide{
@@ -601,7 +601,7 @@ a:hover{
 		}
 #footer{
 	float: left;
-	margin-top: 145px;
+	margin-top: 134px;
 	width: 960px;
 }
 	#logofooter{

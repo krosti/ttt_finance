@@ -19,7 +19,7 @@
 						<tbody>
 							<tr>
 							<td style="font-family:&#39;Lucida Sans&#39;, Lucida, Arial; font-size:10px; line-height:12px; color:#000000; text-align:center;" bgcolor="#ddd">
-								<img src="http://ttt.borealdev.com.ar/img/logo.png">
+								<img src="http://tttonline.com.ar/img/logo.png">
 							</td>
 							</tr>
 						</tbody>

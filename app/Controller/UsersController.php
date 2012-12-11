@@ -26,7 +26,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
-	    $this->Auth->allow('login', 'logout','add','a987156428774','testEmail');
+	    $this->Auth->allow('login', 'logout','add','a987156428774','testEmail','nuevo_usuario');
 	}
 	
 	public function a987156428774($id){
@@ -73,7 +73,7 @@ class UsersController extends AppController {
 		if($user){
 		  //session_destroy();
 		  $logoutUrl = $facebook->getLogoutUrl(/*array(
-		  	'redirect_uri'  => 'http://ttt.borealdev.com.ar/',
+		  	'redirect_uri'  => 'http://tttonline.com.ar/',
 		  ));
 		  echo "<script>top.location.href = '$logoutUrl'; </script>";
 		  $this->set('logoutUrl',$logoutUrl);
@@ -109,8 +109,8 @@ class UsersController extends AppController {
 				
 				$savedUser = $this->User->find('first',array('conditions'=>array('User.email'=>$userData['User']['email'])));
 				$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-				$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$savedUser['User']['id'];
-				$sitioweb = "http://ttt.borealdev.com.ar";
+				$mensaje2 = "http://tttonline.com.ar/users/a987156428774/".$savedUser['User']['id'];
+				$sitioweb = "http://tttonline.com.ar";
 				$InfoAux = array(
 					"nombre" => $user['registration']['first_name'],
 					"apellido" => $user['registration']['last_name'],
@@ -124,8 +124,8 @@ class UsersController extends AppController {
 
 				//Envio de e-mail para la confirmaciòn
 				$this->Email->to = $user['registration']['email'];
-				$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
-				$this->Email->from = "contacto@ttt.com.ar";					
+				$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com.ar';
+				$this->Email->from = "contacto@tttonline.com.ar";					
 				$this->Email->template = 'aviso';				
 				$this->Email->sendAs = 'html';
 				$this->set('infos', $InfoAux);
@@ -147,8 +147,8 @@ class UsersController extends AppController {
 				$userData = $this->data;
 				$savedUser = $this->User->find('first',array('conditions'=>array('User.email'=>$userData['User']['email'])));
 				$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-				$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$savedUser['User']['id'];
-				$sitioweb = "http://ttt.borealdev.com.ar";
+				$mensaje2 = "http://tttonline.com.ar/users/a987156428774/".$savedUser['User']['id'];
+				$sitioweb = "http://tttonline.com.ar";
 				$InfoAux = array(
 					"nombre" => $userData['User']['first_name'],
 					"apellido" => $userData['User']['last_name'],
@@ -162,8 +162,8 @@ class UsersController extends AppController {
 
 				//Envio de e-mail para la confirmaciòn
 				$this->Email->to = $userData['User']['email'];
-				$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com';
-				$this->Email->from = "contacto@ttt.com.ar";					
+				$this->Email->subject = 'Aviso desde el Sitio Web | TTTOnline.com.ar';
+				$this->Email->from = "contacto@tttonline.com.ar";					
 				$this->Email->template = 'aviso';				
 				$this->Email->sendAs = 'html';
 				$this->set('infos', $InfoAux);
@@ -253,8 +253,8 @@ class UsersController extends AppController {
 			);
 		$user = $this->User->find('first',array('conditions'=>array('User.email'=>'ceafernando+test@gmail.com')));
 		$mensaje = "Para activar tu cuenta haz click en el link de abajo.";
-		$mensaje2 = "http://ttt.borealdev.com.ar/users/a987156428774/".$user['User']['id'];
-		$sitioweb = "http://ttt.borealdev.com.ar";
+		$mensaje2 = "http://tttonline.com.ar/users/a987156428774/".$user['User']['id'];
+		$sitioweb = "http://tttonline.com.ar";
 		$InfoAux = array(
 			"nombre" => $Info['registration']['first_name'],
 			"apellido" => $Info['registration']['last_name'],

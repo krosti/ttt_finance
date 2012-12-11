@@ -1,8 +1,8 @@
 #indices_container{
 	width: 960px;
 	height: 126px;
-	margin-top: 4px;
-	margin-bottom: 6px;
+	margin-top: -15px;
+	margin-bottom: -33px;
 	float: left;
 	font-family: 'Open Sans', Lucida Grande, Helvetica;
 	font-weight: 100;
@@ -97,13 +97,16 @@
 	border-right: 2px groove white;
 	margin-right: 5px;
 	padding-right: 6px;
-	width:78px;
+	width:79px;
 }
 	.box_s span{
-		clear:both;
 		float:left;
 		margin-left: 5px;
 		color:#222;
+	}
+
+	.box_s .diff{
+		clear: both;
 	}
 	.box_s .diff .positive, .box_s .perc .positive{ color: #329634; margin-left:0; padding-left: 0; background: none;}
 	.box_s .diff .negative, .box_s .perc .negative{ color: #c80509; margin-left:0; padding-left: 0; background: none;}

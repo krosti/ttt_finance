@@ -196,7 +196,7 @@ CakePlugin::load('DebugKit');
 CakePlugin::load('AjaxMultiUpload');
 CakePlugin::load(array('Minify' => array('routes' => true)));
 
-Configure::write('Site.url','http://ttt.borealdev.com.ar');
+Configure::write('Site.url','http://tttonline.com.ar');
 #CakePlugin::load('TwitterBootstrap');
 
 header('P3P: CP="CAO PSA OUR"');
