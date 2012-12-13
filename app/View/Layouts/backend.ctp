@@ -16,7 +16,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array(/*'resources/css/ext-all',*/'ttt-clients-samples','lightbox','stockTicker','backend'));
+		echo $this->Html->css(array(/*'resources/css/ext-all',*/'ttt-clients-samples','lightbox','stockTicker','backend','/wysihtml5/css/stylesheet.css'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

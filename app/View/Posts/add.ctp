@@ -1,25 +1,33 @@
-<script type="text/javascript" src="http://cdn.aloha-editor.org/latest/lib/require.js"></script>
- 
-<!-- load the Aloha Editor core and some plugins -->
-<script src="http://cdn.aloha-editor.org/latest/lib/aloha.js"
-                   data-aloha-plugins="common/ui,
-                                        common/format,
-                                        common/list,
-                                        common/link,
-                                        common/paste,
-                                        common/undo">
-</script>
+<?php echo $this->Html->script(array('/wysihtml5/parser_rules/advanced.js','/wysihtml5/dist/wysihtml5-0.3.0.min.js') ); ?>
+<?php echo $this->Html->css(array('wysihtml5/css/stylesheet.css','/wysihtml5/css/toolbar.css')); ?>
 
-<!-- load the Aloha Editor CSS styles -->
-<link href="http://cdn.aloha-editor.org/latest/css/aloha.css" rel="stylesheet" type="text/css" />
-
-<!-- make all elements with class="editable" editable with Aloha Editor -->
-<script type="text/javascript">
-     Aloha.ready( function() {
-            var $ = Aloha.jQuery;
-            $('.editable').aloha();
-     });
-</script>
+<div id="wysihtml5-editor-toolbar">
+	<ul class="commands">
+	  <li data-wysihtml5-command="bold" title="Make text bold (CTRL + B)" class="command"></li>
+	  <li data-wysihtml5-command="italic" title="Make text italic (CTRL + I)" class="command"></li>
+	  <li data-wysihtml5-command="insertUnorderedList" title="Insert an unordered list" class="command"></li>
+	  <li data-wysihtml5-command="insertOrderedList" title="Insert an ordered list" class="command"></li>
+	  <li data-wysihtml5-command="createLink" title="Insert a link" class="command"></li>
+	  <!--li data-wysihtml5-command="insertImage" title="Insert an image" class="command"></li>
+	  <li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" title="Insert headline 1" class="command"></li>
+	  <li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" title="Insert headline 2" class="command"></li-->
+	  <li data-wysihtml5-command-group="foreColor" class="fore-color" title="Color the selected text" class="command">
+	    <ul>
+	      <!--li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="silver"></li>
+	      <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="gray"></li>
+	      <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="maroon"></li-->
+	      <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red"></li>
+	      <!--li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="purple"></li-->
+	      <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green"></li>
+	      <!--li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="olive"></li>
+	      <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="navy"></li-->
+	      <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue"></li>
+	    </ul>
+	  </li>
+	  <li data-wysihtml5-command="insertSpeech" title="Insert speech" class="command"></li>
+	  <li data-wysihtml5-action="change_view" title="Show HTML" class="action"></li>
+	</ul>
+</div>
 
 <!--END EDITOR-->
 
@@ -29,7 +37,7 @@
 			<legend><?php echo __('Agregar Nuevo Posteo'); ?></legend>
 		<?php
 			echo $this->Form->input('titulo');
-			echo $this->Form->input('descripcion',array('rows'=>25,'class'=>'editable') );
+			echo $this->Form->input('descripcion',array('rows'=>25,'class'=>'editable','id'=>'wysihtml5-textarea') );
 			#echo $this->Form->input('serie_datos');
 			echo $this->Form->input('serie_datos_pie',array('label'=>'Pie de foto') );
 			echo $this->Form->input('tipo_id');
@@ -51,3 +59,11 @@
 		<li><?php echo $this->Html->link(__('New Tipo'), array('controller' => 'tipos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+
+<script>
+var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
+  toolbar:      "wysihtml5-editor-toolbar", // id of toolbar element
+  stylesheets: ["../wysihtml5/css/stylesheet.css"],
+  parserRules:  wysihtml5ParserRules // defined in parser rules set 
+});
+</script>

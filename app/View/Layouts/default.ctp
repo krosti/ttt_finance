@@ -33,7 +33,7 @@ setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
 	<?php
 		echo $this->Html->meta('icon');
 
-		#echo $this->Html->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips'));
+		echo $this->Html->css(array('/wysihtml5/css/stylesheet.css'));
 		echo $this->Minify->css(array('index','slider','jquery-ui-1.8.16.custom','tooltips','stockTicker'));
 		#echo $this->Minify->script(array('jquery', 'interface'));
 		echo $this->fetch('meta');
