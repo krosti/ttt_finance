@@ -1,13 +1,16 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('FB', 'Facebook.Lib');
+
 /**
  * Posts Controller
  *
  * @property Post $Post
  */
 class PostsController extends AppController {
-	public $helpers = array('Time');
+	public $helpers = array('Html', 'Form','Session','Time');
 	public $uses = array('Post','User','Comment','Tag');
+	public $components = array('Email');
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
@@ -92,7 +95,73 @@ class PostsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('Guardado - Muchas Gracias'));
+				/*
+				 * leyendas:
+				 *
+				 */
+						$mensaje_nuevo_post = 'Nuevo Post';
+						$dominio_ttt = 'tttonline.com.ar';
+						$__status = 'guardado';
+
+				// function that post automatically on
+				// facebook $id_facebook the next:
+				//$id_facebook = '100000913914141';  //=> http://www.facebook.com/tritangotraders
+				$id_facebook = '1276932361';
+
+				$post_url = '/'.$id_facebook.'/feed';
+
+				$msg_body = array(
+		        	'message' 		=> $mensaje_nuevo_post.' | '.$this->request->data['Post']['titulo'],
+		        	'name' 			=> 'TriTangoTraders Online',
+					'link' 			=> 'http://'.$dominio_ttt.'/posts/reporte/' . $this->Post->id,
+					'description' 	=> 'Review: ' . $this->request->data['Post']['descripcion_fb'],
+		        );
+				$Facebook = new FB();
+    			if ($Facebook->api($post_url, 'post', $msg_body)) {
+    				$__status = ', posteado en Facebook, ';
+    			}
+
+    			// function that sent massive mails for the accepted list
+    			$inboxes = $this->User->find('all',array(
+													'conditions'	=>
+														array('User.estado_id != 0'),
+												 	'fields' 		=>
+												 		array('User.email')
+												) );
+
+
+    			foreach ($inboxes as $inbox) {
+    				$mensaje = $this->request->data['Post']['titulo'];
+					$mensaje2 = $this->request->data['Post']['descripcion_fb'];
+					$sitioweb = 'http://'.$dominio_ttt;
+
+					$InfoAux = array(
+						'link' 		=> 'http://'.$dominio_ttt.'/posts/reporte/' . $this->Post->id,
+						'mensaje' 	=> $mensaje,	
+						'mensaje2' 	=> $mensaje2,
+						'sitioweb' 	=> $sitioweb,
+						'imagen' 	=> $this->request->data['Post']['titulo']
+					);
+					#$email = new CakeEmail();
+					$email_config = array(
+							'host' => 'smtp.mandrillapp.com',
+							'port'=>587, 
+							'username'=>'ceafernando@gmail.com',
+							'password'=>'093af434-036d-4dd7-aa10-1b011ef65d00',
+			 				'transport' => 'Smtp'
+					);
+					$this->Email->smtpOptions = $email_config;
+					$this->Email->to 		= $inbox['User']['email'];
+					$this->Email->subject 	= $mensaje_nuevo_post.' | TTTOnline.com.ar';
+					$this->Email->from 		= 'noreply-tttonline'.'@'.$dominio_ttt;					
+					$this->Email->template 	= 'nuevopost';				
+					$this->Email->sendAs 	= 'html';
+
+					$this->set('infos', $InfoAux);
+					$this->Email->send();
+    			}
+
+				$this->Session->setFlash(__('El post fue guardado satisfactoriamente - Muchas Gracias'));
 				$this->redirect('/');
 			} else {
 				$this->Session->setFlash(__('No se pudo guardar - Intente mas tarde - Muchas Gracias'));
@@ -117,10 +186,10 @@ class PostsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved'));
+				$this->Session->setFlash(__('Los cambios se guardaron correctamente.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('No se pudo guardar. Intente en unos minutos.'));
 			}
 		} else {
 			$this->request->data = $this->Post->read(null, $id);
@@ -171,28 +240,14 @@ class PostsController extends AppController {
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Reporte no encontrado'));
 		}
-		//$this->Post->recursive = 4;
 
 		$post = $this->Post->read(null, $id);
-		#echo "<pre>";
-		#print_r($this->Post);
-		#echo "</pre>";
-		#$this->Comment->recursive = 3;
-		#$comments = $this->Comment->find('all',array('conditions'=>'Comment.post_id ='.$id,'fields'=>'user_id'));
-		#debug( $this->User->findById(array($comments[0]['Comment']['user_id'],$comments[2]['Comment']['user_id'])) );
-		
-		
-		/*if(isset($post['Comment']) && isset($post['Comment'][0])):
-			$this->set('users', $this->User->findById($post['Comment'][0]['user_id']));
-		endif;*/
 		
 		$i = 0;
 		foreach ($post['Comment'] as $comment) {
 			array_push($post['Comment'][$i++], $this->User->findById($comment['user_id']) );
 		}
 		$this->set('post', $post);
-		#debug( $post );
-		//$this->set('user', $this->Post->User->find('all'));
 	}
 
 	public function search($value = null){
@@ -211,7 +266,6 @@ class PostsController extends AppController {
 			$this->set('results', $result);
 		}else{
 			$this->Session->setFlash(__('Escriba una palabra a buscar'));
-			//$this->redirect('/');
 		}
 	}
 
@@ -228,10 +282,10 @@ class PostsController extends AppController {
 	        if (move_uploaded_file(
 	        	strval(
 	        		$val['form']['images']['tmp_name'][0]),
-	        		ROOT.DS.APP_DIR.'/webroot/files/'.strval(date("dmY-hms").'_'.$val['form']['images']['name'][0])
+	        		ROOT.DS.APP_DIR.'/webroot/files/'.strval(date('dmY-hms').'_'.$val['form']['images']['name'][0])
 	        		)
 	        ){
-	        	return strval(date("dmY-hms").'_'.$val['form']['images']['name'][0]);
+	        	return strval(date('dmY-hms').'_'.$val['form']['images']['name'][0]);
 	        }
 	    }
 	    return false;

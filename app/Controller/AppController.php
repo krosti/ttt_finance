@@ -63,8 +63,7 @@ class AppController extends Controller {
 
 
 	function beforeFilter() {
-		if ($this->name == 'CakeError') {  
-			debug($this);
+		if ($this->name == 'CakeError') {
 			$this->Session->setFlash(__('URL no encontrada en TTTOnline'));
 	        $this->redirect('/');  
 	    }

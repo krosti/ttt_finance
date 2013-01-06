@@ -40,9 +40,11 @@
 			echo $this->Form->input('descripcion',array('rows'=>25,'class'=>'editable','id'=>'wysihtml5-textarea') );
 			#echo $this->Form->input('serie_datos');
 			echo $this->Form->input('serie_datos_pie',array('label'=>'Pie de foto') );
+			echo $this->Form->input('descripcion_fb',array('label'=>'Desc Facebook') );
 			echo $this->Form->input('tipo_id');
 			#echo $this->Form->input('visitas');
-			$this->Form->input('user_id',array('value'=>$this->Session->read('User')) );
+			echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$this->Session->read('User.id')) );
+			echo $this->Form->input('created_by',array('type'=>'hidden','value'=>$this->Session->read('User.username')) );
 			#echo $this->Upload->add('Post');
 			#echo $this->Form->input('image', array('type' => 'file'));
 			echo $this->Form->input('image',array('type'=>'hidden'));
