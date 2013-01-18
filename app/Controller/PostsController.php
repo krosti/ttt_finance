@@ -8,7 +8,7 @@ App::uses('FB', 'Facebook.Lib');
  * @property Post $Post
  */
 class PostsController extends AppController {
-	public $helpers = array('Html', 'Form','Session','Time');
+	public $helpers = array('Time');
 	public $uses = array('Post','User','Comment','Tag');
 	public $components = array('Email');
 
@@ -92,6 +92,7 @@ class PostsController extends AppController {
  */
 	public function add() {
 		$this->layout = 'backend';
+
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
@@ -99,14 +100,14 @@ class PostsController extends AppController {
 				 * leyendas:
 				 *
 				 */
-						$mensaje_nuevo_post = 'Nuevo Post';
-						$dominio_ttt = 'tttonline.com.ar';
-						$__status = 'guardado';
+				$mensaje_nuevo_post = 'Nuevo Post';
+				$dominio_ttt = 'tttonline.com.ar';
+				unset($_POST);
 
 				// function that post automatically on
 				// facebook $id_facebook the next:
-				//$id_facebook = '100000913914141';  //=> http://www.facebook.com/tritangotraders
-				$id_facebook = '1276932361';
+				$id_facebook = '100000913914141';  //=> http://www.facebook.com/tritangotraders
+				//$id_facebook = '1276932361'; //=> fernando.cea
 
 				$post_url = '/'.$id_facebook.'/feed';
 
@@ -117,51 +118,57 @@ class PostsController extends AppController {
 					'description' 	=> 'Review: ' . $this->request->data['Post']['descripcion_fb'],
 		        );
 				$Facebook = new FB();
-    			if ($Facebook->api($post_url, 'post', $msg_body)) {
-    				$__status = ', posteado en Facebook, ';
-    			}
+    			$Facebook->api($post_url, 'post', $msg_body);
 
     			// function that sent massive mails for the accepted list
-    			$inboxes = $this->User->find('all',array(
+    			/*$inboxes = $this->User->find('all',array(
 													'conditions'	=>
 														array('User.estado_id != 0'),
 												 	'fields' 		=>
 												 		array('User.email')
 												) );
-
-
+    			$in = array();
     			foreach ($inboxes as $inbox) {
-    				$mensaje = $this->request->data['Post']['titulo'];
-					$mensaje2 = $this->request->data['Post']['descripcion_fb'];
-					$sitioweb = 'http://'.$dominio_ttt;
-
-					$InfoAux = array(
-						'link' 		=> 'http://'.$dominio_ttt.'/posts/reporte/' . $this->Post->id,
-						'mensaje' 	=> $mensaje,	
-						'mensaje2' 	=> $mensaje2,
-						'sitioweb' 	=> $sitioweb,
-						'imagen' 	=> $this->request->data['Post']['titulo']
-					);
-					#$email = new CakeEmail();
-					$email_config = array(
-							'host' => 'smtp.mandrillapp.com',
-							'port'=>587, 
-							'username'=>'ceafernando@gmail.com',
-							'password'=>'093af434-036d-4dd7-aa10-1b011ef65d00',
-			 				'transport' => 'Smtp'
-					);
-					$this->Email->smtpOptions = $email_config;
-					$this->Email->to 		= $inbox['User']['email'];
-					$this->Email->subject 	= $mensaje_nuevo_post.' | TTTOnline.com.ar';
-					$this->Email->from 		= 'noreply-tttonline'.'@'.$dominio_ttt;					
-					$this->Email->template 	= 'nuevopost';				
-					$this->Email->sendAs 	= 'html';
-
-					$this->set('infos', $InfoAux);
-					$this->Email->send();
+    				array_push($in, $inbox['User']['email']);
     			}
 
-				$this->Session->setFlash(__('El post fue guardado satisfactoriamente - Muchas Gracias'));
+				$email_config = array(
+					'host' 			=> 'smtp.mandrillapp.com',
+					'port'			=>'587', 
+					'username'		=>'ceafernando@gmail.com',
+					'password'		=>'093af434-036d-4dd7-aa10-1b011ef65d00'
+				);
+
+				$mensaje = $this->request->data['Post']['titulo'];
+				$mensaje2 = $this->request->data['Post']['descripcion_fb'];
+				$sitioweb = 'http://'.$dominio_ttt;
+
+				$InfoAux = array(
+					'link' 		=> 'http://'.$dominio_ttt.'/posts/reporte/' . $this->Post->id,
+					'mensaje' 	=> $mensaje,	
+					'mensaje2' 	=> $mensaje2,
+					'sitioweb' 	=> $sitioweb,
+					'imagen' 	=> $this->request->data['Post']['titulo']
+				);
+
+				$emails = implode(",",$in);
+				$this->Email->to 		= $emails;
+				$this->Email->subject 	= $mensaje_nuevo_post.' | TTTOnline.com.ar';
+				$this->Email->from 		= 'noreplytttonline'.'@'.$dominio_ttt;					
+				$this->Email->template 	= 'nuevopost';				
+				$this->Email->sendAs 	= 'html';
+
+				$this->set('infos', $InfoAux);
+				#$this->Email->smtpOptions = $email_config;
+				if($this->Email->send()){
+					$this->Session->setFlash(__('La cuenta de usuario fue creada. Se le envi&oacute; un email para su activaci&oacute;n.', true));
+					$this->redirect("/");
+				}else{
+					$this->Session->setFlash(__('Hubo un problema, vuelva a intentar en unos minutos. Muchas Gracias.', true));		
+					$this->redirect("/users/add");									
+				}*/
+
+				$this->Session->setFlash(__('El post fue guardado - Muchas Gracias'));
 				$this->redirect('/');
 			} else {
 				$this->Session->setFlash(__('No se pudo guardar - Intente mas tarde - Muchas Gracias'));

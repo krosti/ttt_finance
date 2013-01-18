@@ -1,6 +1,11 @@
 <?php echo $this->Html->script(array('/wysihtml5/parser_rules/advanced.js','/wysihtml5/dist/wysihtml5-0.3.0.min.js') ); ?>
 <?php echo $this->Html->css(array('wysihtml5/css/stylesheet.css','/wysihtml5/css/toolbar.css')); ?>
 
+<?php 
+//usuario id para guardar quien lo creo
+$usr_id = (isset($facebook_user)) ? $this->Session->read('Auth.User.id') : $this->Session->read('User.id');
+?>
+
 <div id="wysihtml5-editor-toolbar">
 	<ul class="commands">
 	  <li data-wysihtml5-command="bold" title="Make text bold (CTRL + B)" class="command"></li>
@@ -43,8 +48,8 @@
 			echo $this->Form->input('descripcion_fb',array('label'=>'Desc Facebook') );
 			echo $this->Form->input('tipo_id');
 			#echo $this->Form->input('visitas');
-			echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$this->Session->read('User.id')) );
-			echo $this->Form->input('created_by',array('type'=>'hidden','value'=>$this->Session->read('User.username')) );
+			echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$usr_id) );
+			#echo $this->Form->input('created_by',array('type'=>'hidden','value'=>$this->Session->read('User.username')) );
 			#echo $this->Upload->add('Post');
 			#echo $this->Form->input('image', array('type' => 'file'));
 			echo $this->Form->input('image',array('type'=>'hidden'));
