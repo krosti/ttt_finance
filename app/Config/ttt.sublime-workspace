@@ -4,6 +4,214 @@
 		"selected_items":
 		[
 			[
+				"email",
+				"email_config"
+			],
+			[
+				"smtp",
+				"smtpOptions"
+			],
+			[
+				"mensa",
+				"mensaje_nuevo_post"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"__",
+				"__status"
+			],
+			[
+				"id",
+				"id_facebook"
+			],
+			[
+				"color",
+				"colorselector"
+			],
+			[
+				"aloha",
+				"alohaS"
+			],
+			[
+				"plu",
+				"plugins"
+			],
+			[
+				"check",
+				"check"
+			],
+			[
+				"indi",
+				"indices_container"
+			],
+			[
+				"usua",
+				"hayUsuarioFb"
+			],
+			[
+				"hayUsu",
+				"hayUsuarioFb"
+			],
+			[
+				"html",
+				"html_entity_decode"
+			],
+			[
+				"opnion",
+				"opiniones"
+			],
+			[
+				"user",
+				"userID"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"new",
+				"newMovie"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"action",
+				"actionsAllowed"
+			],
+			[
+				"hasP",
+				"hasPermissions"
+			],
+			[
+				"us",
+				"usrfb"
+			],
+			[
+				"isn",
+				"is_null"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"up",
+				"uploading_gif"
+			],
+			[
+				"si",
+				"sit_actual"
+			],
+			[
+				"imag",
+				"imagenAttach"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"cuerpo",
+				"cuerpo_seccion"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"busa",
+				"buscar_input"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"saved",
+				"savedUser"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"first",
+				"first_name"
+			],
+			[
+				"face",
+				"facebook_user"
+			],
+			[
+				"login",
+				"loginFb"
+			],
+			[
+				"slide",
+				"slideToggle"
+			],
+			[
+				"tit",
+				"tit_slide"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"hay",
+				"hayUsuarioTtt"
+			],
+			[
+				"h",
+				"hayUsuarioTtt"
+			],
+			[
+				"ha",
+				"hayUsuarioFb"
+			],
+			[
+				"usuaio",
+				"usuario_creado"
+			],
+			[
+				"usuario",
+				"usuario_creado"
+			],
+			[
+				"usu",
+				"usuario_creado"
+			],
+			[
+				"inpu",
+				"input_pass"
+			],
+			[
 				"header",
 				"header_seccion"
 			],
@@ -12,20 +220,8 @@
 				"print_r"
 			],
 			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"LEF",
 				"leftControl3"
-			],
-			[
-				"margin",
-				"margin-bottom"
-			],
-			[
-				"cuerpo",
-				"cuerpo_seccionSmall"
 			],
 			[
 				"cuep",
@@ -36,24 +232,8 @@
 				"margin-top"
 			],
 			[
-				"padd",
-				"padding-top"
-			],
-			[
-				"for",
-				"for	for …"
-			],
-			[
 				"arra",
 				"array"
-			],
-			[
-				"font-",
-				"font-weight"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"indice",
@@ -74,10 +254,6 @@
 			[
 				"in",
 				"indices"
-			],
-			[
-				"indi",
-				"indicesARG"
 			],
 			[
 				"indices",
@@ -132,20 +308,8 @@
 				"authorizedActions"
 			],
 			[
-				"face",
-				"facebook_id"
-			],
-			[
 				"log",
 				"logoutUrl"
-			],
-			[
-				"user",
-				"username"
-			],
-			[
-				"login",
-				"loginUrl"
 			],
 			[
 				"list",
@@ -228,66 +392,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/rgraph.js",
-			"settings":
-			{
-				"buffer_size": 2917,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js",
-			"settings":
-			{
-				"buffer_size": 8579,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/application.js",
-			"settings":
-			{
-				"buffer_size": 987,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/crawler-with-yahooquery.js",
-			"settings":
-			{
-				"buffer_size": 7078,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/symbols.js",
-			"settings":
-			{
-				"buffer_size": 6738,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
-			"settings":
-			{
-				"buffer_size": 6784,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
 			"settings":
 			{
-				"buffer_size": 7015,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/graficador.ctp",
-			"settings":
-			{
-				"buffer_size": 5276,
+				"buffer_size": 9408,
 				"line_ending": "Unix"
 			}
 		},
@@ -295,23 +403,15 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
 			"settings":
 			{
-				"buffer_size": 1975,
+				"buffer_size": 2178,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/mopSlider/mopSlider-2.4.js",
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/opiniones.ctp",
 			"settings":
 			{
-				"buffer_size": 19012,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/ui-home.js",
-			"settings":
-			{
-				"buffer_size": 6184,
+				"buffer_size": 2547,
 				"line_ending": "Unix"
 			}
 		},
@@ -319,31 +419,103 @@
 			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
 			"settings":
 			{
-				"buffer_size": 11682,
+				"buffer_size": 16895,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
+			"file": "/Users/ceafernando/Development/ttt_finance/app/Model/User.php",
 			"settings":
 			{
-				"buffer_size": 1297,
+				"buffer_size": 5078,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Posts/situacionactual.ctp",
+			"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
 			"settings":
 			{
-				"buffer_size": 1460,
+				"buffer_size": 9518,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/indices_box.ctp",
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Posts/add.ctp",
 			"settings":
 			{
-				"buffer_size": 3082,
+				"buffer_size": 4238,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Posts/edit.ctp",
+			"settings":
+			{
+				"buffer_size": 4065,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/wysihtml5/css/toolbar.css",
+			"settings":
+			{
+				"buffer_size": 4761,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/wysihtml5/css/stylesheet.css",
+			"settings":
+			{
+				"buffer_size": 1516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/backend.ctp",
+			"settings":
+			{
+				"buffer_size": 3256,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/post_home.ctp",
+			"settings":
+			{
+				"buffer_size": 3233,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Emails/html/nuevopost.ctp",
+			"settings":
+			{
+				"buffer_size": 5865,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
+			"settings":
+			{
+				"buffer_size": 3832,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/PostsController.php",
+			"settings":
+			{
+				"buffer_size": 9100,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
+			"settings":
+			{
+				"buffer_size": 3042,
 				"line_ending": "Unix"
 			}
 		}
@@ -355,8 +527,12 @@
 		"selected_items":
 		[
 			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
 				"json",
-				"Set Syntax: JSON"
+				"Pretty JSON: Reformat (Pretty Print) JSON"
 			],
 			[
 				"prett",
@@ -376,10 +552,6 @@
 			],
 			[
 				"ins",
-				"Package Control: Install Package"
-			],
-			[
-				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -404,66 +576,115 @@
 	},
 	"file_history":
 	[
-		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/reporte.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/reportes.css",
+		"/Users/ceafernando/Development/ttt_finance/app/Config/core.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/PostsController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/opts_posts.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Emails/html/aviso.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/analisisttt.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/situacionactual.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/opinion.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/aloha/plugins/community/colorselector/lib/colorselector-plugin.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/aloha/lib/aloha-full.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/colorselector.js",
+		"/Users/ceafernando/Development/cake2.2.1/app/Model/User.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/error-handler.js",
+		"/Users/ceafernando/Development/ttt_finance/app/Config/bootstrap.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/indices_box.css",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/symbols.js",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/indices_box.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/post_home.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/slider.css",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/indices_box.css",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/ui-home.js",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/graficador.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/crawler-with-yahooquery.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/reportes.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/reporte.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Administrator/posts.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/valores.js",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/opts_posts.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/indices_box.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/View/Helper/FacebookHelper.php",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/situacionactual.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/PostsController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/casosexito.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/add.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Config/database.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/backend.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/slider.js",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/CommentsController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Model/Post.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Comments/index.ctp",
 		"/Users/ceafernando/Development/ttt_finance/lib/Cake/Test/test_app/Model/Comment.php",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/casos_exito.css",
-		"/Users/ceafernando/Development/ttt_finance/app/Config/core.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Model/User.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Config/routes.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Config/bootstrap.php",
+		"/usr/local/apache-tomcat-7.0.32/webapps/k12-bitbucket/src/main/webapp/js/app/view/Viewport.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/ttt-clients-samples.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/add.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/uploadById.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Comments/add.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Model/Post.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Administrator/index.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/AdministratorController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Model/User.php",
+		"/Users/ceafernando/Development/html5bootcampJOAO/03-oop-and-inheritance/index.html",
+		"/Users/ceafernando/Development/html5bootcampJOAO/03-oop-and-inheritance/Movie.js",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/Emails/html/default.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/tooltips.css",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/backend.css",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/jquery-ui-1.8.16.custom.css",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/jquery-ui-1.8.22.custom.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/edit.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Banners/add.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Banners/edit.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/BannersController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/PagesController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/analisisttt.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/eventos.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/eventos.css",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/situacion_actual.css",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/opinion.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/readme.markdown",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/slider.js",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Banners/index.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Model/Banner.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Controller/Component/ConnectComponent.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/View/Helper/FacebookHelper.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/WidgetController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/situacion_actual.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/index.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/publicidad.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/search.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/resultados_busqueda.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/file_uploader.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/AjaxMultiUpload/View/Helper/UploadHelper.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/Component/FileuploaderComponent.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/Component/UploadHandlerComponent.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/Component/Fileuploader.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/usersadd.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/chrome-fix.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/Config/routes.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/RemindersController.php",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Reminders/hayalgopendiente.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/users.css",
+		"/Users/ceafernando/Development/ttt_finance/app/Config/facebook.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Vendor/Facebook.php",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Vendor/base_facebook.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/application.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/rgraph.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/mopSlider/mopSlider-2.4.js",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/login_dialog.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/login_dialog.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/lib/Cake/Controller/Component/AuthComponent.php",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/usuario_creado.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/casosexito.ctp",
+		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/casos_exito.css",
+		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/readme.markdown",
 		"/Users/ceafernando/Development/k12/index.html",
 		"/Users/ceafernando/Development/k12/css/style.css",
 		"/Users/ceafernando/Development/k12/js/js.js",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/nosotros.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Administrator/posts.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/backend.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/posts.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/ttt-clients-samples.css",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/usersadd.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/ArticlesController.php",
 		"/Users/ceafernando/Development/k12/js/google_mail.js",
 		"/Users/ceafernando/Development/k12/js/google_drive.js",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/error-handler.js",
-		"/Users/ceafernando/Development/ttt_finance/app/Config/facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Users/add.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/users.css",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/none.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/backend.css",
 		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Lib/FacebookInfo.php",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
-		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Controller/Component/ConnectComponent.php",
 		"/Users/ceafernando/Development/ttt_finance/lib/Cake/Controller/Component/AuthComponent.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Vendor/Facebook.php",
-		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Vendor/base_facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Plugin/Facebook/Lib/FacebookApi.php",
 		"/Users/ceafernando/Development/ttt_finance/app/View/Users/login.ctp",
 		"/Users/ceafernando/Development/ttt_finance/app/Model/AppModel.php",
@@ -479,31 +700,10 @@
 		"/Users/ceafernando/Development/ttt_finance/app/Controller/Component/FacebookComponent.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Vendor/fb/facebook.php",
 		"/Users/ceafernando/Development/ttt_finance/app/Vendor/fb/base_facebook.php",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/mopSlider/mopSlider-2.4.js",
 		"/Users/ceafernando/Desktop/html",
 		"/Users/ceafernando/Development/ttt_finance/app/webroot/extjs-login/app/controller/LoginController.js",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
-		"/Users/ceafernando/Development/ttt_finance/app/View/Posts/index.ctp",
 		"/Users/ceafernando/Desktop/{\"yrb_token\" : \"YFT_MARKET_CLOSED\", \"tt\" : \"134417",
-		"/Users/ceafernando/Development/ttt_finance/app/Controller/NoticiasController.php",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/js/lightbox.js",
-		"/Users/ceafernando/Development/ttt_finance/tttmaqueta/index.html",
-		"/Users/ceafernando/Development/ttt_finance/bootstrap/assets/js/symbols.js",
-		"/Applications/MAMP/htdocs/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
-		"/Applications/MAMP/htdocs/ttt_finance/app/webroot/js/jsTTT/rgraph.js",
-		"/Applications/MAMP/htdocs/ttt_finance/app/Controller/AdministratorController.php",
-		"/Applications/MAMP/htdocs/ttt_finance/app/Config/bootstrap.php",
-		"/Applications/XAMPP/xamppfiles/etc/httpd.conf",
-		"/Applications/MAMP/conf/apache/httpd.conf",
-		"/Applications/MAMP/htdocs/ttt_finance/app/webroot/.htaccess",
-		"/Applications/MAMP/htdocs/ttt_finance/app/.htaccess",
-		"/Applications/MAMP/htdocs/ttt_finance/.htaccess",
-		"/Applications/MAMP/htdocs/ttt_finance/app/webroot/js/RGraph/excanvas/HTACCESS-SAMPLE",
-		"/Users/ceafernando/Development/ttt_finance/app/.htaccess",
-		"/Users/ceafernando/Development/ttt_finance/app/webroot/.htaccess",
-		"/Users/ceafernando/Downloads/html",
-		"/Users/ceafernando/Development/index.php",
-		"/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf"
+		"/Users/ceafernando/Development/ttt_finance/app/Controller/NoticiasController.php"
 	],
 	"find":
 	{
@@ -511,7 +711,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/ceafernando/Development/ttt_finance/app",
@@ -527,137 +727,137 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"=>",
-			"array(",
-			"../../js/",
-			"app",
-			"sliderBtnLeftW",
-			"456B98",
-			"header_seccion",
-			"green",
-			"sliderBackLeftW",
-			"sliderBackW",
+			"perfil_id",
+			"$email",
+			"email",
+			"this->E",
+			"//",
+			"\"",
+			"__status",
+			"img",
+			"plugins",
+			"Colorselector",
+			"_createColorButtons",
+			"Colorselector",
+			"_createColorButtons",
+			"plugins",
+			"\\",
+			"check_email_exists",
+			"true",
+			"false",
+			"TRUE",
+			"ttt.borealdev",
+			"ttt",
+			"ttt.borealdev",
+			"ttt_finance",
+			"slide3",
+			"slider3",
 			"mopSlider",
-			".reportes .top .social span{",
-			"sit_actual",
-			"__fbTag",
-			"like",
-			"opts_posts",
-			"#noticias",
-			"<?",
-			", 'name' => ''",
-			"reporte",
-			"view",
-			"img_noticia",
-			"men",
-			"img_noticia",
-			"seccion",
-			"100",
-			"$i",
-			"i",
-			"analisis",
-			"i",
-			"der",
-			"analisis",
-			"compartir_slide",
-			"share",
-			"analisis",
-			"e",
-			"845",
-			"885",
-			"885px",
-			"side-nav-button",
-			"+",
-			"class=\"dias\"",
-			"<a href=\"",
-			"detalle",
-			"titulo",
-			"notepaper",
-			"Fuente completa",
-			"calendar",
-			"2D4D9F",
-			"89AAF0",
-			"mopSlider",
-			"mopSlider01",
-			"border-radius",
-			"offset",
-			"graphicWrapperExpandCollapse",
-			"yay",
-			"drawToolBoxButton",
-			"registrarseTTT",
-			"class",
-			":",
-			"}",
-			"{",
-			"negative",
-			"positive",
-			"ChangeRealtime",
-			"ChangeRealTime",
-			"ChangeRealtime",
-			"ChangeRealTime",
-			"ChangeRealtime",
-			"changeRealTime",
-			"changeRealtime",
-			"ChangeRealTime",
-			"changeRealTime",
-			".",
-			"Things",
-			"queryYQL",
-			"^MERV",
-			")",
-			"=>)",
-			":",
-			"id",
-			"{",
-			"{'",
-			"}",
-			"475x200",
-			"class=\"slide",
-			"id=\"slidesContainer",
-			"slideshow",
-			".caja_slide{\n				padding-top:20px;\n				float:left;\n			}",
-			"450px",
-			"435px",
-			"2",
-			"#slideshow2 {\n  margin:0px auto;\n  position:relative;\n  width:450px;\n  height:435px;\n}\n#slideshow2 #slidesContainer2 {\n  margin:0 auto;\n  overflow:auto; /* allow scrollbar */\n  position:relative;\n  width:450px;\n  height:435px;\n}\n\n#slideshow2 #slidesContainer2 .slide2 {\n  margin:0 auto;\n  height:435px;\n}\n#leftControl2 {\n  top:435px;\n}",
-			"slideshow",
-			"slider2",
-			"slider",
-			"image",
-			"class",
-			"110px",
-			"facebook_user",
-			"username",
-			"5px",
-			"EEEEEE",
-			"FFFFFF",
-			"e",
-			"red",
-			"background",
-			"registration",
-			"login",
-			"'",
-			"registration",
-			"User",
-			"var",
-			"_setDefaults",
-			"you are not authorized",
-			"var",
-			"		\n",
+			"datosLive",
+			"jstockticker",
+			"$opinion['User']['image']",
+			"opiniones",
+			"#opinio",
+			"vermas",
+			"analisisTTT",
+			"70px",
 			"console",
-			"fad",
-			"panel_header",
+			"Tipo",
+			"opinion",
+			"reportes",
+			"comentario",
+			"comentarioMensaje",
+			"eee",
+			"96FF96",
+			"This email",
+			"2790BE",
+			"spinner",
+			"actionAllowed",
+			"actionsAllowed",
+			"Auth->allow",
+			"profile_id",
 			"login",
-			"box_login",
-			"borealdev",
-			"<?php echo $this->Html->image('tw-share.png'); ?>",
-			"chart",
-			"1000",
-			"#tool1",
-			"boxW"
+			"ccc",
+			"ff3400",
+			"span",
+			"div",
+			"absolute",
+			"span",
+			"reporte",
+			"dtool",
+			"URLSITE",
+			"fileName",
+			"post",
+			"Post",
+			"post",
+			"Post",
+			"usuario registrado en",
+			"usuario registrado ttt",
+			"past",
+			"grafi",
+			"background: url(http://www.acuity.com.br/extern/icant.co.uk/arrow.gif) transparent no-repeat bottom right;",
+			"-198px -173px",
+			".extra",
+			"extra",
+			"ANALISIS TTT",
+			"Ocurrio un error",
+			"bancha",
+			"#items",
+			"0",
+			"px",
+			".item",
+			"serie_datos",
+			"images",
+			"graficador",
+			"iconExpanded",
+			"setlocale",
+			"layout",
+			"user",
+			"Info",
+			"['registration']",
+			"497402490288775",
+			"like",
+			"377583548967953",
+			"userLoggedIn",
+			"getUser",
+			"FB",
+			"api",
+			"FB",
+			"facebook",
+			"Connect",
+			"connect",
+			"Welcome!",
+			"element",
+			"facebook",
+			"face",
+			"login",
+			"login_dialog",
+			"der_slide",
+			".compartir_slide",
+			"));",
+			"'display', ",
+			"Router::connect",
+			"situacion_actual",
+			"ture",
+			"userLoggedId",
+			"Cerrar Ses",
+			"cerrar sess",
+			"usuario inactivo",
+			"You are not authorized",
+			"Estos datos ser",
+			"Esos datos ser",
+			"login",
+			"input_login_dialog",
+			"div",
+			"Usuario TTT",
+			"usuarioTTT",
+			"Facebook->regis",
+			"facebook_user",
+			"=>",
+			"array("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -677,58 +877,56 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/rgraph.js",
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
 					"settings":
 					{
-						"buffer_size": 2917,
+						"buffer_size": 9408,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2223,
-								2223
+								1981,
+								1865
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 501.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/ui.js",
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
 					"settings":
 					{
-						"buffer_size": 8579,
+						"buffer_size": 2178,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27,
-								27
+								2126,
+								2126
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -738,23 +936,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/application.js",
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/opiniones.ctp",
 					"settings":
 					{
-						"buffer_size": 987,
+						"buffer_size": 2547,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								106,
-								106
+								2352,
+								2352
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -765,305 +963,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/crawler-with-yahooquery.js",
-					"settings":
-					{
-						"buffer_size": 7078,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5490,
-								5490
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1931.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/symbols.js",
-					"settings":
-					{
-						"buffer_size": 6738,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2240,
-								2240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 600.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/jsTTT/drawCanvas.js",
-					"settings":
-					{
-						"buffer_size": 6784,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								342,
-								342
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/default.ctp",
-					"settings":
-					{
-						"buffer_size": 7015,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4739,
-								4777
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1997.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/graficador.ctp",
-					"settings":
-					{
-						"buffer_size": 5276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1476,
-								1476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 182.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Pages/home.ctp",
-					"settings":
-					{
-						"buffer_size": 1975,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								728,
-								728
-							],
-							[
-								1110,
-								1110
-							],
-							[
-								1346,
-								1346
-							],
-							[
-								1723,
-								1723
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 179.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/mopSlider/mopSlider-2.4.js",
-					"settings":
-					{
-						"buffer_size": 19012,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2833,
-								2847
-							],
-							[
-								2896,
-								2910
-							],
-							[
-								2961,
-								2975
-							],
-							[
-								3026,
-								3040
-							],
-							[
-								3093,
-								3107
-							],
-							[
-								3153,
-								3167
-							],
-							[
-								3225,
-								3239
-							],
-							[
-								3346,
-								3360
-							],
-							[
-								3418,
-								3432
-							],
-							[
-								3493,
-								3507
-							],
-							[
-								3564,
-								3578
-							],
-							[
-								3630,
-								3644
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 929.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/ui-home.js",
-					"settings":
-					{
-						"buffer_size": 6184,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2465,
-								2465
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1858.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
 					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/css/index.css",
 					"settings":
 					{
-						"buffer_size": 11682,
+						"buffer_size": 16895,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-									[
-										7774,
-										7774
-									]
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								4952,
-								4952
+								16895,
+								16895
 							]
 						],
 						"settings":
@@ -1071,31 +982,31 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 1.0,
-						"translation.y": 3673.0,
+						"translation.x": 0.0,
+						"translation.y": 12586.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/js/application-site.js",
+					"buffer": 4,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/Model/User.php",
 					"settings":
 					{
-						"buffer_size": 1297,
+						"buffer_size": 5078,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								276,
-								276
+								639,
+								639
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1105,25 +1016,242 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Posts/situacionactual.ctp",
+					"buffer": 5,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/UsersController.php",
 					"settings":
 					{
-						"buffer_size": 1460,
+						"buffer_size": 9518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								148,
-								148
+								849,
+								691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 20.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Posts/add.ctp",
+					"settings":
+					{
+						"buffer_size": 4238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3398,
+								3341
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 481.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Posts/edit.ctp",
+					"settings":
+					{
+						"buffer_size": 4065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4065,
+								3766
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 451.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/wysihtml5/css/toolbar.css",
+					"settings":
+					{
+						"buffer_size": 4761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3502,
+								3502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1990.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/webroot/wysihtml5/css/stylesheet.css",
+					"settings":
+					{
+						"buffer_size": 1516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1060,
+								1066
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 159.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Layouts/backend.ctp",
+					"settings":
+					{
+						"buffer_size": 3256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1005,
+								1005
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 826.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/post_home.ctp",
+					"settings":
+					{
+						"buffer_size": 3233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1683,
+								1751
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 251.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Emails/html/nuevopost.ctp",
+					"settings":
+					{
+						"buffer_size": 5865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2021,
+								2021
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/AppController.php",
+					"settings":
+					{
+						"buffer_size": 3832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2222,
+								2235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1133,23 +1261,51 @@
 				},
 				{
 					"buffer": 14,
-					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/indices_box.ctp",
+					"file": "/Users/ceafernando/Development/ttt_finance/app/Controller/PostsController.php",
 					"settings":
 					{
-						"buffer_size": 3082,
+						"buffer_size": 9100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1303,
-								1011
+								8336,
+								9096
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3871.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/Users/ceafernando/Development/ttt_finance/app/View/Elements/login.ctp",
+					"settings":
+					{
+						"buffer_size": 3042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1202,459 +1358,527 @@
 		"selected_items":
 		[
 			[
-				"indic",
-				"app/View/Elements/indices_box.ctp"
-			],
-			[
-				"situacion",
-				"app/View/Posts/situacionactual.ctp"
-			],
-			[
-				"application-s",
-				"app/webroot/js/application-site.js"
-			],
-			[
-				"report",
-				"app/webroot/css/reportes.css"
-			],
-			[
-				"repor",
-				"app/View/Posts/reporte.ctp"
-			],
-			[
-				"slider",
-				"app/webroot/css/slider.css"
-			],
-			[
-				"reporte",
-				"app/View/Posts/reporte.ctp"
-			],
-			[
 				"post_",
 				"app/View/Elements/post_home.ctp"
-			],
-			[
-				"appl",
-				"app/webroot/js/application-site.js"
-			],
-			[
-				"indice",
-				"app/webroot/css/indices_box.css"
-			],
-			[
-				"indi",
-				"app/webroot/css/indices_box.css"
-			],
-			[
-				"reportes",
-				"app/webroot/css/reportes.css"
-			],
-			[
-				"facebook",
-				"app/Plugin/Facebook/View/Helper/FacebookHelper.php"
-			],
-			[
-				"op",
-				"app/View/Elements/opts_posts.ctp"
-			],
-			[
-				"post_h",
-				"app/View/Elements/post_home.ctp"
-			],
-			[
-				"indices",
-				"app/View/Elements/indices_box.ctp"
-			],
-			[
-				"pos",
-				"app/Controller/PostsController.php"
-			],
-			[
-				"opt",
-				"app/View/Elements/opts_posts.ctp"
-			],
-			[
-				"casos",
-				"app/View/Pages/casosexito.ctp"
-			],
-			[
-				"add",
-				"app/View/Posts/add.ctp"
-			],
-			[
-				"post",
-				"app/Model/Post.php"
-			],
-			[
-				"comment",
-				"lib/Cake/Test/test_app/Model/Comment.php"
-			],
-			[
-				"core",
-				"app/Config/core.php"
-			],
-			[
-				"user",
-				"app/Model/User.php"
-			],
-			[
-				"postcontro",
-				"app/Controller/PostsController.php"
-			],
-			[
-				"routes",
-				"app/Config/routes.php"
-			],
-			[
-				"boo",
-				"app/Config/bootstrap.php"
-			],
-			[
-				"boot",
-				"app/Config/bootstrap.php"
-			],
-			[
-				"slide",
-				"app/webroot/css/slider.css"
-			],
-			[
-				"admin",
-				"app/Controller/AdministratorController.php"
-			],
-			[
-				"route",
-				"app/Config/routes.php"
-			],
-			[
-				"pages",
-				"app/Controller/PagesController.php"
-			],
-			[
-				"analis",
-				"app/View/Posts/analisisttt.ctp"
-			],
-			[
-				"sicua",
-				"app/webroot/css/situacion_actual.css"
-			],
-			[
-				"opinio",
-				"app/View/Posts/opinion.ctp"
-			],
-			[
-				"situa",
-				"app/View/Posts/situacionactual.ctp"
-			],
-			[
-				"opion",
-				"app/View/Posts/opinion.ctp"
-			],
-			[
-				"postcon",
-				"app/Controller/PostsController.php"
-			],
-			[
-				"opts",
-				"app/View/Elements/opts_posts.ctp"
-			],
-			[
-				"postcont",
-				"app/Controller/PostsController.php"
-			],
-			[
-				"postcontr",
-				"app/Controller/PostsController.php"
-			],
-			[
-				"index",
-				"app/webroot/css/index.css"
-			],
-			[
-				"d",
-				"app/View/Layouts/default.ctp"
-			],
-			[
-				"nosotros",
-				"app/View/Pages/nosotros.ctp"
-			],
-			[
-				"posts",
-				"app/View/Administrator/posts.ctp"
-			],
-			[
-				"admini",
-				"app/Controller/AdministratorController.php"
-			],
-			[
-				"wid",
-				"app/Controller/WidgetController.php"
-			],
-			[
-				"in",
-				"app/View/Elements/indices_box.ctp"
 			],
 			[
 				"back",
 				"app/View/Layouts/backend.ctp"
 			],
 			[
-				"widget",
-				"app/Controller/WidgetController.php"
-			],
-			[
-				"userscon",
-				"app/Controller/UsersController.php"
-			],
-			[
-				"pagescon",
-				"app/Controller/PagesController.php"
-			],
-			[
-				"appli",
-				"app/webroot/js/jsTTT/application.js"
-			],
-			[
-				"error-h",
-				"app/webroot/js/jsTTT/error-handler.js"
-			],
-			[
-				"slid",
-				"app/webroot/js/slider.js"
-			],
-			[
-				"face",
-				"app/Config/facebook.php"
-			],
-			[
-				"users",
-				"app/webroot/css/users.css"
-			],
-			[
-				"none",
-				"app/View/Layouts/none.ctp"
-			],
-			[
-				"home",
-				"app/View/Pages/home.ctp"
-			],
-			[
-				"backend",
-				"app/webroot/css/backend.css"
-			],
-			[
-				"defa",
-				"app/View/Layouts/default.ctp"
-			],
-			[
-				"rout",
-				"app/Config/routes.php"
-			],
-			[
-				"base_",
-				"app/Plugin/Facebook/Vendor/base_facebook.php"
-			],
-			[
-				"fac",
-				"app/Plugin/Facebook/Lib/FacebookApi.php"
-			],
-			[
-				"connect",
-				"app/Plugin/Facebook/Controller/Component/ConnectComponent.php"
-			],
-			[
-				"facebookhel",
-				"app/Plugin/Facebook/View/Helper/FacebookHelper.php"
-			],
-			[
-				"def",
-				"app/View/Layouts/default.ctp"
-			],
-			[
-				"confic",
+				"co",
 				"app/Config/core.php"
-			],
-			[
-				"connectco",
-				"app/Plugin/Facebook/Controller/Component/ConnectComponent.php"
-			],
-			[
-				"connectcom",
-				"app/Plugin/Facebook/Controller/Component/ConnectComponent.php"
-			],
-			[
-				"elementscontro",
-				"lib/Cake/Console/Templates/skel/Controller/PagesController.php"
-			],
-			[
-				"app",
-				"app/Controller/AppController.php"
-			],
-			[
-				"page",
-				"app/Controller/PagesController.php"
 			],
 			[
 				"login",
 				"app/View/Elements/login.ctp"
 			],
 			[
-				"backend.css",
-				"app/webroot/css/backend.css"
+				"core",
+				"app/Config/core.php"
 			],
 			[
-				"mop",
-				"app/webroot/js/mopSlider/mopSlider-2.4.js"
+				"pos",
+				"app/Controller/PostsController.php"
 			],
 			[
-				"de",
-				"app/View/Layouts/default.ctp"
+				"app",
+				"app/Controller/AppController.php"
 			],
 			[
-				"mopslide",
-				"app/webroot/js/mopSlider/mopSlider-2.4.js"
+				"aviso",
+				"app/View/Emails/html/aviso.ctp"
+			],
+			[
+				"add",
+				"app/View/Posts/add.ctp"
+			],
+			[
+				"use",
+				"app/Controller/UsersController.php"
+			],
+			[
+				"posts",
+				"app/Controller/PostsController.php"
+			],
+			[
+				"appcon",
+				"app/Controller/AppController.php"
 			],
 			[
 				"appcont",
 				"app/Controller/AppController.php"
 			],
 			[
+				"post",
+				"app/Controller/PostsController.php"
+			],
+			[
+				"op",
+				"app/View/Elements/opts_posts.ctp"
+			],
+			[
+				"opinion",
+				"app/View/Posts/opinion.ctp"
+			],
+			[
+				"situacion",
+				"app/View/Posts/situacionactual.ctp"
+			],
+			[
+				"analis",
+				"app/View/Posts/analisisttt.ctp"
+			],
+			[
+				"usercon",
+				"app/Controller/UsersController.php"
+			],
+			[
+				"slid",
+				"app/webroot/css/slider.css"
+			],
+			[
+				"ind",
+				"app/webroot/css/index.css"
+			],
+			[
+				"slide",
+				"app/webroot/css/slider.css"
+			],
+			[
+				"index",
+				"app/webroot/css/index.css"
+			],
+			[
+				"slider",
+				"app/webroot/css/slider.css"
+			],
+			[
+				"indice",
+				"app/webroot/css/indices_box.css"
+			],
+			[
+				"symb",
+				"app/webroot/js/jsTTT/symbols.js"
+			],
+			[
+				"opt",
+				"app/View/Elements/opts_posts.ctp"
+			],
+			[
+				"indi",
+				"app/webroot/css/indices_box.css"
+			],
+			[
 				"defau",
 				"app/View/Layouts/default.ctp"
 			],
 			[
-				"backs",
-				"app/webroot/css/backend.css"
-			],
-			[
-				"backen",
-				"app/View/Layouts/backend.ctp"
-			],
-			[
-				"mopsli",
-				"app/webroot/js/mopSlider/mopSlider-2.4.js"
-			],
-			[
-				"ttt-",
-				"app/webroot/css/ttt-clients-samples.css"
-			],
-			[
-				"postscon",
-				"app/Controller/PostsController.php"
+				"ui",
+				"app/webroot/js/ui-home.js"
 			],
 			[
 				"slider.",
 				"app/webroot/js/slider.js"
 			],
 			[
-				"mopslider-2.4.js",
-				"app/webroot/js/mopSlider/mopSlider-2.4.js"
+				"applica",
+				"app/webroot/js/application-site.js"
 			],
 			[
-				"default",
-				"app/View/Layouts/default.ctp"
+				"appli",
+				"app/webroot/js/application-site.js"
 			],
 			[
 				"indices_",
+				"app/View/Elements/indices_box.ctp"
+			],
+			[
+				"indices",
 				"app/webroot/css/indices_box.css"
 			],
 			[
-				"backe",
-				"app/View/Layouts/backend.ctp"
+				"boot",
+				"app/Config/bootstrap.php"
 			],
 			[
-				"controller",
-				"app/Controller/PostsController.php"
+				"aapcon",
+				"app/Controller/AppController.php"
 			],
 			[
-				"dra",
-				"app/webroot/js/jsTTT/drawCanvas.js"
+				"c",
+				"app/Config/core.php"
 			],
 			[
-				"noticias",
-				"app/Controller/NoticiasController.php"
+				"comment",
+				"lib/Cake/Test/test_app/Model/Comment.php"
 			],
 			[
-				"index.css",
-				"app/webroot/css/index.css"
+				"comments/in",
+				"app/View/Comments/index.ctp"
+			],
+			[
+				"comm",
+				"app/Controller/CommentsController.php"
+			],
+			[
+				"ttt-c",
+				"app/webroot/css/ttt-clients-samples.css"
+			],
+			[
+				"uploadby",
+				"app/View/Elements/uploadById.ctp"
+			],
+			[
+				"graf",
+				"app/View/Elements/graficador.ctp"
+			],
+			[
+				"post_h",
+				"app/View/Elements/post_home.ctp"
+			],
+			[
+				"opts",
+				"app/View/Elements/opts_posts.ctp"
+			],
+			[
+				"home",
+				"app/View/Pages/home.ctp"
 			],
 			[
 				"ui-",
 				"app/webroot/js/ui-home.js"
 			],
 			[
-				"home.",
-				"app/View/Pages/home.ctp"
+				"commen",
+				"app/Controller/CommentsController.php"
 			],
 			[
-				"webroot/css/in",
+				"user",
+				"app/Model/User.php"
+			],
+			[
+				"admi",
+				"app/Controller/AdministratorController.php"
+			],
+			[
+				"administrator",
+				"app/View/Administrator/index.ctp"
+			],
+			[
+				"aivso.c",
+				"app/View/Emails/html/aviso.ctp"
+			],
+			[
+				"users",
+				"app/Controller/UsersController.php"
+			],
+			[
+				"lo",
+				"app/View/Elements/login.ctp"
+			],
+			[
+				"toolti",
+				"app/webroot/css/tooltips.css"
+			],
+			[
+				"index.",
 				"app/webroot/css/index.css"
 			],
 			[
-				"maqueta",
-				"tttmaqueta/index.html"
+				"jquer",
+				"app/webroot/css/jquery-ui-1.8.16.custom.css"
 			],
 			[
-				"tttcss",
+				"ttt-clin",
 				"app/webroot/css/ttt-clients-samples.css"
 			],
 			[
-				"sym",
-				"app/webroot/js/jsTTT/symbols.js"
+				"administ",
+				"app/Controller/AdministratorController.php"
 			],
 			[
-				"symbols",
-				"bootstrap/assets/js/symbols.js"
+				"jqueryui",
+				"app/webroot/css/jquery-ui-1.8.16.custom.css"
+			],
+			[
+				"jquery-",
+				"app/webroot/css/jquery-ui-1.8.22.custom.css"
+			],
+			[
+				"posthom",
+				"app/View/Elements/post_home.ctp"
+			],
+			[
+				"postho",
+				"app/View/Elements/post_home.ctp"
+			],
+			[
+				"ttt-",
+				"app/webroot/css/ttt-clients-samples.css"
+			],
+			[
+				"grafica",
+				"app/View/Elements/graficador.ctp"
+			],
+			[
+				"banner",
+				"app/View/Banners/add.ctp"
+			],
+			[
+				"index.cs",
+				"app/webroot/css/index.css"
+			],
+			[
+				"edit",
+				"app/View/Posts/edit.ctp"
+			],
+			[
+				"inde",
+				"app/webroot/css/index.css"
+			],
+			[
+				"repor",
+				"app/View/Posts/reporte.ctp"
+			],
+			[
+				"reporte",
+				"app/View/Posts/reporte.ctp"
+			],
+			[
+				"coment",
+				"lib/Cake/Test/test_app/Model/Comment.php"
+			],
+			[
+				"comments",
+				"app/Controller/CommentsController.php"
+			],
+			[
+				"banner/inde",
+				"app/View/Banners/index.ctp"
+			],
+			[
+				"evntos",
+				"app/webroot/css/eventos.css"
+			],
+			[
+				"event",
+				"app/View/Pages/eventos.ctp"
+			],
+			[
+				"post/ad",
+				"app/View/Posts/add.ctp"
+			],
+			[
+				"edi",
+				"app/View/Banners/edit.ctp"
+			],
+			[
+				"pages",
+				"app/Controller/PagesController.php"
+			],
+			[
+				"edit.",
+				"app/View/Banners/edit.ctp"
+			],
+			[
+				"bannercon",
+				"app/Controller/BannersController.php"
+			],
+			[
+				"wid",
+				"app/Controller/WidgetController.php"
+			],
+			[
+				"model/ba",
+				"app/Model/Banner.php"
+			],
+			[
+				"postc",
+				"app/Controller/PostsController.php"
+			],
+			[
+				"postom",
+				"app/View/Elements/post_home.ctp"
+			],
+			[
+				"posts/ad",
+				"app/View/Posts/add.ctp"
+			],
+			[
+				"posts/index",
+				"app/View/Posts/index.ctp"
+			],
+			[
+				"opino",
+				"app/View/Posts/opinion.ctp"
+			],
+			[
+				"opi",
+				"app/View/Posts/opinion.ctp"
+			],
+			[
+				"ana",
+				"app/View/Posts/analisisttt.ctp"
+			],
+			[
+				"anali",
+				"app/View/Posts/analisisttt.ctp"
+			],
+			[
+				"situa",
+				"app/View/Posts/situacionactual.ctp"
+			],
+			[
+				"situacon",
+				"app/View/Posts/situacionactual.ctp"
+			],
+			[
+				"appc",
+				"app/Controller/AppController.php"
+			],
+			[
+				"cra",
+				"app/webroot/js/jsTTT/crawler-with-yahooquery.js"
+			],
+			[
+				"public",
+				"app/webroot/css/publicidad.css"
+			],
+			[
+				"search",
+				"app/View/Posts/search.ctp"
+			],
+			[
+				"opin",
+				"app/View/Posts/opinion.ctp"
+			],
+			[
+				"widg",
+				"app/Controller/WidgetController.php"
 			],
 			[
 				"craw",
 				"app/webroot/js/jsTTT/crawler-with-yahooquery.js"
 			],
 			[
-				"ui.",
-				"app/webroot/js/jsTTT/ui.js"
+				"sym",
+				"app/webroot/js/jsTTT/symbols.js"
 			],
 			[
-				"rgra",
-				"app/webroot/js/jsTTT/rgraph.js"
+				"sit",
+				"app/View/Posts/situacionactual.ctp"
 			],
 			[
-				"rgr",
-				"app/webroot/js/jsTTT/rgraph.js"
+				"report",
+				"app/View/Posts/reporte.ctp"
 			],
 			[
-				"draw",
-				"app/webroot/js/jsTTT/drawCanvas.js"
+				"up",
+				"app/Plugin/AjaxMultiUpload/View/Helper/UploadHelper.php"
 			],
 			[
-				"htac",
-				".htaccess"
+				"upload",
+				"app/Plugin/AjaxMultiUpload/View/Helper/UploadHelper.php"
 			],
 			[
-				"htacss",
-				"app/webroot/js/RGraph/excanvas/HTACCESS-SAMPLE"
+				"uploadhel",
+				"app/Plugin/AjaxMultiUpload/View/Helper/UploadHelper.php"
 			],
 			[
-				"htace",
-				"app/.htaccess"
+				"wi",
+				"app/Controller/WidgetController.php"
 			],
 			[
-				"htacc",
-				".htaccess"
+				"w",
+				"app/Controller/WidgetController.php"
 			],
 			[
-				"hta",
-				".htaccess"
+				"de",
+				"app/View/Layouts/default.ctp"
+			],
+			[
+				"ttt-cl",
+				"app/webroot/css/ttt-clients-samples.css"
+			],
+			[
+				"grafi",
+				"app/View/Elements/graficador.ctp"
+			],
+			[
+				"ap",
+				"app/Controller/AppController.php"
+			],
+			[
+				"rout",
+				"app/Config/routes.php"
+			],
+			[
+				"appl",
+				"app/webroot/js/application-site.js"
+			],
+			[
+				"usersa",
+				"app/View/Elements/usersadd.ctp"
+			],
+			[
+				"pag",
+				"app/Controller/PagesController.php"
+			],
+			[
+				"face",
+				"app/Config/facebook.php"
+			],
+			[
+				"facebook",
+				"app/Plugin/Facebook/Vendor/Facebook.php"
+			],
+			[
+				"base",
+				"app/Plugin/Facebook/Vendor/base_facebook.php"
+			],
+			[
+				"us",
+				"app/Controller/UsersController.php"
+			],
+			[
+				"appcn",
+				"app/Controller/AppController.php"
+			],
+			[
+				"login_",
+				"app/webroot/css/login_dialog.css"
+			],
+			[
+				"login_d",
+				"app/webroot/css/login_dialog.css"
+			],
+			[
+				"ro",
+				"app/Config/routes.php"
+			],
+			[
+				"log",
+				"app/View/Elements/login.ctp"
+			],
+			[
+				"login_di",
+				"app/View/Elements/login_dialog.ctp"
+			],
+			[
+				"admini",
+				"app/Controller/AdministratorController.php"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
